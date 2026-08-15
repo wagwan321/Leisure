@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Leisure Club — Country Club &amp; Water Resort, Mount Lebanon · Est. 1991</title>
-<meta name="description" content="The Leisure Club, Deek El Mehdi — pools, water slides, sports programmes, the Bianco Bar and a wedding venue in the pines of Mount Lebanon. Your family reward since 1991." />
+<title>The Leisure Club — Country Club, Water Resort &amp; Wedding Venue · Deek El Mehdi, Mount Lebanon · Est. 1991</title>
+<meta name="description" content="The Leisure Club, Deek El Mehdi — the Indoor Club and Leisure Island water resort. Pools, slides, free classes, the Grill House, Pool Bar, weddings and events in the pines of Mount Lebanon. Your family reward since 1991." />
 <link rel="icon" href="images/logo.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,6 +39,7 @@
   ::selection{background:var(--red);color:var(--paper)}
   img,video{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
+  button{font-family:inherit;cursor:pointer}
   .wrap{max-width:var(--w);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
 
   h1,h2,h3,.serif{font-family:'Fraunces',serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
@@ -51,11 +52,11 @@
   .sec-title{font-size:clamp(2.3rem,5vw,4rem);margin-top:18px}
   .sec-intro{max-width:56ch;color:var(--ink-soft);font-size:1.05rem;margin-top:20px}
 
-  /* ---------- buttons: sharp, printed, no pills ---------- */
+  /* ---------- buttons ---------- */
   .btn{
     display:inline-block;font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
-    padding:1.05em 2.2em;border:1px solid var(--red);color:var(--red);
-    position:relative;transition:color .25s ease, background .25s ease;
+    padding:1.05em 2.2em;border:1px solid var(--red);color:var(--red);background:none;
+    transition:color .25s ease, background .25s ease;
   }
   .btn:hover{background:var(--red);color:var(--paper)}
   .btn.solid{background:var(--red);color:var(--paper)}
@@ -76,23 +77,26 @@
     transition:border-color .3s;
   }
   header.scrolled{border-bottom-color:rgba(30,50,48,.15)}
+  #progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--red);z-index:2;
+  }
   .nav{
     max-width:var(--w);margin:0 auto;padding:14px clamp(20px,4vw,48px);
     display:flex;align-items:center;justify-content:space-between;gap:24px;
   }
   .brand img{height:46px;width:auto}
-  .navlinks{display:flex;align-items:center;gap:clamp(18px,2.6vw,38px)}
+  .navlinks{display:flex;align-items:center;gap:clamp(14px,2vw,30px)}
   .navlinks a.nl{
-    font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--ink);transition:color .2s;
+    font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink);transition:color .2s;white-space:nowrap;
   }
   .navlinks a.nl:hover{color:var(--red)}
-  .nav-right{display:flex;align-items:center;gap:26px}
+  .nav-right{display:flex;align-items:center;gap:22px}
   .nav-est{
     font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--ink-soft);
     white-space:nowrap;
   }
-  .burger{display:none;background:none;border:none;cursor:pointer;z-index:320;padding:8px}
+  .burger{display:none;background:none;border:none;z-index:320;padding:8px}
   .burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0;transition:.3s}
   .burger.x span:nth-child(1){transform:translateY(8px) rotate(45deg)}
   .burger.x span:nth-child(2){opacity:0}
@@ -103,15 +107,16 @@
     position:fixed;inset:0;z-index:300;background:var(--paper);
     display:flex;flex-direction:column;justify-content:center;padding:0 9vw;
     transform:translateY(-102%);transition:transform .55s cubic-bezier(.77,0,.18,1);
+    overflow-y:auto;
   }
   .mmenu.open{transform:none}
   .mmenu a.big{
-    font-family:'Fraunces',serif;font-size:clamp(2.2rem,9vw,3.4rem);line-height:1.25;
-    color:var(--ink);border-bottom:1px solid rgba(30,50,48,.12);padding:.35em 0;
+    font-family:'Fraunces',serif;font-size:clamp(1.7rem,7vw,2.8rem);line-height:1.25;
+    color:var(--ink);border-bottom:1px solid rgba(30,50,48,.12);padding:.3em 0;
     display:flex;justify-content:space-between;align-items:baseline;
   }
   .mmenu a.big i{font-style:normal;font-family:'Archivo';font-size:.7rem;letter-spacing:.2em;color:var(--red)}
-  .mmenu .mfoot{margin-top:34px;display:flex;gap:28px;flex-wrap:wrap}
+  .mmenu .mfoot{margin-top:30px;display:flex;gap:26px;flex-wrap:wrap}
 
   /* ---------- hero ---------- */
   .hero{
@@ -144,7 +149,7 @@
   }
   .hero h1 em{font-weight:380}
   .hero-sub{
-    max-width:46ch;font-size:1.02rem;color:rgba(246,241,229,.88);
+    max-width:48ch;font-size:1.02rem;color:rgba(246,241,229,.88);
     margin-top:22px;
   }
   .hero-cta{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;align-items:center}
@@ -161,7 +166,7 @@
     background:var(--red);color:var(--paper);overflow:hidden;
     padding:13px 0;position:relative;z-index:4;
   }
-  .marq-track{display:flex;width:max-content;animation:marq 36s linear infinite}
+  .marq-track{display:flex;width:max-content;animation:marq 40s linear infinite}
   .marq-track span{
     font-size:.78rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;
     white-space:nowrap;padding:0 1.6em;display:flex;align-items:center;gap:3.2em;
@@ -179,7 +184,7 @@
   }
 
   /* ---------- sections ---------- */
-  section{position:relative}
+  section{position:relative;scroll-margin-top:76px}
   .pad{padding:clamp(84px,11vw,150px) 0}
 
   /* grounds / aerial */
@@ -189,9 +194,10 @@
   }
   .grounds-head .right{color:var(--ink-soft);font-size:1.02rem;max-width:44ch;padding-bottom:8px}
   .aerial{position:relative;border:1px solid rgba(30,50,48,.25)}
+  .aerial-stage{position:relative}
   .aerial img{width:100%;height:auto}
   .pin{
-    position:absolute;transform:translate(-50%,-50%);cursor:default;
+    position:absolute;transform:translate(-50%,-50%);cursor:pointer;background:none;border:none;padding:0;
   }
   .pin b{
     display:grid;place-items:center;width:30px;height:30px;border-radius:50%;
@@ -203,36 +209,87 @@
     position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%);
     background:var(--ink);color:var(--paper);font-size:.68rem;font-weight:600;
     letter-spacing:.14em;text-transform:uppercase;padding:.45em 1em;white-space:nowrap;
-    opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;
+    opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:5;
   }
-  .pin:hover b,.pin:focus-within b{background:var(--red);border-color:var(--red);color:var(--paper);transform:scale(1.12)}
-  .pin:hover span,.pin:focus-within span{opacity:1;transform:translateX(-50%) translateY(-3px)}
+  .pin:hover b,.pin:focus-visible b,.pin.on b{background:var(--red);border-color:var(--red);color:var(--paper);transform:scale(1.12)}
+  .pin:hover span,.pin:focus-visible span,.pin.on span{opacity:1;transform:translateX(-50%) translateY(-3px)}
+  .map-card{
+    position:absolute;left:14px;bottom:14px;z-index:6;max-width:320px;
+    background:var(--paper);border:1px solid var(--ink);padding:18px 20px 16px;
+    box-shadow:8px 8px 0 rgba(20,49,44,.25);
+    opacity:0;transform:translateY(10px);pointer-events:none;
+    transition:opacity .3s,transform .3s;
+  }
+  .map-card.show{opacity:1;transform:none;pointer-events:auto}
+  .map-card .mc-no{font-family:'Fraunces',serif;font-style:italic;color:var(--red);font-size:.9rem}
+  .map-card h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin:2px 0 6px}
+  .map-card p{font-size:.86rem;color:var(--ink-soft);line-height:1.5}
+  .map-card a{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:600;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--red);border-bottom:1px solid currentColor;padding-bottom:2px}
+  .map-card .mc-x{
+    position:absolute;top:8px;right:10px;background:none;border:none;font-size:1rem;color:var(--ink-soft);
+  }
   .aerial-legend{
-    display:flex;flex-wrap:wrap;gap:10px 34px;margin-top:22px;
-    font-size:.8rem;color:var(--ink-soft);
+    display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:22px;
+    font-size:.8rem;color:var(--ink-soft);list-style:none;
   }
-  .aerial-legend li{list-style:none;display:flex;gap:10px;align-items:baseline}
+  .aerial-legend li{display:flex;gap:10px;align-items:baseline;cursor:pointer;transition:color .2s}
+  .aerial-legend li:hover,.aerial-legend li.on{color:var(--ink)}
+  .aerial-legend li.on{font-weight:600}
   .aerial-legend b{font-family:'Fraunces',serif;font-weight:500;color:var(--red)}
   .aerial-cap{
     margin-top:14px;font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);
     font-size:.95rem;
   }
 
-  /* ---------- pools: editorial rows ---------- */
+  /* ---------- two clubs ---------- */
+  .clubs{background:var(--pine);color:var(--paper);position:relative}
+  .clubs .label{color:var(--sun)}
+  .clubs .label .no{color:var(--paper)}
+  .clubs .sec-title{color:var(--paper)}
+  .clubs .sec-title em{color:var(--sun)}
+  .clubs-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);
+    margin-top:clamp(44px,6vw,72px);
+  }
+  .club-card{
+    border:1px solid rgba(246,241,229,.35);position:relative;
+    display:flex;flex-direction:column;
+  }
+  .club-card .cc-img{position:relative;overflow:hidden}
+  .club-card .cc-img img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:saturate(.95);transition:transform .9s cubic-bezier(.19,1,.22,1)}
+  .club-card:hover .cc-img img{transform:scale(1.04)}
+  .club-card .cc-tag{
+    position:absolute;top:14px;left:14px;background:var(--red);color:var(--paper);
+    font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:.5em 1.1em;
+  }
+  .club-card .cc-body{padding:clamp(22px,3vw,34px);border-top:1px dashed rgba(246,241,229,.35);flex:1;display:flex;flex-direction:column}
+  .club-card h3{font-size:clamp(1.7rem,2.6vw,2.3rem);color:var(--paper)}
+  .club-card h3 em{color:var(--sun)}
+  .club-card .cc-sub{color:rgba(246,241,229,.75);font-size:.95rem;margin-top:10px;max-width:44ch}
+  .cc-rows{margin-top:22px;border-top:1px solid rgba(246,241,229,.25);flex:1}
+  .cc-rows div{
+    display:flex;justify-content:space-between;gap:18px;padding:11px 2px;
+    border-bottom:1px solid rgba(246,241,229,.14);font-size:.86rem;
+  }
+  .cc-rows span:first-child{letter-spacing:.14em;text-transform:uppercase;font-size:.7rem;font-weight:600;color:rgba(246,241,229,.6);align-self:center;white-space:nowrap}
+  .cc-rows span:last-child{font-family:'Fraunces',serif;font-style:italic;text-align:right}
+  .cc-foot{margin-top:20px;display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ---------- pools rows ---------- */
   .pools{background:var(--paper-2);border-top:var(--hair);border-bottom:var(--hair)}
   .prow{
     display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.5vw,32px);
     align-items:center;margin-top:clamp(56px,8vw,104px);
   }
   .prow:first-of-type{margin-top:clamp(44px,6vw,72px)}
-  .prow .pimg{grid-column:1/8;border:1px solid rgba(30,50,48,.25)}
+  .prow .pimg{grid-column:1/8;border:1px solid rgba(30,50,48,.25);overflow:hidden}
   .prow .ptxt{grid-column:8/13}
   .prow.flip .pimg{grid-column:6/13;order:2}
   .prow.flip .ptxt{grid-column:1/6;order:1}
-  .prow .pimg img{width:100%;aspect-ratio:16/10;object-fit:cover}
-  .pnum{
-    font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--red);
-  }
+  .prow .pimg img{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform 1s cubic-bezier(.19,1,.22,1)}
+  .prow .pimg:hover img{transform:scale(1.04)}
+  .pnum{font-family:'Fraunces',serif;font-style:italic;font-size:.95rem;color:var(--red)}
   .prow h3{font-size:clamp(1.7rem,3vw,2.4rem);margin:10px 0 14px}
   .prow p{color:var(--ink-soft);font-size:.98rem;max-width:40ch}
   .pmeta{
@@ -244,32 +301,46 @@
     letter-spacing:0;text-transform:none;color:var(--pool);margin-top:2px}
 
   /* ---------- programme ---------- */
-  .prog-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,84px);
-    margin-top:clamp(44px,6vw,72px);
+  .prog-tabs{display:flex;gap:0;margin-top:clamp(40px,5vw,60px);border-bottom:2px solid var(--ink)}
+  .ptab{
+    background:none;border:none;font-family:'Fraunces',serif;font-size:clamp(1.15rem,2vw,1.5rem);
+    padding:12px clamp(16px,3vw,32px);color:var(--ink-soft);position:relative;transition:color .2s;
   }
-  .prog-col h3{
-    font-size:1.6rem;display:flex;align-items:baseline;justify-content:space-between;
-    border-bottom:2px solid var(--ink);padding-bottom:14px;
+  .ptab i{font-family:'Archivo';font-style:normal;font-size:.62rem;font-weight:600;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--red);margin-left:.7em;vertical-align:middle}
+  .ptab::after{
+    content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--red);
+    transform:scaleX(0);transition:transform .3s;transform-origin:left;
   }
-  .prog-col h3 i{font-family:'Archivo';font-style:normal;font-size:.68rem;font-weight:600;
-    letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
-  .prog-col ul{list-style:none}
-  .prog-col li{
-    display:flex;align-items:baseline;gap:12px;
-    padding:15px 2px;border-bottom:1px solid rgba(30,50,48,.16);
-    font-size:1rem;
+  .ptab[aria-selected="true"]{color:var(--ink)}
+  .ptab[aria-selected="true"]::after{transform:scaleX(1)}
+  .sched{display:none;margin-top:0}
+  .sched.on{display:block}
+  .sched table{width:100%;border-collapse:collapse}
+  .sched tr{border-bottom:1px solid rgba(30,50,48,.16)}
+  .sched td{padding:14px 2px;vertical-align:baseline}
+  .sched td.cn{font-weight:500;white-space:nowrap;padding-right:20px;font-size:1rem}
+  .sched td.ct{
+    text-align:right;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-soft);
   }
-  .prog-col li .nm{font-weight:500;white-space:nowrap}
-  .prog-col li .dots{flex:1;border-bottom:1px dotted rgba(30,50,48,.4);transform:translateY(-4px)}
-  .prog-col li .tag{
-    font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-    color:var(--ink-soft);white-space:nowrap;
+  .sched td.ct b{color:var(--pool);font-weight:600}
+  .sched-note{
+    margin-top:22px;font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);font-size:.95rem;
   }
-  .prog-note{
-    margin-top:26px;font-family:'Fraunces',serif;font-style:italic;color:var(--ink-soft);
-    font-size:.95rem;
+  .prog-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,84px);margin-top:8px;align-items:start}
+  .hyrox{
+    margin-top:clamp(40px,5vw,56px);background:var(--pine);color:var(--paper);
+    padding:clamp(24px,4vw,40px);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
   }
+  .hyrox h3{font-size:clamp(1.5rem,3vw,2.2rem);color:var(--paper)}
+  .hyrox h3 em{color:var(--sun)}
+  .hyrox p{color:rgba(246,241,229,.75);font-size:.92rem;max-width:44ch;margin-top:8px}
+  .extras{border-top:2px solid var(--ink);margin-top:clamp(48px,6vw,72px)}
+  .extras-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px);padding-top:26px}
+  .extras h4{font-family:'Archivo';font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
+  .xrow{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(30,50,48,.14);font-size:.92rem}
+  .xrow i{font-family:'Fraunces',serif;font-style:italic;color:var(--pool);white-space:nowrap}
   .prog-photos{
     display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.5vw,20px);
     margin-top:clamp(48px,6vw,80px);
@@ -283,55 +354,164 @@
     color:var(--paper);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
   }
 
-  /* ---------- bianco bar (dark) ---------- */
-  .bianco{background:var(--pine);color:var(--paper)}
-  .bianco .label{color:var(--sun)}
-  .bianco .label .no{color:var(--paper)}
-  .bianco-grid{
-    display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,88px);align-items:center;
+  /* ---------- rates ---------- */
+  .rates{background:var(--paper-2);border-top:var(--hair);border-bottom:var(--hair)}
+  .rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,32px);margin-top:clamp(44px,6vw,64px)}
+  .rate-card{border:1px solid var(--ink);background:var(--paper);position:relative;padding:clamp(24px,3vw,36px)}
+  .rate-card.star{background:var(--pine);color:var(--paper);border-color:var(--pine)}
+  .rate-card .rc-stamp{
+    position:absolute;top:-13px;right:18px;background:var(--red);color:var(--paper);
+    font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    padding:.5em 1.2em;transform:rotate(2deg);
   }
-  .bianco h2{
-    font-size:clamp(2.6rem,5.5vw,4.4rem);color:var(--paper);margin-top:18px;
+  .rate-card h3{font-size:clamp(1.5rem,2.2vw,1.9rem)}
+  .rate-card.star h3{color:var(--paper)}
+  .rate-card.star h3 em{color:var(--sun)}
+  .rate-card .rc-sub{font-size:.84rem;color:var(--ink-soft);margin-top:6px;min-height:2.5em}
+  .rate-card.star .rc-sub{color:rgba(246,241,229,.7)}
+  .rc-rows{margin-top:18px;border-top:1px solid rgba(30,50,48,.25)}
+  .rate-card.star .rc-rows{border-top-color:rgba(246,241,229,.3)}
+  .rc-row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid rgba(30,50,48,.14);align-items:baseline}
+  .rate-card.star .rc-row{border-bottom-color:rgba(246,241,229,.14)}
+  .rc-row .k{font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+  .rate-card.star .rc-row .k{color:rgba(246,241,229,.6)}
+  .rc-row .v{font-family:'Fraunces',serif;font-size:1.05rem;text-align:right}
+  .rc-row .v b{font-weight:500;color:var(--pool)}
+  .rate-card.star .rc-row .v b{color:var(--sun)}
+  .rc-row .v small{font-family:'Archivo';font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase}
+  .rate-card.star .rc-row .v small{color:rgba(246,241,229,.55)}
+  .rates-notes{
+    margin-top:clamp(36px,5vw,52px);display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,4vw,64px);
   }
-  .bianco h2 em{color:var(--sun)}
-  .bianco p.bp{color:rgba(246,241,229,.78);max-width:44ch;margin-top:22px;font-size:1.02rem}
-  .bianco-hours{
-    margin-top:30px;border-top:1px solid rgba(246,241,229,.25);
+  .free-list{border-top:2px solid var(--ink)}
+  .free-list h4{font-family:'Archivo';font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);padding:14px 0 4px}
+  .free-list .xrow i{color:var(--ink)}
+  .fine{font-size:.85rem;color:var(--ink-soft)}
+  .fine p{margin-bottom:10px}
+  .fine b{color:var(--ink)}
+
+  /* ---------- dine ---------- */
+  .dine-head{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,5vw,80px);align-items:end}
+  .dine-head .right{color:var(--ink-soft);font-size:1.02rem;max-width:44ch;padding-bottom:8px}
+  .dine-grid{
+    display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(16px,2.5vw,28px);
+    margin-top:clamp(44px,6vw,72px);
   }
-  .bianco-hours div{
-    display:flex;justify-content:space-between;gap:20px;padding:13px 2px;
-    border-bottom:1px solid rgba(246,241,229,.16);font-size:.86rem;
+  .dcard{position:relative;overflow:hidden;border:1px solid rgba(30,50,48,.25);display:flex;flex-direction:column;background:var(--paper)}
+  .dcard .di{overflow:hidden;position:relative}
+  .dcard .di img,.dcard .di video{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.19,1,.22,1)}
+  .dcard:hover .di img{transform:scale(1.05)}
+  .dcard .db{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .dcard h3{font-size:1.5rem}
+  .dcard .ds{font-family:'Fraunces',serif;font-style:italic;font-size:.9rem;color:var(--red)}
+  .dcard p{font-size:.9rem;color:var(--ink-soft);flex:1}
+  .dcard .dl{margin-top:8px}
+  .dcard.wide{grid-column:span 7}
+  .dcard.tall{grid-column:span 5}
+  .dcard.wide .di img{aspect-ratio:16/9}
+  .dcard.tall .di img{aspect-ratio:16/10}
+  .dcard.third{grid-column:span 4}
+  .dcard.third .di img{aspect-ratio:4/3}
+  .menu-btn{
+    align-self:flex-start;background:none;border:none;padding:0 0 2px;
+    font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--red);border-bottom:1px solid currentColor;
   }
-  .bianco-hours span:first-child{letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:600;color:rgba(246,241,229,.65);align-self:center}
-  .bianco-hours span:last-child{font-family:'Fraunces',serif;font-style:italic}
-  .bianco-media{position:relative}
-  .bianco-media .main{border:1px solid rgba(246,241,229,.3)}
-  .bianco-media .main img{width:100%;aspect-ratio:4/3;object-fit:cover}
-  .bianco-media .over{
-    position:absolute;right:-7%;bottom:-14%;width:52%;border:1px solid rgba(246,241,229,.3);
-    box-shadow:0 30px 60px -30px rgba(0,0,0,.6);
+  .menu-btn:hover{opacity:.6}
+
+  /* ---------- reels ---------- */
+  .reels{background:var(--pine-2);color:var(--paper);overflow:hidden}
+  .reels .label{color:var(--sun)}
+  .reels .label .no{color:var(--paper)}
+  .reels .sec-title{color:var(--paper)}
+  .reels .sec-title em{color:var(--sun)}
+  .reel-strip{
+    display:flex;gap:clamp(14px,2vw,24px);margin-top:clamp(40px,5vw,60px);
+    overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;
+    -webkit-overflow-scrolling:touch;
   }
-  .bianco-media .over img{width:100%;aspect-ratio:4/3;object-fit:cover}
-  @media(max-width:700px){.bianco-media .over{display:none}}
+  .reel-strip::-webkit-scrollbar{height:6px}
+  .reel-strip::-webkit-scrollbar-track{background:rgba(246,241,229,.1)}
+  .reel-strip::-webkit-scrollbar-thumb{background:var(--red)}
+  .reel{
+    position:relative;flex:0 0 auto;width:clamp(220px,26vw,300px);
+    scroll-snap-align:start;border:1px solid rgba(246,241,229,.3);
+    aspect-ratio:9/16;overflow:hidden;background:#000;
+  }
+  .reel video{width:100%;height:100%;object-fit:cover}
+  .reel .r-tag{
+    position:absolute;left:0;bottom:0;right:0;padding:40px 14px 12px;
+    background:linear-gradient(0deg,rgba(15,39,36,.85),transparent);
+    font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--paper);pointer-events:none;
+  }
+  .reel .r-play{
+    position:absolute;inset:0;display:grid;place-items:center;background:rgba(15,39,36,.15);
+    border:none;transition:background .25s;
+  }
+  .reel .r-play::before{
+    content:'';grid-area:1/1;width:58px;height:58px;border-radius:50%;
+    background:var(--paper);border:1px solid var(--ink);
+  }
+  .reel .r-play::after{
+    content:'';grid-area:1/1;width:0;height:0;justify-self:center;align-self:center;
+    border-left:16px solid var(--red);border-top:10px solid transparent;border-bottom:10px solid transparent;
+    transform:translateX(3px);
+  }
+  .reel .r-play{display:grid}
+  .reel .r-play>*{grid-area:1/1}
+  .reel .r-play:hover{background:rgba(15,39,36,.35)}
+  .reel.playing .r-play{display:none}
+
+  /* ---------- events ---------- */
+  .events .ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,88px);align-items:center}
+  .ev-list{margin-top:26px;border-top:2px solid var(--ink)}
+  .ev-item{
+    display:flex;align-items:baseline;gap:16px;padding:15px 2px;
+    border-bottom:1px solid rgba(30,50,48,.16);
+  }
+  .ev-item b{font-family:'Fraunces',serif;font-weight:500;color:var(--red);font-size:.95rem;min-width:2em}
+  .ev-item .en{font-weight:500;font-size:1.02rem}
+  .ev-item .dots{flex:1;border-bottom:1px dotted rgba(30,50,48,.4);transform:translateY(-4px)}
+  .ev-item .et{font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+  .ev-media{position:relative}
+  .ev-media .main{border:1px solid rgba(30,50,48,.25)}
+  .ev-media .main img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .ev-media .over{
+    position:absolute;right:-7%;bottom:-14%;width:52%;border:1px solid rgba(30,50,48,.25);
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.5);
+  }
+  .ev-media .over img{width:100%;aspect-ratio:3/4;object-fit:cover}
+  @media(max-width:700px){.ev-media .over{display:none}}
+  .ev-call{
+    margin-top:30px;padding:20px 24px;border:1px dashed var(--red);
+    display:flex;gap:20px;align-items:center;flex-wrap:wrap;justify-content:space-between;
+  }
+  .ev-call p{font-size:.9rem;color:var(--ink-soft)}
+  .ev-call a.big-tel{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--ink)}
+  .ev-call a.big-tel:hover{color:var(--red)}
 
   /* ---------- weddings ---------- */
+  .wed{background:var(--pine);color:var(--paper)}
+  .wed .label{color:var(--sun)}
+  .wed .label .no{color:var(--paper)}
   .wed .wed-grid{
     display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,88px);align-items:center;
   }
-  .wed .wimg{border:1px solid rgba(30,50,48,.25)}
+  .wed .wimg{border:1px solid rgba(246,241,229,.3)}
   .wed .wimg img{width:100%;aspect-ratio:4/3;object-fit:cover}
   .wed blockquote{
     font-family:'Fraunces',serif;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;
-    font-weight:340;max-width:22ch;
+    font-weight:340;max-width:22ch;color:var(--paper);
   }
-  .wed blockquote em{color:var(--red)}
-  .wed .wp{color:var(--ink-soft);margin-top:22px;max-width:46ch;font-size:1rem}
+  .wed blockquote em{color:var(--sun)}
+  .wed .wp{color:rgba(246,241,229,.78);margin-top:22px;max-width:46ch;font-size:1rem}
   .wed .wlist{margin:26px 0 34px;list-style:none}
   .wed .wlist li{
-    padding:10px 0;border-bottom:1px solid rgba(30,50,48,.16);
-    display:flex;gap:14px;align-items:baseline;font-size:.95rem;
+    padding:10px 0;border-bottom:1px solid rgba(246,241,229,.16);
+    display:flex;gap:14px;align-items:baseline;font-size:.95rem;color:rgba(246,241,229,.85);
   }
-  .wed .wlist li::before{content:'—';color:var(--red)}
+  .wed .wlist li::before{content:'—';color:var(--sun)}
 
   /* ---------- visit ---------- */
   .visit{background:var(--paper-2);border-top:var(--hair)}
@@ -382,6 +562,20 @@
   }
   .foot-bot .est{font-family:'Fraunces',serif;font-style:italic}
 
+  /* ---------- lightbox ---------- */
+  .lightbox{
+    position:fixed;inset:0;z-index:500;background:rgba(15,39,36,.9);
+    display:grid;place-items:center;padding:24px;
+    opacity:0;pointer-events:none;transition:opacity .3s;
+  }
+  .lightbox.show{opacity:1;pointer-events:auto}
+  .lightbox img{max-height:90vh;max-width:min(92vw,760px);border:1px solid rgba(246,241,229,.4);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+  .lightbox .lb-x{
+    position:absolute;top:18px;right:22px;background:none;border:none;color:var(--paper);
+    font-size:.8rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+    border-bottom:1px solid currentColor;padding-bottom:2px;
+  }
+
   /* ---------- reveal ---------- */
   .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.19,1,.22,1)}
   .rv.in{opacity:1;transform:none}
@@ -389,23 +583,36 @@
   @media (prefers-reduced-motion: reduce){.rv{opacity:1;transform:none;transition:none}}
 
   /* ---------- responsive ---------- */
+  @media(max-width:1080px){
+    .rate-grid{grid-template-columns:1fr;max-width:560px}
+    .rates-notes{grid-template-columns:1fr}
+  }
   @media(max-width:960px){
     .navlinks,.nav-est{display:none}
     .burger{display:block}
-    .grounds-head{grid-template-columns:1fr}
+    .grounds-head,.dine-head{grid-template-columns:1fr}
+    .clubs-grid{grid-template-columns:1fr}
     .prow,.prow.flip{grid-template-columns:1fr}
     .prow .pimg,.prow .ptxt,.prow.flip .pimg,.prow.flip .ptxt{grid-column:1/-1;order:0}
     .prow .ptxt{max-width:560px}
     .prog-grid{grid-template-columns:1fr}
-    .bianco-grid,.wed .wed-grid,.visit-grid{grid-template-columns:1fr}
+    .extras-grid{grid-template-columns:1fr}
+    .dcard.wide,.dcard.tall,.dcard.third{grid-column:1/-1}
+    .events .ev-grid,.wed .wed-grid,.visit-grid{grid-template-columns:1fr}
     .wed .wimg{order:-1}
     .foot-top{grid-template-columns:1fr 1fr}
     .prog-photos{grid-template-columns:1fr 1fr}
+    .map-card{position:static;max-width:none;margin-top:14px;box-shadow:none;
+      opacity:1;transform:none;pointer-events:auto;display:none}
+    .map-card.show{display:block}
+    .pin span{display:none}
   }
   @media(max-width:520px){
+    .pin b{width:22px;height:22px;font-size:.72rem}
     .vrow{grid-template-columns:1fr;gap:6px}
     .foot-top{grid-template-columns:1fr}
     .hero-frame{inset:10px}
+    .sched td.ct{font-size:.68rem}
   }
 </style>
 </head>
@@ -419,10 +626,12 @@
     </a>
     <div class="navlinks">
       <a class="nl" href="#grounds">The Grounds</a>
-      <a class="nl" href="#pools">Pools</a>
+      <a class="nl" href="#clubs">Two Clubs</a>
+      <a class="nl" href="#water">The Water</a>
       <a class="nl" href="#programme">Programme</a>
-      <a class="nl" href="#bianco">Bianco Bar</a>
-      <a class="nl" href="#weddings">Weddings</a>
+      <a class="nl" href="#rates">Rates</a>
+      <a class="nl" href="#dine">Eat &amp; Drink</a>
+      <a class="nl" href="#events">Events</a>
     </div>
     <div class="nav-right">
       <span class="nav-est">est. 1991</span>
@@ -432,16 +641,19 @@
       </button>
     </div>
   </nav>
+  <div id="progress"></div>
 </header>
 
 <!-- mobile menu -->
 <div class="mmenu" id="mmenu">
   <a class="big" href="#grounds">The Grounds <i>01</i></a>
-  <a class="big" href="#pools">The Pools <i>02</i></a>
-  <a class="big" href="#programme">Programme <i>03</i></a>
-  <a class="big" href="#bianco">Bianco Bar <i>04</i></a>
-  <a class="big" href="#weddings">Weddings <i>05</i></a>
-  <a class="big" href="#visit">Plan a Visit <i>06</i></a>
+  <a class="big" href="#clubs">Two Clubs <i>02</i></a>
+  <a class="big" href="#water">The Water <i>03</i></a>
+  <a class="big" href="#programme">Programme <i>04</i></a>
+  <a class="big" href="#rates">Rates <i>05</i></a>
+  <a class="big" href="#dine">Eat &amp; Drink <i>06</i></a>
+  <a class="big" href="#events">Events <i>07</i></a>
+  <a class="big" href="#visit">Plan a Visit <i>08</i></a>
   <div class="mfoot">
     <a class="tlink" href="tel:+9613340341">03 340 341</a>
     <a class="tlink" href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a>
@@ -463,9 +675,9 @@
       <span>Country Club &amp; Water Resort</span>
     </div>
     <h1>Where summer<br /><em>never grew up.</em></h1>
-    <p class="hero-sub">Pools, slides, pine shade and long lunches — the club Lebanese families have called their own since 1991.</p>
+    <p class="hero-sub">One club, two worlds — Leisure Island under the sun and the Indoor Club all year round. Pools, slides, pine shade and long lunches, the way Lebanese families have loved them since 1991.</p>
     <div class="hero-cta">
-      <a href="#visit" class="btn solid">Plan your visit</a>
+      <a href="#rates" class="btn solid">Become a member</a>
       <a href="#grounds" class="btn ghost-light">Tour the grounds</a>
     </div>
   </div>
@@ -478,8 +690,8 @@
 <!-- marquee -->
 <div class="marquee" aria-hidden="true">
   <div class="marq-track">
-    <span>Water Slides <b class="fl">❋</b> Olympic Lap Pool <b class="fl">❋</b> Heated Indoor Pool <b class="fl">❋</b> Learn to Swim <b class="fl">❋</b> Football Pitch <b class="fl">❋</b> Bianco Bar <b class="fl">❋</b> Summer Camps <b class="fl">❋</b> Weddings &amp; Events <b class="fl">❋</b></span>
-    <span>Water Slides <b class="fl">❋</b> Olympic Lap Pool <b class="fl">❋</b> Heated Indoor Pool <b class="fl">❋</b> Learn to Swim <b class="fl">❋</b> Football Pitch <b class="fl">❋</b> Bianco Bar <b class="fl">❋</b> Summer Camps <b class="fl">❋</b> Weddings &amp; Events <b class="fl">❋</b></span>
+    <span>Water Slides <b class="fl">❋</b> Olympic Lap Pool <b class="fl">❋</b> Heated Indoor Pool <b class="fl">❋</b> Free Classes for Members <b class="fl">❋</b> Grill House <b class="fl">❋</b> Pool Bar <b class="fl">❋</b> Basketball &amp; Football <b class="fl">❋</b> Weddings &amp; Events <b class="fl">❋</b></span>
+    <span>Water Slides <b class="fl">❋</b> Olympic Lap Pool <b class="fl">❋</b> Heated Indoor Pool <b class="fl">❋</b> Free Classes for Members <b class="fl">❋</b> Grill House <b class="fl">❋</b> Pool Bar <b class="fl">❋</b> Basketball &amp; Football <b class="fl">❋</b> Weddings &amp; Events <b class="fl">❋</b></span>
   </div>
 </div>
 <div class="scallop"></div>
@@ -492,170 +704,455 @@
         <div class="label"><span class="no">№ 01</span>The Grounds</div>
         <h2 class="sec-title">Ten green acres,<br /><em>seen from above.</em></h2>
       </div>
-      <p class="right rv d1">Terraced into the hills of Deir Tamish, minutes from Champville — every pool, pitch and terrace wrapped in pine forest and sea views.</p>
+      <p class="right rv d1">Terraced into the hills of Park Tamish, minutes from Champville — every pool, pitch, court and terrace wrapped in pine forest and sea views. Tap a number to explore.</p>
     </div>
 
-    <div class="aerial rv">
-      <img src="images/pool1.jpeg" alt="Aerial view of The Leisure Club — pools, water slides and football pitch among the pines" />
-      <div class="pin" style="left:24%;top:41%"  tabindex="0"><b>1</b><span>Olympic lap pool</span></div>
-      <div class="pin" style="left:41%;top:29%"  tabindex="0"><b>2</b><span>The water slides</span></div>
-      <div class="pin" style="left:53%;top:38%"  tabindex="0"><b>3</b><span>Leisure pool</span></div>
-      <div class="pin" style="left:77%;top:40%"  tabindex="0"><b>4</b><span>Kids’ pool</span></div>
-      <div class="pin" style="left:38%;top:73%"  tabindex="0"><b>5</b><span>Football pitch</span></div>
-      <div class="pin" style="left:16%;top:22%"  tabindex="0"><b>6</b><span>Bianco Bar &amp; terraces</span></div>
+    <div class="aerial rv" id="aerial">
+      <div class="aerial-stage" id="aerialStage">
+        <img src="images/pool1.jpeg" alt="Aerial view of The Leisure Club — pools, water slides, courts and football pitch among the pines" />
+        <!-- pins injected by JS -->
+      </div>
+      <div class="map-card" id="mapCard" role="dialog" aria-live="polite">
+        <button class="mc-x" id="mapCardClose" aria-label="Close">✕</button>
+        <div class="mc-no" id="mcNo"></div>
+        <h4 id="mcTitle"></h4>
+        <p id="mcText"></p>
+        <a id="mcLink" href="#">See more</a>
+      </div>
     </div>
-    <ul class="aerial-legend rv d1">
-      <li><b>1</b> Olympic lap pool</li>
-      <li><b>2</b> Water slides</li>
-      <li><b>3</b> Leisure pool</li>
-      <li><b>4</b> Kids’ pool</li>
-      <li><b>5</b> Football pitch</li>
-      <li><b>6</b> Bianco Bar &amp; terraces</li>
-    </ul>
+    <ul class="aerial-legend rv d1" id="legend"></ul>
     <p class="aerial-cap rv d2">— The club from the air, on a July afternoon.</p>
   </div>
 </section>
 
-<!-- ======= 02 · THE POOLS ======= -->
-<section class="pools pad" id="pools">
+<!-- ======= 02 · TWO CLUBS ======= -->
+<section class="clubs pad" id="clubs">
   <div class="wrap">
     <div class="rv">
-      <div class="label"><span class="no">№ 02</span>The Pools</div>
-      <h2 class="sec-title">Three ways into <em>the water.</em></h2>
+      <div class="label"><span class="no">№ 02</span>Two Clubs, One Membership</div>
+      <h2 class="sec-title">The Island in summer,<br /><em>the Club all year.</em></h2>
+    </div>
+    <div class="clubs-grid">
+      <article class="club-card rv">
+        <div class="cc-img">
+          <img src="images/island-sign.jpeg" alt="Leisure Island — splash pad and kids' pools under the pines" />
+          <span class="cc-tag">Outdoor · Summer</span>
+        </div>
+        <div class="cc-body">
+          <h3>Leisure <em>Island</em></h3>
+          <p class="cc-sub">The outdoor water resort — Olympic lap pool, twisting slides, kids' splash pad, sun terraces, and the Grill House a few steps from your lounger.</p>
+          <div class="cc-rows">
+            <div><span>Season</span><span>May 16 — September 20</span></div>
+            <div><span>Open</span><span>7 days a week, 10:00 — 20:00</span></div>
+            <div><span>The water</span><span>Olympic pool · leisure pool · kids' pools</span></div>
+            <div><span>On dry land</span><span>Football, basketball, playground</span></div>
+            <div><span>Eat &amp; drink</span><span>Grill House · Pool Bar · Leisure Treats</span></div>
+          </div>
+          <div class="cc-foot">
+            <a href="#water" class="btn ghost-light">Into the water</a>
+          </div>
+        </div>
+      </article>
+      <article class="club-card rv d1">
+        <div class="cc-img">
+          <img src="images/indoor-pool.jpg" alt="The heated indoor pool of the Indoor Club" />
+          <span class="cc-tag">Indoor · All Year</span>
+        </div>
+        <div class="cc-body">
+          <h3>The Indoor <em>Club</em></h3>
+          <p class="cc-sub">When the mountain air cools, the club moves inside — heated pool, gym, jacuzzi, steam and sauna, and a full week of free classes for members.</p>
+          <div class="cc-rows">
+            <div><span>Season</span><span>All year round</span></div>
+            <div><span>Open</span><span>6 days a week, 7:30 — 22:00 <br /><small style="font-family:'Archivo';font-style:normal;font-size:.72rem;color:rgba(246,241,229,.55)">Saturdays until 21:00</small></span></div>
+            <div><span>Free for members</span><span>Gym · ping pong · heated pool · jacuzzi</span></div>
+            <div><span>Steam</span><span>Tue, Thu &amp; Sat, 10:00 — 21:30</span></div>
+            <div><span>Sauna</span><span>Mon, Wed &amp; Fri, 10:00 — 21:30</span></div>
+          </div>
+          <div class="cc-foot">
+            <a href="#programme" class="btn ghost-light">See the classes</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 03 · THE WATER ======= -->
+<section class="pools pad" id="water">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label"><span class="no">№ 03</span>The Water</div>
+      <h2 class="sec-title">Four ways into <em>the blue.</em></h2>
     </div>
 
     <div class="prow rv">
       <div class="pimg"><img src="images/pool2.jpeg" alt="Olympic lap pool with the yellow water slides behind" /></div>
       <div class="ptxt">
-        <div class="pnum">i. Out in the sun</div>
-        <h3>The lap pool &amp; the slides</h3>
-        <p>Swim laps in the big pool, then race down the twisting yellow slides into the leisure pool below. Loungers and umbrellas hold the shore all day.</p>
+        <div class="pnum">i. The serious end</div>
+        <h3>The Olympic lap pool</h3>
+        <p>Fifty metres of proper swimming under the mountain sky — lap lanes by morning, families by noon, and lit a deep glowing blue after dark.</p>
         <div class="pmeta">
+          <div>Length<b>Olympic, 8 lanes</b></div>
           <div>Season<b>May — September</b></div>
-          <div>Slides<b>Three, twisting</b></div>
         </div>
       </div>
     </div>
 
     <div class="prow flip rv">
-      <div class="pimg"><img src="images/indoor-pool.jpg" alt="The heated indoor pool" /></div>
+      <div class="pimg"><img src="images/island-crowd.jpeg" alt="The twisting water slides landing in the leisure pool" /></div>
       <div class="ptxt">
-        <div class="pnum">ii. All year round</div>
+        <div class="pnum">ii. The fast way down</div>
+        <h3>The slides &amp; leisure pool</h3>
+        <p>Race down the twisting yellow and blue slides into the big free-form pool, then drift to the shallow end while the loungers hold the shore all day.</p>
+        <div class="pmeta">
+          <div>Slides<b>Three, twisting</b></div>
+          <div>Mood<b>Pure summer</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prow rv">
+      <div class="pimg"><img src="images/island-sunset.jpeg" alt="The kids' pools and splash pad at golden hour" /></div>
+      <div class="ptxt">
+        <div class="pnum">iii. The little island</div>
+        <h3>Kids' pools &amp; splash pad</h3>
+        <p>Mushroom fountains, rainbow arches and a shark that never bites — shallow, sunny and made for first swims and long happy afternoons.</p>
+        <div class="pmeta">
+          <div>Depth<b>Little-legs friendly</b></div>
+          <div>Under 2s<b>Enter free</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prow flip rv">
+      <div class="pimg"><img src="images/learn-to-swim.jpeg" alt="Learn to Swim — the heated indoor pool and swim school" /></div>
+      <div class="ptxt">
+        <div class="pnum">iv. All year round</div>
         <h3>The heated indoor pool</h3>
-        <p>When the mountain air cools, the fun moves indoors. Warm water, marble columns, and home to our learn-to-swim school — first floats to full laps.</p>
+        <p>Warm water and calm lanes — home to our Learn-to-Swim school, from first floats to full laps, plus aqua gym and winter training.</p>
         <div class="pmeta">
           <div>Season<b>All year</b></div>
           <div>Swim school<b>All ages &amp; levels</b></div>
         </div>
       </div>
     </div>
-
-    <div class="prow rv">
-      <div class="pimg"><img src="images/football.jpeg" alt="Kids playing football on the full-size pitch" /></div>
-      <div class="ptxt">
-        <div class="pnum">iii. Dry land</div>
-        <h3>Pitch, terraces &amp; camps</h3>
-        <p>A full-size football pitch for matches and summer camps, green terraces for the grandparents, and pine shade for everyone in between.</p>
-        <div class="pmeta">
-          <div>Pitch<b>Full-size turf</b></div>
-          <div>Camps<b>Every summer</b></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ======= 03 · PROGRAMME ======= -->
+<!-- ======= 04 · PROGRAMME ======= -->
 <section class="pad" id="programme">
   <div class="wrap">
     <div class="rv">
-      <div class="label"><span class="no">№ 03</span>The Programme</div>
-      <h2 class="sec-title">Classes, printed<br /><em>like it’s 1991.</em></h2>
-      <p class="sec-intro">Year-round coaching for every age — sign up at the front desk or call to reserve a place.</p>
+      <div class="label"><span class="no">№ 04</span>The Programme</div>
+      <h2 class="sec-title">Free classes,<br /><em>every single week.</em></h2>
+      <p class="sec-intro">Every class below is free with membership — a full week of coaching for every age, printed like it's 1991. Sign up at the front desk or call to reserve a place.</p>
     </div>
 
-    <div class="prog-grid">
-      <div class="prog-col rv">
-        <h3>Kids’ Programme <i>Ages 4+</i></h3>
-        <ul>
-          <li><span class="nm">Football</span><span class="dots"></span><span class="tag">Pitch</span></li>
-          <li><span class="nm">Gymnastics</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Taekwondo</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Zumba</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Learn to Swim</span><span class="dots"></span><span class="tag">Indoor pool</span></li>
-          <li><span class="nm">Summer Camp</span><span class="dots"></span><span class="tag">July — Aug</span></li>
-        </ul>
+    <div class="prog-tabs rv" role="tablist" aria-label="Class schedules">
+      <button class="ptab" role="tab" id="tabKids" aria-selected="true" aria-controls="schedKids">Kids' Classes <i>Under 16</i></button>
+      <button class="ptab" role="tab" id="tabAdults" aria-selected="false" aria-controls="schedAdults">Adults' Classes <i>All levels</i></button>
+    </div>
+
+    <div class="sched on rv" id="schedKids" role="tabpanel" aria-labelledby="tabKids">
+      <table>
+        <tr><td class="cn">Breakdance</td><td class="ct">Sat @ <b>9 am</b></td></tr>
+        <tr><td class="cn">Latino Dance</td><td class="ct">Sat @ <b>10 am</b></td></tr>
+        <tr><td class="cn">Fitness</td><td class="ct">Sat @ <b>11 am</b></td></tr>
+        <tr><td class="cn">Taekwondo</td><td class="ct">Ages 4–6 · Tue &amp; Fri @ <b>4:15 pm</b> &nbsp;·&nbsp; Ages 6–8 @ <b>5 pm</b> &nbsp;·&nbsp; Ages 8+ @ <b>6 pm</b></td></tr>
+        <tr><td class="cn">Hip Hop</td><td class="ct">Wed @ <b>5 pm</b></td></tr>
+        <tr><td class="cn">Gymnastics</td><td class="ct">Thu · under 8 @ <b>5 pm</b> · under 16 @ <b>6 pm</b></td></tr>
+        <tr><td class="cn">Kickboxing</td><td class="ct">Wed @ <b>6 pm</b></td></tr>
+        <tr><td class="cn">Basketball</td><td class="ct">Thu · ages 6–8 @ <b>5 pm</b> · ages 8+ @ <b>6 pm</b></td></tr>
+        <tr><td class="cn">Football</td><td class="ct">Fri · ages 6–8 @ <b>5 pm</b> · ages 8+ @ <b>6 pm</b></td></tr>
+        <tr><td class="cn">Run Club</td><td class="ct">Wed @ <b>6 pm</b> &nbsp;|&nbsp; Sat @ <b>8 am</b></td></tr>
+      </table>
+      <p class="sched-note">— Plus Learn to Swim in the indoor pool, and summer camp every July &amp; August.</p>
+    </div>
+
+    <div class="sched rv" id="schedAdults" role="tabpanel" aria-labelledby="tabAdults">
+      <table>
+        <tr><td class="cn">Aerobics</td><td class="ct">Mon &amp; Wed @ <b>9 am</b> &nbsp;|&nbsp; Fri @ <b>9 am + 7 pm</b></td></tr>
+        <tr><td class="cn">Oriental</td><td class="ct">Mon &amp; Wed @ <b>10 am</b> &nbsp;|&nbsp; Tue &amp; Thu @ <b>7 pm</b></td></tr>
+        <tr><td class="cn">Mat Pilates</td><td class="ct">Mon @ <b>6 pm</b></td></tr>
+        <tr><td class="cn">Hyrox</td><td class="ct">Tue &amp; Thu @ <b>8 am</b></td></tr>
+        <tr><td class="cn">Run Club</td><td class="ct">Wed &amp; Thu @ <b>7 pm</b> &nbsp;|&nbsp; Sat @ <b>7 am</b></td></tr>
+        <tr><td class="cn">Kickboxing</td><td class="ct">Wed @ <b>7 pm</b></td></tr>
+        <tr><td class="cn">Aqua Gym</td><td class="ct">Wed @ <b>7 pm</b> &nbsp;|&nbsp; Thu @ <b>10 am</b></td></tr>
+        <tr><td class="cn">Yoga</td><td class="ct">Mon &amp; Wed @ <b>8 pm</b></td></tr>
+        <tr><td class="cn">Boxing</td><td class="ct">Tue &amp; Thu @ <b>8 pm</b></td></tr>
+        <tr><td class="cn">Body Combat</td><td class="ct">Fri @ <b>8 pm</b></td></tr>
+        <tr><td class="cn">Grit</td><td class="ct">Mon @ <b>7 pm</b></td></tr>
+        <tr><td class="cn">Calisthenics</td><td class="ct">Fri @ <b>7 pm</b></td></tr>
+      </table>
+      <p class="sched-note">— All indoor classes are free for members. New schedule from October 1st.</p>
+    </div>
+
+    <div class="hyrox rv">
+      <div>
+        <h3>Stay tuned — <em>train for Hyrox.</em></h3>
+        <p>The club is building a Hyrox programme: functional racing, real coaching, Tuesday and Thursday mornings. Ask at the desk to join the first wave.</p>
       </div>
-      <div class="prog-col rv d1">
-        <h3>Adults’ Programme <i>All levels</i></h3>
-        <ul>
-          <li><span class="nm">Mixed Aerobics</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Abs &amp; Butts</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Body Shape</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Classic Oriental</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Fat Burn</span><span class="dots"></span><span class="tag">Studio</span></li>
-          <li><span class="nm">Boxing</span><span class="dots"></span><span class="tag">Studio</span></li>
-        </ul>
-        <p class="prog-note">— Personal training &amp; memberships available on request.</p>
+      <a href="#visit" class="btn ghost-light">Reserve a spot</a>
+    </div>
+
+    <div class="extras rv">
+      <div class="extras-grid">
+        <div>
+          <h4>Personal Sessions</h4>
+          <div class="xrow"><span>Fitness training</span><i>$25 / session</i></div>
+          <div class="xrow"><span>Physiotherapy</span><i>$30 / session</i></div>
+          <div class="xrow"><span>Pilates reformer</span><i>$15 / person</i></div>
+          <div class="xrow"><span>Solarium</span><i>$1 / minute</i></div>
+        </div>
+        <div>
+          <h4>Learn to Swim</h4>
+          <div class="xrow"><span>Private, one swimmer</span><i>$30 / session</i></div>
+          <div class="xrow"><span>Two swimmers</span><i>$40 / session</i></div>
+          <div class="xrow"><span>Three swimmers</span><i>$50 / session</i></div>
+          <div class="xrow"><span>Taekwondo school entry</span><i>$20 members · $50 guests</i></div>
+        </div>
+        <div>
+          <h4>Court Hire</h4>
+          <div class="xrow"><span>Football or basketball, 90 min</span><i>$50</i></div>
+          <div class="xrow"><span>120 minutes</span><i>$60</i></div>
+          <div class="xrow" style="border-bottom:none"><span style="color:var(--ink-soft);font-size:.84rem">Free for members during summer season, unless reserved.</span></div>
+        </div>
       </div>
     </div>
 
     <div class="prog-photos rv">
-      <figure><img src="images/football.jpeg" alt="Football training" /><figcaption>Football</figcaption></figure>
-      <figure><img src="images/gymnastics.jpeg" alt="Gymnastics class" /><figcaption>Gymnastics</figcaption></figure>
+      <figure><img src="images/football.jpeg" alt="Football training on the full-size pitch" /><figcaption>Football</figcaption></figure>
+      <figure><img src="images/basketball.jpeg" alt="The covered multi-sport basketball court" /><figcaption>Basketball</figcaption></figure>
       <figure><img src="images/taekwondo.jpeg" alt="Taekwondo class" /><figcaption>Taekwondo</figcaption></figure>
-      <figure><img src="images/zumba.jpeg" alt="Zumba class" /><figcaption>Zumba</figcaption></figure>
+      <figure><img src="images/gymnastics.jpeg" alt="Gymnastics class" /><figcaption>Gymnastics</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ======= 04 · BIANCO BAR ======= -->
-<section class="bianco pad" id="bianco">
+<!-- ======= 05 · RATES ======= -->
+<section class="rates pad" id="rates">
   <div class="wrap">
-    <div class="bianco-grid">
+    <div class="rv">
+      <div class="label"><span class="no">№ 05</span>Membership · 2027 Season</div>
+      <h2 class="sec-title">Pick your side<br />of the <em>mountain.</em></h2>
+      <p class="sec-intro">Three ways to belong — the Indoor Club all year, Leisure Island all summer, or the run of the whole place. Rates are per single, couple or family.</p>
+    </div>
+
+    <div class="rate-grid">
+      <article class="rate-card rv">
+        <h3>Indoor Club</h3>
+        <p class="rc-sub">Gym, heated pool, jacuzzi, steam, sauna &amp; all free classes — all year.</p>
+        <div class="rc-rows">
+          <div class="rc-row"><span class="k">1 month</span><span class="v"><b>$120</b> / $200 / $240</span></div>
+          <div class="rc-row"><span class="k">1 year</span><span class="v"><b>$700</b> / $1200 / $1400</span></div>
+          <div class="rc-row"><span class="k">Accompanied guest</span><span class="v">$25 <small>any age</small></span></div>
+        </div>
+      </article>
+
+      <article class="rate-card rv d1">
+        <h3>Leisure Island</h3>
+        <p class="rc-sub">The outdoor water resort — pools, slides, courts &amp; terraces, May 16 to Sept 20.</p>
+        <div class="rc-rows">
+          <div class="rc-row"><span class="k">1 month</span><span class="v"><b>$200</b> / $300 / $400</span></div>
+          <div class="rc-row"><span class="k">Summer season</span><span class="v"><b>$400</b> / $600 / $800</span></div>
+          <div class="rc-row"><span class="k">Day visitors</span><span class="v">under 2 free · under 10 $20 · 10+ $25</span></div>
+          <div class="rc-row"><span class="k">Private locker</span><span class="v">$5 <small>/day</small> · $100 <small>/season</small></span></div>
+        </div>
+      </article>
+
+      <article class="rate-card star rv d2">
+        <span class="rc-stamp">Best value</span>
+        <h3>Full <em>Access</em></h3>
+        <p class="rc-sub">Everything, everywhere — the Island all summer and the Indoor Club all year.</p>
+        <div class="rc-rows">
+          <div class="rc-row"><span class="k">1 month</span><span class="v"><b>$250</b> / $400 / $500</span></div>
+          <div class="rc-row"><span class="k">Summer season</span><span class="v"><b>$700</b> / $1200 / $1400</span></div>
+          <div class="rc-row"><span class="k">1 year</span><span class="v"><b>$1000</b> / $1500 / $2000</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="rates-notes">
+      <div class="free-list rv">
+        <h4>Free with your membership</h4>
+        <div class="xrow"><span>Gym &amp; ping pong</span><i>7:30 — 22:00</i></div>
+        <div class="xrow"><span>Jacuzzi, indoor pool &amp; showers</span><i>8:30 — 21:30</i></div>
+        <div class="xrow"><span>Steam — Tue, Thu, Sat</span><i>10:00 — 21:30</i></div>
+        <div class="xrow"><span>Sauna — Mon, Wed, Fri</span><i>10:00 — 21:30</i></div>
+        <div class="xrow"><span>All weekly classes, kids &amp; adults</span><i>See programme</i></div>
+        <div class="xrow"><span>Wifi &amp; parking</span><i>Always</i></div>
+      </div>
+      <div class="fine rv d1" style="align-self:end">
+        <p><b>The small print, kept small.</b> Rates shown per single / couple / family. Obligatory insurance $20 per person. Under-2s always enter free.</p>
+        <p style="margin-top:16px"><a href="tel:+9613340341" class="btn solid">Call to join — 03 340 341</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 06 · EAT & DRINK ======= -->
+<section class="pad" id="dine">
+  <div class="wrap">
+    <div class="dine-head">
       <div class="rv">
-        <div class="label"><span class="no">№ 04</span>Eat &amp; Drink</div>
-        <h2>Nights at the<br /><em>Bianco Bar.</em></h2>
-        <p class="bp">Fresh juices and light bites between swims. Then, as the pines go dark, the lights come on, the music starts, and dinner turns into dancing.</p>
-        <div class="bianco-hours">
-          <div><span>Poolside</span><span>Juices, snacks &amp; lunch, all day</span></div>
-          <div><span>Evenings</span><span>Dinner, music &amp; dancing</span></div>
-          <div><span>Private</span><span>Bookable for your own occasion</span></div>
+        <div class="label"><span class="no">№ 06</span>Eat &amp; Drink</div>
+        <h2 class="sec-title">From live BBQ to<br /><em>frozen margaritas.</em></h2>
+      </div>
+      <p class="right rv d1">Move, eat, relax, repeat. Three kitchens and bars keep the whole club fed — from shawarma off the spit to crepes by the kids' pool, without ever leaving your lounger.</p>
+    </div>
+
+    <div class="dine-grid">
+      <article class="dcard wide rv">
+        <div class="di"><img src="images/burger.jpeg" alt="Gourmet Angus burger and fries at the Grill House" /></div>
+        <div class="db">
+          <span class="ds">Poolside restaurant</span>
+          <h3>The Grill House</h3>
+          <p>Live BBQ off the coals — shawarma, taouk, kabab and lamb chops — alongside Angus burgers, wraps, pizzas and a proper kids' menu. Breakfast tray for two until noon, $25.</p>
+          <button class="menu-btn" data-menu="menus/grill-house-menu.jpeg">View the menu</button>
+        </div>
+      </article>
+
+      <article class="dcard tall rv d1">
+        <div class="di"><img src="images/facility1.jpeg" alt="Evenings at the club — lights on, music up" /></div>
+        <div class="db">
+          <span class="ds">Sip &amp; swim</span>
+          <h3>The Pool Bar</h3>
+          <p>Frozen margaritas, pina coladas and passion-fruit mojitos, wine from Ksara and Carel, any shot $5 — as the pines go dark the music comes up.</p>
+          <button class="menu-btn" data-menu="menus/pool-bar-menu.jpeg">View the menu</button>
+        </div>
+      </article>
+
+      <article class="dcard third rv">
+        <div class="di"><img src="images/boat-kids.jpeg" alt="Kids paddling a boat across the pool" /></div>
+        <div class="db">
+          <span class="ds">Sweet moments</span>
+          <h3>Leisure Treats</h3>
+          <p>Crepes, fresh juices, cotton candy and the $5 Island Crepe — a sweet break for the whole family.</p>
+          <button class="menu-btn" data-menu="menus/leisure-treats-menu.jpeg">View the menu</button>
+        </div>
+      </article>
+
+      <article class="dcard third rv d1">
+        <div class="di"><img src="images/facility2.jpeg" alt="Inside the Bianco Bar, white timber and full tables" /></div>
+        <div class="db">
+          <span class="ds">After dark</span>
+          <h3>Bianco Bar</h3>
+          <p>Dinner turns into dancing under the garden lights — and the whole bar is bookable for your own occasion.</p>
+          <a class="menu-btn" href="#events">Book an evening</a>
+        </div>
+      </article>
+
+      <article class="dcard third rv d2">
+        <div class="di"><img src="images/foam-party.jpeg" alt="Foam party at the club" /></div>
+        <div class="db">
+          <span class="ds">Feed a crowd</span>
+          <h3>Catering</h3>
+          <p>Canapés, charcuterie, quiches and full mains — the Grill House caters your event, on the grounds or off. Pre-order a must.</p>
+          <button class="menu-btn" data-menu="menus/catering-menu.jpeg">View the menu</button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 07 · CLUB LIFE (REELS) ======= -->
+<section class="reels pad" id="life">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label"><span class="no">№ 07</span>Club Life</div>
+      <h2 class="sec-title">Sound on,<br /><em>sunscreen on.</em></h2>
+      <p class="sec-intro" style="color:rgba(246,241,229,.7)">Straight from the club's phone to yours — tap any reel to press play.</p>
+    </div>
+
+    <div class="reel-strip rv">
+      <div class="reel">
+        <video src="video/reel-slides.mp4" poster="video/reel-slides.jpg" preload="none" playsinline loop></video>
+        <button class="r-play" aria-label="Play video — summer at the leisure pool"></button>
+        <span class="r-tag">Summer vibes</span>
+      </div>
+      <div class="reel">
+        <video src="video/reel-games.mp4" poster="video/reel-games.jpg" preload="none" playsinline loop></video>
+        <button class="r-play" aria-label="Play video — pool games on Leisure Island"></button>
+        <span class="r-tag">Island games</span>
+      </div>
+      <div class="reel">
+        <video src="video/reel-splash.mp4" poster="video/reel-splash.jpg" preload="none" playsinline loop></video>
+        <button class="r-play" aria-label="Play video — kids' pool fun"></button>
+        <span class="r-tag">Little swimmers</span>
+      </div>
+      <div class="reel">
+        <video src="video/reel-shawarma.mp4" poster="video/reel-shawarma.jpg" preload="none" playsinline loop></video>
+        <button class="r-play" aria-label="Play video — shawarma at the Grill House"></button>
+        <span class="r-tag">Off the spit</span>
+      </div>
+      <div class="reel">
+        <video src="video/reel-grill.mp4" poster="video/reel-grill.jpg" preload="none" playsinline loop></video>
+        <button class="r-play" aria-label="Play video — lunch at the Grill House terrace"></button>
+        <span class="r-tag">Long lunches</span>
+      </div>
+      <div class="reel">
+        <video src="video/reel-birthday.mp4" poster="video/reel-birthday.jpg" preload="none" playsinline loop></video>
+        <button class="r-play" aria-label="Play video — a birthday setup in the gardens"></button>
+        <span class="r-tag">Party season</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 08 · EVENTS ======= -->
+<section class="events pad" id="events">
+  <div class="wrap">
+    <div class="ev-grid">
+      <div class="rv">
+        <div class="label"><span class="no">№ 08</span>Beyond Membership</div>
+        <h2 class="sec-title">Your day,<br /><em>our grounds.</em></h2>
+        <p class="sec-intro">Terraces, gardens, pools and a team that has seen a thousand toasts — the club hosts every occasion worth celebrating.</p>
+        <div class="ev-list">
+          <div class="ev-item"><b>a.</b><span class="en">Weddings</span><span class="dots"></span><span class="et">Gardens &amp; terraces</span></div>
+          <div class="ev-item"><b>b.</b><span class="en">Birthdays</span><span class="dots"></span><span class="et">All ages</span></div>
+          <div class="ev-item"><b>c.</b><span class="en">Teenage pool parties</span><span class="dots"></span><span class="et">Leisure Island</span></div>
+          <div class="ev-item"><b>d.</b><span class="en">Baptisms</span><span class="dots"></span><span class="et">By the pines</span></div>
+          <div class="ev-item"><b>e.</b><span class="en">First communions</span><span class="dots"></span><span class="et">Lunch &amp; gardens</span></div>
+          <div class="ev-item"><b>f.</b><span class="en">Bachelor parties</span><span class="dots"></span><span class="et">Pool &amp; bar</span></div>
+        </div>
+        <div class="ev-call">
+          <p>For any event,<br />coordinate with <b>Nancy</b></p>
+          <a class="big-tel" href="tel:+9613478200">03 478 200</a>
         </div>
       </div>
-      <div class="bianco-media rv d1">
-        <div class="main"><img src="images/facility2.jpeg" alt="Inside the Bianco Bar, white timber and full tables" /></div>
-        <div class="over"><img src="images/facility1.jpeg" alt="Dancing at night under the Bianco Bar sign" /></div>
+      <div class="ev-media rv d1">
+        <div class="main"><img src="images/night-pool.jpeg" alt="The Olympic pool glowing blue at night" /></div>
+        <div class="over"><img src="video/reel-birthday.jpg" alt="A birthday setup in the club gardens" /></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= 05 · WEDDINGS ======= -->
+<!-- ======= 09 · WEDDINGS ======= -->
 <section class="wed pad" id="weddings">
   <div class="wrap">
     <div class="wed-grid">
       <div class="rv">
-        <div class="label"><span class="no">№ 05</span>Weddings &amp; Events</div>
+        <div class="label"><span class="no">№ 09</span>Weddings</div>
         <blockquote style="margin-top:18px">Say yes among the pines, <em>celebrate by the water.</em></blockquote>
-        <p class="wp">For three decades the club has hosted weddings, baptisms and birthdays on its terraces — mountain air, garden lights, and a team that has seen a thousand toasts.</p>
+        <p class="wp">For three decades the club has hosted weddings on its terraces — mountain air, garden lights, sea views, and dinner that turns into dancing.</p>
         <ul class="wlist">
-          <li>Open-air terraces with mountain views</li>
+          <li>Open-air terraces with mountain &amp; sea views</li>
           <li>The Bianco Bar for receptions &amp; after-parties</li>
           <li>Catering, music &amp; planning handled in-house</li>
         </ul>
-        <a href="#visit" class="btn">Enquire about a date</a>
+        <a href="#visit" class="btn ghost-light">Enquire about a date</a>
       </div>
       <div class="wimg rv d1"><img src="images/facility1.jpeg" alt="An evening celebration at the club" /></div>
     </div>
   </div>
 </section>
 
-<!-- ======= 06 · VISIT ======= -->
+<!-- ======= 10 · VISIT ======= -->
 <section class="visit pad" id="visit">
   <div class="wrap">
     <div class="rv">
-      <div class="label"><span class="no">№ 06</span>Plan a Visit</div>
+      <div class="label"><span class="no">№ 10</span>Plan a Visit</div>
       <h2 class="sec-title">Come up the <em>mountain.</em></h2>
     </div>
     <div class="visit-grid">
@@ -666,7 +1163,7 @@
             <p>
               <a class="big-tel" href="tel:+9613340341">03 340 341</a><br />
               <a class="big-tel" href="tel:+9614920921">04 920 921</a>
-              <span class="sub">Bookings, memberships &amp; event enquiries</span>
+              <span class="sub">Bookings &amp; memberships · events: Nancy, 03 478 200</span>
             </p>
           </div>
           <div class="vrow">
@@ -675,13 +1172,13 @@
           </div>
           <div class="vrow">
             <h4>Find us</h4>
-            <p>Deir Tamish — Deek El Mehdi<br />Champville, North Metn, Lebanon
-              <span class="sub">Street 2, Building 49 · 20 minutes from Beirut</span></p>
+            <p>Deek El Mehdi — Champville Area<br />Park Tamish, North Metn, Lebanon
+              <span class="sub">20 minutes from Beirut · free parking</span></p>
           </div>
           <div class="vrow">
-            <h4>Season</h4>
-            <p>Outdoor pools &amp; slides — summer<br />Indoor pool &amp; classes — all year
-              <span class="sub">Call ahead for today’s hours</span></p>
+            <h4>Hours</h4>
+            <p>Leisure Island — 7/7, 10:00 – 20:00, May 16 to Sept 20<br />Indoor Club — 6/7, 7:30 – 22:00
+              <span class="sub">Saturdays until 21:00 · call ahead for today's hours</span></p>
           </div>
         </div>
         <div class="vcta">
@@ -709,39 +1206,53 @@
       <div>
         <h5>The Club</h5>
         <a class="fl" href="#grounds">The Grounds</a>
-        <a class="fl" href="#pools">The Pools</a>
+        <a class="fl" href="#clubs">Two Clubs</a>
         <a class="fl" href="#programme">Programme</a>
-        <a class="fl" href="#bianco">Bianco Bar</a>
-        <a class="fl" href="#weddings">Weddings &amp; Events</a>
+        <a class="fl" href="#rates">Membership</a>
+        <a class="fl" href="#dine">Eat &amp; Drink</a>
+        <a class="fl" href="#events">Events &amp; Weddings</a>
       </div>
       <div>
         <h5>Contact</h5>
         <a class="fl" href="tel:+9613340341">03 340 341</a>
         <a class="fl" href="tel:+9614920921">04 920 921</a>
+        <a class="fl" href="tel:+9613478200">Events — 03 478 200</a>
         <a class="fl" href="mailto:info@theleisureclub-lb.com">Email the club</a>
         <a class="fl" href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a>
         <a class="fl" href="https://www.facebook.com/theleisureclublb/" target="_blank" rel="noopener">Facebook</a>
+        <a class="fl" href="https://www.tiktok.com/@theleisureclublb" target="_blank" rel="noopener">TikTok</a>
       </div>
       <div>
         <h5>Address</h5>
-        <span class="fa">Deir Tamish — Deek El Mehdi</span>
-        <span class="fa">Champville, North Metn</span>
+        <span class="fa">Deek El Mehdi — Champville Area</span>
+        <span class="fa">Park Tamish, North Metn</span>
         <span class="fa">Lebanon</span>
       </div>
     </div>
     <div class="foot-bot">
-      <span>© <span id="yr"></span> The Leisure Club. All rights reserved.</span>
+      <span>© <span id="yr"></span> The Leisure Club S.A.L. All rights reserved.</span>
       <span class="est">est. 1991 — still in the family</span>
     </div>
   </div>
 </footer>
 
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="lb-x" id="lbClose">Close ✕</button>
+  <img id="lbImg" src="" alt="Menu" />
+</div>
+
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // header hairline on scroll
+  // header hairline + progress
   const header = document.getElementById('header');
-  addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 24), {passive:true});
+  const progress = document.getElementById('progress');
+  addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', scrollY > 24);
+    const h = document.documentElement;
+    progress.style.width = (scrollY / (h.scrollHeight - h.clientHeight) * 100) + '%';
+  }, {passive:true});
 
   // mobile menu
   const burger = document.getElementById('burger'), mmenu = document.getElementById('mmenu');
@@ -757,7 +1268,106 @@
   };
   document.querySelectorAll('.mmenu a, header a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // reveals
+  /* ============ INTERACTIVE GROUNDS MAP ============
+     Edit pin positions here — x/y are % across the aerial photo. */
+  const PINS = [
+    {x:23,  y:44, name:'Olympic lap pool',        note:'Fifty metres, eight lanes — laps at sunrise, glowing blue at night.', link:'#water'},
+    {x:40,  y:26, name:'The water slides',        note:'Three twisting slides landing in the leisure pool below.', link:'#water'},
+    {x:52,  y:38, name:'Leisure pool',            note:'The big free-form pool at the heart of the Island.', link:'#water'},
+    {x:80,  y:40, name:'Kids’ pools & splash pad', note:'Mushroom fountains, rainbow arches and shallow water for little legs.', link:'#water'},
+    {x:70,  y:47, name:'Baby pool',               note:'Extra shallow and extra calm — under-2s swim free.', link:'#water'},
+    {x:38,  y:73, name:'Football pitch',          note:'Full-size turf for matches, training and summer camps.', link:'#programme'},
+    {x:21,  y:17, name:'Multisport court',        note:'Covered basketball and games court under the solar canopy.', link:'#programme'},
+    {x:31,  y:32, name:'Sun terraces',            note:'Hundreds of loungers and umbrellas holding the shore all day.', link:'#water'},
+    {x:60,  y:27, name:'Pool Bar & Treats',       note:'Frozen cocktails, juices and crepes a few steps from the water.', link:'#dine'},
+    {x:66,  y:15, name:'Events terrace',          note:'The white pavilion — weddings, birthdays and long toasts.', link:'#events'},
+    {x:18,  y:59, name:'Indoor Club',             note:'Gym, heated pool, jacuzzi, steam and sauna — open all year.', link:'#clubs'},
+  ];
+  const aerial = document.getElementById('aerial');
+  const stage = document.getElementById('aerialStage');
+  const legend = document.getElementById('legend');
+  const mapCard = document.getElementById('mapCard');
+  const mcNo = document.getElementById('mcNo'), mcTitle = document.getElementById('mcTitle'),
+        mcText = document.getElementById('mcText'), mcLink = document.getElementById('mcLink');
+  let activePin = -1;
+
+  PINS.forEach((p, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'pin';
+    btn.style.left = p.x + '%';
+    btn.style.top  = p.y + '%';
+    btn.setAttribute('aria-label', p.name);
+    btn.innerHTML = `<b>${i+1}</b><span>${p.name}</span>`;
+    btn.addEventListener('click', e => { e.stopPropagation(); setActive(i === activePin ? -1 : i); });
+    stage.appendChild(btn);
+
+    const li = document.createElement('li');
+    li.innerHTML = `<b>${i+1}</b> ${p.name}`;
+    li.addEventListener('mouseenter', () => hover(i, true));
+    li.addEventListener('mouseleave', () => hover(i, false));
+    li.addEventListener('click', () => setActive(i === activePin ? -1 : i));
+    legend.appendChild(li);
+  });
+  const pinEls = aerial.querySelectorAll('.pin');
+  const legEls = legend.querySelectorAll('li');
+
+  function hover(i, on){ pinEls[i].classList.toggle('on', on || i === activePin); }
+  function setActive(i){
+    activePin = i;
+    pinEls.forEach((el, j) => el.classList.toggle('on', j === i));
+    legEls.forEach((el, j) => el.classList.toggle('on', j === i));
+    if (i < 0){ mapCard.classList.remove('show'); return; }
+    const p = PINS[i];
+    mcNo.textContent = 'No. ' + (i+1);
+    mcTitle.textContent = p.name;
+    mcText.textContent = p.note;
+    mcLink.href = p.link;
+    mapCard.classList.add('show');
+  }
+  document.getElementById('mapCardClose').addEventListener('click', e => { e.stopPropagation(); setActive(-1); });
+  document.addEventListener('click', e => {
+    if (activePin >= 0 && !aerial.contains(e.target) && !legend.contains(e.target)) setActive(-1);
+  });
+
+  /* ============ PROGRAMME TABS ============ */
+  const tabs = [document.getElementById('tabKids'), document.getElementById('tabAdults')];
+  const panels = [document.getElementById('schedKids'), document.getElementById('schedAdults')];
+  tabs.forEach((t, i) => t.addEventListener('click', () => {
+    tabs.forEach((x, j) => x.setAttribute('aria-selected', i === j));
+    panels.forEach((p, j) => p.classList.toggle('on', i === j));
+  }));
+
+  /* ============ MENU LIGHTBOX ============ */
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lbImg');
+  document.querySelectorAll('[data-menu]').forEach(b => b.addEventListener('click', () => {
+    lbImg.src = b.dataset.menu;
+    lb.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }));
+  const closeLb = () => { lb.classList.remove('show'); document.body.style.overflow = ''; };
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape'){ closeLb(); setActive(-1); } });
+
+  /* ============ REELS ============ */
+  const reels = document.querySelectorAll('.reel');
+  reels.forEach(r => {
+    const v = r.querySelector('video'), play = r.querySelector('.r-play');
+    play.addEventListener('click', () => {
+      reels.forEach(o => { if (o !== r){ o.classList.remove('playing'); o.querySelector('video').pause(); } });
+      r.classList.add('playing');
+      v.muted = false;
+      v.play().catch(()=>{});
+    });
+    v.addEventListener('click', () => { v.pause(); r.classList.remove('playing'); });
+  });
+  // pause reels scrolled out of view
+  const reelIO = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting){ e.target.classList.remove('playing'); e.target.querySelector('video').pause(); }
+  }), {threshold:.2});
+  reels.forEach(r => reelIO.observe(r));
+
+  /* ============ REVEALS ============ */
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   }), {threshold:.12});
