@@ -26,7 +26,7 @@
       var d = document.documentElement, q = new URLSearchParams(location.search), s = {};
       try { s = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
       var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-      d.dataset.theme = q.get("theme") || s.theme || "paper";
+      d.dataset.theme = "paper"; // the brief's colour table (§04)
       d.dataset.hero = q.get("hero") || s.hero || "bleed";
       var m = q.get("motion") || s.motion;
       if (m) d.setAttribute("data-motion-chosen", "");

@@ -1,8 +1,6 @@
 /* ==========================================================================
    The Leisure Club — design system
-   Two creative directions share one structure:
-     [data-theme="paper"]    Direction A · Quiet Heritage (brief palette, default)
-     [data-theme="graphite"] Direction B · Graphite (Equinox-inspired dark grey)
+   Palette: the brief's colour table (§04), chosen by the client over the dark-grey option.
    Motion levels: [data-motion="still" | "quiet" | "expressive"]
    Hero layout:   [data-hero="bleed" | "framed"]
    All layout uses logical properties so Arabic (RTL) mirrors cleanly.
@@ -32,28 +30,6 @@
   color-scheme: light;
 }
 
-[data-theme="graphite"] {
-  --bg: #111111;
-  --surface: #1B1B1B;
-  --card: #202020;
-  --ink: #F2F1EE;
-  --muted: #8E8E8E;
-  --muted-ink: #A3A3A0;
-  --line: rgba(242, 241, 238, .12);
-  --line-strong: rgba(242, 241, 238, .3);
-  --red: #E62028;
-  --red-text: #FF4A50;
-  --contrast-bg: #E8E6E1;   /* in the dark direction, contrast sections invert to stone */
-  --contrast-surface: #DEDBD5;
-  --contrast-ink: #111111;
-  --contrast-muted: #5E5D59;
-  --contrast-line: rgba(17, 17, 17, .16);
-  --ph: #1F1F1F;
-  --ph-ink: #9A9A97;
-  --ph-stroke: rgba(242, 241, 238, .09);
-  --logo-filter: none;
-  color-scheme: dark;
-}
 
 /* Leisure Island — "fun, bright" sub-identity (owner's note). Flat colour, no gradients. */
 :root {
@@ -200,7 +176,6 @@ html[dir="rtl"] .link-arrow:hover::after { transform: translateX(-3px); }
   content: ""; position: absolute; inset: 0; z-index: -1;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0L100 100M100 0L0 100' stroke='%23000' stroke-opacity='.07' stroke-width='.25' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
-[data-theme="graphite"] .ph::before { filter: invert(1); }
 .ph__tag {
   position: absolute; inset-block-start: .75rem; inset-inline-start: .75rem;
   display: inline-flex; align-items: center; gap: .45rem;
@@ -339,7 +314,6 @@ html[data-hero="framed"][data-theme="paper"] .site-header.on-hero:not(.is-scroll
    ========================================================================== */
 .section { padding-block: var(--section); position: relative; }
 .section--surface { background: var(--surface); --ph: #DCD9D2; }
-[data-theme="graphite"] .section--surface { --ph: #262626; }
 .section--contrast {
   background: var(--contrast-bg); color: var(--contrast-ink);
   --ink: var(--contrast-ink); --muted-ink: var(--contrast-muted); --line: var(--contrast-line);
@@ -1041,7 +1015,6 @@ html[lang="ar"] .day h3 { letter-spacing: 0; }
 
 /* map embed */
 .map-embed { width: 100%; aspect-ratio: 16 / 10; border: 0; border-radius: var(--radius); background: var(--surface); filter: grayscale(.35); }
-[data-theme="graphite"] .map-embed { filter: grayscale(1) invert(.92) contrast(.9); }
 
 /* generic two-column list */
 .list-cols { display: grid; gap: 0 3rem; }

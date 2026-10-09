@@ -26,7 +26,7 @@
       var d = document.documentElement, q = new URLSearchParams(location.search), s = {};
       try { s = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
       var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-      d.dataset.theme = q.get("theme") || s.theme || "paper";
+      d.dataset.theme = "paper"; // the brief's colour table (§04)
       d.dataset.hero = q.get("hero") || s.hero || "bleed";
       var m = q.get("motion") || s.motion;
       if (m) d.setAttribute("data-motion-chosen", "");
@@ -296,14 +296,7 @@
   <div class="review" data-review lang="en" dir="ltr">
     <div class="review__panel" id="review-panel" hidden>
       <h2>Design options</h2>
-      <p>Step 1 prototype — switch directions live. Your choice is remembered, and the link below shares it.</p>
-      <fieldset>
-        <legend>Creative direction</legend>
-        <div class="seg">
-          <label><input type="radio" name="theme" value="paper" /><span>A · Quiet Heritage</span></label>
-          <label><input type="radio" name="theme" value="graphite" /><span>B · Graphite</span></label>
-        </div>
-      </fieldset>
+      <p>Prototype — try the motion and hero options live. Colours are the brief's table (§04).</p>
       <fieldset>
         <legend>Motion</legend>
         <div class="seg">

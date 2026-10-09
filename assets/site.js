@@ -198,7 +198,6 @@
         if (input) input.checked = true;
       });
       hint.textContent = hints[doc.dataset.motion] + (reduceMQ.matches ? " (Your device asks for reduced motion.)" : "");
-      document.querySelector('meta[name="theme-color"]').setAttribute("content", doc.dataset.theme === "graphite" ? "#111111" : "#F6F5F2");
     }
     rToggle.addEventListener("click", function () {
       var open = panel.hidden;
@@ -216,7 +215,6 @@
     review.querySelector("[data-copy-link]").addEventListener("click", function (e) {
       var u = new URL(location.href);
       u.hash = "";
-      u.searchParams.set("theme", doc.dataset.theme);
       u.searchParams.set("motion", doc.dataset.motion);
       u.searchParams.set("hero", doc.dataset.hero);
       if (window.TLC_i18n && window.TLC_i18n.current !== "en") u.searchParams.set("lang", window.TLC_i18n.current);
