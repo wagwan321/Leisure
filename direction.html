@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="paper" data-motion="quiet" data-motion-chosen>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Creative Direction — The Leisure Club</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Step 1 of the website: creative direction, two mood boards, motion options, sitemap and shot list." />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <style>
+    body { background: var(--bg); }
+    .doc-head { padding-block: clamp(2rem, 1rem + 3vw, 3.5rem) clamp(3rem, 2rem + 4vw, 6rem); border-bottom: 1px solid var(--line); }
+    .doc-head__bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-block-end: clamp(3rem, 2rem + 5vw, 7rem); font-size: var(--t-sm); }
+    .doc-head__bar img { height: 52px; width: auto; }
+    .doc-head h1 { max-width: 16ch; margin-block: 1.25rem 1.5rem; }
+    .doc-meta { display: flex; flex-wrap: wrap; gap: .5rem 2rem; font-size: var(--t-sm); color: var(--muted-ink); }
+
+    .steps { display: grid; grid-template-columns: repeat(7, minmax(110px, 1fr)); gap: 0; margin-block-start: 3rem; overflow-x: auto; border-top: 1px solid var(--line); }
+    .step { padding: 1rem 1rem 0 0; font-size: var(--t-xs); color: var(--muted-ink); position: relative; }
+    .step b { display: block; font-size: var(--t-sm); font-weight: 500; color: var(--ink); margin-block-start: .35rem; }
+    .step::before { content: ""; position: absolute; top: -1px; inset-inline: 0 1rem; height: 2px; background: transparent; }
+    .step.done::before { background: var(--ink); }
+    .step.now::before { background: var(--red); }
+    .step.now b::after { content: " · now"; color: var(--red-text); font-weight: 500; }
+
+    .doc-sec { padding-block: clamp(4rem, 3rem + 4vw, 7rem); border-bottom: 1px solid var(--line); }
+    .doc-sec__head { display: grid; gap: 1rem; margin-block-end: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+    @media (min-width: 900px) { .doc-sec__head { grid-template-columns: 4fr 8fr; gap: 4rem; align-items: baseline; } }
+    .doc-sec__no { font-size: var(--t-xs); letter-spacing: .14em; text-transform: uppercase; color: var(--muted-ink); }
+    .prose p + p { margin-block-start: .9rem; }
+    .prose { max-width: 44rem; color: var(--muted-ink); }
+    .prose strong { color: var(--ink); font-weight: 500; }
+
+    /* decisions */
+    .decisions { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    @media (min-width: 760px) { .decisions { grid-template-columns: repeat(3, 1fr); } }
+    .decision { background: var(--bg); padding: 1.5rem; }
+    .decision dt { font-size: var(--t-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--muted-ink); }
+    .decision dd { margin-block-start: .6rem; font-size: var(--t-md); font-weight: 500; line-height: 1.35; }
+    .decision dd small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--muted-ink); margin-block-start: .35rem; }
+
+    /* mood boards */
+    .board { border-radius: 4px; overflow: hidden; border: 1px solid var(--line); }
+    .board__inner { padding: clamp(1.25rem, 1rem + 2vw, 3rem); display: grid; gap: clamp(1.5rem, 1rem + 2vw, 3rem); }
+    .board__title { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; }
+    .board__title h3 { font-size: var(--t-2xl); font-weight: 500; letter-spacing: -.03em; line-height: 1; }
+    .board__title h3 em { font-family: var(--font-serif); font-weight: 400; }
+    .board__collage { display: grid; gap: .6rem; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 900px) { .board__collage { grid-template-columns: repeat(12, 1fr); grid-auto-rows: 70px; } }
+    .tile { border-radius: 2px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; min-height: 140px; position: relative; overflow: hidden; }
+    .tile small { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+    .tile p { font-size: var(--t-xs); line-height: 1.45; max-width: 30ch; }
+    .tile .big { font-size: clamp(2rem, 1.2rem + 3vw, 4rem); line-height: .95; letter-spacing: -.035em; font-weight: 600; }
+    .tile .serif-big { font-family: var(--font-serif); font-style: italic; font-size: clamp(2rem, 1.2rem + 3vw, 4.2rem); line-height: 1; }
+    .tile--ph::before { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0L100 100M100 0L0 100' stroke='%23000' stroke-opacity='.08' stroke-width='.25' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") center/100% 100%; pointer-events: none; }
+    .tile--ph.inv::before { filter: invert(1); }
+    @media (min-width: 900px) {
+      .c-a1 { grid-column: span 5; grid-row: span 5; } .c-a2 { grid-column: span 4; grid-row: span 3; } .c-a3 { grid-column: span 3; grid-row: span 3; }
+      .c-a4 { grid-column: span 3; grid-row: span 2; } .c-a5 { grid-column: span 4; grid-row: span 2; }
+      .c-a6 { grid-column: span 4; grid-row: span 3; } .c-a7 { grid-column: span 4; grid-row: span 3; } .c-a8 { grid-column: span 4; grid-row: span 3; }
+    }
+    .swatches { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }
+    @media (min-width: 760px) { .swatches { grid-template-columns: repeat(6, 1fr); } }
+    .sw { border-radius: 2px; overflow: hidden; border: 1px solid rgba(128,128,128,.25); font-size: var(--t-xs); }
+    .sw i { display: block; height: 84px; }
+    .sw div { padding: .6rem .7rem; display: grid; gap: .1rem; }
+    .sw b { font-weight: 600; font-size: var(--t-sm); }
+    .sw code { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; opacity: .8; }
+    .balance { display: flex; height: 14px; border-radius: 2px; overflow: hidden; }
+    .balance + p { font-size: var(--t-xs); margin-block-start: .5rem; opacity: .8; }
+    .board__cols { display: grid; gap: 2rem; }
+    @media (min-width: 900px) { .board__cols { grid-template-columns: repeat(3, 1fr); } }
+    .board__cols h4 { font-size: var(--t-xs); letter-spacing: .12em; text-transform: uppercase; font-weight: 600; margin-block-end: .6rem; }
+    .board__cols p, .board__cols li { font-size: var(--t-sm); line-height: 1.55; }
+    .board__cols ul { padding-inline-start: 1.1rem; display: grid; gap: .3rem; }
+
+    .board--a { background: #F6F5F2; color: #191919; }
+    .board--a .muted { color: #6B6A66; }
+    .board--b { background: #111111; color: #F2F1EE; border-color: #111; }
+    .board--b .muted { color: #A3A3A0; }
+    .board--b .btn { --b-ink: #F2F1EE; --b-line: rgba(242,241,238,.4); }
+    .board--b .btn:hover { --b-line: #F2F1EE; }
+    .board--i { background: #0A78A3; color: #fff; border-color: #0A78A3; }
+    .board--i .muted { color: rgba(255,255,255,.85); }
+    .board--i .btn { --b-ink: #fff; --b-line: rgba(255,255,255,.5); }
+
+    /* typography */
+    .type-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    @media (min-width: 900px) { .type-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .type-card { background: var(--bg); padding: 1.75rem; display: grid; gap: 1rem; align-content: start; }
+    .type-card .spec { font-size: clamp(3rem, 2rem + 3vw, 5rem); line-height: 1; letter-spacing: -.03em; }
+    .type-card small { font-size: var(--t-xs); color: var(--muted-ink); }
+    .scale { margin-block-start: 2rem; display: grid; border-top: 1px solid var(--line); }
+    .scale div { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; align-items: baseline; padding-block: .8rem; border-bottom: 1px solid var(--line); overflow: hidden; white-space: nowrap; }
+    .scale code { font-family: ui-monospace, Consolas, monospace; font-size: 11.5px; color: var(--muted-ink); }
+
+    /* motion demos */
+    .demos { display: grid; gap: 1rem; }
+    @media (min-width: 900px) { .demos { grid-template-columns: repeat(3, 1fr); } }
+    .demo { border: 1px solid var(--line); border-radius: 4px; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; background: var(--card); }
+    .demo--rec { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+    .demo__head { padding: 1.25rem 1.25rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .demo__head h3 { font-size: var(--t-lg); font-weight: 500; }
+    .demo__rec { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; background: var(--red); color: #fff; padding: .3rem .5rem; border-radius: 2px; }
+    .demo__stage { margin: 1.25rem; padding: 1.25rem; background: var(--bg); border-radius: 2px; min-height: 220px; display: grid; gap: .6rem; align-content: start; overflow: hidden; }
+    .demo__stage .dh { font-size: 1.9rem; font-weight: 600; letter-spacing: -.03em; line-height: 1; }
+    .demo__stage .dh .w { display: inline-block; overflow: hidden; vertical-align: top; }
+    .demo__stage .dh .w > span { display: inline-block; }
+    .demo__stage .dp { font-size: var(--t-xs); color: var(--muted-ink); }
+    .demo__row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: .4rem; margin-block-start: .4rem; }
+    .demo__row i { display: block; height: 78px; background: var(--surface); border-radius: 2px; }
+    .demo__body { padding: 0 1.25rem 1.25rem; display: grid; gap: 1rem; }
+    .demo__body p { font-size: var(--t-sm); color: var(--muted-ink); }
+    .demo__body ul { font-size: var(--t-sm); padding-inline-start: 1.1rem; display: grid; gap: .25rem; }
+    .demo__btns { display: flex; gap: .5rem; flex-wrap: wrap; }
+    .demo__btns .btn { min-height: 40px; padding: .55rem 1rem; font-size: var(--t-xs); }
+
+    .play-quiet .dh, .play-quiet .dp, .play-quiet .demo__row i { animation: dq .8s cubic-bezier(.2,.7,.1,1) both; }
+    .play-quiet .dp { animation-delay: .09s; } .play-quiet .demo__row i:nth-child(1) { animation-delay: .18s; } .play-quiet .demo__row i:nth-child(2) { animation-delay: .27s; } .play-quiet .demo__row i:nth-child(3) { animation-delay: .36s; }
+    @keyframes dq { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .play-exp .dh .w > span { animation: dw 1.1s cubic-bezier(.2,.7,.1,1) both; animation-delay: calc(var(--w) * 110ms); }
+    .play-exp .dp { animation: dq 1s cubic-bezier(.2,.7,.1,1) both .35s; }
+    .play-exp .demo__row i { animation: dc 1.3s cubic-bezier(.2,.7,.1,1) both; }
+    .play-exp .demo__row i:nth-child(1) { animation-delay: .45s; } .play-exp .demo__row i:nth-child(2) { animation-delay: .58s; } .play-exp .demo__row i:nth-child(3) { animation-delay: .71s; }
+    @keyframes dw { from { transform: translateY(105%); } to { transform: none; } }
+    @keyframes dc { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+    .motion-table { width: 100%; border-collapse: collapse; margin-block-start: 2.5rem; font-size: var(--t-sm); }
+    .motion-table th, .motion-table td { text-align: start; padding: .8rem 1rem .8rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .motion-table th { font-size: var(--t-xs); letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--muted-ink); }
+    .motion-table td:first-child { font-weight: 500; white-space: nowrap; }
+    .table-wrap { overflow-x: auto; }
+
+    /* sitemap */
+    .sitemap { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    @media (min-width: 700px) { .sitemap { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1100px) { .sitemap { grid-template-columns: repeat(4, 1fr); } }
+    .sm { background: var(--bg); padding: 1.5rem; }
+    .sm h3 { font-size: var(--t-md); font-weight: 500; display: flex; gap: .6rem; align-items: baseline; }
+    .sm h3 span { font-size: var(--t-xs); color: var(--muted-ink); font-weight: 400; }
+    .sm ul { list-style: none; padding: 0; margin-block-start: .9rem; display: grid; gap: .4rem; font-size: var(--t-sm); color: var(--muted-ink); }
+    .sm li::before { content: "— "; opacity: .5; }
+    .sm--util { background: var(--surface); }
+
+    .journey { counter-reset: j; display: grid; border-top: 1px solid var(--line); }
+    .journey li { counter-increment: j; display: grid; grid-template-columns: 3rem 1fr; gap: .25rem 1rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); }
+    @media (min-width: 900px) { .journey li { grid-template-columns: 3rem 16rem 1fr; } }
+    .journey li::before { content: counter(j, decimal-leading-zero); font-size: var(--t-xs); color: var(--muted-ink); padding-block-start: .2rem; }
+    .journey b { font-weight: 500; }
+    .journey span { font-size: var(--t-sm); color: var(--muted-ink); grid-column: 2; }
+    @media (min-width: 900px) { .journey span { grid-column: 3; } }
+
+    .shots { width: 100%; border-collapse: collapse; font-size: var(--t-sm); }
+    .shots th, .shots td { text-align: start; padding: .75rem 1rem .75rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .shots th { font-size: var(--t-xs); letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--muted-ink); }
+    .shots td:nth-child(2) { white-space: nowrap; }
+    .kind { font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; padding: .2rem .45rem; border-radius: 2px; background: var(--surface); }
+    .kind--film { background: var(--red); color: #fff; }
+
+    .questions { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    @media (min-width: 900px) { .questions { grid-template-columns: 1fr 1fr; } }
+    .q { background: var(--bg); padding: 1.5rem; }
+    .q h3 { font-size: var(--t-xs); letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted-ink); margin-block-end: .9rem; }
+    .q ol, .q ul { padding-inline-start: 1.2rem; display: grid; gap: .55rem; font-size: var(--t-sm); }
+    .next { display: grid; gap: 1rem; counter-reset: n; }
+    @media (min-width: 900px) { .next { grid-template-columns: repeat(4, 1fr); } }
+    .next li { list-style: none; counter-increment: n; border-top: 2px solid var(--ink); padding-block-start: 1rem; }
+    .next li:first-child { border-color: var(--red); }
+    .next li::before { content: "Step " counter(n, decimal) ; display: block; font-size: var(--t-xs); color: var(--muted-ink); letter-spacing: .06em; }
+    .next b { display: block; font-weight: 500; margin-block: .35rem; }
+    .next p { font-size: var(--t-sm); color: var(--muted-ink); }
+    .doc-foot { padding-block: 3rem; font-size: var(--t-xs); color: var(--muted-ink); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="doc-head">
+    <div class="wrap">
+      <div class="doc-head__bar">
+        <a href="index.html"><img src="images/logo.png" alt="The Leisure Club" width="196" height="178" /></a>
+        <a class="link-arrow" href="index.html">Open the homepage prototype</a>
+      </div>
+      <span class="eyebrow eyebrow--dot">Website · Step 1 of 7</span>
+      <h1 class="display" style="font-size:var(--t-3xl)">Creative <em>direction.</em></h1>
+      <p class="lead">Two mood boards, motion options and the site structure — for approval before any full production work begins, as the brief asks (§20).</p>
+      <div class="doc-meta" style="margin-block-start:2rem"><span>October 2026</span><span>Established 1991</span><span>Images and video are placeholders — no photography yet</span></div>
+
+      <ol class="steps" role="list" aria-label="Project process">
+        <li class="step done">01<b>Discovery</b></li>
+        <li class="step now">02<b>Creative direction</b></li>
+        <li class="step">03<b>Architecture</b></li>
+        <li class="step">04<b>Design approval</b></li>
+        <li class="step">05<b>Development</b></li>
+        <li class="step">06<b>Testing</b></li>
+        <li class="step">07<b>Launch &amp; handover</b></li>
+      </ol>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 01 What we heard -->
+    <section class="doc-sec">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">01 — What we heard</span>
+          <div class="prose">
+            <p><strong>Not another gym website.</strong> A destination for movement, wellness, leisure and community, which should make people want to visit before they ever have. It should feel timeless, premium, minimal and distinctive, emotionally engaging but clear, and built to grow.</p>
+            <p>Target blend: <strong>50% architectural minimalism, 30% premium wellness and lifestyle, 20% athletic energy.</strong> Studied, never imitated: Aman (restraint, atmosphere), Aesop (editorial discipline), Equinox (athletic confidence), Six Senses (emotional storytelling) and Technogym (performance).</p>
+          </div>
+        </div>
+        <dl class="decisions">
+          <div class="decision"><dt>Palette</dt><dd>Brief palette <em>or</em> Equinox dark grey<small>Handwritten note on §04, so this board shows two directions: A and B.</small></dd></div>
+          <div class="decision"><dt>Leisure Island</dt><dd>Fun and bright<small>Handwritten note. Island gets its own brighter sub-palette inside the same identity.</small></dd></div>
+          <div class="decision"><dt>Membership prices</dt><dd>Published online<small>The plan pages show prices. Online purchasing stays a later phase (§14).</small></dd></div>
+          <div class="decision"><dt>Launch languages</dt><dd>Three: English, Arabic (RTL), French<small>The prototype already switches all three, with full right-to-left mirroring.</small></dd></div>
+          <div class="decision"><dt>Emphasis</dt><dd>HYROX<small>Underlined in §10. It leads the Hybrid Athlete Performance Center as Lebanon's first HYROX gym.</small></dd></div>
+          <div class="decision"><dt>Navigation</dt><dd>Exactly as §07<small>Home · The Club · Fitness &amp; Performance · Aquatics · Leisure Island · Community · Memberships. Member Login is left out until a working portal exists.</small></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 02 Mood board A -->
+    <section class="doc-sec" id="board-a">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">02 — Mood board A</span>
+          <div class="prose"><p>The brief's own palette, taken literally. Warm paper, charcoal ink and a single red accent. It is calm and architectural, with a heritage feel: the club as a well-kept place with a long story.</p></div>
+        </div>
+        <div class="board board--a">
+          <div class="board__inner">
+            <div class="board__title">
+              <h3>Quiet <em>Heritage</em></h3>
+              <a class="btn" href="index.html?theme=paper">Preview homepage in A</a>
+            </div>
+            <div class="board__collage">
+              <div class="tile tile--ph c-a1" style="background:#E8E6E1"><small>Photo · architecture</small><p><b>Indoor pool at first light.</b> Long horizontals, still water, no people. Sets the tone of quiet confidence.</p></div>
+              <div class="tile c-a2" style="background:#191919;color:#F6F5F2"><small style="color:#A3A3A0">Headline</small><span class="big">MORE THAN<br />A CLUB.</span></div>
+              <div class="tile c-a3" style="background:#E62028;color:#fff"><small>Accent · 5%</small><p>Red is used only for actions and small details, never for large fills.</p></div>
+              <div class="tile tile--ph c-a4" style="background:#DCD9D2"><small>Detail</small><p>Towel, timber, chalk.</p></div>
+              <div class="tile c-a5" style="background:#FFFFFF;border:1px solid rgba(25,25,25,.12)"><small class="muted">Serif accent</small><span class="serif-big">Since 1991.</span></div>
+              <div class="tile tile--ph c-a6" style="background:#E8E6E1"><small>Candid moment</small><p>A swim lesson: coach and child, natural light.</p></div>
+              <div class="tile tile--ph c-a7" style="background:#DCD9D2"><small>Archive</small><p>The club in the 1990s, scanned and untouched.</p></div>
+              <div class="tile tile--ph c-a8" style="background:#E8E6E1"><small>Hospitality</small><p>Grill House table at golden hour.</p></div>
+            </div>
+            <div class="swatches">
+              <div class="sw"><i style="background:#F6F5F2"></i><div><b>Warm off-white</b><code>#F6F5F2</code><span class="muted">Main backgrounds</span></div></div>
+              <div class="sw"><i style="background:#191919"></i><div><b>Charcoal</b><code>#191919</code><span class="muted">Text, dark sections</span></div></div>
+              <div class="sw"><i style="background:#E8E6E1"></i><div><b>Soft stone</b><code>#E8E6E1</code><span class="muted">Secondary surfaces</span></div></div>
+              <div class="sw"><i style="background:#858585"></i><div><b>Muted gray</b><code>#858585</code><span class="muted">Supporting text</span></div></div>
+              <div class="sw"><i style="background:#E62028"></i><div><b>Leisure red</b><code>#E62028</code><span class="muted">Sampled from the logo</span></div></div>
+              <div class="sw"><i style="background:#FFFFFF"></i><div><b>White</b><code>#FFFFFF</code><span class="muted">Content, contrast</span></div></div>
+            </div>
+            <div>
+              <div class="balance" aria-label="Colour balance: 70% light, 25% dark, 5% red"><i style="flex:70;background:#E8E6E1"></i><i style="flex:25;background:#191919"></i><i style="flex:5;background:#E62028"></i></div>
+              <p>Indicative balance, as the brief sets it: ~70% light neutrals · ~25% dark contrast · ~5% red.</p>
+            </div>
+            <div class="board__cols">
+              <div><h4>Rationale</h4><p class="muted">Closest to Aman and Aesop. It reads as established and confident without trying hard. The red sits quietly against a lot of warm whitespace, which keeps it premium.</p></div>
+              <div><h4>Imagery</h4><ul class="muted"><li>Bright, natural, slightly warm grade</li><li>Wide architectural frames paired with tight material details</li><li>Candid people, never posed fitness stock</li></ul></div>
+              <div><h4>Accessibility note</h4><p class="muted">The brief's muted gray #858585 reaches only 3.4:1 on the off-white, so we keep it for large text. Small supporting text uses #6B6A66 (5:1, which passes WCAG AA). Red text on light is darkened to #C8141C.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Mood board B -->
+    <section class="doc-sec" id="board-b">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">03 — Mood board B</span>
+          <div class="prose"><p>The handwritten alternative, inspired by Equinox's dark grey. Graphite grounds, soft-white type and the same red. It is more athletic, nocturnal and cinematic. Light stone sections invert the rhythm so the page never feels heavy.</p></div>
+        </div>
+        <div class="board board--b">
+          <div class="board__inner">
+            <div class="board__title">
+              <h3>Graph<em>ite</em></h3>
+              <a class="btn" href="index.html?theme=graphite">Preview homepage in B</a>
+            </div>
+            <div class="board__collage">
+              <div class="tile tile--ph inv c-a1" style="background:#1F1F1F"><small style="color:#A3A3A0">Photo · performance</small><p style="color:#C9C8C4"><b style="color:#F2F1EE">Performance floor, low light.</b> Hard edges, steel, a single athlete under a pool of light.</p></div>
+              <div class="tile c-a2" style="background:#E8E6E1;color:#111"><small style="color:#5E5D59">Headline</small><span class="big">MORE THAN<br />A CLUB.</span></div>
+              <div class="tile c-a3" style="background:#E62028;color:#fff"><small>Accent · 5%</small><p>The same red, sharper against graphite.</p></div>
+              <div class="tile tile--ph inv c-a4" style="background:#262626"><small style="color:#A3A3A0">Detail</small><p style="color:#C9C8C4">Chalked hands.</p></div>
+              <div class="tile c-a5" style="background:#1B1B1B;border:1px solid rgba(242,241,238,.12)"><small class="muted">Serif accent</small><span class="serif-big">Since 1991.</span></div>
+              <div class="tile tile--ph inv c-a6" style="background:#1F1F1F"><small style="color:#A3A3A0">Film still</small><p style="color:#C9C8C4">Night swim: underwater lights, lane ropes.</p></div>
+              <div class="tile tile--ph inv c-a7" style="background:#262626"><small style="color:#A3A3A0">Run Club</small><p style="color:#C9C8C4">Dawn, headlamps, breath in the air.</p></div>
+              <div class="tile tile--ph inv c-a8" style="background:#1F1F1F"><small style="color:#A3A3A0">Recovery</small><p style="color:#C9C8C4">Sauna glow, steam.</p></div>
+            </div>
+            <div class="swatches">
+              <div class="sw"><i style="background:#111111"></i><div><b>Graphite</b><code>#111111</code><span class="muted">Main backgrounds</span></div></div>
+              <div class="sw"><i style="background:#1B1B1B"></i><div><b>Carbon</b><code>#1B1B1B</code><span class="muted">Secondary surfaces</span></div></div>
+              <div class="sw"><i style="background:#F2F1EE"></i><div><b>Soft white</b><code>#F2F1EE</code><span class="muted">Text</span></div></div>
+              <div class="sw"><i style="background:#A3A3A0"></i><div><b>Ash</b><code>#A3A3A0</code><span class="muted">Supporting text (7.5:1)</span></div></div>
+              <div class="sw"><i style="background:#E62028"></i><div><b>Leisure red</b><code>#E62028</code><span class="muted">Accents, actions</span></div></div>
+              <div class="sw"><i style="background:#E8E6E1"></i><div><b>Soft stone</b><code>#E8E6E1</code><span class="muted">Inverted sections</span></div></div>
+            </div>
+            <div>
+              <div class="balance" aria-label="Colour balance: 70% dark, 25% light, 5% red"><i style="flex:70;background:#1B1B1B;outline:1px solid #333"></i><i style="flex:25;background:#E8E6E1"></i><i style="flex:5;background:#E62028"></i></div>
+              <p>The brief's ratio, flipped: ~70% dark neutrals · ~25% light contrast · ~5% red.</p>
+            </div>
+            <div class="board__cols">
+              <div><h4>Rationale</h4><p class="muted">Closest to Equinox and Technogym. This direction puts the performance side, HYROX and the Hybrid Center first. It photographs beautifully at night and makes film feel cinematic.</p></div>
+              <div><h4>Imagery</h4><ul class="muted"><li>Deeper, cooler grade with real shadows</li><li>Directional light and motion</li><li>Needs the strongest photography of the two</li></ul></div>
+              <div><h4>Trade-off</h4><p class="muted">Less "family and summer" by default. Leisure Island's bright palette does more of the emotional work here, and the contrast between the two becomes part of the story.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Leisure Island -->
+    <section class="doc-sec" id="island">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">04 — Leisure Island accent</span>
+          <div class="prose"><p>Per the owner's note, <strong>Leisure Island is fun and bright</strong>. It keeps the same type, grid and restraint, but switches to a sunlit flat palette wherever the island appears. This works with either direction. We still use no gradients, as the brief asks.</p></div>
+        </div>
+        <div class="board board--i">
+          <div class="board__inner">
+            <div class="board__title">
+              <h3>Island <em style="color:#FFC93C">Brights</em></h3>
+              <a class="btn" href="index.html#island">See it on the homepage</a>
+            </div>
+            <div class="swatches">
+              <div class="sw" style="border-color:rgba(255,255,255,.3)"><i style="background:#0A78A3"></i><div><b>Lagoon</b><code>#0A78A3</code><span class="muted">Section ground; white text 5:1</span></div></div>
+              <div class="sw" style="border-color:rgba(255,255,255,.3)"><i style="background:#0B3A4E"></i><div><b>Deep water</b><code>#0B3A4E</code><span class="muted">Text on sun</span></div></div>
+              <div class="sw" style="border-color:rgba(255,255,255,.3)"><i style="background:#FFC93C"></i><div><b>Sun</b><code>#FFC93C</code><span class="muted">Actions, season banner</span></div></div>
+              <div class="sw" style="border-color:rgba(255,255,255,.3)"><i style="background:#FF6B5A"></i><div><b>Coral</b><code>#FF6B5A</code><span class="muted">Hospitality highlights</span></div></div>
+              <div class="sw" style="border-color:rgba(255,255,255,.3)"><i style="background:#E7F6FA"></i><div><b>Foam</b><code>#E7F6FA</code><span class="muted">Light surfaces</span></div></div>
+              <div class="sw" style="border-color:rgba(255,255,255,.3)"><i style="background:#FFFFFF"></i><div><b>White</b><code>#FFFFFF</code><span class="muted">Type, label pills</span></div></div>
+            </div>
+            <div class="board__cols">
+              <div><h4>Where it applies</h4><p class="muted">The Leisure Island section and pages, the summer season banner, and the routes into the Grill House, sunset bar, weddings and events.</p></div>
+              <div><h4>Seasonality</h4><p class="muted">A staff-editable status ("Closed for the season", "Open daily 10:00 to 20:00") sits at the top of every island page, as §12 asks.</p></div>
+              <div><h4>Imagery</h4><p class="muted">Saturated but natural. Real families, splash and laughter, shot at peak summer afternoon. Nothing that looks like a water-park advert.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Typography -->
+    <section class="doc-sec" id="type">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">05 — Typography</span>
+          <div class="prose"><p>Large, confident headlines, readable body copy, limited uppercase and a disciplined scale (§05). The prototype uses <strong>Inter</strong>, which is free with an open licence and one of the brief's named options. The other options (Neue Haas Grotesk, Helvetica Now, Söhne) need a paid web licence and can be swapped in with one line of CSS once the club chooses.</p></div>
+        </div>
+        <div class="type-grid">
+          <div class="type-card"><small>Sans · headlines, UI, body</small><span class="spec" style="font-weight:600">Inter</span><p>Movement. Wellness. Leisure. Community.</p><small>Licensed alternatives: Neue Haas Grotesk · Helvetica Now · Söhne</small></div>
+          <div class="type-card"><small>Restrained editorial serif · select words only</small><span class="spec serif">Instrument</span><p class="serif" style="font-size:1.5rem">Since 1991.</p><small>Used for a word or phrase inside a headline, never for paragraphs.</small></div>
+          <div class="type-card" lang="ar" dir="rtl"><small>Arabic · RTL</small><span class="spec" style="font-family:'IBM Plex Sans Arabic';font-weight:600;letter-spacing:0">أكثر من نادٍ</span><p style="font-family:'IBM Plex Sans Arabic'">حركة. عافية. ترفيه. مجتمع.</p><small style="font-family:'Amiri';font-size:1.1rem">منذ ١٩٩١ — Amiri for accents</small></div>
+        </div>
+        <div class="scale" aria-label="Type scale">
+          <div><code>Display</code><span class="display" style="font-size:var(--t-3xl)">More than a club.</span></div>
+          <div><code>H2</code><span class="h2">A legacy of <em>movement.</em></span></div>
+          <div><code>H3</code><span class="h3">Hybrid Athlete Performance Center</span></div>
+          <div><code>Lead 18</code><span style="font-size:var(--t-md)">For more than three decades, families have learned to swim here.</span></div>
+          <div><code>Body 16</code><span>Year-round access to the gym, indoor pool and wellness.</span></div>
+          <div><code>Label 12</code><span class="eyebrow">Explore our world</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 Motion -->
+    <section class="doc-sec" id="motion">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">06 — Motion options</span>
+          <div class="prose"><p>The brief asks for <strong>restrained motion</strong>: subtle reveals, with image transitions and hover effects only where they help (§03, §17), and no aggressive animation. Here are three levels to choose from. Press <strong>Play</strong> on each one. All three switch off automatically for visitors who ask their device for reduced motion, and you can switch levels live on the homepage under <em>Design options</em>.</p></div>
+        </div>
+        <div class="demos">
+          <article class="demo">
+            <div class="demo__head"><h3>Still</h3></div>
+            <div class="demo__stage" data-demo="still"><span class="dh">More than a club.</span><span class="dp">Movement. Wellness. Leisure. Community.</span><div class="demo__row"><i></i><i></i><i></i></div></div>
+            <div class="demo__body">
+              <p>No animation. Content is simply there. It is the most architectural option, and it is also what reduced-motion visitors get.</p>
+              <div class="demo__btns"><button class="btn" type="button" data-play="still">Play</button><a class="btn" href="index.html?motion=still">Try on homepage</a></div>
+            </div>
+          </article>
+          <article class="demo demo--rec">
+            <div class="demo__head"><h3>Quiet</h3><span class="demo__rec">Recommended</span></div>
+            <div class="demo__stage" data-demo="quiet"><span class="dh">More than a club.</span><span class="dp">Movement. Wellness. Leisure. Community.</span><div class="demo__row"><i></i><i></i><i></i></div></div>
+            <div class="demo__body">
+              <p>Content fades and rises 18px as it enters the screen, staggered by 90ms. There are soft image zooms on hover and a header that tucks away while you scroll down. This matches the brief most closely.</p>
+              <div class="demo__btns"><button class="btn btn--solid" type="button" data-play="quiet">Play</button><a class="btn" href="index.html?motion=quiet">Try on homepage</a></div>
+            </div>
+          </article>
+          <article class="demo">
+            <div class="demo__head"><h3>Expressive</h3></div>
+            <div class="demo__stage" data-demo="expressive"><span class="dh" data-words>More than a club.</span><span class="dp">Movement. Wellness. Leisure. Community.</span><div class="demo__row"><i></i><i></i><i></i></div></div>
+            <div class="demo__body">
+              <p>The headline rises word by word and images unveil like a curtain. It adds gentle parallax on the hero film, count-up numbers and a slow ticker of disciplines. It is still calm, with more presence, closer to Equinox.</p>
+              <div class="demo__btns"><button class="btn" type="button" data-play="expressive">Play</button><a class="btn" href="index.html?motion=expressive">Try on homepage</a></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="table-wrap">
+          <table class="motion-table">
+            <thead><tr><th>Moment</th><th>Still</th><th>Quiet</th><th>Expressive</th></tr></thead>
+            <tbody>
+              <tr><td>Hero headline</td><td>Static</td><td>Soft fade-in</td><td>Word-by-word rise</td></tr>
+              <tr><td>Hero film</td><td>Poster still only</td><td>Silent loop, pause button</td><td>Loop + light parallax, pause button</td></tr>
+              <tr><td>Sections</td><td>—</td><td>Fade + 18px rise, staggered</td><td>36px rise, longer, staggered</td></tr>
+              <tr><td>Images</td><td>—</td><td>Fade with content</td><td>Curtain unveil from below</td></tr>
+              <tr><td>Hover on gateways</td><td>Underline only</td><td>Image zoom 2.5%</td><td>Image zoom + card lift</td></tr>
+              <tr><td>Numbers (1991, 35…)</td><td>Static</td><td>Static</td><td>Count up once</td></tr>
+              <tr><td>Disciplines ticker</td><td>Hidden</td><td>Hidden</td><td>Slow 60s loop, pauses on hover</td></tr>
+              <tr><td>Header</td><td>Always visible</td><td>Hides on scroll down</td><td>Hides on scroll down</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="prose" style="margin-block-start:2.5rem">
+          <p><strong>Hero layout is a second option.</strong> <em>Full-bleed film</em> fills the screen (immersive, Equinox-like). <em>Framed film</em> insets the film within page margins with the headline beneath (restrained, Aman-like). Both are switchable on the homepage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Sitemap -->
+    <section class="doc-sec" id="sitemap">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">07 — Sitemap</span>
+          <div class="prose"><p>Primary navigation exactly as proposed in §07, with each page's content taken from §09 to §16. Hospitality &amp; Events gets prominent routes from the homepage and from Leisure Island. The final navigation should be user-tested on mobile.</p></div>
+        </div>
+        <div class="sitemap">
+          <div class="sm"><h3>Home <span>§08</span></h3><ul><li>Eight-part journey, below</li></ul></div>
+          <div class="sm"><h3>The Club <span>§09</span></h3><ul><li>Our Story</li><li>Our Philosophy</li><li>Our Facilities</li><li>Gallery</li></ul></div>
+          <div class="sm"><h3>Fitness &amp; Performance <span>§10</span></h3><ul><li>The Gym</li><li>Hybrid Athlete Performance Center (HYROX)</li><li>Group Classes</li><li>Personal Training</li><li>Wellness &amp; Recovery</li><li>Weekly Schedule (filterable) §15</li></ul></div>
+          <div class="sm"><h3>Aquatics <span>§11</span></h3><ul><li>Indoor Swimming — 25 m</li><li>Swimming Lessons</li><li>Swim Club</li><li>Competitive Swimming</li><li>Outdoor Swimming → Leisure Island</li></ul></div>
+          <div class="sm"><h3>Leisure Island <span>§12</span></h3><ul><li>Pools, Slides &amp; Jacuzzi</li><li>Family &amp; Kids</li><li>Grill House &amp; Sunset Bar</li><li>Football &amp; Outdoor Sports</li><li>Weddings &amp; Private Events</li><li>Season, hours &amp; conditions</li></ul></div>
+          <div class="sm"><h3>Community <span>§13</span></h3><ul><li>Run Club</li><li>Swim Club</li><li>Events &amp; Competitions</li><li>Achievements</li><li>News &amp; Stories</li></ul></div>
+          <div class="sm"><h3>Memberships <span>§14</span></h3><ul><li>Compare plans (mobile-first)</li><li>Individual · Family · Corporate</li><li>Indoor · Island seasonal · Combined</li><li>Request Information</li><li>Schedule a Visit</li></ul></div>
+          <div class="sm sm--util"><h3>Utilities <span>§07 · §16</span></h3><ul><li>Visit Us (map, directions, hours)</li><li>Contact (routed inquiries, WhatsApp)</li><li>Language: EN · عربي · FR</li><li>Member Login — only once functional</li></ul></div>
+        </div>
+
+        <h3 class="h4" style="margin-block:3.5rem 1.25rem">Homepage journey (§08), as built in the prototype</h3>
+        <ol class="journey" role="list">
+          <li><b>Hero</b><span>Immersive film. "MORE THAN A CLUB." with "Movement. Wellness. Leisure. Community." CTAs: Explore the Club and Discover Memberships, plus a pause control.</span></li>
+          <li><b>Heritage</b><span>"A legacy of movement. Since 1991." A short story, a then-and-now photo pair and four facts.</span></li>
+          <li><b>Explore Our World</b><span>Six large editorial gateways: Fitness, Aquatics, Wellness, Leisure Island, Community and Hospitality.</span></li>
+          <li><b>Hybrid Athlete Performance Center</b><span>The newest chapter: Lebanon's first HYROX gym. Free member access is kept clearly separate from scheduled classes (§10).</span></li>
+          <li><b>Memberships</b><span>The value of belonging. Three plan families with what's included, slots for public prices and inquiry CTAs.</span></li>
+          <li><b>Community</b><span>Run Club, Swim Club, events, achievements and the latest News &amp; Stories.</span></li>
+          <li><b>Leisure Island</b><span>The bright sub-identity: an editable season status, six experiences and a prominent "Plan a celebration" route.</span></li>
+          <li><b>Visit</b><span>Location, hours, reception, WhatsApp, socials, a map and a three-field inquiry routed to the right team.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 08 Shot list -->
+    <section class="doc-sec" id="shots">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">08 — Photography &amp; film to commission</span>
+          <div class="prose"><p>Every placeholder on the homepage describes the shot it needs. Together they make up the first commission list, which answers one of the meeting questions. Everything should be authentic, in natural light with a consistent grade, with no heavy filters and no stock (§06).</p></div>
+        </div>
+        <div class="table-wrap">
+          <table class="shots">
+            <thead><tr><th>Shot</th><th>Type</th><th>Ratio</th><th>Brief</th></tr></thead>
+            <tbody>
+              <tr><td>Homepage film</td><td><span class="kind kind--film">Film</span></td><td>16:9 + 4:5</td><td>20–40 s silent loop: pool at first light, performance floor, island family, Grill House sunset. A lightweight mobile cut and a poster still.</td></tr>
+              <tr><td>Performance Center film</td><td><span class="kind kind--film">Film</span></td><td>16:9</td><td>10 s loop: sled, ski-erg, wall-balls. Real athletes.</td></tr>
+              <tr><td>Sunset bar</td><td><span class="kind kind--film">Film</span></td><td>4:5</td><td>6 s loop as the sun drops.</td></tr>
+              <tr><td>Archive, 1990s</td><td><span class="kind">Archive</span></td><td>3:4</td><td>From the club's own collection. Scan, don't retouch.</td></tr>
+              <tr><td>Then and now</td><td><span class="kind">Photo</span></td><td>3:4</td><td>Re-shoot the archive viewpoint today.</td></tr>
+              <tr><td>Performance floor</td><td><span class="kind">Photo</span></td><td>4:5</td><td>Wide and architectural, one athlete, plus material details.</td></tr>
+              <tr><td>Indoor 25 m pool</td><td><span class="kind">Photo</span></td><td>3:4</td><td>Lane-end or overhead, still water, morning.</td></tr>
+              <tr><td>Recovery</td><td><span class="kind">Photo</span></td><td>1:1</td><td>Sauna timber, steam, towels.</td></tr>
+              <tr><td>Leisure Island ×6</td><td><span class="kind">Photo</span></td><td>Mixed</td><td>Pools and slides (wide), kids' playground, football pitch, Grill House, sunset bar, wedding garden (real event, with permission).</td></tr>
+              <tr><td>Run Club</td><td><span class="kind">Photo</span></td><td>3:2</td><td>The group at dawn, in motion.</td></tr>
+              <tr><td>Swim Club race day</td><td><span class="kind">Photo</span></td><td>16:9</td><td>Hosted at the venue, with the organiser credited accurately.</td></tr>
+              <tr><td>Equipment detail</td><td><span class="kind">Photo</span></td><td>4:5</td><td>Chalked hands, timing clock.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 To confirm -->
+    <section class="doc-sec" id="confirm">
+      <div class="wrap">
+        <div class="doc-sec__head">
+          <span class="doc-sec__no">09 — Still to confirm with the club</span>
+          <div class="prose"><p>From the meeting sheet, plus the facts the prototype marks "to confirm". The brief says to publish <strong>only confirmed current offerings</strong>, so none of these go live until the club signs them off.</p></div>
+        </div>
+        <div class="questions">
+          <div class="q"><h3>Meeting decisions still open</h3><ol>
+            <li>Which audiences and inquiries come first at launch? (The note on the sheet brackets this with prices, so please confirm.)</li>
+            <li>Which photography and video will be commissioned, and when? (See the shot list above.)</li>
+            <li>Who maintains content and schedules day to day?</li>
+            <li>Timeline, milestones, budget and acceptance criteria.</li>
+            <li>A or B? And which motion level?</li>
+          </ol></div>
+          <div class="q"><h3>Facts to verify</h3><ul>
+            <li>Membership prices for every plan, which are now going online</li>
+            <li>Hybrid Center access rules: what is free on the floor, and what is a booked class</li>
+            <li>Current class timetable, with coaches</li>
+            <li>Indoor opening hours, and Leisure Island season dates for 2027</li>
+            <li>Which number is the WhatsApp line, and who receives each type of inquiry</li>
+            <li>The heritage story: a few true sentences from the founders</li>
+            <li>Leisure red: confirm #E62028 against the official logo file</li>
+          </ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 Next -->
+    <section class="doc-sec" style="border-bottom:0">
+      <div class="wrap">
+        <div class="doc-sec__head"><span class="doc-sec__no">10 — Next steps</span><div class="prose"><p>Step by step, with approval at each stage.</p></div></div>
+        <ol class="next">
+          <li><b>Choose a direction</b><p>A or B, a motion level and a hero layout. Comments on the homepage prototype.</p></li>
+          <li><b>Memberships page</b><p>A plan comparison built for mobile, with prices and the three CTAs (§14).</p></li>
+          <li><b>Key interior templates</b><p>The Club, the Hybrid Center, Aquatics, Leisure Island and the filterable schedule.</p></li>
+          <li><b>Then build</b><p>A CMS so staff can edit schedules, hours, plans and events, plus SEO, analytics and launch.</p></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap doc-foot">
+    <span>The Leisure Club · Website development · October 2026</span>
+    <a class="link-arrow" href="index.html">Homepage prototype</a>
+  </footer>
+
+  <script>
+    // Split the expressive headline into words
+    document.querySelectorAll("[data-words]").forEach(function (el) {
+      el.innerHTML = el.textContent.trim().split(/\s+/).map(function (w, i) {
+        return '<span class="w"><span style="--w:' + i + '">' + w + "</span></span>";
+      }).join(" ");
+    });
+    document.querySelectorAll("[data-play]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var kind = btn.dataset.play;
+        var stage = document.querySelector('[data-demo="' + kind + '"]');
+        stage.classList.remove("play-quiet", "play-exp");
+        void stage.offsetWidth;
+        if (kind === "quiet") stage.classList.add("play-quiet");
+        if (kind === "expressive") stage.classList.add("play-exp");
+      });
+    });
+  </script>
+</body>
+</html>
