@@ -34,8 +34,6 @@
     "hero.pause": "إيقاف الفيلم",
     "hero.play": "تشغيل الفيلم",
 
-    "tick.1": "القوة", "tick.2": "السباحة", "tick.3": "HYROX", "tick.4": "بيلاتس",
-    "tick.5": "الاستشفاء", "tick.6": "نادي الجري", "tick.7": "ليجر آيلاند", "tick.8": "الاحتفالات",
 
     "her.eyebrow": "إرثنا",
     "her.title": "إرث من الحركة. <em>منذ ١٩٩١.</em>",
@@ -201,8 +199,6 @@
     "hero.pause": "Mettre le film en pause",
     "hero.play": "Lire le film",
 
-    "tick.1": "Force", "tick.2": "Natation", "tick.3": "HYROX", "tick.4": "Pilates",
-    "tick.5": "Récupération", "tick.6": "Run Club", "tick.7": "Leisure Island", "tick.8": "Célébrations",
 
     "her.eyebrow": "Notre héritage",
     "her.title": "Un héritage du mouvement. <em>Depuis 1991.</em>",

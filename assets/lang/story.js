@@ -1,0 +1,45 @@
+/* Our Story page — DRAFT AR/FR for native review. */
+TLC_add({
+  ar: {
+    "page.title": "قصتنا — ذا ليجر كلوب منذ ١٩٩١",
+    "st.eyebrow": "قصتنا · منذ ١٩٩١",
+    "st.title": "إرث <em>من الحركة.</em>",
+    "st.lead": "خمسة وثلاثون عامًا من العائلات والسبّاحين والاحتفالات والبدايات الأولى في ديك المحدي.",
+    "st.timeline": "الخط الزمني", "st.since": "ذا ليجر كلوب",
+    "st.e1.t": "حيث بدأ كل شيء", "st.e1.p": "يفتح ذا ليجر كلوب أبوابه في ديك المحدي، المتن الشمالي. ووعده، الذي ما زال قائمًا حتى اليوم: مكافأة للعائلة.",
+    "st.e2.y": "التسعينيات – الألفينيات", "st.e2.t": "سنوات التأسيس", "st.e2.p": "المسابح الأولى، الأعضاء الأوائل، الصيف الأول. سيُكتب هذا الفصل مع المؤسسين ومن أرشيف النادي.",
+    "st.tbc": "فصل يُستكمل مع المؤسسين",
+    "st.e3.t": "نادٍ ريفي وقاعة أعراس", "st.e3.p": "في الداخل، نادٍ صحي مع صالة رياضية ومسبح وسبا، وساونا وبخار، وإيروبكس ورقص وفنون قتالية. وفي الخارج، ليجر آيلاند: حدائق الأعراس، وثلاثة مسابح، وزحاليق مائية، وملعب للأطفال، ومسارات بين الأشجار وحبل انزلاق.",
+    "st.e4.t": "مسبح أكبر يتشكّل", "st.e4.p": "يعلن النادي عن مسبح أولمبي قيد الإنشاء في ليجر آيلاند.",
+    "st.e5.t": "أسبوع كامل من البرامج", "st.e5.p": "Learn to Swim، المخيم الصيفي، الكاراتيه، ملعب كرة القدم، البينغ بونغ وتحدّي الإيروبكس تملأ أسبوع النادي.",
+    "st.e6.t": "السباحة للبكالوريا الفرنسية", "st.e6.p": "يدرّب المسبح الطلاب على اختبار السباحة والإنقاذ في البكالوريا الفرنسية، إلى جانب العلاج المائي والرقص والسبا.",
+    "st.e7.t": "طاقة جديدة", "st.e7.p": "الملاكمة والزومبا تنضمّان إلى الجدول.",
+    "st.e8.t": "بيانكو بار وبرنامج جديد للأطفال", "st.e8.p": "تكسب الأمسيات بيانكو بار، ويحصل الأطفال على برنامج كامل: كرة قدم، زومبا، تايكواندو، جمباز وLearn to Swim.",
+    "st.e9.y": "اليوم", "st.e9.t": "حياة الجزيرة تكبر", "st.e9.p": "غريل هاوس وبنغالوهات Escape ونادي البيلاتس توسّع ما يمكن أن يكون عليه يوم في النادي.",
+    "st.e9.tbc": "سنوات الافتتاح بانتظار التأكيد",
+    "st.e10.t": "الفصل الأحدث", "st.e10.p": "يبلغ النادي عامه الخامس والثلاثين، ويتشكّل مركز أداء الرياضي الهجين كأول نادٍ لـ HYROX في لبنان.",
+    "st.note": "التواريخ مأخوذة من المواد التي نشرها النادي نفسه، من ٢٠١٠ حتى اليوم. وستُستكمل فصول التأسيس مع المؤسسين.",
+    "st.end.title": "العقد المقبل <em>يبدأ هنا.</em>", "st.end.p": "تعال وشاهد إلى أين تمضي القصة."
+  },
+  fr: {
+    "page.title": "Notre histoire — The Leisure Club depuis 1991",
+    "st.eyebrow": "Notre histoire · Depuis 1991",
+    "st.title": "Un héritage <em>du mouvement.</em>",
+    "st.lead": "Trente-cinq ans de familles, de nageurs, de fêtes et de premières fois à Dik el-Mehdi.",
+    "st.timeline": "Chronologie", "st.since": "The Leisure Club",
+    "st.e1.t": "Là où tout commence", "st.e1.p": "The Leisure Club ouvre à Dik el-Mehdi, dans le Metn Nord. Sa promesse, toujours la même aujourd'hui : une récompense pour la famille.",
+    "st.e2.y": "Années 1990 – 2000", "st.e2.t": "Les années fondatrices", "st.e2.p": "Les premières piscines, les premiers membres, les premiers étés. Ce chapitre sera écrit avec les fondateurs et les archives du club.",
+    "st.tbc": "Chapitre à compléter avec les fondateurs",
+    "st.e3.t": "Un country club et un lieu de mariage", "st.e3.p": "À l'intérieur, un club de santé avec salle, piscine et spa, sauna et hammam, aérobic, danse et arts martiaux. À l'extérieur, Leisure Island : jardins de mariage, trois piscines, toboggans, aire de jeux, accrobranche et tyrolienne.",
+    "st.e4.t": "Un plus grand bassin prend forme", "st.e4.p": "Le club annonce un bassin olympique en construction à Leisure Island.",
+    "st.e5.t": "Une semaine pleine de programmes", "st.e5.p": "Learn to Swim, camp d'été, karaté, terrain de football, ping-pong et défi aérobic remplissent la semaine du club.",
+    "st.e6.t": "Nager pour le Bac français", "st.e6.p": "Le bassin prépare les élèves à l'épreuve « Natation et Sauvetage » du Baccalauréat français, aux côtés de l'aquathérapie, de la danse et du spa.",
+    "st.e7.t": "Une nouvelle énergie", "st.e7.p": "La boxe et la Zumba rejoignent le planning.",
+    "st.e8.t": "Le Bianco Bar et un nouveau programme enfants", "st.e8.p": "Les soirées gagnent le Bianco Bar, et les enfants un programme complet : football, Zumba, taekwondo, gymnastique et Learn to Swim.",
+    "st.e9.y": "Aujourd'hui", "st.e9.t": "La vie sur l'île s'agrandit", "st.e9.p": "Le Grill House, les bungalows Escape et The Pilates Club élargissent ce qu'une journée au club peut offrir.",
+    "st.e9.tbc": "Années d'ouverture à confirmer",
+    "st.e10.t": "Le nouveau chapitre", "st.e10.p": "Le club fête ses 35 ans, et le Hybrid Athlete Performance Center prend forme : la première salle HYROX du Liban.",
+    "st.note": "Les dates proviennent des documents publiés par le club lui-même, de 2010 à aujourd'hui. Les chapitres fondateurs seront complétés avec les fondateurs.",
+    "st.end.title": "La prochaine décennie <em>commence ici.</em>", "st.end.p": "Venez voir où l'histoire nous mène."
+  }
+});

@@ -190,6 +190,33 @@
     });
   });
 
+  /* ---------- Our Story: the big year follows the chapter you're reading; the line fills ---------- */
+  var legacy = document.querySelector(".legacy__list");
+  if (legacy) {
+    var yearEl = document.querySelector("[data-legacy-year]");
+    var eras = Array.prototype.slice.call(legacy.querySelectorAll(".era"));
+    var setYear = function (era) {
+      var label = era.querySelector(".era__year").textContent;
+      eras.forEach(function (e, i) { e.classList.toggle("is-current", e === era); e.classList.toggle("is-past", i < eras.indexOf(era)); });
+      if (!yearEl || yearEl.textContent === label) return;
+      yearEl.classList.add("is-changing");
+      setTimeout(function () { yearEl.textContent = label; yearEl.classList.remove("is-changing"); }, 180);
+    };
+    if ("IntersectionObserver" in window) {
+      var eraIO = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) setYear(en.target); });
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      eras.forEach(function (e) { eraIO.observe(e); });
+    }
+    var fill = function () {
+      var r = legacy.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (window.innerHeight * 0.5 - r.top) / r.height));
+      legacy.style.setProperty("--legacy-p", p.toFixed(3));
+    };
+    window.addEventListener("scroll", fill, { passive: true }); fill();
+    document.addEventListener("tlc:lang", function () { var cur = legacy.querySelector(".era.is-current") || eras[0]; yearEl.textContent = cur.querySelector(".era__year").textContent; });
+  }
+
   /* ---------- In-page navigation: highlight the section in view ---------- */
   var subLinks = Array.prototype.slice.call(document.querySelectorAll(".subnav a[href^='#']"));
   if (subLinks.length && "IntersectionObserver" in window) {
@@ -217,7 +244,7 @@
     var hints = {
       still: "Nothing moves. Also what visitors with “reduce motion” switched on will get.",
       quiet: "Soft fade-rise reveals and gentle hovers only — the most restrained reading of the brief.",
-      expressive: "Default. Smooth scrolling, headlines rising word by word, the film framing itself as you scroll, a horizontal gallery, an expanding performance film, parallax images and a bright Leisure Island entrance."
+      expressive: "Default. Smooth scrolling, headlines rising word by word, the film framing itself as you scroll, a horizontal gallery and gentle parallax. Simple and calm."
     };
     function sync() {
       ["theme", "motion", "hero"].forEach(function (k) {

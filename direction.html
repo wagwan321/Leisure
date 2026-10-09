@@ -263,7 +263,7 @@
             <div class="board__cols">
               <div><h4>Rationale</h4><p class="muted">Closest to Aman and Aesop. It reads as established and confident without trying hard. The red sits quietly against a lot of warm whitespace, which keeps it premium.</p></div>
               <div><h4>Imagery</h4><ul class="muted"><li>Bright, natural, slightly warm grade</li><li>Wide architectural frames paired with tight material details</li><li>Candid people, never posed fitness stock</li></ul></div>
-              <div><h4>Accessibility note</h4><p class="muted">The brief's muted gray #858585 reaches only 3.4:1 on the off-white, so we keep it for large text. Small supporting text uses #6B6A66 (5:1, which passes WCAG AA). Red text on light is darkened to #C8141C.</p></div>
+              <div><h4>Used exactly</h4><p class="muted">Only the six colours of the table appear on the site. Muted gray #858585 is used for supporting text at 24px and above (where it passes accessibility) and on charcoal; small supporting text stays charcoal. Leisure Island adds two accents (lagoon and sun) for the owner's "fun, bright" note.</p></div>
             </div>
           </div>
         </div>
@@ -354,8 +354,8 @@
           <div class="prose"><p>Large, confident headlines, readable body copy, limited uppercase and a disciplined scale (§05). The prototype uses <strong>Inter</strong>, which is free with an open licence and one of the brief's named options. The other options (Neue Haas Grotesk, Helvetica Now, Söhne) need a paid web licence and can be swapped in with one line of CSS once the club chooses.</p></div>
         </div>
         <div class="type-grid">
-          <div class="type-card"><small>Sans · body, labels, buttons</small><span class="spec" style="font-weight:600">Inter</span><p>Movement. Wellness. Leisure. Community.</p><small>Licensed alternatives: Neue Haas Grotesk · Helvetica Now · Söhne</small></div>
-          <div class="type-card"><small>Editorial serif · headings</small><span class="spec serif">Instrument</span><p class="serif" style="font-size:1.5rem">Since 1991.</p><small>After studying Aman (§19), every heading uses this serif at regular weight, as Aman does. Body text, labels and buttons stay in Inter.</small></div>
+          <div class="type-card"><small>Sans · headlines, body, labels (§05: one of the four named faces)</small><span class="spec" style="font-weight:600">Inter</span><p>Movement. Wellness. Leisure. Community.</p><small>Licensed alternatives: Neue Haas Grotesk · Helvetica Now · Söhne</small></div>
+          <div class="type-card"><small>Restrained editorial serif · select words only</small><span class="spec serif">Instrument</span><p class="serif" style="font-size:1.5rem">Since 1991.</p><small>Used only for select words inside headlines ("Since 1991.", "by design."), exactly as §05 says: "a restrained editorial serif for select headings".</small></div>
           <div class="type-card" lang="ar" dir="rtl"><small>Arabic · RTL</small><span class="spec" style="font-family:'IBM Plex Sans Arabic';font-weight:600;letter-spacing:0">أكثر من نادٍ</span><p style="font-family:'IBM Plex Sans Arabic'">حركة. عافية. ترفيه. مجتمع.</p><small style="font-family:'Amiri';font-size:1.1rem">منذ ١٩٩١ — Amiri for accents</small></div>
         </div>
         <div class="scale" aria-label="Type scale">
@@ -420,8 +420,7 @@
               <tr><td>Images</td><td>—</td><td>Fade with content</td><td>Curtain unveil from below</td></tr>
               <tr><td>Hover on gateways</td><td>Underline only</td><td>Image zoom 2.5%</td><td>Image zoom + card lift</td></tr>
               <tr><td>Numbers (1991, 35…)</td><td>Static</td><td>Static</td><td>Count up once</td></tr>
-              <tr><td>Disciplines ticker</td><td>Hidden</td><td>Hidden</td><td>Follows your scroll direction and speeds up with it</td></tr>
-              <tr><td>Reading line</td><td>—</td><td>—</td><td>Thin red progress line under the header</td></tr>
+                            <tr><td>Reading line</td><td>—</td><td>—</td><td>Thin red progress line under the header</td></tr>
               <tr><td>Header</td><td>Always visible</td><td>Hides on scroll down</td><td>Hides on scroll down</td></tr>
             </tbody>
           </table>
@@ -442,7 +441,7 @@
         </div>
         <div class="sitemap">
           <div class="sm"><h3><a href="index.html" style="text-decoration:underline;text-underline-offset:4px">Home</a> <span>§08</span></h3><ul><li>Eight-part journey, below</li></ul></div>
-          <div class="sm"><h3><a href="the-club.html" style="text-decoration:underline;text-underline-offset:4px">The Club</a> <span>§09</span></h3><ul><li>Our Story</li><li>Our Philosophy</li><li>Our Facilities</li><li>Gallery</li></ul></div>
+          <div class="sm"><h3><a href="the-club.html" style="text-decoration:underline;text-underline-offset:4px">The Club</a> <span>§09</span></h3><ul><li><a href="our-story.html">Our Story (timeline page)</a></li><li>Our Philosophy</li><li>Our Facilities</li><li>Gallery</li></ul></div>
           <div class="sm"><h3><a href="fitness.html" style="text-decoration:underline;text-underline-offset:4px">Fitness &amp; Performance</a> <span>§10</span></h3><ul><li>The Gym</li><li><a href="hybrid-center.html">Hybrid Athlete Performance Center (HYROX)</a></li><li>Group Classes</li><li>Personal Training</li><li>Wellness &amp; Recovery</li><li><a href="schedule.html">Weekly Schedule (filterable) §15</a></li></ul></div>
           <div class="sm"><h3><a href="aquatics.html" style="text-decoration:underline;text-underline-offset:4px">Aquatics</a> <span>§11</span></h3><ul><li>Indoor Swimming — 25 m</li><li>Swimming Lessons</li><li>Swim Club</li><li>Competitive Swimming</li><li>Outdoor Swimming → Leisure Island</li></ul></div>
           <div class="sm"><h3><a href="leisure-island.html" style="text-decoration:underline;text-underline-offset:4px">Leisure Island</a> <span>§12</span></h3><ul><li>Pools, Slides &amp; Jacuzzi</li><li>Family &amp; Kids</li><li>Grill House &amp; Sunset Bar</li><li>Football &amp; Outdoor Sports</li><li><a href="events.html">Hospitality &amp; Events, Weddings</a></li><li>Season, hours &amp; conditions</li></ul></div>

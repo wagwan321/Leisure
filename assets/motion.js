@@ -190,7 +190,7 @@
       scrollTrigger: { trigger: ".clubs", start: "top 85%", once: true } });
   }
 
-  // Leisure Island — the lagoon opens out to full width, tiles bounce in (fun, bright)
+  // Leisure Island — the lagoon opens out to full width, tiles rise in
   function island() {
     var s = $("main > .island:not(.page-hero)"); if (!s) return;
     gsap.fromTo(s, { clipPath: "inset(5% 4% 0% 4% round 36px)" }, {
@@ -201,33 +201,10 @@
     if (!tiles.length) return;
     tiles.forEach(claim);
     var st = { trigger: ".island-tiles", start: "top 82%", once: true };
-    gsap.from(tiles, { y: 90, scale: 0.9, opacity: 0, rotation: function (i) { return i % 2 ? 2.5 : -2.5; },
-      duration: 1.15, ease: "back.out(1.4)", stagger: 0.09, scrollTrigger: st });
-    gsap.from($$(".it__label", s), { scale: 0, duration: 0.7, ease: "back.out(2.4)", stagger: 0.09, delay: 0.55,
-      scrollTrigger: { trigger: ".island-tiles", start: "top 82%", once: true } });
+    gsap.from(tiles, { y: 60, opacity: 0, duration: 1.1, ease: "expo.out", stagger: 0.08, scrollTrigger: st });
     var season = $(".season", s);
-    if (season) gsap.from(season, { scale: 0.85, opacity: 0, duration: 0.9, ease: "back.out(2)",
+    if (season) gsap.from(season, { y: 20, opacity: 0, duration: 0.9, ease: "expo.out",
       scrollTrigger: { trigger: season, start: "top 90%", once: true } });
-  }
-
-  // Ticker — speeds up with your scroll and follows its direction
-  function ticker() {
-    var track = $(".ticker__track"); if (!track) return;
-    track.classList.add("is-gsap");
-    var dir = doc.dir === "rtl" ? 1 : -1;
-    var tween = gsap.fromTo(track, { xPercent: 0 }, { xPercent: 50 * dir, repeat: -1, ease: "none", duration: 48 });
-    tween.totalTime(48 * 200);
-    var target = 1, current = 1;
-    ScrollTrigger.create({ start: 0, end: "max", onUpdate: function (self) {
-      target = self.direction * (1 + Math.min(Math.abs(self.getVelocity()) / 250, 6));
-    } });
-    var tick = function () {
-      current += (target - current) * 0.08;
-      target += ((target > 0 ? 1 : -1) - target) * 0.04;
-      tween.timeScale(current);
-    };
-    gsap.ticker.add(tick);
-    cleanups.push(function () { gsap.ticker.remove(tick); track.classList.remove("is-gsap"); });
   }
 
   // Thin red reading line under the header
@@ -301,7 +278,7 @@
     ctx = gsap.context(function () {
       if ($(".hero")) hero();
       pageHero(); headlines(); statements(); parallax(); facts(); staggers();
-      performance(); memberships(); community(); island(); ticker(); progress();
+      performance(); memberships(); community(); island(); progress();
     });
     mm = gsap.matchMedia();
     mm.add("(min-width: 1000px)", horizontal);
