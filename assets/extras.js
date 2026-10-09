@@ -1,8 +1,7 @@
 /* Finishing touches — each one small, automatic and optional:
-   1. Then/now slider      2. Live "Open now" status      3. Custom cursor (desktop only) */
+   1. Then/now slider      2. Live "Open now" status */
 (function () {
   "use strict";
-  var doc = document.documentElement;
   function t(k, f) { return (window.TLC_i18n && window.TLC_i18n.t(k)) || f; }
 
   /* ---------- 1. Then/now slider ---------- */
@@ -66,36 +65,4 @@
   renderLive();
   setInterval(renderLive, 60000);
   document.addEventListener("tlc:lang", renderLive);
-
-  /* ---------- 3. Custom cursor: a small red dot that says "View" or "Drag" ---------- */
-  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-  var cursor = document.createElement("div");
-  cursor.className = "cursor"; cursor.setAttribute("aria-hidden", "true");
-  cursor.innerHTML = '<span class="cursor__label"></span>';
-  document.body.appendChild(cursor);
-  var label = cursor.firstChild;
-  var x = -100, y = -100, cx = -100, cy = -100, shown = false;
-  var TARGETS = [
-    ["[data-compare]", "cur.drag", "Drag"],
-    [".gw, .it, .story, .card:has(> .ph), .gallery > .ph, .era .ph", "cur.view", "View"]
-  ];
-  document.addEventListener("mousemove", function (e) {
-    x = e.clientX; y = e.clientY;
-    if (!shown) { cx = x; cy = y; shown = true; }
-    var mode = "", text = "";
-    for (var i = 0; i < TARGETS.length; i++) {
-      if (e.target.closest && e.target.closest(TARGETS[i][0])) { mode = "label"; text = t(TARGETS[i][1], TARGETS[i][2]); break; }
-    }
-    if (!mode && e.target.closest && e.target.closest("a, button, label, select, input, summary")) mode = "link";
-    cursor.dataset.mode = mode;
-    if (text) label.textContent = text;
-  }, { passive: true });
-  document.addEventListener("mouseout", function (e) { if (!e.relatedTarget) cursor.dataset.mode = "hidden"; });
-  (function loop() {
-    var still = doc.dataset.motion === "still";
-    doc.classList.toggle("has-cursor", !still);
-    cx += (x - cx) * (still ? 1 : 0.2); cy += (y - cy) * (still ? 1 : 0.2);
-    cursor.style.transform = "translate3d(" + cx.toFixed(1) + "px," + cy.toFixed(1) + "px,0)";
-    requestAnimationFrame(loop);
-  })();
 })();

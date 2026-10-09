@@ -1285,22 +1285,4 @@ html[data-motion="still"] .live.is-open::before { animation: none; }
 .hero__bar .live { color: var(--ink); }
 html[data-hero="bleed"] .hero__bar .live { color: #F6F5F2; }
 
-/* 5. Custom cursor (desktop, not in Still) */
-.cursor { position: fixed; top: 0; left: 0; z-index: 400; pointer-events: none; display: none; }
-.has-cursor .cursor { display: block; }
-.has-cursor, .has-cursor * { cursor: none; }
-.has-cursor input:not([type=range]), .has-cursor textarea, .has-cursor select { cursor: auto; }
-.cursor::before {
-  content: ""; position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%;
-  background: var(--red); transition: transform .35s var(--ease), opacity .3s;
-}
-.cursor[data-mode="link"]::before { transform: scale(2.4); opacity: .35; }
-.cursor[data-mode="hidden"]::before, .cursor[data-mode="label"]::before { opacity: 0; transform: scale(.5); }
-.cursor__label {
-  position: absolute; left: 0; top: 0; transform: translate(-50%, -50%) scale(.4); opacity: 0;
-  width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--red); color: #FFFFFF; font-size: var(--t-xs); font-weight: 600;
-  transition: transform .4s var(--ease), opacity .3s;
-}
-.cursor[data-mode="label"] .cursor__label { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 .compare-slider .ph__brief { inset-block-end: 3.6rem; }
