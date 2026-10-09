@@ -376,3 +376,27 @@ TLC_add({
     "mn.welcome": "Dik el-Mehdi · Depuis 1991", "mn.panel": "Mouvement. Bien-être. <em>Loisirs. Communauté.</em>"
   }
 });
+
+/* Live status, slider and cursor (all pages) */
+TLC_add({
+  en: {
+    "live.open": "Open now", "live.until": "until", "live.closed": "Closed", "live.opens": "opens", "live.opensat": "opens at",
+    "live.tomorrow": "tomorrow", "live.islandin": "Opens in", "live.day": "day", "live.days": "days",
+    "live.d.mon": "Monday", "live.d.tue": "Tuesday", "live.d.wed": "Wednesday", "live.d.thu": "Thursday", "live.d.fri": "Friday", "live.d.sat": "Saturday", "live.d.sun": "Sunday",
+    "cur.view": "View", "cur.drag": "Drag", "cmp.aria": "Compare the club then and now"
+  },
+  ar: {
+    "live.indoor": "النادي الداخلي", "live.now": "الآن",
+    "live.open": "مفتوح الآن", "live.until": "حتى", "live.closed": "مغلق", "live.opens": "يفتح", "live.opensat": "يفتح الساعة",
+    "live.tomorrow": "غدًا", "live.islandin": "يفتح بعد", "live.day": "يوم", "live.days": "يومًا",
+    "live.d.mon": "الاثنين", "live.d.tue": "الثلاثاء", "live.d.wed": "الأربعاء", "live.d.thu": "الخميس", "live.d.fri": "الجمعة", "live.d.sat": "السبت", "live.d.sun": "الأحد",
+    "cur.view": "شاهد", "cur.drag": "اسحب", "cmp.aria": "قارن النادي بين الماضي والحاضر"
+  },
+  fr: {
+    "live.indoor": "Club intérieur", "live.now": "En ce moment",
+    "live.open": "Ouvert", "live.until": "jusqu'à", "live.closed": "Fermé", "live.opens": "ouvre", "live.opensat": "ouvre à",
+    "live.tomorrow": "demain", "live.islandin": "Ouvre dans", "live.day": "jour", "live.days": "jours",
+    "live.d.mon": "lundi", "live.d.tue": "mardi", "live.d.wed": "mercredi", "live.d.thu": "jeudi", "live.d.fri": "vendredi", "live.d.sat": "samedi", "live.d.sun": "dimanche",
+    "cur.view": "Voir", "cur.drag": "Glisser", "cmp.aria": "Comparer le club hier et aujourd'hui"
+  }
+});

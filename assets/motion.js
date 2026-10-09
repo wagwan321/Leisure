@@ -75,9 +75,14 @@
           { clipPath: "inset(0px " + g + "px " + g * 2 + "px " + g + "px round 16px)", ease: "none" }, 0)
         .to(content, { yPercent: -18, opacity: 0, ease: "none" }, 0);
     } else {
-      gsap.fromTo(media, { clipPath: "inset(0px 0px 0px 0px round 2px)" },
-        { clipPath: "inset(6% 0px 0px 0px round 2px)", ease: "none",
-          scrollTrigger: { trigger: media, start: "top 20%", end: "bottom top", scrub: true } });
+      // The headline is a window onto the film; scrolling pushes through the letters until the film fills the frame
+      var mask = $(".hero__mask", h);
+      if (mask) {
+        gsap.fromTo(mask, { scale: 1.06 }, { scale: 1, duration: 2.2, ease: "power3.out" });
+        gsap.timeline({ scrollTrigger: { trigger: h, start: "top top", end: "+=75%", pin: true, scrub: 0.6, anticipatePin: 1 } })
+          .to(mask, { scale: 9, ease: "power2.in", duration: 1 }, 0)
+          .to(mask, { opacity: 0, ease: "none", duration: 0.35 }, 0.65);
+      }
     }
   }
 

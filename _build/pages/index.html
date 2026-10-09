@@ -8,6 +8,8 @@ scripts: assets/lang/home.js
     <!-- ===================== 1 · Hero ===================== -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__media ph ph--video" role="img" aria-label="Placeholder for the homepage film">
+        <!-- Expressive: the headline is a window onto the film, then opens as you scroll -->
+        <div class="hero__mask" aria-hidden="true"><span data-i18n="hero.title">MORE THAN A CLUB.</span></div>
         <span class="ph__tag">Film · homepage loop</span>
         <p class="ph__brief"><b>Understated cinematic film, 20–40 s, silent loop</b>Early light on the 25 m pool · chalk and sled on the performance floor · a family at Leisure Island · sunset at the Grill House. Natural light, consistent grade. Mobile fallback: one 4:5 still.</p>
       </div>
@@ -26,7 +28,7 @@ scripts: assets/lang/home.js
           </div>
         </div>
         <div class="hero__bar">
-          <span class="scroll-cue" aria-hidden="true"><i></i><span data-i18n="hero.scroll">Scroll</span></span>
+          <span class="live" data-live="indoor"><span data-i18n="live.indoor">Indoor Club</span> · <span data-live-text></span></span>
           <button class="film-toggle" type="button" aria-pressed="false" data-film-toggle>
             <span class="film-toggle__icon" aria-hidden="true"></span><span data-i18n="hero.pause">Pause film</span>
           </button>
@@ -44,21 +46,13 @@ scripts: assets/lang/home.js
             <p class="lead" data-reveal style="--i:2" data-i18n="her.p2">The club has grown with them — from a pool and a gym to a destination for movement, wellness and summer days. The next chapter is already being written.</p>
             <a class="link-arrow" href="our-story.html" data-reveal style="--i:4" data-i18n="her.link">Read our story</a>
           </div>
-          <div class="then-now">
-            <figure data-reveal>
-              <div class="ph r-3x4" data-parallax="0.08" role="img" aria-label="Placeholder: archive photograph of the club in the 1990s">
-                <span class="ph__tag">Archive</span><span class="ph__ratio">3:4</span>
-                <p class="ph__brief"><b>The club, 1990s</b>From the club's own archive — scanned print, untouched.</p>
-              </div>
-              <figcaption data-i18n="her.then">Then — 1991</figcaption>
-            </figure>
-            <figure data-reveal style="--i:1">
-              <div class="ph r-3x4" data-parallax="-0.06" role="img" aria-label="Placeholder: the same viewpoint photographed today">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">3:4</span>
-                <p class="ph__brief"><b>Same viewpoint, today</b>Re-shot from the archive angle. Natural light.</p>
-              </div>
-              <figcaption data-i18n="her.now">Now — 2026</figcaption>
-            </figure>
+          <div class="compare-slider r-4x3" data-compare data-reveal style="--pos:50%">
+            <ph r="free" tag="Photo · today" t="Same viewpoint, today" b="Re-shot from the archive angle. Natural light." cls="compare-slider__now"/>
+            <ph r="free" tag="Archive · 1990s" t="The club, 1990s" b="From the club's own archive: scanned print, untouched." cls="ph--dark compare-slider__then"/>
+            <span class="compare-slider__label compare-slider__label--then" data-i18n="her.then">Then — 1991</span>
+            <span class="compare-slider__label compare-slider__label--now" data-i18n="her.now">Now — 2026</span>
+            <span class="compare-slider__handle" aria-hidden="true"></span>
+            <input type="range" min="0" max="100" value="50" step="1" aria-label="Compare the club then and now" data-i18n-attr="aria-label:cmp.aria" />
           </div>
         </div>
 

@@ -30,8 +30,15 @@ scripts: assets/lang/story.js
             <p class="lead" data-i18n="st.lead">Thirty-five years of families, swimmers, celebrations and firsts in Dik el-Mehdi.</p>
           </div>
         </div>
-        <div class="page-hero__media" data-reveal>
-          <ph r="21x9" tag="Archive" t="The club, early years" b="The oldest photograph the club holds: a scan, untouched. Paired below with the same view today."/>
+        <div class="page-hero__media">
+          <div class="compare-slider r-21x9" data-compare style="--pos:50%">
+            <ph r="free" tag="Photo · today" t="The same view, today" b="Re-shot from exactly the archive angle." cls="compare-slider__now"/>
+            <ph r="free" tag="Archive" t="The club, early years" b="The oldest photograph the club holds: a scan, untouched." cls="ph--dark compare-slider__then"/>
+            <span class="compare-slider__label compare-slider__label--then" data-i18n="her.then">Then — 1991</span>
+            <span class="compare-slider__label compare-slider__label--now" data-i18n="her.now">Now — 2026</span>
+            <span class="compare-slider__handle" aria-hidden="true"></span>
+            <input type="range" min="0" max="100" value="50" step="1" aria-label="Compare the club then and now" data-i18n-attr="aria-label:cmp.aria" />
+          </div>
         </div>
       </div>
     </section>
