@@ -360,3 +360,23 @@ TLC_add({
     "fp.more": "Plus", "tbc.short": "À confirmer"
   }
 });
+
+/* Menu (all pages) */
+TLC_add({
+  ar: {
+    "mn.fac": "مرافقنا", "mn.gym": "الصالة الرياضية", "mn.hapc": "مركز أداء الرياضي الهجين", "mn.classes": "الحصص الجماعية",
+    "mn.pt": "التدريب الشخصي", "mn.well": "العافية والاستشفاء", "mn.indoor": "السباحة الداخلية", "mn.lessons": "دروس السباحة",
+    "mn.comp": "السباحة التنافسية", "mn.outdoor": "السباحة الخارجية", "mn.season": "الموسم والساعات", "mn.water": "المسابح والزحاليق",
+    "mn.family": "العائلة", "mn.sports": "كرة القدم والرياضة", "mn.weddings": "الأعراس", "mn.plans": "الخطط والأسعار",
+    "mn.compare": "قارن الخطط", "mn.corp": "للشركات", "mn.req": "اطلب المعلومات",
+    "mn.welcome": "ديك المحدي · منذ ١٩٩١", "mn.panel": "حركة. عافية. <em>ترفيه. مجتمع.</em>"
+  },
+  fr: {
+    "mn.fac": "Nos installations", "mn.gym": "La salle", "mn.hapc": "Hybrid Athlete Performance Center", "mn.classes": "Cours collectifs",
+    "mn.pt": "Coaching personnel", "mn.well": "Bien-être & récupération", "mn.indoor": "Natation intérieure", "mn.lessons": "Cours de natation",
+    "mn.comp": "Natation de compétition", "mn.outdoor": "Natation en plein air", "mn.season": "Saison & horaires", "mn.water": "Piscines & toboggans",
+    "mn.family": "Famille", "mn.sports": "Football & sports", "mn.weddings": "Mariages", "mn.plans": "Formules & tarifs",
+    "mn.compare": "Comparer les formules", "mn.corp": "Entreprises", "mn.req": "Demander des informations",
+    "mn.welcome": "Dik el-Mehdi · Depuis 1991", "mn.panel": "Mouvement. Bien-être. <em>Loisirs. Communauté.</em>"
+  }
+});

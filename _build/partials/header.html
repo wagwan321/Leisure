@@ -1,45 +1,3 @@
-<!doctype html>
-<html lang="en" dir="ltr" data-theme="paper" data-motion="expressive" data-hero="framed">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>{{TITLE}}</title>
-  <meta name="description" content="{{DESCRIPTION}}" />
-  <meta name="theme-color" content="#F6F5F2" />
-  <link rel="icon" href="images/logo.png" />
-  <link rel="alternate" hreflang="en" href="https://theleisureclub-lb.com/{{PATH}}" />
-  <link rel="alternate" hreflang="ar" href="https://theleisureclub-lb.com/{{PATH}}?lang=ar" />
-  <link rel="alternate" hreflang="fr" href="https://theleisureclub-lb.com/{{PATH}}?lang=fr" />
-  <meta property="og:title" content="{{TITLE}}" />
-  <meta property="og:description" content="{{DESCRIPTION}}" />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://theleisureclub-lb.com/{{PATH}}" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri&display=swap" />
-  <link rel="stylesheet" href="assets/site.css" />
-
-  <!-- Apply saved / shared review options before first paint -->
-  <script>
-    (function () {
-      var d = document.documentElement, q = new URLSearchParams(location.search), s = {};
-      try { s = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
-      var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-      d.dataset.theme = "paper"; // the brief's colour table (§04)
-      d.dataset.hero = q.get("hero") || s.hero || "framed";
-      var m = q.get("motion") || s.motion;
-      if (m) d.setAttribute("data-motion-chosen", "");
-      d.dataset.motion = m || (reduce ? "still" : "expressive");
-      d.classList.add("js");
-    })();
-  </script>
-
-{{JSONLD}}
-</head>
-<body>
-  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-
   <!-- ===================== Header (Aman-inspired: Menu · centred logo · language + one action) ===================== -->
   <header class="{{HEADER_CLASS}}" id="top">
     <div class="progress" aria-hidden="true"></div>
@@ -156,5 +114,3 @@
       </div>
     </div>
   </div>
-
-  

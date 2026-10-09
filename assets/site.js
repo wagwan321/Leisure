@@ -58,26 +58,53 @@
   }
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  /* ---------- Mobile menu ---------- */
+  /* ---------- Menu (Aman-inspired split panel) ---------- */
   var toggle = document.querySelector(".menu-toggle");
-  var menu = document.getElementById("mobile-menu");
-  function closeMenu() {
-    doc.classList.remove("menu-open");
-    toggle.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
-    motion("pause", false);
-  }
-  toggle.addEventListener("click", function () {
-    var open = !doc.classList.contains("menu-open");
+  var menu = document.getElementById("site-menu");
+  var panelDefault = menu.querySelector("[data-menu-default]");
+  var panelSub = menu.querySelector("[data-menu-sub]");
+  var panelTitle = menu.querySelector("[data-menu-sub-title]");
+  var panelList = menu.querySelector("[data-menu-sub-list]");
+  function setMenu(open) {
     doc.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     document.body.style.overflow = open ? "hidden" : "";
     motion("pause", open);
-    if (open) { var first = menu.querySelector("a"); if (first) first.focus(); }
+    if (open) { var first = menu.querySelector(".menu-primary a"); if (first) first.focus(); }
+    else { showPanel(null); }
+  }
+  function closeMenu() { if (doc.classList.contains("menu-open")) setMenu(false); }
+  // desktop: hovering or focusing a section shows its pages on the right
+  function showPanel(li) {
+    menu.querySelectorAll(".menu-primary > li").forEach(function (x) { x.classList.toggle("is-current", x === li); });
+    if (!li || !li.querySelector(".menu-sub")) { panelDefault.hidden = false; panelSub.hidden = true; return; }
+    panelTitle.textContent = li.querySelector("a").textContent;
+    panelList.innerHTML = "";
+    li.querySelectorAll(".menu-sub a").forEach(function (a) {
+      var c = a.cloneNode(true); c.className = "btn"; c.removeAttribute("data-i18n"); panelList.appendChild(c);
+    });
+    panelDefault.hidden = true; panelSub.hidden = false;
+  }
+  menu.querySelectorAll(".menu-primary > li").forEach(function (li) {
+    li.addEventListener("mouseenter", function () { showPanel(li); });
+    li.querySelector("a").addEventListener("focus", function () { showPanel(li); });
   });
-  menu.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
+  // mobile: chevrons open each section's pages in place
+  menu.querySelectorAll(".menu-sub-toggle").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var li = b.parentNode, open = !li.classList.contains("is-open");
+      li.classList.toggle("is-open", open);
+      b.setAttribute("aria-expanded", String(open));
+    });
+  });
+  toggle.addEventListener("click", function () { setMenu(!doc.classList.contains("menu-open")); });
+  menu.querySelector("[data-menu-close]").addEventListener("click", function () { setMenu(false); toggle.focus(); });
+  menu.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMenu();
+    else if (e.target === menu) closeMenu();
+  });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && doc.classList.contains("menu-open")) { closeMenu(); toggle.focus(); }
+    if (e.key === "Escape" && doc.classList.contains("menu-open")) { setMenu(false); toggle.focus(); }
   });
 
   /* ---------- Reveals ---------- */
