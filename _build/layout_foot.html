@@ -1,0 +1,114 @@
+
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="The Leisure Club" width="196" height="178" />
+          <p class="h3" data-i18n-html="foot.line">More than a club. <em>Since 1991.</em></p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h3 data-i18n="nav.club">The Club</h3>
+            <ul role="list">
+              <li><a href="the-club.html#story" data-i18n="f.story">Our Story</a></li>
+              <li><a href="the-club.html#philosophy" data-i18n="f.phil">Our Philosophy</a></li>
+              <li><a href="the-club.html#facilities" data-i18n="f.fac">Facilities</a></li>
+              <li><a href="the-club.html#gallery" data-i18n="f.gal">Gallery</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="f.move">Move</h3>
+            <ul role="list">
+              <li><a href="fitness.html" data-i18n="nav.fitness">Fitness &amp; Performance</a></li>
+              <li><a href="hybrid-center.html" data-i18n="f.hc">Aquatics</a></li>
+              <li><a href="aquatics.html" data-i18n="nav.aquatics">Wellness &amp; Recovery</a></li>
+              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="f.enjoy">Enjoy</h3>
+            <ul role="list">
+              <li><a href="leisure-island.html" data-i18n="nav.island">Leisure Island</a></li>
+              <li><a href="events.html" data-i18n="f.hosp">Grill House</a></li>
+              <li><a href="events.html#celebrate" data-i18n="f.events">Weddings &amp; events</a></li>
+              <li><a href="community.html" data-i18n="nav.community">Community</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="f.contact">Contact</h3>
+            <ul role="list">
+              <li><a href="tel:+9613340341" dir="ltr">03 340 341</a></li>
+              <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="visit.html" data-i18n="util.visit">Visit Us</a></li>
+              <li><a href="memberships.html" data-i18n="nav.memberships">Memberships</a></li>
+              <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 The Leisure Club · <span data-i18n="foot.est">Est. 1991</span></span>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile: persistent conversion bar (appears after the hero) -->
+  <nav class="mobile-cta" aria-label="Quick actions">
+    <a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="memberships.html" data-i18n="nav.memberships">Memberships</a>
+  </nav>
+
+  <!-- ===================== Design review panel (prototype only) ===================== -->
+  <div class="review" data-review lang="en" dir="ltr">
+    <div class="review__panel" id="review-panel" hidden>
+      <h2>Design options</h2>
+      <p>Step 1 prototype — switch directions live. Your choice is remembered, and the link below shares it.</p>
+      <fieldset>
+        <legend>Creative direction</legend>
+        <div class="seg">
+          <label><input type="radio" name="theme" value="paper" /><span>A · Quiet Heritage</span></label>
+          <label><input type="radio" name="theme" value="graphite" /><span>B · Graphite</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="seg">
+          <label><input type="radio" name="motion" value="still" /><span>Still</span></label>
+          <label><input type="radio" name="motion" value="quiet" /><span>Quiet</span></label>
+          <label><input type="radio" name="motion" value="expressive" /><span>Expressive</span></label>
+        </div>
+        <p class="review__hint" data-motion-hint></p>
+      </fieldset>
+      <fieldset>
+        <legend>Hero layout</legend>
+        <div class="seg">
+          <label><input type="radio" name="hero" value="bleed" /><span>Full-bleed film</span></label>
+          <label><input type="radio" name="hero" value="framed" /><span>Framed film</span></label>
+        </div>
+      </fieldset>
+      <div class="review__foot">
+        <a href="direction.html">Creative direction board →</a>
+        <button type="button" data-copy-link>Copy share link</button>
+      </div>
+    </div>
+    <button class="review__toggle" type="button" aria-expanded="false" aria-controls="review-panel">Design options</button>
+  </div>
+
+  <!-- Motion libraries (used only by the Expressive level) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/lang/common.js" defer></script>
+{{SCRIPTS}}
+  <script src="assets/motion.js" defer></script>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

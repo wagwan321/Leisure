@@ -3,6 +3,7 @@
 (function () {
   "use strict";
   var doc = document.documentElement;
+  if (window.TLC_i18n) window.TLC_i18n.capture();
   var reduceMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   function store(patch) {
@@ -111,29 +112,73 @@
     });
   }
 
-  /* ---------- Inquiry routing (prototype: nothing is sent) ---------- */
-  var form = document.querySelector("[data-inquiry]");
-  var routeEl = document.querySelector("[data-route]");
+  /* ---------- Inquiry forms: routed to the right team (prototype: nothing is sent) ---------- */
   function t(key, fallback) { return (window.TLC_i18n && window.TLC_i18n.t(key)) || fallback; }
-  function updateRoute() {
-    if (!form || !routeEl) return;
-    var v = form.type.value;
-    routeEl.textContent = t("route." + v, "");
+  var forms = Array.prototype.slice.call(document.querySelectorAll("form[data-inquiry]"));
+  function routeKey(form) {
+    var sel = form.querySelector('select[name="type"]');
+    var opt = sel && sel.options[sel.selectedIndex];
+    return (opt && opt.dataset.route) || (sel && sel.value) || form.dataset.route || "general";
   }
-  if (form) {
-    form.type.addEventListener("change", updateRoute);
+  function updateRoute() {
+    forms.forEach(function (form) {
+      var note = form.querySelector(".route-note[data-route]");
+      if (note) note.textContent = t("route." + routeKey(form), "");
+    });
+  }
+  forms.forEach(function (form) {
+    var sel = form.querySelector('select[name="type"]');
+    if (sel) sel.addEventListener("change", updateRoute);
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var status = form.querySelector("[data-form-status]");
-      if (!form.name.value.trim() || !form.phone.value.trim()) {
-        status.hidden = false;
+      var missing = Array.prototype.filter.call(form.querySelectorAll("[required]"), function (f) { return !f.value.trim(); });
+      status.hidden = false;
+      if (missing.length) {
         status.textContent = t("inq.missing", "Please add your name and a phone number.");
-        (form.name.value.trim() ? form.phone : form.name).focus();
+        missing[0].focus();
         return;
       }
-      status.hidden = false;
       status.textContent = t("inq.proto", "Prototype — nothing was sent.");
     });
+  });
+
+  // ?type=training on a link pre-selects the inquiry topic
+  var qType = new URLSearchParams(location.search).get("type");
+  if (qType) forms.forEach(function (form) {
+    var sel = form.querySelector('select[name="type"]');
+    if (sel && sel.querySelector('option[value="' + qType + '"]')) sel.value = qType;
+  });
+
+  /* ---------- Journal filters ---------- */
+  document.querySelectorAll(".chips[role='group']").forEach(function (group) {
+    var list = group.parentNode.querySelector("[data-journal]");
+    if (!list) return;
+    group.addEventListener("click", function (e) {
+      var b = e.target.closest("[data-filter]"); if (!b) return;
+      group.querySelectorAll("[data-filter]").forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
+      list.querySelectorAll("[data-kind]").forEach(function (item) {
+        item.hidden = b.dataset.filter !== "all" && item.dataset.kind !== b.dataset.filter;
+      });
+    });
+  });
+
+  /* ---------- In-page navigation: highlight the section in view ---------- */
+  var subLinks = Array.prototype.slice.call(document.querySelectorAll(".subnav a[href^='#']"));
+  if (subLinks.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        subLinks.forEach(function (a) {
+          var on = a.getAttribute("href") === "#" + en.target.id;
+          a.classList.toggle("is-active", on);
+          if (on && a.scrollIntoView && a.parentNode.parentNode.scrollWidth > a.parentNode.parentNode.clientWidth) {
+            a.parentNode.parentNode.scrollTo({ left: a.offsetLeft - 24, behavior: "smooth" });
+          }
+        });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    subLinks.forEach(function (a) { var el = document.querySelector(a.getAttribute("href")); if (el) spy.observe(el); });
   }
 
   /* ---------- Review panel ---------- */

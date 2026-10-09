@@ -83,7 +83,7 @@
 
   // Section headlines rise word by word from behind a mask
   function headlines() {
-    $$("main .h2, .footer__brand .h3").forEach(function (h) {
+    $$("main .h2, main .page-title, .footer__brand .h3").forEach(function (h) {
       claim(h);
       var words = splitWords(h);
       gsap.from(words, {
@@ -96,6 +96,29 @@
       claim(e);
       gsap.from(e, { opacity: 0, x: doc.dir === "rtl" ? 24 : -24, duration: 1, ease: "expo.out",
         scrollTrigger: { trigger: e, start: "top 90%", once: true } });
+    });
+  }
+
+  // Interior page hero — the opening image settles, then drifts as you scroll on
+  function pageHero() {
+    var media = $(".page-hero__media .ph"); if (!media) return;
+    var wrap = media.parentNode; claim(wrap);
+    gsap.fromTo(media, { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 2, ease: "power3.out", delay: 0.2 });
+    gsap.to(media, { "--zoom": 1.12, ease: "none",
+      scrollTrigger: { trigger: wrap, start: "top 60%", end: "bottom top", scrub: true } });
+    $$(".page-hero__aside > *, .crumbs").forEach(function (el, i) {
+      gsap.from(el, { y: 24, opacity: 0, duration: 1.1, ease: "expo.out", delay: 0.35 + i * 0.08 });
+    });
+  }
+
+  // Any [data-stagger] group: children arrive one after another
+  function staggers() {
+    $$("[data-stagger]").forEach(function (group) {
+      if (group.classList.contains("plans")) return; // memberships() handles plan cards
+      var kids = Array.prototype.slice.call(group.children).filter(function (k) { return !k.matches(".sr-only"); });
+      kids.forEach(claim);
+      gsap.from(kids, { y: 70, opacity: 0, duration: 1.15, ease: "expo.out", stagger: 0.09,
+        scrollTrigger: { trigger: group, start: "top 86%", once: true } });
     });
   }
 
@@ -141,6 +164,7 @@
       scrollTrigger: { trigger: film, start: "top 95%", end: "top 22%", scrub: true }
     });
     var cols = $$("#performance .access__col");
+    if (!cols.length) return;
     cols.forEach(claim);
     gsap.from(cols, { y: 60, opacity: 0, duration: 1.1, ease: "expo.out", stagger: 0.12,
       scrollTrigger: { trigger: ".access", start: "top 85%", once: true } });
@@ -168,12 +192,13 @@
 
   // Leisure Island — the lagoon opens out to full width, tiles bounce in (fun, bright)
   function island() {
-    var s = $(".island"); if (!s) return;
+    var s = $("main > .island:not(.page-hero)"); if (!s) return;
     gsap.fromTo(s, { clipPath: "inset(5% 4% 0% 4% round 36px)" }, {
       clipPath: "inset(0% 0% 0% 0% round 0px)", ease: "none",
       scrollTrigger: { trigger: s, start: "top 95%", end: "top 15%", scrub: true }
     });
     var tiles = $$(".it", s);
+    if (!tiles.length) return;
     tiles.forEach(claim);
     var st = { trigger: ".island-tiles", start: "top 82%", once: true };
     gsap.from(tiles, { y: 90, scale: 0.9, opacity: 0, rotation: function (i) { return i % 2 ? 2.5 : -2.5; },
@@ -274,7 +299,8 @@
     gsap.registerPlugin(ScrollTrigger);
     startLenis();
     ctx = gsap.context(function () {
-      hero(); headlines(); statements(); parallax(); facts();
+      if ($(".hero")) hero();
+      pageHero(); headlines(); statements(); parallax(); facts(); staggers();
       performance(); memberships(); community(); island(); ticker(); progress();
     });
     mm = gsap.matchMedia();

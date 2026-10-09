@@ -1,0 +1,96 @@
+<!--
+title: Weekly Schedule — Classes at The Leisure Club
+description: The weekly class schedule at The Leisure Club. Filter by activity, age group, facility and day — plus seasonal programmes and special events.
+nav: fitness
+crumb: Weekly Schedule
+scripts: assets/lang/schedule.js, assets/data/schedule.js, assets/schedule.js
+-->
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><a href="fitness.html" data-i18n="nav.fitness">Fitness &amp; Performance</a><span aria-hidden="true">/</span><span data-i18n="f.sched">Weekly schedule</span></nav>
+        <div class="page-hero__grid">
+          <div>
+            <span class="eyebrow eyebrow--dot" data-i18n="sch.eyebrow">Weekly schedule</span>
+            <h1 class="page-title" data-i18n-html="sch.title">This week <em>at the club.</em></h1>
+          </div>
+          <div class="page-hero__aside">
+            <p class="lead" data-i18n="sch.lead">Every recurring class, for adults and kids. All weekly classes are included with membership. Sign up at the front desk or call to reserve a place.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-block-start:0" aria-labelledby="week-title" data-schedule>
+      <div class="wrap">
+        <h2 class="sr-only" id="week-title" data-i18n="sch.recurring">Recurring classes</h2>
+        <div class="filters" data-reveal>
+          <div class="field">
+            <label for="f-activity" data-i18n="sch.f.activity">Activity</label>
+            <select id="f-activity"><option value="all">All activities</option></select>
+          </div>
+          <div class="field">
+            <label for="f-group" data-i18n="sch.f.group">Age group</label>
+            <select id="f-group">
+              <option value="all" data-i18n="sch.f.allages">All ages</option>
+              <option value="adults" data-i18n="sch.adults">Adults</option>
+              <option value="kids" data-i18n="sch.f.kids">Kids, under 16</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-facility" data-i18n="sch.f.facility">Facility</label>
+            <select id="f-facility">
+              <option value="all" data-i18n="sch.f.allfac">All facilities</option>
+              <option value="studio" data-i18n="sch.fac.studio">Studios</option>
+              <option value="performance" data-i18n="sch.fac.performance">Performance Center</option>
+              <option value="pool" data-i18n="sch.fac.pool">Indoor pool</option>
+              <option value="courts" data-i18n="sch.fac.courts">Courts</option>
+              <option value="outdoor" data-i18n="sch.fac.outdoor">Outdoors</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-day" data-i18n="sch.f.day">Day</label>
+            <select id="f-day">
+              <option value="all" data-i18n="sch.f.allweek">Whole week</option>
+              <option value="mon" data-i18n="sch.d.mon">Monday</option>
+              <option value="tue" data-i18n="sch.d.tue">Tuesday</option>
+              <option value="wed" data-i18n="sch.d.wed">Wednesday</option>
+              <option value="thu" data-i18n="sch.d.thu">Thursday</option>
+              <option value="fri" data-i18n="sch.d.fri">Friday</option>
+              <option value="sat" data-i18n="sch.d.sat">Saturday</option>
+              <option value="sun" data-i18n="sch.d.sun">Sunday</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center">
+          <div class="legend" aria-hidden="true">
+            <span class="c-studio"><i></i><span data-i18n="sch.fac.studio">Studios</span></span>
+            <span class="c-performance"><i></i><span data-i18n="sch.fac.performance">Performance Center</span></span>
+            <span class="c-pool"><i></i><span data-i18n="sch.fac.pool">Indoor pool</span></span>
+            <span class="c-courts"><i></i><span data-i18n="sch.fac.courts">Courts</span></span>
+            <span class="c-outdoor"><i></i><span data-i18n="sch.fac.outdoor">Outdoors</span></span>
+          </div>
+          <button class="link-arrow" type="button" style="background:none;border-top:0;border-inline:0" data-reset data-i18n="sch.reset">Reset filters</button>
+        </div>
+        <p class="sched-count" data-count aria-live="polite"></p>
+        <div class="week" data-week></div>
+        <span class="editable" data-i18n="sch.tbc">Timetable as last published · facilities and coaches to confirm · staff-editable</span>
+      </div>
+    </section>
+
+    <!-- Special events & seasonal programmes are kept apart from recurring classes (brief §15) -->
+    <section class="section section--surface" aria-labelledby="season-title">
+      <div class="wrap">
+        <div class="intro">
+          <div>
+            <span class="eyebrow" data-reveal data-i18n="sch.sp.eyebrow">Seasonal &amp; special</span>
+            <h2 class="h2" id="season-title" data-reveal data-i18n-html="sch.sp.title">Beyond <em>the weekly rhythm.</em></h2>
+          </div>
+          <p class="lead" data-reveal data-i18n="sch.sp.lead">Programmes that run for a season, and one-off events. These don't appear in the weekly grid.</p>
+        </div>
+        <div class="cards cards--3" data-stagger>
+          <article class="card"><span class="tag" data-i18n="sch.sp.c1.tag">Seasonal · kids</span><h3 data-i18n="sch.sp.c1.t">Summer camp</h3><p data-i18n="sch.sp.c1.p">Every July and August at Leisure Island.</p><a class="link-arrow" href="leisure-island.html#family" data-i18n="fp.more">More</a></article>
+          <article class="card"><span class="tag" data-i18n="sch.sp.c2.tag">All year · by appointment</span><h3 data-i18n="sch.sp.c2.t">Learn to Swim</h3><p data-i18n="sch.sp.c2.p">Private and small-group lessons in the indoor pool.</p><a class="link-arrow" href="aquatics.html#lessons" data-i18n="fp.more">More</a></article>
+          <article class="card"><span class="tag tag--red" data-i18n="sch.sp.c3.tag">Events</span><h3 data-i18n="sch.sp.c3.t">Races, meets &amp; open days</h3><p data-i18n="sch.sp.c3.p">Dates and organisers on the Community page.</p><a class="link-arrow" href="community.html#events" data-i18n="fp.more">More</a></article>
+        </div>
+      </div>
+    </section>
