@@ -368,6 +368,7 @@
     t: function (key) { var d = dicts[api.current] || en; return d[key] != null ? d[key] : en[key]; },
     apply: function (lang) {
       if (!dicts[lang]) lang = "en";
+      if (window.TLC_beforeTranslate) window.TLC_beforeTranslate();
       api.current = lang;
       var html = document.documentElement;
       html.lang = lang;

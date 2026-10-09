@@ -23,7 +23,9 @@
       }).join(" ");
     });
   }
-  window.TLC_afterTranslate = splitWords;
+  function motion(method, arg) { if (window.TLC_motion) window.TLC_motion[method](arg); }
+  window.TLC_beforeTranslate = function () { motion("destroy"); };
+  window.TLC_afterTranslate = function () { splitWords(); motion("init"); };
 
   /* ---------- Language ---------- */
   function setLang(lang) {
@@ -52,18 +54,6 @@
     else if (y < lastY - 4 || y < heroEnd) header.classList.remove("is-hidden");
     if (mobileCta) mobileCta.classList.toggle("is-visible", y > heroEnd * 0.6);
     lastY = y;
-    parallax(y);
-  }
-
-  /* ---------- Parallax (expressive only, gentle) ---------- */
-  var heroMedia = document.querySelector(".hero__media");
-  function parallax(y) {
-    if (!heroMedia) return;
-    if (doc.dataset.motion === "expressive" && doc.dataset.hero === "bleed" && y < window.innerHeight * 1.2) {
-      heroMedia.style.transform = "translate3d(0," + (y * 0.25).toFixed(1) + "px,0)";
-    } else {
-      heroMedia.style.transform = "";
-    }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -74,12 +64,14 @@
     doc.classList.remove("menu-open");
     toggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
+    motion("pause", false);
   }
   toggle.addEventListener("click", function () {
     var open = !doc.classList.contains("menu-open");
     doc.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
     document.body.style.overflow = open ? "hidden" : "";
+    motion("pause", open);
     if (open) { var first = menu.querySelector("a"); if (first) first.focus(); }
   });
   menu.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
@@ -92,7 +84,6 @@
     entries.forEach(function (en) {
       if (!en.isIntersecting) return;
       en.target.classList.add("is-in");
-      if (en.target.querySelector("[data-count]") || en.target.matches("[data-count]")) countUp(en.target);
       io.unobserve(en.target);
     });
   }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }) : null;
@@ -107,21 +98,6 @@
     });
   }
 
-  /* ---------- Count-up (expressive only) ---------- */
-  function countUp(scope) {
-    if (doc.dataset.motion !== "expressive") return;
-    scope.querySelectorAll("[data-count]").forEach(function (el) {
-      var to = parseInt(el.dataset.count, 10), t0 = null, dur = 1400;
-      function step(t) {
-        if (!t0) t0 = t;
-        var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-        el.textContent = Math.round(to * e);
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    });
-  }
-
   /* ---------- Film control (accessibility: pause the homepage film) ---------- */
   var filmBtn = document.querySelector("[data-film-toggle]");
   if (filmBtn) {
@@ -130,7 +106,7 @@
       filmBtn.setAttribute("aria-pressed", String(paused));
       var label = filmBtn.querySelector("[data-i18n]");
       label.dataset.i18n = paused ? "hero.play" : "hero.pause";
-      if (window.TLC_i18n) window.TLC_i18n.apply(window.TLC_i18n.current);
+      label.textContent = t(label.dataset.i18n, label.textContent);
       // When the real film exists: video.paused ? video.play() : video.pause();
     });
   }
@@ -168,8 +144,8 @@
     var hint = review.querySelector("[data-motion-hint]");
     var hints = {
       still: "Nothing moves. Also what visitors with “reduce motion” switched on will get.",
-      quiet: "Recommended. Soft fade-rise reveals and gentle hovers — restrained, per the brief.",
-      expressive: "Word-by-word headline, image curtains, light parallax, count-ups and a slow ticker. Still calm, but more presence."
+      quiet: "Soft fade-rise reveals and gentle hovers only — the most restrained reading of the brief.",
+      expressive: "Default. Smooth scrolling, headlines rising word by word, the film framing itself as you scroll, a horizontal gallery, an expanding performance film, parallax images and a bright Leisure Island entrance."
     };
     function sync() {
       ["theme", "motion", "hero"].forEach(function (k) {
@@ -188,8 +164,8 @@
       var k = e.target.name, v = e.target.value, patch = {};
       doc.dataset[k] = v;
       patch[k] = v; store(patch);
-      if (k === "motion") { doc.setAttribute("data-motion-chosen", ""); armReveals(); replayHero(); }
-      if (k === "hero") onScroll();
+      if (k === "motion") { doc.setAttribute("data-motion-chosen", ""); motion("refresh"); armReveals(); replayHero(); }
+      if (k === "hero") { motion("refresh"); onScroll(); }
       sync();
     });
     review.querySelector("[data-copy-link]").addEventListener("click", function (e) {
@@ -219,6 +195,7 @@
   try { saved = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
   var lang = q.get("lang") || saved.lang || "en";
   if (lang !== "en") setLang(lang); else { splitWords(); updateRoute(); }
+  motion("refresh");
   armReveals();
   onScroll();
   requestAnimationFrame(function () { hero && hero.classList.add("is-ready"); });

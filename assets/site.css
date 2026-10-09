@@ -104,7 +104,7 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition: background-color .4s, color .4s;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 img, video, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -445,7 +445,7 @@ html[data-hero="framed"] .hero__layout { display: grid; gap: 1.5rem; }
   .gw:nth-child(6) { grid-column: 8 / span 5; margin-block-start: 6rem; }
 }
 .gw { display: block; }
-.gw .ph { transition: transform .9s var(--ease); }
+.gw .ph { transition: scale .9s var(--ease); }
 .gw__media { overflow: hidden; border-radius: var(--radius); }
 .gw__meta { display: grid; grid-template-columns: auto 1fr; gap: .25rem 1rem; margin-block-start: 1.1rem; align-items: baseline; }
 .gw__no { font-size: var(--t-xs); color: var(--muted-ink); font-variant-numeric: tabular-nums; letter-spacing: .08em; }
@@ -705,21 +705,20 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .js[data-motion="expressive"] [data-reveal] { transform: translate3d(0, 36px, 0); transition-duration: 1100ms; transition-delay: calc(var(--i, 0) * 130ms); }
 .js [data-reveal].is-in { opacity: 1 !important; transform: none !important; }
 
-/* image curtain — media "unveils" from the bottom */
-.js[data-motion="expressive"] [data-reveal].ph,
-.js[data-motion="expressive"] [data-reveal] > .ph,
-.js[data-motion="expressive"] .gw__media[data-reveal] {
-  opacity: 1; transform: none; clip-path: inset(100% 0 0 0);
-  transition: clip-path 1.3s var(--ease); transition-delay: calc(var(--i, 0) * 130ms);
+/* image curtain — media "unveils" from the bottom.
+   The clip sits on the child: a fully clipped element never registers as visible to the observer. */
+.js[data-motion="expressive"] [data-reveal] > .ph {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.4s var(--ease), scale .9s var(--ease); transition-delay: calc(var(--i, 0) * 130ms + 100ms), 0s;
 }
-.js[data-motion="expressive"] [data-reveal].ph.is-in,
-.js[data-motion="expressive"] .gw__media[data-reveal].is-in { clip-path: inset(0 0 0 0); }
+.js[data-motion="expressive"] [data-reveal].is-in > .ph { clip-path: inset(0 0 0 0); }
 
 /* hover — image breathing, only where it aids comprehension (it's a link) */
 html:not([data-motion="still"]) .gw:hover .ph,
-html:not([data-motion="still"]) .it:hover .ph { transform: scale(1.025); }
-.it .ph { transition: transform .9s var(--ease); }
-html[data-motion="expressive"] .plan:hover { transform: translateY(-4px); }
+html:not([data-motion="still"]) .it:hover .ph { scale: 1.03; }
+.it .ph { transition: scale .9s var(--ease); }
+.plan { transition: border-color .3s, translate .5s var(--ease); }
+html[data-motion="expressive"] .plan:hover { translate: 0 -6px; }
 
 /* hero headline */
 .split-word { display: inline-block; overflow: hidden; vertical-align: top; padding-block-end: .06em; }
@@ -753,3 +752,71 @@ html[dir="rtl"] .ticker__track { animation-name: tick-rtl; }
 .ph__brief, .ph__tag, .ph__ratio { direction: ltr; unicode-bidi: isolate; }
 html[dir="rtl"] .ph__brief { text-align: right; }
 .menu-open .review { display: none; }
+
+/* ==========================================================================
+   Expressive scroll scenes (driven by assets/motion.js)
+   ========================================================================== */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* reading line under the header */
+.progress {
+  position: absolute; inset-inline: 0; bottom: -1px; height: 2px; z-index: 2;
+  background: var(--red); transform: scaleX(0); transform-origin: left; display: none;
+}
+html[dir="rtl"] .progress { transform-origin: right; }
+html[data-motion="expressive"] .progress { display: block; }
+
+/* masked words for headline rises */
+.mw { display: inline-block; overflow: hidden; vertical-align: top; padding-block-end: .1em; margin-block-end: -.1em; }
+.mw > span { display: inline-block; will-change: transform; }
+.is-scrub .mw { overflow: visible; }
+
+/* heritage statement — fills in as you read */
+.statement {
+  margin-block-start: clamp(4rem, 3rem + 5vw, 9rem);
+  font-size: var(--t-2xl); font-weight: 500; line-height: 1.1; letter-spacing: -.03em;
+  max-width: 26ch; text-wrap: balance;
+}
+html[lang="ar"] .statement { letter-spacing: 0; line-height: 1.4; }
+
+[data-expand] { transform-origin: center center; will-change: transform; }
+.ticker__track.is-gsap { animation: none; }
+
+/* Explore — mobile: native swipe carousel (all motion levels) */
+@media (max-width: 759px) {
+  .gateways {
+    display: flex; gap: .9rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter);
+    scrollbar-width: none; overscroll-behavior-x: contain;
+  }
+  .gateways::-webkit-scrollbar { display: none; }
+  .gw { flex: 0 0 82%; scroll-snap-align: start; }
+  .gw .ph { aspect-ratio: 4 / 5; }
+}
+
+/* Explore — desktop expressive: pinned horizontal gallery */
+.explore__viewport { position: relative; }
+.explore__bar { display: none; }
+.explore.is-horizontal { padding-block: 0; }
+.explore.is-horizontal .explore__viewport { height: 100vh; display: flex; align-items: center; overflow: hidden; }
+.explore.is-horizontal .explore__track {
+  display: flex; align-items: center; gap: 6vw; width: max-content; max-width: none; margin: 0;
+  padding-inline: var(--gutter) 10vw; will-change: transform;
+}
+.explore.is-horizontal .explore__intro { width: min(30vw, 440px); flex-shrink: 0; grid-template-columns: 1fr; gap: 1.5rem; margin: 0; }
+.explore.is-horizontal .gateways { display: flex; align-items: flex-start; gap: 2.5vw; }
+.explore.is-horizontal .gw { width: calc(54vh * .8); flex-shrink: 0; margin: 0 !important; }
+.explore.is-horizontal .gw:nth-child(even) { margin-block-start: 9vh !important; }
+.explore.is-horizontal .gw .ph { aspect-ratio: 4 / 5; }
+.explore.is-horizontal .gw__desc { max-width: 34ch; }
+.explore.is-horizontal .explore__bar {
+  display: block; position: absolute; inset-inline: var(--gutter); bottom: 5vh; height: 1px; background: var(--line-strong);
+}
+.explore__bar i { display: block; height: 100%; background: var(--ink); transform: scaleX(0); transform-origin: left; }
+html[dir="rtl"] .explore__bar i { transform-origin: right; }
+
+/* image layer that scroll scenes move (placeholder cross now, real <img>/<video> later) */
+.ph::before, .ph > img, .ph > video { transform: translateX(var(--drift, 0)) scale(var(--zoom, 1)); }
+.ph > img, .ph > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }

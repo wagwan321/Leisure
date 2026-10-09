@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr" data-theme="paper" data-motion="quiet" data-hero="bleed">
+<html lang="en" dir="ltr" data-theme="paper" data-motion="expressive" data-hero="bleed">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -29,7 +29,7 @@
       d.dataset.hero = q.get("hero") || s.hero || "bleed";
       var m = q.get("motion") || s.motion;
       if (m) d.setAttribute("data-motion-chosen", "");
-      d.dataset.motion = m || (reduce ? "still" : "quiet");
+      d.dataset.motion = m || (reduce ? "still" : "expressive");
       d.classList.add("js");
     })();
   </script>
@@ -64,6 +64,7 @@
 
   <!-- ===================== Header ===================== -->
   <header class="site-header on-hero" id="top">
+    <div class="progress" aria-hidden="true"></div>
     <div class="utility">
       <div class="wrap">
         <span data-i18n="util.place">Dik el-Mehdi · Deir Tamish, Lebanon — Est. 1991</span>
@@ -174,20 +175,19 @@
           <div class="heritage__story">
             <span class="eyebrow" data-reveal data-i18n="her.eyebrow">Our heritage</span>
             <h2 class="h2" id="heritage-title" data-reveal style="--i:1;margin-block:1rem 2rem" data-i18n-html="her.title">A legacy of movement. <em>Since 1991.</em></h2>
-            <p class="lead" data-reveal style="--i:2" data-i18n="her.p1">For more than three decades, families have learned to swim here, trained here, competed here and celebrated here.</p>
-            <p class="small" data-reveal style="--i:3" data-i18n="her.p2">The club has grown with them — from a pool and a gym to a destination for movement, wellness and summer days. The next chapter is already being written.</p>
+            <p class="lead" data-reveal style="--i:2" data-i18n="her.p2">The club has grown with them — from a pool and a gym to a destination for movement, wellness and summer days. The next chapter is already being written.</p>
             <a class="link-arrow" href="#heritage" data-reveal style="--i:4" data-i18n="her.link">Read our story</a>
           </div>
           <div class="then-now">
             <figure data-reveal>
-              <div class="ph r-3x4" role="img" aria-label="Placeholder: archive photograph of the club in the 1990s">
+              <div class="ph r-3x4" data-parallax="0.08" role="img" aria-label="Placeholder: archive photograph of the club in the 1990s">
                 <span class="ph__tag">Archive</span><span class="ph__ratio">3:4</span>
                 <p class="ph__brief"><b>The club, 1990s</b>From the club's own archive — scanned print, untouched.</p>
               </div>
               <figcaption data-i18n="her.then">Then — 1991</figcaption>
             </figure>
             <figure data-reveal style="--i:1">
-              <div class="ph r-3x4" role="img" aria-label="Placeholder: the same viewpoint photographed today">
+              <div class="ph r-3x4" data-parallax="-0.06" role="img" aria-label="Placeholder: the same viewpoint photographed today">
                 <span class="ph__tag">Photo</span><span class="ph__ratio">3:4</span>
                 <p class="ph__brief"><b>Same viewpoint, today</b>Re-shot from the archive angle. Natural light.</p>
               </div>
@@ -195,6 +195,8 @@
             </figure>
           </div>
         </div>
+
+        <p class="statement" data-reveal data-scrub-words data-i18n="her.p1">For more than three decades, families have learned to swim here, trained here, competed here and celebrated here.</p>
 
         <dl class="facts">
           <div class="fact" data-reveal><dt data-i18n="fact.1">Year founded</dt><dd class="num">1991</dd></div>
@@ -206,9 +208,10 @@
     </section>
 
     <!-- ===================== 3 · Explore Our World ===================== -->
-    <section class="section section--surface" id="explore" aria-labelledby="explore-title">
-      <div class="wrap">
-        <div class="section-head section-head--split">
+    <section class="section section--surface explore" id="explore" aria-labelledby="explore-title">
+      <div class="explore__viewport">
+      <div class="wrap explore__track">
+        <div class="section-head section-head--split explore__intro">
           <div>
             <span class="eyebrow" data-reveal data-i18n="ex.eyebrow">Explore our world</span>
             <h2 class="h2" id="explore-title" data-reveal style="--i:1" data-i18n-html="ex.title">Six ways <em>in.</em></h2>
@@ -297,6 +300,8 @@
           </a>
         </div>
       </div>
+      <div class="explore__bar" aria-hidden="true"><i></i></div>
+      </div>
     </section>
 
     <!-- ===================== 4 · Hybrid Athlete Performance Center ===================== -->
@@ -312,11 +317,11 @@
         </div>
 
         <div class="hapc__media">
-          <div class="ph ph--video ph--dark r-16x9" data-reveal role="img" aria-label="Placeholder: performance center film">
+          <div class="ph ph--video ph--dark r-16x9" data-expand role="img" aria-label="Placeholder: performance center film">
             <span class="ph__tag">Film · 10 s loop</span><span class="ph__ratio">16:9</span>
             <p class="ph__brief"><b>The space, in motion</b>Sled push, ski-erg, wall-balls. Real athletes, no slow-motion clichés.</p>
           </div>
-          <div class="ph ph--dark r-4x5" data-reveal style="--i:1" role="img" aria-label="Placeholder: equipment detail">
+          <div class="ph ph--dark r-4x5" data-parallax="0.16" role="img" aria-label="Placeholder: equipment detail">
             <span class="ph__tag">Photo</span><span class="ph__ratio">4:5</span>
             <p class="ph__brief"><b>Detail</b>Chalked hands, timing clock, worn sled handles.</p>
           </div>
@@ -465,17 +470,17 @@
 
         <div class="stories">
           <article class="story" data-reveal>
-            <div class="ph r-3x2" role="img" aria-label="Placeholder: journal story image"><span class="ph__tag">Story</span><span class="ph__ratio">3:2</span></div>
+            <div class="ph r-3x2" data-parallax="0.05" role="img" aria-label="Placeholder: journal story image"><span class="ph__tag">Story</span><span class="ph__ratio">3:2</span></div>
             <div class="story__meta"><span data-i18n="com.s.tag1">Milestone</span><span>—</span><span class="num">00.00.2026</span></div>
             <h3 data-i18n="com.s1">Journal entry — a member achievement, written by the club</h3>
           </article>
           <article class="story" data-reveal style="--i:1">
-            <div class="ph r-3x2" role="img" aria-label="Placeholder: journal story image"><span class="ph__tag">Story</span><span class="ph__ratio">3:2</span></div>
+            <div class="ph r-3x2" data-parallax="0.05" role="img" aria-label="Placeholder: journal story image"><span class="ph__tag">Story</span><span class="ph__ratio">3:2</span></div>
             <div class="story__meta"><span data-i18n="com.s.tag2">Event</span><span>—</span><span class="num">00.00.2026</span></div>
             <h3 data-i18n="com.s2">Journal entry — an event hosted at the venue, organiser credited</h3>
           </article>
           <article class="story" data-reveal style="--i:2">
-            <div class="ph r-3x2" role="img" aria-label="Placeholder: journal story image"><span class="ph__tag">Story</span><span class="ph__ratio">3:2</span></div>
+            <div class="ph r-3x2" data-parallax="0.05" role="img" aria-label="Placeholder: journal story image"><span class="ph__tag">Story</span><span class="ph__ratio">3:2</span></div>
             <div class="story__meta"><span data-i18n="com.s.tag3">Club news</span><span>—</span><span class="num">00.00.2026</span></div>
             <h3 data-i18n="com.s3">Journal entry — a genuine moment from the club's week</h3>
           </article>
@@ -724,7 +729,12 @@
     <button class="review__toggle" type="button" aria-expanded="false" aria-controls="review-panel">Design options</button>
   </div>
 
-  <script src="assets/i18n.js"></script>
-  <script src="assets/site.js"></script>
+  <!-- Motion libraries (used only by the Expressive level) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/motion.js" defer></script>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

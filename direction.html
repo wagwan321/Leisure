@@ -374,7 +374,7 @@
       <div class="wrap">
         <div class="doc-sec__head">
           <span class="doc-sec__no">06 — Motion options</span>
-          <div class="prose"><p>The brief asks for <strong>restrained motion</strong>: subtle reveals, with image transitions and hover effects only where they help (§03, §17), and no aggressive animation. Here are three levels to choose from. Press <strong>Play</strong> on each one. All three switch off automatically for visitors who ask their device for reduced motion, and you can switch levels live on the homepage under <em>Design options</em>.</p></div>
+          <div class="prose"><p>The site now uses <strong>Expressive</strong> by default, built from what the reference sites actually do while you scroll. <strong>Equinox:</strong> smooth inertial scrolling and a framed film. <strong>Aman and Six Senses:</strong> horizontal story rows, statements that come alive as you read, and quiet parallax. <strong>Technogym:</strong> performance film that expands to fill the screen. Every movement is slow and eased, never flashy, so it stays within the brief's "no aggressive animation" (§03). Press <strong>Play</strong> on each card. All of it switches off for visitors who ask their device for reduced motion, and the other two levels are still one click away under <em>Design options</em>.</p></div>
         </div>
         <div class="demos">
           <article class="demo">
@@ -385,20 +385,20 @@
               <div class="demo__btns"><button class="btn" type="button" data-play="still">Play</button><a class="btn" href="index.html?motion=still">Try on homepage</a></div>
             </div>
           </article>
-          <article class="demo demo--rec">
-            <div class="demo__head"><h3>Quiet</h3><span class="demo__rec">Recommended</span></div>
+          <article class="demo">
+            <div class="demo__head"><h3>Quiet</h3></div>
             <div class="demo__stage" data-demo="quiet"><span class="dh">More than a club.</span><span class="dp">Movement. Wellness. Leisure. Community.</span><div class="demo__row"><i></i><i></i><i></i></div></div>
             <div class="demo__body">
-              <p>Content fades and rises 18px as it enters the screen, staggered by 90ms. There are soft image zooms on hover and a header that tucks away while you scroll down. This matches the brief most closely.</p>
-              <div class="demo__btns"><button class="btn btn--solid" type="button" data-play="quiet">Play</button><a class="btn" href="index.html?motion=quiet">Try on homepage</a></div>
+              <p>Content fades and rises 18px as it enters the screen, staggered by 90ms. There are soft image zooms on hover and a header that tucks away while you scroll down. This is the most restrained reading of the brief.</p>
+              <div class="demo__btns"><button class="btn" type="button" data-play="quiet">Play</button><a class="btn" href="index.html?motion=quiet">Try on homepage</a></div>
             </div>
           </article>
-          <article class="demo">
-            <div class="demo__head"><h3>Expressive</h3></div>
+          <article class="demo demo--rec">
+            <div class="demo__head"><h3>Expressive</h3><span class="demo__rec">Default</span></div>
             <div class="demo__stage" data-demo="expressive"><span class="dh" data-words>More than a club.</span><span class="dp">Movement. Wellness. Leisure. Community.</span><div class="demo__row"><i></i><i></i><i></i></div></div>
             <div class="demo__body">
-              <p>The headline rises word by word and images unveil like a curtain. It adds gentle parallax on the hero film, count-up numbers and a slow ticker of disciplines. It is still calm, with more presence, closer to Equinox.</p>
-              <div class="demo__btns"><button class="btn" type="button" data-play="expressive">Play</button><a class="btn" href="index.html?motion=expressive">Try on homepage</a></div>
+              <p>Smooth scrolling and headlines that rise word by word. Images unveil like a curtain, the hero film frames itself as you scroll, and "Six ways in" becomes a horizontal gallery. The performance film expands, Leisure Island opens out in colour, and a red reading line runs under the header.</p>
+              <div class="demo__btns"><button class="btn btn--solid" type="button" data-play="expressive">Play</button><a class="btn" href="index.html?motion=expressive">Try on homepage</a></div>
             </div>
           </article>
         </div>
@@ -407,13 +407,21 @@
           <table class="motion-table">
             <thead><tr><th>Moment</th><th>Still</th><th>Quiet</th><th>Expressive</th></tr></thead>
             <tbody>
+              <tr><td>Scrolling</td><td>Native</td><td>Native</td><td>Smooth, inertial (Equinox)</td></tr>
               <tr><td>Hero headline</td><td>Static</td><td>Soft fade-in</td><td>Word-by-word rise</td></tr>
-              <tr><td>Hero film</td><td>Poster still only</td><td>Silent loop, pause button</td><td>Loop + light parallax, pause button</td></tr>
+              <tr><td>Hero film</td><td>Poster still only</td><td>Silent loop, pause button</td><td>Slow settle on load, then frames itself with rounded margins as you scroll</td></tr>
+              <tr><td>Section headlines</td><td>Static</td><td>Fade + rise</td><td>Words rise from behind a mask</td></tr>
+              <tr><td>Heritage statement</td><td>Static</td><td>Fade + rise</td><td>Words light up as you read (Six Senses)</td></tr>
+              <tr><td>Explore Our World</td><td>Editorial grid</td><td>Editorial grid</td><td>Pinned horizontal gallery with progress line on desktop (Aman). Swipe carousel on phones at every level</td></tr>
+              <tr><td>Performance film</td><td>Static</td><td>Fade</td><td>Grows to full width as it arrives (Technogym)</td></tr>
+              <tr><td>Leisure Island</td><td>Static</td><td>Fade</td><td>Lagoon opens out to full width; tiles bounce in</td></tr>
+              <tr><td>Images</td><td>—</td><td>Fade with content</td><td>Curtain unveil and parallax drift</td></tr>
               <tr><td>Sections</td><td>—</td><td>Fade + 18px rise, staggered</td><td>36px rise, longer, staggered</td></tr>
               <tr><td>Images</td><td>—</td><td>Fade with content</td><td>Curtain unveil from below</td></tr>
               <tr><td>Hover on gateways</td><td>Underline only</td><td>Image zoom 2.5%</td><td>Image zoom + card lift</td></tr>
               <tr><td>Numbers (1991, 35…)</td><td>Static</td><td>Static</td><td>Count up once</td></tr>
-              <tr><td>Disciplines ticker</td><td>Hidden</td><td>Hidden</td><td>Slow 60s loop, pauses on hover</td></tr>
+              <tr><td>Disciplines ticker</td><td>Hidden</td><td>Hidden</td><td>Follows your scroll direction and speeds up with it</td></tr>
+              <tr><td>Reading line</td><td>—</td><td>—</td><td>Thin red progress line under the header</td></tr>
               <tr><td>Header</td><td>Always visible</td><td>Hides on scroll down</td><td>Hides on scroll down</td></tr>
             </tbody>
           </table>
@@ -499,7 +507,7 @@
             <li>Which photography and video will be commissioned, and when? (See the shot list above.)</li>
             <li>Who maintains content and schedules day to day?</li>
             <li>Timeline, milestones, budget and acceptance criteria.</li>
-            <li>A or B? And which motion level?</li>
+            <li>A or B? Is Expressive motion the right amount?</li>
           </ol></div>
           <div class="q"><h3>Facts to verify</h3><ul>
             <li>Membership prices for every plan, which are now going online</li>
@@ -519,7 +527,7 @@
       <div class="wrap">
         <div class="doc-sec__head"><span class="doc-sec__no">10 — Next steps</span><div class="prose"><p>Step by step, with approval at each stage.</p></div></div>
         <ol class="next">
-          <li><b>Choose a direction</b><p>A or B, a motion level and a hero layout. Comments on the homepage prototype.</p></li>
+          <li><b>Choose a direction</b><p>A or B, confirm the motion level, and pick a hero layout. Comments on the homepage prototype.</p></li>
           <li><b>Memberships page</b><p>A plan comparison built for mobile, with prices and the three CTAs (§14).</p></li>
           <li><b>Key interior templates</b><p>The Club, the Hybrid Center, Aquatics, Leisure Island and the filterable schedule.</p></li>
           <li><b>Then build</b><p>A CMS so staff can edit schedules, hours, plans and events, plus SEO, analytics and launch.</p></li>
