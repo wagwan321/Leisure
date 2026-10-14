@@ -166,7 +166,7 @@
         missing[0].focus();
         return;
       }
-      status.textContent = t("inq.proto", "Prototype — nothing was sent.");
+      status.textContent = t("inq.proto", "Prototype: nothing was sent.");
     });
   });
 
@@ -243,7 +243,7 @@
     var hint = review.querySelector("[data-motion-hint]");
     var hints = {
       still: "Nothing moves. Also what visitors with “reduce motion” switched on will get.",
-      quiet: "Soft fade-rise reveals and gentle hovers only — the most restrained reading of the brief.",
+      quiet: "Soft fade-rise reveals and gentle hovers only, the most restrained reading of the brief.",
       expressive: "Default. Smooth scrolling, headlines rising word by word, the film framing itself as you scroll, a horizontal gallery and gentle parallax. Simple and calm."
     };
     function sync() {

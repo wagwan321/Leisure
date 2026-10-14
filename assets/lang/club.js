@@ -1,7 +1,7 @@
 /* The Club page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "النادي — قصتنا منذ ١٩٩١ | ذا ليجر كلوب",
+    "page.title": "النادي: قصتنا منذ ١٩٩١ | ذا ليجر كلوب",
     "cl.eyebrow": "النادي · منذ ١٩٩١",
     "cl.title": "مكان <em>يكبر معك.</em>",
     "cl.lead": "وجهتان في ديك المحدي: النادي الداخلي المفتوح طوال العام، وليجر آيلاند، منتجعنا الخارجي للصيف.",
@@ -32,7 +32,7 @@ TLC_add({
     "cl.end.p": "أفضل طريقة لفهم النادي أن تتجوّل فيه."
   },
   fr: {
-    "page.title": "Le Club — Notre histoire depuis 1991 | The Leisure Club",
+    "page.title": "Le Club: Notre histoire depuis 1991 | The Leisure Club",
     "cl.eyebrow": "Le Club · Depuis 1991",
     "cl.title": "Un lieu <em>qui grandit avec vous.</em>",
     "cl.lead": "Deux destinations à Dik el-Mehdi : le Club intérieur, ouvert toute l'année, et Leisure Island, notre resort extérieur pour l'été.",

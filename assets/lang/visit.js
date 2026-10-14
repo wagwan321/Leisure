@@ -1,7 +1,7 @@
 /* Visit & Contact page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "الزيارة والتواصل — ذا ليجر كلوب، ديك المحدي",
+    "page.title": "الزيارة والتواصل | ذا ليجر كلوب، ديك المحدي",
     "vs.crumb": "الزيارة والتواصل", "vs.eyebrow": "الزيارة والتواصل",
     "vs.lead": "عشرون دقيقة من بيروت، بين أشجار الصنوبر فوق شانفيل، مع موقف مجاني.",
     "vs.find": "اعثر علينا",
@@ -17,7 +17,7 @@ TLC_add({
     "vs.g3.t": "سهولة الوصول", "vs.g3.p": "أخبرنا بما تحتاجه قبل مجيئك وسنخطّط لأسهل طريق داخل النادي."
   },
   fr: {
-    "page.title": "Visite & Contact — The Leisure Club, Dik el-Mehdi",
+    "page.title": "Visite & Contact | The Leisure Club, Dik el-Mehdi",
     "vs.crumb": "Visite & Contact", "vs.eyebrow": "Visite & Contact",
     "vs.lead": "À vingt minutes de Beyrouth, dans les pins au-dessus de Champville, avec parking gratuit sur place.",
     "vs.find": "Nous trouver",

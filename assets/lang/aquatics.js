@@ -1,7 +1,7 @@
 /* Aquatics page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "السباحة — ذا ليجر كلوب",
+    "page.title": "السباحة | ذا ليجر كلوب",
     "aq.eyebrow": "السباحة",
     "aq.title": "الحياة، <em>في الماء.</em>",
     "aq.lead": "من أول طفو لطفل إلى يوم سباق لسبّاح في النادي: مسبح داخلي مدفّأ طوال العام، ومسبح كبير في الهواء الطلق طوال الصيف.",
@@ -45,7 +45,7 @@ TLC_add({
     "aq.out.cta": "اكتشف ليجر آيلاند"
   },
   fr: {
-    "page.title": "Natation — The Leisure Club",
+    "page.title": "Natation | The Leisure Club",
     "aq.eyebrow": "Natation",
     "aq.title": "La vie, <em>dans l'eau.</em>",
     "aq.lead": "Du premier flottement d'un enfant au jour de course d'un nageur du club : une piscine intérieure chauffée toute l'année, et un grand bassin en plein air tout l'été.",

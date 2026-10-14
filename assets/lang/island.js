@@ -1,7 +1,7 @@
 /* Leisure Island page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "ليجر آيلاند — مسابح وزحاليق وصيف | ذا ليجر كلوب",
+    "page.title": "ليجر آيلاند: مسابح وزحاليق وصيف | ذا ليجر كلوب",
     "li.eyebrow": "ليجر آيلاند · في الهواء الطلق",
     "li.title": "الصيف يعيش <em>هنا.</em>",
     "li.lead": "عشرة فدادين خضراء من المسابح والزحاليق وظلال الصنوبر، وكرة قدم على الملعب، ثم عشاء في غريل هاوس مع غروب الشمس.",
@@ -38,7 +38,7 @@ TLC_add({
     "li.ev.p": "أعراس وأعياد ميلاد وحفلات مسبح ومناسبات عائلية على تراسات تطلّ على الجبل والبحر. ويهتم فريق المناسبات بكل التفاصيل."
   },
   fr: {
-    "page.title": "Leisure Island — Piscines, toboggans et été | The Leisure Club",
+    "page.title": "Leisure Island: Piscines, toboggans et été | The Leisure Club",
     "li.eyebrow": "Leisure Island · En plein air",
     "li.title": "L'été vit <em>ici.</em>",
     "li.lead": "Quatre hectares de piscines, de toboggans et d'ombre des pins, du football sur le terrain, puis un dîner au Grill House au coucher du soleil.",

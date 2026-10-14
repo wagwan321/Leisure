@@ -5,7 +5,7 @@ TLC_add({
     "sch.none": "No classes", "sch.session": "session this week", "sch.sessions": "sessions this week", "sch.sessions.few": "sessions this week"
   },
   ar: {
-    "page.title": "الجدول الأسبوعي — ذا ليجر كلوب",
+    "page.title": "الجدول الأسبوعي | ذا ليجر كلوب",
     "sch.f.allact": "كل الأنشطة", "sch.kids": "أطفال", "sch.ages": "الأعمار", "sch.coach": "المدرّب بانتظار التأكيد",
     "sch.none": "لا حصص", "sch.session": "حصة هذا الأسبوع", "sch.sessions": "حصة هذا الأسبوع", "sch.sessions.few": "حصص هذا الأسبوع",
     "sch.eyebrow": "الجدول الأسبوعي",
@@ -27,7 +27,7 @@ TLC_add({
     "sch.sp.c3.tag": "فعاليات", "sch.sp.c3.t": "سباقات ولقاءات وأيام مفتوحة", "sch.sp.c3.p": "المواعيد والجهات المنظّمة في صفحة المجتمع."
   },
   fr: {
-    "page.title": "Planning hebdomadaire — The Leisure Club",
+    "page.title": "Planning hebdomadaire | The Leisure Club",
     "sch.f.allact": "Toutes les activités", "sch.kids": "Enfants", "sch.ages": "âges", "sch.coach": "Coach à confirmer",
     "sch.none": "Pas de cours", "sch.session": "séance cette semaine", "sch.sessions": "séances cette semaine", "sch.sessions.few": "séances cette semaine",
     "sch.eyebrow": "Planning hebdomadaire",

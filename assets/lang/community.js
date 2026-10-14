@@ -1,7 +1,7 @@
 /* Community page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "المجتمع — نادي الجري ونادي السباحة والفعاليات | ذا ليجر كلوب",
+    "page.title": "المجتمع: نادي الجري ونادي السباحة والفعاليات | ذا ليجر كلوب",
     "cm.eyebrow": "المجتمع", "cm.cta.join": "انضم إلى نادٍ",
     "cm.run.eyebrow": "نادي الجري", "cm.run.title": "كل إيقاع، كل أسبوع",
     "cm.run.p": "جري جماعي ينطلق من النادي للكبار والأطفال. تعال واجرِ معنا.",
@@ -28,12 +28,12 @@ TLC_add({
     "cm.j.title": "مجلّة <em>النادي.</em>",
     "cm.j.lead": "لحظات وإنجازات حقيقية من النادي، لا تدوينات عامة.",
     "cm.j.all": "الكل",
-    "cm.j.s4": "مقال — افتتاح مركز أداء الرياضي الهجين",
-    "cm.j.s5": "مقال — ٣٥ عامًا من ذا ليجر كلوب",
-    "cm.j.s6": "مقال — أبرز لحظات المخيم الصيفي"
+    "cm.j.s4": "مقال: افتتاح مركز أداء الرياضي الهجين",
+    "cm.j.s5": "مقال: ٣٥ عامًا من ذا ليجر كلوب",
+    "cm.j.s6": "مقال: أبرز لحظات المخيم الصيفي"
   },
   fr: {
-    "page.title": "Communauté — Run Club, Swim Club, événements | The Leisure Club",
+    "page.title": "Communauté: Run Club, Swim Club, événements | The Leisure Club",
     "cm.eyebrow": "Communauté", "cm.cta.join": "Rejoindre un club",
     "cm.run.eyebrow": "Run Club", "cm.run.title": "Tous les rythmes, chaque semaine",
     "cm.run.p": "Des sorties en groupe au départ du club, pour adultes et enfants. Venez courir ensemble.",
@@ -60,8 +60,8 @@ TLC_add({
     "cm.j.title": "Le journal <em>du club.</em>",
     "cm.j.lead": "De vrais moments et de vraies étapes du club, pas des articles de blog génériques.",
     "cm.j.all": "Tout",
-    "cm.j.s4": "Article — l'ouverture du Hybrid Athlete Performance Center",
-    "cm.j.s5": "Article — 35 ans du Leisure Club",
-    "cm.j.s6": "Article — les temps forts du camp d'été"
+    "cm.j.s4": "Article : l'ouverture du Hybrid Athlete Performance Center",
+    "cm.j.s5": "Article : 35 ans du Leisure Club",
+    "cm.j.s6": "Article : les temps forts du camp d'été"
   }
 });

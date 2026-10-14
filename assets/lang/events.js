@@ -1,7 +1,7 @@
 /* Hospitality & Events page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "الضيافة والمناسبات — ذا ليجر كلوب",
+    "page.title": "الضيافة والمناسبات | ذا ليجر كلوب",
     "ev.crumb": "الضيافة والمناسبات", "ev.eyebrow": "الضيافة والمناسبات",
     "ev.title": "اجتمعوا، <em>واحتفلوا.</em>",
     "ev.lead": "ثلاثة عقود من الغداءات الطويلة ومشروبات الغروب والاحتفالات. تناول الطعام معنا أي يوم، أو دعنا نستضيف اليوم الذي يهمّك.",
@@ -38,7 +38,7 @@ TLC_add({
     "ev.form.type": "المناسبة", "ev.form.date": "التاريخ التقريبي", "ev.form.guests": "عدد الضيوف"
   },
   fr: {
-    "page.title": "Restauration & Événements — The Leisure Club",
+    "page.title": "Restauration & Événements | The Leisure Club",
     "ev.crumb": "Restauration & Événements", "ev.eyebrow": "Restauration & Événements",
     "ev.title": "Se retrouver, <em>célébrer.</em>",
     "ev.lead": "Trois décennies de longs déjeuners, d'apéritifs au coucher du soleil et de fêtes. Venez manger chez nous n'importe quel jour, ou laissez-nous accueillir le jour qui compte.",

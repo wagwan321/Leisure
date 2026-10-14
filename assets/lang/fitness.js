@@ -1,7 +1,7 @@
 /* Fitness & Performance page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "اللياقة والأداء — ذا ليجر كلوب",
+    "page.title": "اللياقة والأداء | ذا ليجر كلوب",
     "fp.eyebrow": "اللياقة والأداء",
     "fp.title": "تدرّب <em>لكل شيء.</em>",
     "fp.lead": "صالة رياضية تقليدية، ومنطقة أداء للرياضيين الهجينين، وأسبوع كامل من الحصص بإشراف مدرّبين، وتدريب فردي واستشفاء حقيقي، كلها تحت سقف واحد.",
@@ -61,7 +61,7 @@ TLC_add({
     "fp.end.p": "كل الحصص مشمولة بالعضوية. تعال وجرّب واحدة، واشعر بأجواء النادي."
   },
   fr: {
-    "page.title": "Fitness & Performance — The Leisure Club",
+    "page.title": "Fitness & Performance | The Leisure Club",
     "fp.eyebrow": "Fitness & Performance",
     "fp.title": "S'entraîner <em>pour tout.</em>",
     "fp.lead": "Une salle traditionnelle, un plateau de performance pour athlètes hybrides, une semaine complète de cours encadrés, du coaching individuel et une vraie récupération, sous un même toit.",

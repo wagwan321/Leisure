@@ -1,7 +1,7 @@
 /* Our Story page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "قصتنا — ذا ليجر كلوب منذ ١٩٩١",
+    "page.title": "قصتنا | ذا ليجر كلوب منذ ١٩٩١",
     "st.eyebrow": "قصتنا · منذ ١٩٩١",
     "st.title": "إرث <em>من الحركة.</em>",
     "st.lead": "خمسة وثلاثون عامًا من العائلات والسبّاحين والاحتفالات والبدايات الأولى في ديك المحدي.",
@@ -22,7 +22,7 @@ TLC_add({
     "st.end.title": "العقد المقبل <em>يبدأ هنا.</em>", "st.end.p": "تعال وشاهد إلى أين تمضي القصة."
   },
   fr: {
-    "page.title": "Notre histoire — The Leisure Club depuis 1991",
+    "page.title": "Notre histoire | The Leisure Club depuis 1991",
     "st.eyebrow": "Notre histoire · Depuis 1991",
     "st.title": "Un héritage <em>du mouvement.</em>",
     "st.lead": "Trente-cinq ans de familles, de nageurs, de fêtes et de premières fois à Dik el-Mehdi.",

@@ -1,7 +1,7 @@
 /* Hybrid Athlete Performance Center page — DRAFT AR/FR for native review. */
 TLC_add({
   ar: {
-    "page.title": "مركز أداء الرياضي الهجين — أول نادٍ لـ HYROX في لبنان | ذا ليجر كلوب",
+    "page.title": "مركز أداء الرياضي الهجين: أول نادٍ لـ HYROX في لبنان | ذا ليجر كلوب",
     "hc.crumb": "مركز الأداء",
     "hc.eyebrow": "الفصل الأحدث",
     "hc.title": "مركز أداء <em>الرياضي الهجين.</em>",
@@ -41,7 +41,7 @@ TLC_add({
     "hc.end.cta": "اسأل عن المركز"
   },
   fr: {
-    "page.title": "Hybrid Athlete Performance Center — La première salle HYROX du Liban | The Leisure Club",
+    "page.title": "Hybrid Athlete Performance Center: La première salle HYROX du Liban | The Leisure Club",
     "hc.crumb": "Performance Center",
     "hc.eyebrow": "Le nouveau chapitre",
     "hc.title": "Hybrid Athlete <em>Performance Center.</em>",

@@ -2,7 +2,7 @@
 TLC_add({
   en: { "ms.per.month": "/ month", "ms.per.season": "/ season", "ms.per.year": "/ year" },
   ar: {
-    "page.title": "العضويات — ذا ليجر كلوب",
+    "page.title": "العضويات | ذا ليجر كلوب",
     "ms.per.month": "/ شهريًا", "ms.per.season": "/ للموسم", "ms.per.year": "/ سنويًا",
     "ms.eyebrow": "العضويات",
     "ms.title": "انتماء، <em>بتصميم.</em>",
@@ -71,7 +71,7 @@ TLC_add({
     "ms.o.corp": "عضوية الشركات", "ms.o.visit": "حجز زيارة", "ms.o.unsure": "لست متأكدًا بعد"
   },
   fr: {
-    "page.title": "Abonnements — The Leisure Club",
+    "page.title": "Abonnements | The Leisure Club",
     "ms.per.month": "/ mois", "ms.per.season": "/ saison", "ms.per.year": "/ an",
     "ms.eyebrow": "Abonnements",
     "ms.title": "Appartenir, <em>par conception.</em>",
