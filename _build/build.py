@@ -51,6 +51,25 @@ def attrs(s):
     return out
 
 
+_sizes = {}
+
+
+def _img_set(name):
+    """Build srcset from images/site/<name>-<n>.webp (sizes read from the files)."""
+    from PIL import Image
+    files = sorted((ROOT / "images" / "site").glob(f"{name}-*.webp"), key=lambda f: f.stat().st_size)
+    items = []
+    for f in files:
+        if f not in _sizes:
+            with Image.open(f) as im:
+                _sizes[f] = im.size[0]
+        items.append((_sizes[f], f"images/site/{f.name}"))
+    items.sort()
+    if not items:
+        raise SystemExit(f"missing image: images/site/{name}-*.webp")
+    return items
+
+
 def ph(match):
     a = attrs(match.group(1))
     r = a.get("r", "16x9")
@@ -63,6 +82,21 @@ def ph(match):
     if a.get("cls"):
         cls.append(a["cls"])
     extra = (" " + a["x"]) if a.get("x") else ""
+    pos = a.get("pos", "50% 50%")
+    alt = html.escape(a.get("alt", title or tag), quote=True)
+    if a.get("img"):
+        items = _img_set(a["img"])
+        srcset = ", ".join(f"{u} {w}w" for w, u in items)
+        sizes = a.get("sz", "(min-width: 900px) 50vw, 100vw")
+        eager = 'loading="eager" fetchpriority="high"' if a.get("eager") else 'loading="lazy"'
+        return (f'<div class="{" ".join(cls)} ph--photo"{extra}>'
+                f'<img src="{items[0][1]}" srcset="{srcset}" sizes="{sizes}" alt="{alt}" {eager} decoding="async" '
+                f'style="object-position:{pos}"></div>')
+    if a.get("video"):
+        v = a["video"]
+        return (f'<div class="{" ".join(cls)} ph--photo"{extra}>'
+                f'<video muted loop playsinline preload="none" poster="video/site/{v}.jpg" data-src="video/site/{v}.mp4" '
+                f'data-lazyvideo aria-label="{alt}" style="object-position:{pos}"></video></div>')
     ratio = "" if r == "free" else f'<span class="ph__ratio">{r.replace("x", ":")}</span>'
     body = f'<p class="ph__brief"><b>{title}</b>{brief}</p>' if (title or brief) else ""
     label = html.escape(f"Placeholder: {title or tag}", quote=True)

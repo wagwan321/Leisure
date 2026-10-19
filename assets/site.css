@@ -1286,3 +1286,24 @@ html[data-motion="still"] .live.is-open::before { animation: none; }
 html[data-hero="bleed"] .hero__bar .live { color: #F6F5F2; }
 
 .compare-slider .ph__brief { inset-block-end: 3.6rem; }
+
+/* Real photographs and film inside the placeholder frames */
+.ph--photo { background: var(--ph); }
+.ph--photo::before { display: none; }
+.ph--photo > img, .ph--photo > video { object-fit: cover; }
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.hero__media .hero__video { transform: none; }
+
+/* Hero: size the film so the headline, buttons and Pause control are all visible on first view */
+@media (min-width: 700px) {
+  html[data-hero="framed"] .hero { --hero-h: clamp(320px, calc(100svh - var(--header-h) - 270px), 860px); }
+}
+
+/* Hero still image sits behind the video (phones get the single-portrait version) */
+.hero__media.ph--video { background: #191919 url("../video/site/hero-home.jpg") center / cover no-repeat; }
+@media (max-width: 699px) { .hero__media.ph--video { background-image: url("../video/site/hero-home-m.jpg"); } }
+@media (min-width: 700px) {
+  html[data-hero="framed"] .hero { --hero-h: clamp(320px, calc(100svh - var(--header-h) - 300px), 860px); }
+  html[data-hero="framed"] .hero__bar { margin-block-start: 1rem; padding-block-start: .9rem; }
+  html[data-hero="framed"] .hero__content { padding-block-start: 1.25rem; padding-block-end: 1.25rem; }
+}

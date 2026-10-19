@@ -135,7 +135,7 @@
       var label = filmBtn.querySelector("[data-i18n]");
       label.dataset.i18n = paused ? "hero.play" : "hero.pause";
       label.textContent = t(label.dataset.i18n, label.textContent);
-      // When the real film exists: video.paused ? video.play() : video.pause();
+      document.dispatchEvent(new CustomEvent("tlc:film", { detail: { paused: paused } }));
     });
   }
 

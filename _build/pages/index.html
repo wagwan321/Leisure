@@ -7,11 +7,12 @@ scripts: assets/lang/home.js
 -->
     <!-- ===================== 1 · Hero ===================== -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media ph ph--video" role="img" aria-label="Placeholder for the homepage film">
+      <div class="hero__media ph ph--video">
+        <video class="hero__video" muted loop playsinline autoplay preload="auto" aria-hidden="true"
+          data-hero-video
+          data-src-desktop="video/site/hero-home.mp4" data-src-mobile="video/site/hero-home-m.mp4"></video>
         <!-- Expressive: the headline is a window onto the film, then opens as you scroll -->
         <div class="hero__mask" aria-hidden="true"><span data-i18n="hero.title">MORE THAN A CLUB.</span></div>
-        <span class="ph__tag">Film · homepage loop</span>
-        <p class="ph__brief"><b>Understated cinematic film, 20–40 s, silent loop</b>Early light on the 25 m pool · chalk and sled on the performance floor · a family at Leisure Island · sunset at the Grill House. Natural light, consistent grade. Mobile fallback: one 4:5 still.</p>
       </div>
       <div class="hero__content wrap">
         <div class="hero__layout">
@@ -82,10 +83,7 @@ scripts: assets/lang/home.js
         <div class="gateways">
           <a class="gw" href="fitness.html">
             <div class="gw__media" data-reveal>
-              <div class="ph r-4x5" role="img" aria-label="Placeholder: performance floor">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">4:5</span>
-                <p class="ph__brief"><b>Performance floor</b>Wide, architectural. One athlete mid-movement, candid. Material detail: rubber, steel, chalk.</p>
-              </div>
+              <ph r="4x5" t="performance floor" img="gym-trainer" pos="50% 40%" alt="A coach guiding a member through a lunge in the gym"/>
             </div>
             <div class="gw__meta" data-reveal style="--i:1">
               <span class="gw__no">01</span><h3 class="gw__title" data-i18n="gw.1.t">Fitness &amp; Performance</h3>
@@ -95,10 +93,7 @@ scripts: assets/lang/home.js
           </a>
           <a class="gw" href="aquatics.html">
             <div class="gw__media" data-reveal>
-              <div class="ph r-3x4" role="img" aria-label="Placeholder: indoor 25-metre pool">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">3:4</span>
-                <p class="ph__brief"><b>Indoor 25 m pool</b>Overhead or lane-end view, still water, morning light.</p>
-              </div>
+              <ph r="3x4" t="indoor 25-metre pool" img="pool-lanes-logo" pos="30% 50%" alt="The heated indoor pool"/>
             </div>
             <div class="gw__meta" data-reveal style="--i:1">
               <span class="gw__no">02</span><h3 class="gw__title" data-i18n="gw.2.t">Aquatics</h3>
@@ -108,10 +103,7 @@ scripts: assets/lang/home.js
           </a>
           <a class="gw" href="fitness.html#wellness">
             <div class="gw__media" data-reveal>
-              <div class="ph r-1x1" role="img" aria-label="Placeholder: sauna and steam detail">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">1:1</span>
-                <p class="ph__brief"><b>Recovery detail</b>Sauna timber, steam, towel texture. Warm, quiet.</p>
-              </div>
+              <ph r="1x1" t="sauna and steam detail" img="solarium" pos="50% 45%" alt="Solarium in blue light"/>
             </div>
             <div class="gw__meta" data-reveal style="--i:1">
               <span class="gw__no">03</span><h3 class="gw__title" data-i18n="gw.3.t">Wellness &amp; Recovery</h3>
@@ -121,10 +113,7 @@ scripts: assets/lang/home.js
           </a>
           <a class="gw" href="leisure-island.html">
             <div class="gw__media" data-reveal>
-              <div class="ph r-3x2" role="img" aria-label="Placeholder: Leisure Island pools and slides">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">3:2</span>
-                <p class="ph__brief"><b>Leisure Island, high summer</b>Pools and slides among the pines. Bright, joyful, real families.</p>
-              </div>
+              <ph r="3x2" t="Leisure Island pools and slides" img="island-pool-slides" pos="50% 68%" alt="The outdoor pool with swimmers and the slides behind"/>
             </div>
             <div class="gw__meta" data-reveal style="--i:1">
               <span class="gw__no">04</span><h3 class="gw__title" data-i18n="gw.4.t">Leisure Island</h3>
@@ -134,10 +123,7 @@ scripts: assets/lang/home.js
           </a>
           <a class="gw" href="community.html">
             <div class="gw__media" data-reveal>
-              <div class="ph r-3x2" role="img" aria-label="Placeholder: Run Club group run">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">3:2</span>
-                <p class="ph__brief"><b>Run Club at dawn</b>The group in motion, from behind or at distance. Genuine moment.</p>
-              </div>
+              <ph r="3x2" t="Run Club group run" img="meet-hug" pos="50% 45%" alt="Two swimmers hugging after a race at a club swim meet"/>
             </div>
             <div class="gw__meta" data-reveal style="--i:1">
               <span class="gw__no">05</span><h3 class="gw__title" data-i18n="gw.5.t">Community</h3>
@@ -147,10 +133,7 @@ scripts: assets/lang/home.js
           </a>
           <a class="gw" href="events.html">
             <div class="gw__media" data-reveal>
-              <div class="ph r-4x5" role="img" aria-label="Placeholder: Grill House at sunset">
-                <span class="ph__tag">Photo</span><span class="ph__ratio">4:5</span>
-                <p class="ph__brief"><b>Grill House, golden hour</b>Table set, sunset bar beyond. Hospitality, not food close-ups.</p>
-              </div>
+              <ph r="4x5" t="Grill House at sunset" img="bianco-bar" pos="45% 50%" alt="Guests dancing at the Bianco Bar"/>
             </div>
             <div class="gw__meta" data-reveal style="--i:1">
               <span class="gw__no">06</span><h3 class="gw__title" data-i18n="gw.6.t">Hospitality &amp; Events</h3>
@@ -177,14 +160,8 @@ scripts: assets/lang/home.js
         </div>
 
         <div class="hapc__media">
-          <div class="ph ph--video ph--dark r-16x9" data-expand role="img" aria-label="Placeholder: performance center film">
-            <span class="ph__tag">Film · 10 s loop</span><span class="ph__ratio">16:9</span>
-            <p class="ph__brief"><b>The space, in motion</b>Sled push, ski-erg, wall-balls. Real athletes, no slow-motion clichés.</p>
-          </div>
-          <div class="ph ph--dark r-4x5" data-parallax="0.16" role="img" aria-label="Placeholder: equipment detail">
-            <span class="ph__tag">Photo</span><span class="ph__ratio">4:5</span>
-            <p class="ph__brief"><b>Detail</b>Chalked hands, timing clock, worn sled handles.</p>
-          </div>
+          <ph r="16x9" t="performance center film" img="hybrid-floor" pos="50% 50%" alt="The Hybrid Athlete Performance Center floor" sz="(min-width: 900px) 60vw, 100vw" cls="ph--dark" x="data-expand"/>
+          <ph r="4x5" t="equipment detail" img="hybrid-session" pos="75% 55%" alt="Members training on the performance floor" cls="ph--dark" x="data-parallax='0.16'"/>
         </div>
 
         <div class="access">
@@ -300,10 +277,7 @@ scripts: assets/lang/home.js
         </div>
 
         <div class="community__grid">
-          <div class="ph r-16x9" data-reveal role="img" aria-label="Placeholder: Swim Club at competition">
-            <span class="ph__tag">Photo</span><span class="ph__ratio">16:9</span>
-            <p class="ph__brief"><b>Swim Club, race day</b>Hosted at the venue. Credit the organiser accurately. Candid, not posed.</p>
-          </div>
+          <ph r="16x9" t="Swim Club at competition" img="meet-race" pos="50% 50%" alt="A swimmer racing at a club swim meet" sz="(min-width: 900px) 60vw, 100vw" x="data-reveal"/>
           <div class="clubs">
             <div class="club" data-reveal>
               <h3 data-i18n="com.c1.t">Run Club</h3>
@@ -369,19 +343,19 @@ scripts: assets/lang/home.js
 
         <div class="island-tiles">
           <a class="it" href="leisure-island.html#water" data-reveal>
-            <div class="ph" role="img" aria-label="Placeholder: pools and water slides"><span class="ph__tag">Photo · wide</span><p class="ph__brief"><b>Pools &amp; slides</b>Wide from above, peak afternoon, bright and alive.</p></div>
+            <ph r="free" t="pools and water slides" img="island-pool-slides" pos="50% 70%" alt="The outdoor pool with the slides behind" sz="(min-width: 900px) 55vw, 100vw"/>
             <span class="it__label" data-i18n="isl.t1">Pools &amp; slides</span>
           </a>
           <a class="it it--sun" href="leisure-island.html#family" data-reveal style="--i:1">
-            <div class="ph" role="img" aria-label="Placeholder: children at the playground"><span class="ph__tag">Photo</span><p class="ph__brief"><b>Family &amp; kids</b>Playground and splash area, candid.</p></div>
+            <ph r="free" t="children at the playground" img="island-splash" pos="50% 45%" alt="Children under the palm fountain at the splash pad"/>
             <span class="it__label" data-i18n="isl.t2">Family &amp; kids</span>
           </a>
           <a class="it" href="leisure-island.html#sports" data-reveal style="--i:2">
-            <div class="ph" role="img" aria-label="Placeholder: football pitch"><span class="ph__tag">Photo</span><p class="ph__brief"><b>Football &amp; sports</b>The pitch in late light.</p></div>
+            <ph r="free" t="football pitch" img="island-pitch-sunset" pos="50% 55%" alt="Children playing football on the pitch at sunset"/>
             <span class="it__label" data-i18n="isl.t3">Football &amp; sports</span>
           </a>
           <a class="it it--coral" href="events.html#grill-house" data-reveal style="--i:3">
-            <div class="ph" role="img" aria-label="Placeholder: Grill House"><span class="ph__tag">Photo</span><p class="ph__brief"><b>Grill House</b>Tables outdoors, people sharing.</p></div>
+            <ph r="free" t="Grill House" img="burger" pos="50% 45%" alt="A burger and fries from the Grill House"/>
             <span class="it__label" data-i18n="isl.t4">Grill House</span>
           </a>
           <a class="it" href="events.html#bars" data-reveal style="--i:4">
@@ -450,10 +424,8 @@ scripts: assets/lang/home.js
           </div>
 
           <div class="visit__map">
-            <div class="ph r-16x9" data-reveal role="img" aria-label="Placeholder: interactive map">
-              <span class="ph__tag">Map</span><span class="ph__ratio">16:9</span>
-              <p class="ph__brief"><b>Interactive map</b>Two pins: Indoor Club and Leisure Island, with directions. Styled to the palette.</p>
-            </div>
+            <iframe class="map-embed" data-reveal title="Map of The Leisure Club, Dik el-Mehdi" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=33.9374008,35.6204719&amp;z=15&amp;output=embed"></iframe>
 
             <div class="inquiry" id="inquire" data-reveal style="--i:1">
               <h3 class="h4" data-i18n="inq.t">Send an inquiry</h3>
