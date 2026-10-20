@@ -199,7 +199,7 @@ html[dir="rtl"] .link-arrow:hover::after { transform: translateX(-3px); }
 .ph--dark .ph__brief b { color: #F6F5F2; }
 .ph--dark .ph__tag { background: #F6F5F2; color: #191919; }
 .ph--dark::before { filter: invert(1); }
-.ph-inner { position: absolute; inset: 0; } /* moved by parallax so the label stays put */
+.ph-inner { position: absolute; inset: 0; }
 
 .r-16x9 { aspect-ratio: 16 / 9; }
 .r-4x5  { aspect-ratio: 4 / 5; }
@@ -439,7 +439,7 @@ html[data-hero="framed"] .hero__layout { display: grid; gap: 1.5rem; }
   .gw:nth-child(6) { grid-column: 8 / span 5; margin-block-start: 6rem; }
 }
 .gw { display: block; }
-.gw .ph { transition: scale .9s var(--ease); }
+
 .gw__media { overflow: hidden; border-radius: var(--radius); }
 .gw__meta { display: grid; grid-template-columns: auto 1fr; gap: .25rem 1rem; margin-block-start: 1.1rem; align-items: baseline; }
 .gw__no { font-size: var(--t-xs); color: var(--muted-ink); font-variant-numeric: tabular-nums; letter-spacing: .08em; }
@@ -682,7 +682,8 @@ html[lang="ar"] .footer__cols h3 { letter-spacing: 0; }
    Motion
    still      — nothing moves (also the default under prefers-reduced-motion)
    quiet      — subtle fade-rise reveals, soft image transitions (recommended)
-   expressive — word-by-word headline, image curtains, parallax, count-up
+   expressive — word-by-word headline, count-up, the homepage film
+   Pictures are never scaled, shifted or clipped by scrolling.
    ========================================================================== */
 html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-motion="still"] *::after {
   transition-duration: 0s !important; animation: none !important;
@@ -698,18 +699,10 @@ html[data-motion="still"] *, html[data-motion="still"] *::before, html[data-moti
 .js[data-motion="expressive"] [data-reveal] { transform: translate3d(0, 36px, 0); transition-duration: 1100ms; transition-delay: calc(var(--i, 0) * 130ms); }
 .js [data-reveal].is-in { opacity: 1 !important; transform: none !important; }
 
-/* image curtain — media "unveils" from the bottom.
-   The clip sits on the child: a fully clipped element never registers as visible to the observer. */
-.js[data-motion="expressive"] [data-reveal] > .ph {
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 1.4s var(--ease), scale .9s var(--ease); transition-delay: calc(var(--i, 0) * 130ms + 100ms), 0s;
-}
-.js[data-motion="expressive"] [data-reveal].is-in > .ph { clip-path: inset(0 0 0 0); }
-
 /* hover — image breathing, only where it aids comprehension (it's a link) */
-html:not([data-motion="still"]) .gw:hover .ph,
-html:not([data-motion="still"]) .it:hover .ph { scale: 1.03; }
-.it .ph { transition: scale .9s var(--ease); }
+html:not([data-motion="still"]) .gw:hover .ph > img,
+html:not([data-motion="still"]) .it:hover .ph > img { scale: 1.03; }
+.gw .ph > img, .it .ph > img { transition: scale .9s var(--ease); }
 .plan { transition: border-color .3s, translate .5s var(--ease); }
 
 /* hero headline */
@@ -763,8 +756,6 @@ html[data-motion="expressive"] .progress { display: block; }
 }
 html[lang="ar"] .statement { letter-spacing: 0; line-height: 1.4; }
 
-[data-expand] { transform-origin: center center; will-change: transform; }
-
 /* Explore — mobile: native swipe carousel (all motion levels) */
 @media (max-width: 759px) {
   .gateways {
@@ -798,8 +789,6 @@ html[lang="ar"] .statement { letter-spacing: 0; line-height: 1.4; }
 .explore__bar i { display: block; height: 100%; background: var(--ink); transform: scaleX(0); transform-origin: left; }
 html[dir="rtl"] .explore__bar i { transform-origin: right; }
 
-/* image layer that scroll scenes move (placeholder cross now, real <img>/<video> later) */
-.ph::before, .ph > img, .ph > video { transform: translateX(var(--drift, 0)) scale(var(--zoom, 1)); }
 .ph > img, .ph > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
 
 /* ==========================================================================

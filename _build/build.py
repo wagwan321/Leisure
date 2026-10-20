@@ -15,7 +15,7 @@ Each file in _build/pages/ is a page body with a small header comment:
 
 Shortcode for media placeholders (no photography yet):
 
-    <ph r="4x5" tag="Photo" t="Indoor pool" b="Brief for the photographer" cls="ph--dark" x='data-parallax="0.1"'/>
+    <ph r="4x5" tag="Photo" t="Indoor pool" b="Brief for the photographer" cls="ph--dark" x='data-reveal'/>
 
 The output is plain HTML written to the site root, so Vercel serves it as-is.
 """

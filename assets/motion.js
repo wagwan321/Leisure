@@ -1,9 +1,9 @@
 /* The Leisure Club — scroll motion (the "Expressive" level)
    Patterns studied from the brief's references (§19):
    - Equinox   smooth inertial scroll, framed film, bold statements
-   - Aman      slow film, horizontal story rows, quiet parallax
+   - Aman      slow film, horizontal story rows
    - Six Senses  statement text that comes alive as you read
-   - Technogym   performance media that expands to fill the screen
+   Pictures are never scaled, shifted or clipped: they always fill their frame.
    Runs only when html[data-motion="expressive"] and GSAP is available; otherwise
    the CSS reveals in site.css (Quiet) or nothing at all (Still) apply. */
 (function () {
@@ -67,7 +67,6 @@
   function hero() {
     var h = $(".hero"); if (!h) return;
     var media = $(".hero__media", h), content = $(".hero__content", h);
-    gsap.fromTo(media, { scale: 1.12 }, { scale: 1, duration: 2.8, ease: "power2.out" });
     if (doc.dataset.hero === "bleed") {
       var g = gutter();
       gsap.timeline({ scrollTrigger: { trigger: h, start: "top top", end: "bottom top", scrub: true } })
@@ -104,13 +103,11 @@
     });
   }
 
-  // Interior page hero — the opening image settles, then drifts as you scroll on
+  // Interior page hero: the opening image fades in, always filling its frame
   function pageHero() {
     var media = $(".page-hero__media .ph"); if (!media) return;
     var wrap = media.parentNode; claim(wrap);
-    gsap.fromTo(media, { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 2, ease: "power3.out", delay: 0.2 });
-    gsap.to(media, { "--zoom": 1.12, ease: "none",
-      scrollTrigger: { trigger: wrap, start: "top 60%", end: "bottom top", scrub: true } });
+    gsap.fromTo(media, { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "power2.out", delay: 0.1 });
     $$(".page-hero__aside > *, .crumbs").forEach(function (el, i) {
       gsap.from(el, { y: 24, opacity: 0, duration: 1.1, ease: "expo.out", delay: 0.35 + i * 0.08 });
     });
@@ -122,7 +119,7 @@
       if (group.classList.contains("plans")) return; // memberships() handles plan cards
       var kids = Array.prototype.slice.call(group.children).filter(function (k) { return !k.matches(".sr-only"); });
       kids.forEach(claim);
-      gsap.from(kids, { y: 70, opacity: 0, duration: 1.15, ease: "expo.out", stagger: 0.09,
+      gsap.from(kids, { y: 28, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.09,
         scrollTrigger: { trigger: group, start: "top 86%", once: true } });
     });
   }
@@ -140,17 +137,6 @@
     });
   }
 
-  // Images drift at their own pace (Aman)
-  function parallax() {
-    $$("[data-parallax]").forEach(function (el) {
-      var s = parseFloat(el.dataset.parallax) || 0.1;
-      gsap.fromTo(el, { yPercent: s * 100 }, {
-        yPercent: -s * 100, ease: "none",
-        scrollTrigger: { trigger: el, start: "top bottom", end: "bottom top", scrub: true }
-      });
-    });
-  }
-
   // Count-ups for the heritage facts
   function facts() {
     $$(".facts [data-count]").forEach(function (el) {
@@ -161,13 +147,8 @@
     });
   }
 
-  // Performance Center — the film grows to full width as it arrives (Technogym)
+  // Performance Center: the access columns arrive in turn
   function performance() {
-    var film = $("[data-expand]"); if (!film) return;
-    gsap.fromTo(film, { scale: 0.74, borderRadius: 28 }, {
-      scale: 1, borderRadius: 2, ease: "none",
-      scrollTrigger: { trigger: film, start: "top 95%", end: "top 22%", scrub: true }
-    });
     var cols = $$("#performance .access__col");
     if (!cols.length) return;
     cols.forEach(claim);
@@ -195,13 +176,9 @@
       scrollTrigger: { trigger: ".clubs", start: "top 85%", once: true } });
   }
 
-  // Leisure Island — the lagoon opens out to full width, tiles rise in
+  // Leisure Island: tiles rise in
   function island() {
     var s = $("main > .island:not(.page-hero)"); if (!s) return;
-    gsap.fromTo(s, { clipPath: "inset(5% 4% 0% 4% round 36px)" }, {
-      clipPath: "inset(0% 0% 0% 0% round 0px)", ease: "none",
-      scrollTrigger: { trigger: s, start: "top 95%", end: "top 15%", scrub: true }
-    });
     var tiles = $$(".it", s);
     if (!tiles.length) return;
     tiles.forEach(claim);
@@ -233,13 +210,6 @@
         onUpdate: function (self) { if (bar) bar.style.transform = "scaleX(" + self.progress.toFixed(3) + ")"; }
       }
     });
-    if (!rtl) {
-      $$(".gw__media .ph", sec).forEach(function (ph) {
-        // drift the image layer only (the ::before today, the <img> later) so labels stay put
-        gsap.fromTo(ph, { "--drift": "7%", "--zoom": 1.16 }, { "--drift": "-7%", "--zoom": 1.16, ease: "none",
-          scrollTrigger: { trigger: ph.parentNode, containerAnimation: tween, start: "left right", end: "right left", scrub: true } });
-      });
-    }
     return function () {
       sec.classList.remove("is-horizontal");
       gsap.set(track, { clearProps: "x" });
@@ -282,7 +252,7 @@
     startLenis();
     ctx = gsap.context(function () {
       if ($(".hero")) hero();
-      pageHero(); headlines(); statements(); parallax(); facts(); staggers();
+      pageHero(); headlines(); statements(); facts(); staggers();
       performance(); memberships(); community(); island(); progress();
     });
     mm = gsap.matchMedia();
