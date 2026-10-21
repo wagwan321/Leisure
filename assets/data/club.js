@@ -1,6 +1,6 @@
 /* Opening hours and the Leisure Island season — the one place to edit them.
    The "Open now" lines and the island countdown update themselves from this.
-   Times are Lebanon time (Asia/Beirut). Hours as last published — to confirm with the club. */
+   Times are Lebanon time (Asia/Beirut). Source: the club's affiliation 2027 flyer. */
 window.TLC_CLUB = {
   timezone: "Asia/Beirut",
   indoor: {
@@ -13,8 +13,8 @@ window.TLC_CLUB = {
     sun: null              // closed
   },
   island: {
-    opens: null,           // e.g. "2027-05-15" — when set, Leisure Island shows a countdown
-    closes: null,          // e.g. "2027-09-20"
+    opens: "2027-05-16",   // Leisure Island season (affiliation 2027 flyer): 16 May to 20 September
+    closes: "2027-09-20",
     hours: ["10:00", "20:00"]
   }
 };

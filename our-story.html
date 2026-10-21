@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri&display=swap" />
   <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/v2.css" />
 
   <!-- Apply saved / shared review options before first paint -->
   <script>
@@ -67,7 +68,7 @@
     </div>
   </header>
 
-  <!-- Full-screen menu: primary sections left (brief §07 order), the hovered section's pages on the right -->
+  <!-- Full-screen menu: seven sections, no sub-lists (owner review, Oct 2026: fewer subsections) -->
   <div class="site-menu" id="site-menu" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="site-menu__nav">
       <div class="site-menu__top">
@@ -77,58 +78,15 @@
       <nav aria-label="Primary">
         <ol class="menu-primary" role="list">
           <li><a href="index.html" data-nav="home" data-i18n="nav.home">Home</a></li>
-          <li data-has-sub><a href="the-club.html" data-nav="club" aria-current="page" data-i18n="nav.club">The Club</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="The Club pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="our-story.html" data-i18n="f.story">Our Story</a></li>
-              <li><a href="the-club.html#philosophy" data-i18n="f.phil">Our Philosophy</a></li>
-              <li><a href="the-club.html#facilities" data-i18n="mn.fac">Our Facilities</a></li>
-              <li><a href="the-club.html#gallery" data-i18n="f.gal">Gallery</a></li>
-            </ul></li>
-          <li data-has-sub><a href="fitness.html" data-nav="fitness" data-i18n="nav.fitness">Fitness &amp; Performance</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Fitness pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="fitness.html#gym" data-i18n="mn.gym">The Gym</a></li>
-              <li><a href="hybrid-center.html" data-i18n="mn.hapc">Hybrid Athlete Performance Center</a></li>
-              <li><a href="fitness.html#classes" data-i18n="mn.classes">Group Classes</a></li>
-              <li><a href="fitness.html#training" data-i18n="mn.pt">Personal Training</a></li>
-              <li><a href="fitness.html#wellness" data-i18n="mn.well">Wellness &amp; Recovery</a></li>
-              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
-            </ul></li>
-          <li data-has-sub><a href="aquatics.html" data-nav="aquatics" data-i18n="nav.aquatics">Aquatics</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Aquatics pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="aquatics.html#indoor" data-i18n="mn.indoor">Indoor Swimming</a></li>
-              <li><a href="aquatics.html#lessons" data-i18n="mn.lessons">Swimming Lessons</a></li>
-              <li><a href="aquatics.html#swim-club" data-i18n="com.c2.t">Swim Club</a></li>
-              <li><a href="aquatics.html#competitive" data-i18n="mn.comp">Competitive Swimming</a></li>
-              <li><a href="aquatics.html#outdoor" data-i18n="mn.outdoor">Outdoor Swimming</a></li>
-            </ul></li>
-          <li data-has-sub><a href="leisure-island.html" data-nav="island" data-i18n="nav.island">Leisure Island</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Leisure Island pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="leisure-island.html#season" data-i18n="mn.season">Season &amp; hours</a></li>
-              <li><a href="leisure-island.html#water" data-i18n="mn.water">Pools &amp; slides</a></li>
-              <li><a href="leisure-island.html#family" data-i18n="mn.family">Family</a></li>
-              <li><a href="leisure-island.html#sports" data-i18n="mn.sports">Football &amp; sports</a></li>
-              <li><a href="events.html" data-i18n="f.hosp">Hospitality &amp; Events</a></li>
-              <li><a href="events.html#weddings" data-i18n="mn.weddings">Weddings</a></li>
-            </ul></li>
-          <li data-has-sub><a href="community.html" data-nav="community" data-i18n="nav.community">Community</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Community pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="community.html#run-club" data-i18n="com.c1.t">Run Club</a></li>
-              <li><a href="community.html#swim-club" data-i18n="com.c2.t">Swim Club</a></li>
-              <li><a href="community.html#events" data-i18n="com.c3.t">Events &amp; competitions</a></li>
-              <li><a href="community.html#achievements" data-i18n="com.c4.t">Achievements</a></li>
-              <li><a href="community.html#journal" data-i18n="com.all">News &amp; Stories</a></li>
-            </ul></li>
-          <li data-has-sub><a href="memberships.html" data-nav="memberships" data-i18n="nav.memberships">Memberships</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Membership pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="memberships.html#plans" data-i18n="mn.plans">Plans &amp; prices</a></li>
-              <li><a href="memberships.html#compare" data-i18n="mn.compare">Compare plans</a></li>
-              <li><a href="memberships.html#corporate" data-i18n="mn.corp">Corporate</a></li>
-              <li><a href="memberships.html#inquire" data-i18n="mn.req">Request information</a></li>
-            </ul></li>
+          <li><a href="the-club.html" data-nav="club" aria-current="page" data-i18n="nav.club">The Club</a></li>
+          <li><a href="fitness.html" data-nav="fitness" data-i18n="nav.fitness2">Fitness</a></li>
+          <li><a href="aquatics.html" data-nav="aquatics" data-i18n="nav.aquatics">Aquatics</a></li>
+          <li><a href="leisure-island.html" data-nav="island" data-i18n="nav.island">Leisure Island</a></li>
+          <li><a href="community.html" data-nav="community" data-i18n="nav.community">Community</a></li>
+          <li><a href="memberships.html" data-nav="memberships" data-i18n="nav.memberships">Memberships</a></li>
         </ol>
         <ul class="menu-secondary" role="list">
-          <li><a href="visit.html" data-i18n="util.visit">Visit Us</a></li>
-          <li><a href="visit.html#inquire" data-i18n="util.contact">Contact</a></li>
+          <li><a href="visit.html" data-nav="visit" data-i18n="util.contact">Contact</a></li>
           <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
@@ -139,16 +97,16 @@
         <button type="button" data-lang="fr" aria-pressed="false">Français</button>
       </div>
     </div>
-    <!-- desktop: the hovered section's pages appear here -->
+    <!-- desktop: a quiet side panel with the three most asked-for links -->
     <div class="site-menu__aside">
       <div class="site-menu__panel" data-menu-panel>
         <div data-menu-default>
           <p class="eyebrow" data-i18n="mn.welcome">Dik el-Mehdi · Since 1991</p>
           <p class="site-menu__panel-title" data-i18n-html="mn.panel">Movement. Wellness. <em>Leisure. Community.</em></p>
           <div class="site-menu__boxes">
-            <a class="btn" href="visit.html#inquire" data-i18n="mem.visit">Schedule a visit</a>
-            <a class="btn" href="memberships.html" data-i18n="mn.compare">Compare plans</a>
+            <a class="btn" href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a>
             <a class="btn" href="schedule.html" data-i18n="f.sched">Weekly schedule</a>
+            <a class="btn" href="visit.html" data-i18n="util.contact">Contact</a>
           </div>
         </div>
         <div data-menu-sub hidden>
@@ -160,20 +118,7 @@
   </div>
 
   <main id="main">
-<nav class="subnav" aria-label="On this page">
-      <div class="wrap">
-        <ul role="list">
-          <li class="subnav__title" data-i18n="f.story">Our Story</li>
-          <li><a href="#y1991">1991</a></li>
-          <li><a href="#y2010">2010</a></li>
-          <li><a href="#y2016">2016</a></li>
-          <li><a href="#y2021">2021</a></li>
-          <li><a href="#y2026">2026</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="page-hero">
+<section class="page-hero">
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><a href="the-club.html" data-i18n="nav.club">The Club</a><span aria-hidden="true">/</span><span data-i18n="f.story">Our Story</span></nav>
         <div class="page-hero__grid">
@@ -182,7 +127,6 @@
             <h1 class="page-title" data-i18n-html="st.title">A legacy <em>of movement.</em></h1>
           </div>
           <div class="page-hero__aside">
-            <p class="lead" data-i18n="st.lead">Thirty-five years of families, swimmers, celebrations and firsts in Dik el-Mehdi.</p>
           </div>
         </div>
         <div class="page-hero__media">
@@ -214,7 +158,6 @@
               <span class="era__year" data-i18n="st.e2.y">1990s – 2000s</span>
               <h3 data-i18n="st.e2.t">The founding years</h3>
               <p data-i18n="st.e2.p">The first pools, the first members, the first summers. This chapter will be written with the founders and the club's archive.</p>
-              <span class="editable" data-i18n="st.tbc">Chapter to complete with the founders</span>
             </li>
             <li class="era" id="y2010" data-year="2010">
               <span class="era__year">2010</span>
@@ -253,18 +196,16 @@
               <span class="era__year" data-i18n="st.e9.y">Today</span>
               <h3 data-i18n="st.e9.t">Island life grows</h3>
               <p data-i18n="st.e9.p">The Grill House, the Escape bungalows and The Pilates Club extend what a day at the club can be.</p>
-              <span class="editable" data-i18n="st.e9.tbc">Opening years to confirm</span>
             </li>
             <li class="era era--now" id="y2026" data-year="2026">
               <span class="era__year">2026</span>
               <h3 data-i18n="st.e10.t">The newest chapter</h3>
               <p data-i18n="st.e10.p">The club turns 35, and the Hybrid Athlete Performance Center takes shape as Lebanon's first HYROX gym.</p>
               <div class="ph r-3x2 ph--photo"><img src="images/site/hyrox-carry-900.webp" srcset="images/site/hyrox-carry-900.webp 506w, images/site/hyrox-carry-1600.webp 900w" sizes="(min-width: 900px) 50vw, 100vw" alt="An athlete doing a farmer&#x27;s carry, a HYROX station" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
-              <a class="link-arrow" href="hybrid-center.html" data-i18n="hapc.cta1">Discover the Center</a>
+              <a class="link-arrow" href="fitness.html#hyrox" data-i18n="hapc.cta1">Discover the Center</a>
             </li>
           </ol>
         </div>
-        <p class="small" style="margin-block-start:2rem;max-width:46rem" data-i18n="st.note">Dates come from the club's own published materials, 2010 to today. The founding chapters will be completed with the founders.</p>
       </div>
     </section>
 
@@ -272,7 +213,6 @@
       <div class="wrap">
         <div>
           <h2 class="h2" id="st-cta-title" data-i18n-html="st.end.title">The next decade <em>starts here.</em></h2>
-          <p class="lead" data-i18n="st.end.p">Come and see where the story goes next.</p>
         </div>
         <div class="cta-band__btns">
           <a class="btn btn--red" href="visit.html#inquire" data-i18n="mem.visit">Schedule a visit</a>
@@ -292,40 +232,39 @@
         </div>
         <div class="footer__cols">
           <div>
-            <h3 data-i18n="nav.club">The Club</h3>
+            <h3 data-i18n="f.explore">Explore</h3>
             <ul role="list">
-              <li><a href="our-story.html" data-i18n="f.story">Our Story</a></li>
-              <li><a href="the-club.html#philosophy" data-i18n="f.phil">Our Philosophy</a></li>
-              <li><a href="the-club.html#facilities" data-i18n="f.fac">Facilities</a></li>
-              <li><a href="the-club.html#gallery" data-i18n="f.gal">Gallery</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="f.move">Move</h3>
-            <ul role="list">
-              <li><a href="fitness.html" data-i18n="nav.fitness">Fitness &amp; Performance</a></li>
-              <li><a href="hybrid-center.html" data-i18n="f.hc">Aquatics</a></li>
-              <li><a href="aquatics.html" data-i18n="nav.aquatics">Wellness &amp; Recovery</a></li>
-              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="f.enjoy">Enjoy</h3>
-            <ul role="list">
+              <li><a href="the-club.html" data-i18n="nav.club">The Club</a></li>
+              <li><a href="fitness.html" data-i18n="nav.fitness2">Fitness</a></li>
+              <li><a href="aquatics.html" data-i18n="nav.aquatics">Aquatics</a></li>
               <li><a href="leisure-island.html" data-i18n="nav.island">Leisure Island</a></li>
-              <li><a href="events.html" data-i18n="f.hosp">Grill House</a></li>
-              <li><a href="events.html#celebrate" data-i18n="f.events">Weddings &amp; events</a></li>
               <li><a href="community.html" data-i18n="nav.community">Community</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="nav.memberships">Memberships</h3>
+            <ul role="list">
+              <li><a href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a></li>
+              <li><a href="memberships.html#beyond" data-i18n="f.beyond">Beyond membership</a></li>
+              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
+              <li><a href="memberships.html#events" data-i18n="f.book">Book your event</a></li>
             </ul>
           </div>
           <div>
             <h3 data-i18n="f.contact">Contact</h3>
             <ul role="list">
               <li><a href="tel:+9613340341" dir="ltr">03 340 341</a></li>
+              <li><a href="tel:+9614920921" dir="ltr">04 920 921</a></li>
               <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
-              <li><a href="visit.html" data-i18n="util.visit">Visit Us</a></li>
-              <li><a href="memberships.html" data-i18n="nav.memberships">Memberships</a></li>
+              <li><a href="visit.html" data-i18n="f.find">Find us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="vis.follow">Follow</h3>
+            <ul role="list">
               <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/theleisureclublb" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="https://www.tiktok.com/@theleisureclublb" target="_blank" rel="noopener">TikTok</a></li>
             </ul>
           </div>
         </div>
@@ -383,6 +322,7 @@
   <script src="assets/i18n.js" defer></script>
   <script src="assets/lang/common.js" defer></script>
   <script src="assets/lang/story.js" defer></script>
+  <script src="assets/lang/v2.js" defer></script>
   <script src="assets/data/club.js" defer></script>
   <script src="assets/motion.js" defer></script>
   <script src="assets/site.js" defer></script>

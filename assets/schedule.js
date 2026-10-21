@@ -58,7 +58,6 @@
           '<time dir="ltr">' + it.time + "</time>" +
           "<b>" + esc(it.c.name[lang()] || it.c.name.en) + "</b>" +
           "<small>" + esc(who) + " · " + esc(t("sch.fac." + it.c.facility, it.c.facility)) + "</small>" +
-          "<small>" + esc(t("sch.coach", "Coach to be confirmed")) + "</small>" +
           "</div>";
       }).join("") : '<p class="day__empty">' + esc(t("sch.none", "No classes")) + "</p>";
       return '<div class="day"><h3>' + esc(t("sch.d." + day, day)) + "</h3>" + body + "</div>";

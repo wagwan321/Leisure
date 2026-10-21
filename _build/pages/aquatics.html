@@ -5,18 +5,6 @@ nav: aquatics
 crumb: Aquatics
 scripts: assets/lang/aquatics.js
 -->
-    <nav class="subnav" aria-label="On this page">
-      <div class="wrap">
-        <ul role="list">
-          <li class="subnav__title" data-i18n="nav.aquatics">Aquatics</li>
-          <li><a href="#indoor" data-i18n="aq.sub.indoor">Indoor Swimming</a></li>
-          <li><a href="#lessons" data-i18n="aq.sub.lessons">Swimming Lessons</a></li>
-          <li><a href="#swim-club" data-i18n="aq.sub.club">Swim Club</a></li>
-          <li><a href="#competitive" data-i18n="aq.sub.comp">Competitive Swimming</a></li>
-          <li><a href="#outdoor" data-i18n="aq.sub.out">Outdoor Swimming</a></li>
-        </ul>
-      </div>
-    </nav>
 
     <section class="page-hero">
       <div class="wrap">
@@ -27,7 +15,6 @@ scripts: assets/lang/aquatics.js
             <h1 class="page-title" data-i18n-html="aq.title">Life, <em>in the water.</em></h1>
           </div>
           <div class="page-hero__aside">
-            <p class="lead" data-i18n="aq.lead">From a child's first float to a club swimmer's race day: a heated indoor pool all year, and a big lap pool outdoors all summer.</p>
             <div class="page-hero__ctas">
               <a class="btn btn--solid" href="#lessons" data-i18n="aq.cta.lessons">Swimming lessons</a>
               <a class="btn" href="memberships.html" data-i18n="nav.memberships">Memberships</a>
@@ -49,12 +36,11 @@ scripts: assets/lang/aquatics.js
             <span class="eyebrow" data-reveal data-i18n="aq.ways.eyebrow">Three ways to swim</span>
             <h2 class="h2" id="ways-title" data-reveal data-i18n-html="aq.ways.title">Swim, learn <em>or compete.</em></h2>
           </div>
-          <p class="lead" data-reveal data-i18n="aq.ways.lead">Recreational swimming, instruction and competition each have their own place here, so you can find yours quickly.</p>
         </div>
-        <div class="cards cards--3" data-stagger>
-          <article class="card"><span class="tag" data-i18n="aq.w1.tag">Recreational</span><h3 data-i18n="aq.w1.t">Swim for yourself</h3><p data-i18n="aq.w1.p">Lane swimming and family time in the indoor pool all year, and outdoors in summer.</p><a class="link-arrow" href="#indoor" data-i18n="aq.w1.cta">Indoor pool</a></article>
-          <article class="card"><span class="tag" data-i18n="aq.w2.tag">Instruction</span><h3 data-i18n="aq.w2.t">Learn, at any age</h3><p data-i18n="aq.w2.p">Lessons for children and adults, from beginner to advanced, privately or in small groups.</p><a class="link-arrow" href="#lessons" data-i18n="aq.w2.cta">Lessons</a></article>
-          <article class="card"><span class="tag tag--red" data-i18n="aq.w3.tag">Competitive</span><h3 data-i18n="aq.w3.t">Train and race</h3><p data-i18n="aq.w3.p">The Swim Club's coached training, and the competitions hosted at our pool.</p><a class="link-arrow" href="#swim-club" data-i18n="aq.w3.cta">Swim Club</a></article>
+        <div class="bento" style="grid-auto-rows:auto">
+          <div class="tile c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w1.tag">Recreational</span><h3 data-i18n="aq.w1.t">Swim for yourself</h3><a class="btn btn--light" href="#indoor" data-i18n="aq.w1.cta">Indoor pool</a></div>
+          <div class="tile tile--red c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w2.tag">Instruction</span><h3 data-i18n="aq.w2.t">Learn, at any age</h3><a class="btn btn--light" href="#lessons" data-i18n="aq.w2.cta">Lessons</a></div>
+          <div class="tile tile--olive c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w3.tag">Competitive</span><h3 data-i18n="aq.w3.t">Train and race</h3><a class="btn btn--light" href="#swim-club" data-i18n="aq.w3.cta">Swim Club</a></div>
         </div>
       </div>
     </section>
@@ -73,7 +59,6 @@ scripts: assets/lang/aquatics.js
               <div><dt data-i18n="aq.in.s1">Length</dt><dd data-i18n="aq.in.s1v">25 metres, heated</dd></div>
               <div><dt data-i18n="aq.in.s2">Open to members</dt><dd dir="ltr">08:30 – 21:30</dd></div>
               <div><dt data-i18n="aq.in.s3">Next to</dt><dd data-i18n="aq.in.s3v">Jacuzzi, steam &amp; sauna</dd></div>
-              <div><dt data-i18n="aq.in.s4">Lane availability</dt><dd><span class="editable" data-i18n="aq.in.s4v">Shown live once the club confirms</span></dd></div>
             </dl>
           </div>
         </div>
@@ -85,7 +70,7 @@ scripts: assets/lang/aquatics.js
         <div class="split split--rev">
           <div class="split__media split__media--pair">
             <ph r="4x5" tag="Photo" t="A first lesson" b="Coach and child, eye level with the water. Natural, joyful." img="swim-lesson" pos="50% 50%" alt="A swimming coach teaching a child in the indoor pool"/>
-            <ph r="1x1" tag="Photo" t="Adult lesson" b="Technique work, calm."/>
+            <ph r="1x1" tag="Photo" t="Adult swimmer" img="adult-swim" pos="45% 50%" alt="An adult swimmer doing freestyle"/>
           </div>
           <div class="split__body">
             <span class="eyebrow" data-reveal data-i18n="aq.ls.eyebrow">02 · Swimming Lessons</span>
@@ -112,7 +97,6 @@ scripts: assets/lang/aquatics.js
             <span class="eyebrow eyebrow--dot" data-reveal data-i18n="aq.sc.eyebrow">03 · Swim Club</span>
             <h2 class="h3" id="club-title" data-reveal data-i18n="aq.sc.title">Coaching, training and community</h2>
             <p data-reveal data-i18n="aq.sc.p">For swimmers who want structure: coached sessions, technique and fitness, and a team to train with.</p>
-            <span class="editable" data-reveal data-i18n="aq.sc.tbc">Squad levels, coaches and session times to confirm</span>
             <a class="btn btn--light" href="visit.html?type=training#inquire" data-reveal data-i18n="aq.sc.cta">Join the Swim Club</a>
           </div>
         </div>
@@ -126,14 +110,18 @@ scripts: assets/lang/aquatics.js
             <span class="eyebrow" data-reveal data-i18n="aq.cp.eyebrow">04 · Competitive Swimming</span>
             <h2 class="h2" id="comp-title" data-reveal data-i18n-html="aq.cp.title">Race days, <em>at home.</em></h2>
           </div>
-          <p class="lead" data-reveal data-i18n="aq.cp.lead">Club achievements and the competitions hosted at our pool, each credited to the organiser who runs it.</p>
         </div>
-        <div class="cards cards--3" data-stagger>
-          <article class="card"><ph r="3x2" tag="Event" t="Competition hosted at the venue" img="meet-podium-arena" pos="50% 50%" alt="Three swimmers on the podium at a championship hosted at the club"/><span class="card__no num">00.00.2026</span><h3 data-i18n="aq.cp.e1">Event name</h3><p data-i18n="aq.cp.org">Organised by: organiser name, credited accurately</p></article>
-          <article class="card"><ph r="3x2" tag="Result" t="Club achievement" img="meet-medals-group" pos="50% 45%" alt="Swimmers and coaches with their medals"/><span class="card__no num">00.00.2026</span><h3 data-i18n="aq.cp.e2">A Swim Club result</h3><p data-i18n="aq.cp.res">Swimmer, event, time or placing</p></article>
-          <article class="card"><ph r="3x2" tag="Event" t="Upcoming meet"/><span class="card__no num">00.00.2027</span><h3 data-i18n="aq.cp.e3">Upcoming meet</h3><p data-i18n="aq.cp.org">Organised by: organiser name, credited accurately</p></article>
+        <div class="bento">
+          <div class="c7 r2 m2" data-reveal>
+            <ph r="free" t="Competition hosted at the venue" img="meet-podium-arena" pos="50% 50%" alt="Three swimmers on the podium at a championship hosted at the club" sz="(min-width: 900px) 58vw, 100vw"/>
+            <span class="sticker sticker--red" data-i18n="cm.medal">Medal</span>
+          </div>
+          <div class="c5 r2 m2" data-reveal style="--i:1">
+            <ph r="free" t="Club achievement" img="meet-medals-group" pos="50% 45%" alt="Swimmers and coaches with their medals" sz="(min-width: 900px) 42vw, 100vw"/>
+            <span class="sticker sticker--olive" data-i18n="com.c2.t">Swim Club</span>
+          </div>
         </div>
-        <p style="margin-block-start:2rem" data-reveal><a class="link-arrow" href="community.html#events" data-i18n="aq.cp.all">All events &amp; competitions</a></p>
+        <p style="margin-block-start:2rem" data-reveal><a class="link-arrow" href="community.html#achievements" data-i18n="aq.cp.all">All events &amp; competitions</a></p>
       </div>
     </section>
 
@@ -145,7 +133,6 @@ scripts: assets/lang/aquatics.js
             <h2 class="h2" id="out-title" data-reveal data-i18n-html="aq.out.title">Lanes <em>under the sky.</em></h2>
             <p data-reveal data-i18n="aq.out.p">In summer the swimming moves outdoors to Leisure Island: a big lap pool under the mountain sky, with lanes in the morning and families by noon.</p>
             <dl class="specs" data-reveal>
-              <div><dt data-i18n="aq.out.s1">Outdoor lap pool</dt><dd><span class="editable" data-i18n="aq.out.s1v">Size to confirm</span></dd></div>
               <div><dt data-i18n="aq.out.s2">Season</dt><dd data-i18n="aq.out.s2v">May – September</dd></div>
             </dl>
             <a class="btn btn--sun" href="leisure-island.html" data-reveal data-i18n="aq.out.cta">Explore Leisure Island</a>

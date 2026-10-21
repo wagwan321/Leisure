@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri&display=swap" />
   <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/v2.css" />
 
   <!-- Apply saved / shared review options before first paint -->
   <script>
@@ -67,7 +68,7 @@
     </div>
   </header>
 
-  <!-- Full-screen menu: primary sections left (brief §07 order), the hovered section's pages on the right -->
+  <!-- Full-screen menu: seven sections, no sub-lists (owner review, Oct 2026: fewer subsections) -->
   <div class="site-menu" id="site-menu" role="dialog" aria-modal="true" aria-label="Menu">
     <div class="site-menu__nav">
       <div class="site-menu__top">
@@ -77,58 +78,15 @@
       <nav aria-label="Primary">
         <ol class="menu-primary" role="list">
           <li><a href="index.html" data-nav="home" data-i18n="nav.home">Home</a></li>
-          <li data-has-sub><a href="the-club.html" data-nav="club" data-i18n="nav.club">The Club</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="The Club pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="our-story.html" data-i18n="f.story">Our Story</a></li>
-              <li><a href="the-club.html#philosophy" data-i18n="f.phil">Our Philosophy</a></li>
-              <li><a href="the-club.html#facilities" data-i18n="mn.fac">Our Facilities</a></li>
-              <li><a href="the-club.html#gallery" data-i18n="f.gal">Gallery</a></li>
-            </ul></li>
-          <li data-has-sub><a href="fitness.html" data-nav="fitness" data-i18n="nav.fitness">Fitness &amp; Performance</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Fitness pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="fitness.html#gym" data-i18n="mn.gym">The Gym</a></li>
-              <li><a href="hybrid-center.html" data-i18n="mn.hapc">Hybrid Athlete Performance Center</a></li>
-              <li><a href="fitness.html#classes" data-i18n="mn.classes">Group Classes</a></li>
-              <li><a href="fitness.html#training" data-i18n="mn.pt">Personal Training</a></li>
-              <li><a href="fitness.html#wellness" data-i18n="mn.well">Wellness &amp; Recovery</a></li>
-              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
-            </ul></li>
-          <li data-has-sub><a href="aquatics.html" data-nav="aquatics" aria-current="page" data-i18n="nav.aquatics">Aquatics</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Aquatics pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="aquatics.html#indoor" data-i18n="mn.indoor">Indoor Swimming</a></li>
-              <li><a href="aquatics.html#lessons" data-i18n="mn.lessons">Swimming Lessons</a></li>
-              <li><a href="aquatics.html#swim-club" data-i18n="com.c2.t">Swim Club</a></li>
-              <li><a href="aquatics.html#competitive" data-i18n="mn.comp">Competitive Swimming</a></li>
-              <li><a href="aquatics.html#outdoor" data-i18n="mn.outdoor">Outdoor Swimming</a></li>
-            </ul></li>
-          <li data-has-sub><a href="leisure-island.html" data-nav="island" data-i18n="nav.island">Leisure Island</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Leisure Island pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="leisure-island.html#season" data-i18n="mn.season">Season &amp; hours</a></li>
-              <li><a href="leisure-island.html#water" data-i18n="mn.water">Pools &amp; slides</a></li>
-              <li><a href="leisure-island.html#family" data-i18n="mn.family">Family</a></li>
-              <li><a href="leisure-island.html#sports" data-i18n="mn.sports">Football &amp; sports</a></li>
-              <li><a href="events.html" data-i18n="f.hosp">Hospitality &amp; Events</a></li>
-              <li><a href="events.html#weddings" data-i18n="mn.weddings">Weddings</a></li>
-            </ul></li>
-          <li data-has-sub><a href="community.html" data-nav="community" data-i18n="nav.community">Community</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Community pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="community.html#run-club" data-i18n="com.c1.t">Run Club</a></li>
-              <li><a href="community.html#swim-club" data-i18n="com.c2.t">Swim Club</a></li>
-              <li><a href="community.html#events" data-i18n="com.c3.t">Events &amp; competitions</a></li>
-              <li><a href="community.html#achievements" data-i18n="com.c4.t">Achievements</a></li>
-              <li><a href="community.html#journal" data-i18n="com.all">News &amp; Stories</a></li>
-            </ul></li>
-          <li data-has-sub><a href="memberships.html" data-nav="memberships" data-i18n="nav.memberships">Memberships</a><button class="menu-sub-toggle" type="button" aria-expanded="false" aria-label="Membership pages"></button>
-            <ul class="menu-sub" role="list">
-              <li><a href="memberships.html#plans" data-i18n="mn.plans">Plans &amp; prices</a></li>
-              <li><a href="memberships.html#compare" data-i18n="mn.compare">Compare plans</a></li>
-              <li><a href="memberships.html#corporate" data-i18n="mn.corp">Corporate</a></li>
-              <li><a href="memberships.html#inquire" data-i18n="mn.req">Request information</a></li>
-            </ul></li>
+          <li><a href="the-club.html" data-nav="club" data-i18n="nav.club">The Club</a></li>
+          <li><a href="fitness.html" data-nav="fitness" data-i18n="nav.fitness2">Fitness</a></li>
+          <li><a href="aquatics.html" data-nav="aquatics" aria-current="page" data-i18n="nav.aquatics">Aquatics</a></li>
+          <li><a href="leisure-island.html" data-nav="island" data-i18n="nav.island">Leisure Island</a></li>
+          <li><a href="community.html" data-nav="community" data-i18n="nav.community">Community</a></li>
+          <li><a href="memberships.html" data-nav="memberships" data-i18n="nav.memberships">Memberships</a></li>
         </ol>
         <ul class="menu-secondary" role="list">
-          <li><a href="visit.html" data-i18n="util.visit">Visit Us</a></li>
-          <li><a href="visit.html#inquire" data-i18n="util.contact">Contact</a></li>
+          <li><a href="visit.html" data-nav="visit" data-i18n="util.contact">Contact</a></li>
           <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
           <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
@@ -139,16 +97,16 @@
         <button type="button" data-lang="fr" aria-pressed="false">Français</button>
       </div>
     </div>
-    <!-- desktop: the hovered section's pages appear here -->
+    <!-- desktop: a quiet side panel with the three most asked-for links -->
     <div class="site-menu__aside">
       <div class="site-menu__panel" data-menu-panel>
         <div data-menu-default>
           <p class="eyebrow" data-i18n="mn.welcome">Dik el-Mehdi · Since 1991</p>
           <p class="site-menu__panel-title" data-i18n-html="mn.panel">Movement. Wellness. <em>Leisure. Community.</em></p>
           <div class="site-menu__boxes">
-            <a class="btn" href="visit.html#inquire" data-i18n="mem.visit">Schedule a visit</a>
-            <a class="btn" href="memberships.html" data-i18n="mn.compare">Compare plans</a>
+            <a class="btn" href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a>
             <a class="btn" href="schedule.html" data-i18n="f.sched">Weekly schedule</a>
+            <a class="btn" href="visit.html" data-i18n="util.contact">Contact</a>
           </div>
         </div>
         <div data-menu-sub hidden>
@@ -160,20 +118,7 @@
   </div>
 
   <main id="main">
-<nav class="subnav" aria-label="On this page">
-      <div class="wrap">
-        <ul role="list">
-          <li class="subnav__title" data-i18n="nav.aquatics">Aquatics</li>
-          <li><a href="#indoor" data-i18n="aq.sub.indoor">Indoor Swimming</a></li>
-          <li><a href="#lessons" data-i18n="aq.sub.lessons">Swimming Lessons</a></li>
-          <li><a href="#swim-club" data-i18n="aq.sub.club">Swim Club</a></li>
-          <li><a href="#competitive" data-i18n="aq.sub.comp">Competitive Swimming</a></li>
-          <li><a href="#outdoor" data-i18n="aq.sub.out">Outdoor Swimming</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="page-hero">
+<section class="page-hero">
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><span data-i18n="nav.aquatics">Aquatics</span></nav>
         <div class="page-hero__grid">
@@ -182,7 +127,6 @@
             <h1 class="page-title" data-i18n-html="aq.title">Life, <em>in the water.</em></h1>
           </div>
           <div class="page-hero__aside">
-            <p class="lead" data-i18n="aq.lead">From a child's first float to a club swimmer's race day: a heated indoor pool all year, and a big lap pool outdoors all summer.</p>
             <div class="page-hero__ctas">
               <a class="btn btn--solid" href="#lessons" data-i18n="aq.cta.lessons">Swimming lessons</a>
               <a class="btn" href="memberships.html" data-i18n="nav.memberships">Memberships</a>
@@ -204,12 +148,11 @@
             <span class="eyebrow" data-reveal data-i18n="aq.ways.eyebrow">Three ways to swim</span>
             <h2 class="h2" id="ways-title" data-reveal data-i18n-html="aq.ways.title">Swim, learn <em>or compete.</em></h2>
           </div>
-          <p class="lead" data-reveal data-i18n="aq.ways.lead">Recreational swimming, instruction and competition each have their own place here, so you can find yours quickly.</p>
         </div>
-        <div class="cards cards--3" data-stagger>
-          <article class="card"><span class="tag" data-i18n="aq.w1.tag">Recreational</span><h3 data-i18n="aq.w1.t">Swim for yourself</h3><p data-i18n="aq.w1.p">Lane swimming and family time in the indoor pool all year, and outdoors in summer.</p><a class="link-arrow" href="#indoor" data-i18n="aq.w1.cta">Indoor pool</a></article>
-          <article class="card"><span class="tag" data-i18n="aq.w2.tag">Instruction</span><h3 data-i18n="aq.w2.t">Learn, at any age</h3><p data-i18n="aq.w2.p">Lessons for children and adults, from beginner to advanced, privately or in small groups.</p><a class="link-arrow" href="#lessons" data-i18n="aq.w2.cta">Lessons</a></article>
-          <article class="card"><span class="tag tag--red" data-i18n="aq.w3.tag">Competitive</span><h3 data-i18n="aq.w3.t">Train and race</h3><p data-i18n="aq.w3.p">The Swim Club's coached training, and the competitions hosted at our pool.</p><a class="link-arrow" href="#swim-club" data-i18n="aq.w3.cta">Swim Club</a></article>
+        <div class="bento" style="grid-auto-rows:auto">
+          <div class="tile c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w1.tag">Recreational</span><h3 data-i18n="aq.w1.t">Swim for yourself</h3><a class="btn btn--light" href="#indoor" data-i18n="aq.w1.cta">Indoor pool</a></div>
+          <div class="tile tile--red c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w2.tag">Instruction</span><h3 data-i18n="aq.w2.t">Learn, at any age</h3><a class="btn btn--light" href="#lessons" data-i18n="aq.w2.cta">Lessons</a></div>
+          <div class="tile tile--olive c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w3.tag">Competitive</span><h3 data-i18n="aq.w3.t">Train and race</h3><a class="btn btn--light" href="#swim-club" data-i18n="aq.w3.cta">Swim Club</a></div>
         </div>
       </div>
     </section>
@@ -228,7 +171,6 @@
               <div><dt data-i18n="aq.in.s1">Length</dt><dd data-i18n="aq.in.s1v">25 metres, heated</dd></div>
               <div><dt data-i18n="aq.in.s2">Open to members</dt><dd dir="ltr">08:30 – 21:30</dd></div>
               <div><dt data-i18n="aq.in.s3">Next to</dt><dd data-i18n="aq.in.s3v">Jacuzzi, steam &amp; sauna</dd></div>
-              <div><dt data-i18n="aq.in.s4">Lane availability</dt><dd><span class="editable" data-i18n="aq.in.s4v">Shown live once the club confirms</span></dd></div>
             </dl>
           </div>
         </div>
@@ -240,7 +182,7 @@
         <div class="split split--rev">
           <div class="split__media split__media--pair">
             <div class="ph r-4x5 ph--photo"><img src="images/site/swim-lesson-900.webp" srcset="images/site/swim-lesson-900.webp 720w, images/site/swim-lesson-1800.webp 1440w" sizes="(min-width: 900px) 50vw, 100vw" alt="A swimming coach teaching a child in the indoor pool" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
-            <div class="ph r-1x1" role="img" aria-label="Placeholder: Adult lesson"><span class="ph__tag">Photo</span><span class="ph__ratio">1:1</span><p class="ph__brief"><b>Adult lesson</b>Technique work, calm.</p></div>
+            <div class="ph r-1x1 ph--photo"><img src="images/site/adult-swim-1000.webp" srcset="images/site/adult-swim-1000.webp 1000w, images/site/adult-swim-2000.webp 2000w" sizes="(min-width: 900px) 50vw, 100vw" alt="An adult swimmer doing freestyle" loading="lazy" decoding="async" style="object-position:45% 50%"></div>
           </div>
           <div class="split__body">
             <span class="eyebrow" data-reveal data-i18n="aq.ls.eyebrow">02 · Swimming Lessons</span>
@@ -267,7 +209,6 @@
             <span class="eyebrow eyebrow--dot" data-reveal data-i18n="aq.sc.eyebrow">03 · Swim Club</span>
             <h2 class="h3" id="club-title" data-reveal data-i18n="aq.sc.title">Coaching, training and community</h2>
             <p data-reveal data-i18n="aq.sc.p">For swimmers who want structure: coached sessions, technique and fitness, and a team to train with.</p>
-            <span class="editable" data-reveal data-i18n="aq.sc.tbc">Squad levels, coaches and session times to confirm</span>
             <a class="btn btn--light" href="visit.html?type=training#inquire" data-reveal data-i18n="aq.sc.cta">Join the Swim Club</a>
           </div>
         </div>
@@ -281,14 +222,18 @@
             <span class="eyebrow" data-reveal data-i18n="aq.cp.eyebrow">04 · Competitive Swimming</span>
             <h2 class="h2" id="comp-title" data-reveal data-i18n-html="aq.cp.title">Race days, <em>at home.</em></h2>
           </div>
-          <p class="lead" data-reveal data-i18n="aq.cp.lead">Club achievements and the competitions hosted at our pool, each credited to the organiser who runs it.</p>
         </div>
-        <div class="cards cards--3" data-stagger>
-          <article class="card"><div class="ph r-3x2 ph--photo"><img src="images/site/meet-podium-arena-1000.webp" srcset="images/site/meet-podium-arena-1000.webp 1000w, images/site/meet-podium-arena-2000.webp 2000w" sizes="(min-width: 900px) 50vw, 100vw" alt="Three swimmers on the podium at a championship hosted at the club" loading="lazy" decoding="async" style="object-position:50% 50%"></div><span class="card__no num">00.00.2026</span><h3 data-i18n="aq.cp.e1">Event name</h3><p data-i18n="aq.cp.org">Organised by: organiser name, credited accurately</p></article>
-          <article class="card"><div class="ph r-3x2 ph--photo"><img src="images/site/meet-medals-group-1000.webp" srcset="images/site/meet-medals-group-1000.webp 1000w, images/site/meet-medals-group-2000.webp 2000w" sizes="(min-width: 900px) 50vw, 100vw" alt="Swimmers and coaches with their medals" loading="lazy" decoding="async" style="object-position:50% 45%"></div><span class="card__no num">00.00.2026</span><h3 data-i18n="aq.cp.e2">A Swim Club result</h3><p data-i18n="aq.cp.res">Swimmer, event, time or placing</p></article>
-          <article class="card"><div class="ph r-3x2" role="img" aria-label="Placeholder: Upcoming meet"><span class="ph__tag">Event</span><span class="ph__ratio">3:2</span><p class="ph__brief"><b>Upcoming meet</b></p></div><span class="card__no num">00.00.2027</span><h3 data-i18n="aq.cp.e3">Upcoming meet</h3><p data-i18n="aq.cp.org">Organised by: organiser name, credited accurately</p></article>
+        <div class="bento">
+          <div class="c7 r2 m2" data-reveal>
+            <div class="ph ph--photo"><img src="images/site/meet-podium-arena-1000.webp" srcset="images/site/meet-podium-arena-1000.webp 1000w, images/site/meet-podium-arena-2000.webp 2000w" sizes="(min-width: 900px) 58vw, 100vw" alt="Three swimmers on the podium at a championship hosted at the club" loading="lazy" decoding="async" style="object-position:50% 50%"></div>
+            <span class="sticker sticker--red" data-i18n="cm.medal">Medal</span>
+          </div>
+          <div class="c5 r2 m2" data-reveal style="--i:1">
+            <div class="ph ph--photo"><img src="images/site/meet-medals-group-1000.webp" srcset="images/site/meet-medals-group-1000.webp 1000w, images/site/meet-medals-group-2000.webp 2000w" sizes="(min-width: 900px) 42vw, 100vw" alt="Swimmers and coaches with their medals" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
+            <span class="sticker sticker--olive" data-i18n="com.c2.t">Swim Club</span>
+          </div>
         </div>
-        <p style="margin-block-start:2rem" data-reveal><a class="link-arrow" href="community.html#events" data-i18n="aq.cp.all">All events &amp; competitions</a></p>
+        <p style="margin-block-start:2rem" data-reveal><a class="link-arrow" href="community.html#achievements" data-i18n="aq.cp.all">All events &amp; competitions</a></p>
       </div>
     </section>
 
@@ -300,7 +245,6 @@
             <h2 class="h2" id="out-title" data-reveal data-i18n-html="aq.out.title">Lanes <em>under the sky.</em></h2>
             <p data-reveal data-i18n="aq.out.p">In summer the swimming moves outdoors to Leisure Island: a big lap pool under the mountain sky, with lanes in the morning and families by noon.</p>
             <dl class="specs" data-reveal>
-              <div><dt data-i18n="aq.out.s1">Outdoor lap pool</dt><dd><span class="editable" data-i18n="aq.out.s1v">Size to confirm</span></dd></div>
               <div><dt data-i18n="aq.out.s2">Season</dt><dd data-i18n="aq.out.s2v">May – September</dd></div>
             </dl>
             <a class="btn btn--sun" href="leisure-island.html" data-reveal data-i18n="aq.out.cta">Explore Leisure Island</a>
@@ -323,40 +267,39 @@
         </div>
         <div class="footer__cols">
           <div>
-            <h3 data-i18n="nav.club">The Club</h3>
+            <h3 data-i18n="f.explore">Explore</h3>
             <ul role="list">
-              <li><a href="our-story.html" data-i18n="f.story">Our Story</a></li>
-              <li><a href="the-club.html#philosophy" data-i18n="f.phil">Our Philosophy</a></li>
-              <li><a href="the-club.html#facilities" data-i18n="f.fac">Facilities</a></li>
-              <li><a href="the-club.html#gallery" data-i18n="f.gal">Gallery</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="f.move">Move</h3>
-            <ul role="list">
-              <li><a href="fitness.html" data-i18n="nav.fitness">Fitness &amp; Performance</a></li>
-              <li><a href="hybrid-center.html" data-i18n="f.hc">Aquatics</a></li>
-              <li><a href="aquatics.html" data-i18n="nav.aquatics">Wellness &amp; Recovery</a></li>
-              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n="f.enjoy">Enjoy</h3>
-            <ul role="list">
+              <li><a href="the-club.html" data-i18n="nav.club">The Club</a></li>
+              <li><a href="fitness.html" data-i18n="nav.fitness2">Fitness</a></li>
+              <li><a href="aquatics.html" data-i18n="nav.aquatics">Aquatics</a></li>
               <li><a href="leisure-island.html" data-i18n="nav.island">Leisure Island</a></li>
-              <li><a href="events.html" data-i18n="f.hosp">Grill House</a></li>
-              <li><a href="events.html#celebrate" data-i18n="f.events">Weddings &amp; events</a></li>
               <li><a href="community.html" data-i18n="nav.community">Community</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="nav.memberships">Memberships</h3>
+            <ul role="list">
+              <li><a href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a></li>
+              <li><a href="memberships.html#beyond" data-i18n="f.beyond">Beyond membership</a></li>
+              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
+              <li><a href="memberships.html#events" data-i18n="f.book">Book your event</a></li>
             </ul>
           </div>
           <div>
             <h3 data-i18n="f.contact">Contact</h3>
             <ul role="list">
               <li><a href="tel:+9613340341" dir="ltr">03 340 341</a></li>
+              <li><a href="tel:+9614920921" dir="ltr">04 920 921</a></li>
               <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
-              <li><a href="visit.html" data-i18n="util.visit">Visit Us</a></li>
-              <li><a href="memberships.html" data-i18n="nav.memberships">Memberships</a></li>
+              <li><a href="visit.html" data-i18n="f.find">Find us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="vis.follow">Follow</h3>
+            <ul role="list">
               <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/theleisureclublb" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="https://www.tiktok.com/@theleisureclublb" target="_blank" rel="noopener">TikTok</a></li>
             </ul>
           </div>
         </div>
@@ -414,6 +357,7 @@
   <script src="assets/i18n.js" defer></script>
   <script src="assets/lang/common.js" defer></script>
   <script src="assets/lang/aquatics.js" defer></script>
+  <script src="assets/lang/v2.js" defer></script>
   <script src="assets/data/club.js" defer></script>
   <script src="assets/motion.js" defer></script>
   <script src="assets/site.js" defer></script>

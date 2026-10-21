@@ -1,48 +1,28 @@
-/* Memberships — who's joining × duration price switcher, and plan pre-selection for the inquiry form.
-   Prices live in each card's data-price (staff-editable; moves to the CMS later). */
+/* Memberships: the Solo / Duo / Family switch updates every price on the page.
+   Prices live in each price's data-price as [solo, duo, family] (from the affiliation 2027 flyer).
+   Also: review bubbles and the Book your event ring appear as they come into view,
+   and "Request information" on a card pre-selects that plan in the form. */
 (function () {
   "use strict";
-  var who = 0, dur = "month";
-  function t(k, f) { return (window.TLC_i18n && window.TLC_i18n.t(k)) || f; }
-  var per = { month: ["ms.per.month", "/ month"], season: ["ms.per.season", "/ season"], year: ["ms.per.year", "/ year"] };
+  var who = 0;
 
-  function render() {
-    document.querySelectorAll("[data-plan-card]").forEach(function (card) {
-      var el = card.querySelector("[data-price]");
-      var data = JSON.parse(el.dataset.price);
-      var row = data[dur];
-      var perEl = card.querySelector("[data-per]");
-      var note = card.querySelector("[data-na-note]");
-      if (row) {
-        el.textContent = "$" + row[who].toLocaleString("en-US");
-        el.removeAttribute("data-na");
-        perEl.textContent = t(per[dur][0], per[dur][1]);
-        note.hidden = true;
-        card.style.opacity = "";
-      } else {
-        el.textContent = "—";
-        el.setAttribute("data-na", "");
-        perEl.textContent = "";
-        note.hidden = false;
-        card.style.opacity = ".72";
-      }
+  function render(flash) {
+    document.querySelectorAll("[data-price]").forEach(function (el) {
+      var row = JSON.parse(el.dataset.price);
+      el.textContent = "$" + row[who].toLocaleString("en-US");
+      if (flash) { el.removeAttribute("data-flash"); void el.offsetWidth; el.setAttribute("data-flash", ""); }
     });
   }
 
-  function bind(attr, set) {
-    var buttons = document.querySelectorAll("[" + attr + "]");
-    buttons.forEach(function (b) {
-      b.addEventListener("click", function () {
-        buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x === b)); });
-        set(b.getAttribute(attr));
-        render();
-      });
+  var buttons = document.querySelectorAll("[data-who]");
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      who = parseInt(b.dataset.who, 10);
+      buttons.forEach(function (x) { x.setAttribute("aria-pressed", String(x.dataset.who === b.dataset.who)); });
+      render(true);
     });
-  }
-  bind("data-who", function (v) { who = parseInt(v, 10); });
-  bind("data-dur", function (v) { dur = v; });
+  });
 
-  // "Request information" on a plan pre-selects it in the form
   var select = document.getElementById("ms-plan");
   document.querySelectorAll("a[data-plan]").forEach(function (a) {
     a.addEventListener("click", function () {
@@ -50,6 +30,20 @@
     });
   });
 
-  document.addEventListener("tlc:lang", render);
-  render();
+  // bubbles and the event ring come in once, when seen
+  var show = document.querySelectorAll("[data-bubble], [data-ring]");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add(e.target.hasAttribute("data-ring") ? "is-spin" : "is-in");
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    show.forEach(function (el) { io.observe(el); });
+  } else {
+    show.forEach(function (el) { el.classList.add("is-in", "is-spin"); });
+  }
+
+  render(false);
 })();

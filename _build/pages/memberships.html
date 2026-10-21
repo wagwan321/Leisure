@@ -1,210 +1,278 @@
 <!--
 title: Memberships | The Leisure Club
-description: Indoor Club, Leisure Island and Full Access memberships for singles, couples and families: monthly, seasonal and annual, with published rates.
+description: Indoor, Outdoor and Full Access memberships for solo, duo and family, with prices, opening hours, free amenities, free classes and services beyond membership.
 nav: memberships
 crumb: Memberships
 scripts: assets/lang/memberships.js, assets/memberships.js
 -->
-    <nav class="subnav" aria-label="On this page">
-      <div class="wrap">
-        <ul role="list">
-          <li class="subnav__title" data-i18n="nav.memberships">Memberships</li>
-          <li><a href="#plans" data-i18n="ms.sub.plans">Plans</a></li>
-          <li><a href="#compare" data-i18n="ms.sub.compare">Compare</a></li>
-          <li><a href="#corporate" data-i18n="ms.sub.corp">Corporate</a></li>
-          <li><a href="#conditions" data-i18n="ms.sub.cond">Good to know</a></li>
-          <li><a href="#inquire" data-i18n="ms.sub.inq">Request information</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="page-hero">
+    <section class="page-hero page-hero--short">
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><span data-i18n="nav.memberships">Memberships</span></nav>
-        <div class="page-hero__grid">
+        <div class="head">
           <div>
-            <span class="eyebrow eyebrow--dot" data-i18n="ms.eyebrow">Memberships</span>
+            <span class="eyebrow eyebrow--dot" data-i18n="ms.eyebrow2">Affiliation 2027</span>
             <h1 class="page-title" data-i18n-html="ms.title">Belonging, <em>by design.</em></h1>
           </div>
-          <div class="page-hero__aside">
-            <p class="lead" data-i18n="ms.lead">Three ways to belong: the Indoor Club all year, Leisure Island all summer, or the whole club. Every plan comes as single, couple or family.</p>
-            <div class="page-hero__ctas">
-              <a class="btn btn--solid" href="#plans" data-i18n="ms.cta.plans">See the plans</a>
-              <a class="btn" href="#inquire" data-plan="visit" data-i18n="ms.cta.visit">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="page-hero__media" data-reveal>
-          <ph r="21x9" tag="Photo · wide" t="Members, a weekday morning" b="Indoor pool and gym in one frame if the architecture allows, with calm, real members and natural light." img="pool-steps" pos="50% 55%" alt="The indoor pool and spa" sz="100vw" eager="1"/>
         </div>
       </div>
     </section>
 
-
-    <!-- Plans -->
-    <section class="section" id="plans" aria-labelledby="plans-title">
+    <!-- Plans: Indoor · Outdoor · Full Access -->
+    <section class="section" id="plans" aria-labelledby="plans-title" style="padding-block-start:0">
       <div class="wrap">
-        <div class="intro">
-          <div>
-            <span class="eyebrow" data-reveal data-i18n="ms.plans.eyebrow">The plans</span>
-            <h2 class="h2" id="plans-title" data-reveal data-i18n-html="ms.plans.title">Pick your side <em>of the club.</em></h2>
-          </div>
-          <p class="lead" data-reveal data-i18n="ms.plans.lead">Choose who's joining and for how long. Prices update instantly, and every plan lists exactly what's included.</p>
-        </div>
-
-        <div class="toggles" data-reveal>
+        <h2 class="sr-only" id="plans-title" data-i18n="ms.plans.t">Membership prices</h2>
+        <div class="mplans__bar">
           <div>
             <span class="lbl" id="who-lbl" data-i18n="ms.who">Who's joining</span>
-            <div class="toggle" role="group" aria-labelledby="who-lbl">
-              <button type="button" data-who="0" aria-pressed="true" data-i18n="ms.who.single">Single</button>
-              <button type="button" data-who="1" aria-pressed="false" data-i18n="ms.who.couple">Couple</button>
-              <button type="button" data-who="2" aria-pressed="false" data-i18n="ms.who.family">Family</button>
+            <div class="who" role="group" aria-labelledby="who-lbl">
+              <button type="button" data-who="0" aria-pressed="true" data-i18n="ms.solo">Solo</button>
+              <button type="button" data-who="1" aria-pressed="false" data-i18n="ms.duo">Duo</button>
+              <button type="button" data-who="2" aria-pressed="false" data-i18n="ms.family">Family</button>
             </div>
           </div>
-          <div>
-            <span class="lbl" id="dur-lbl" data-i18n="ms.dur">Duration</span>
-            <div class="toggle" role="group" aria-labelledby="dur-lbl">
-              <button type="button" data-dur="month" aria-pressed="true" data-i18n="ms.dur.month">Monthly</button>
-              <button type="button" data-dur="season" aria-pressed="false" data-i18n="ms.dur.season">Summer season</button>
-              <button type="button" data-dur="year" aria-pressed="false" data-i18n="ms.dur.year">Annual</button>
+          <p class="insurance"><span data-i18n="ms.ins">OBLIGATORY INSURANCE</span> · <b>$20</b> <span data-i18n="ms.ins.per">per person</span></p>
+        </div>
+
+        <div class="mplans">
+          <!-- Indoor -->
+          <article class="mplan mplan--indoor" data-reveal>
+            <div class="mplan__top">
+              <h3 class="mplan__name" data-i18n="ms.in.t">Indoor</h3>
+              <p class="mplan__sub" data-i18n="ms.in.sub">The Indoor Club, all year</p>
+              <div class="mplan__hours">
+                <span><b data-i18n="ms.in.h1">Mon to Fri</b> · <bdi>07:30 – 22:00</bdi></span>
+                <span><b data-i18n="ms.in.h2">Saturday</b> · <bdi>07:30 – 21:00</bdi></span>
+              </div>
             </div>
-          </div>
+            <div class="mplan__body">
+              <dl class="mprices">
+                <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[120,200,240]">$120</dd></div>
+                <div><dt data-i18n="ms.year">1 year</dt><dd data-price="[700,1200,1400]">$700</dd></div>
+              </dl>
+              <div class="mincl">
+                <h4 data-i18n="ms.free.t">Free with this membership</h4>
+                <ul role="list">
+                  <li><span data-i18n="ms.in.i1">Gym &amp; ping pong</span><span><bdi>07:30 – 22:00</bdi></span></li>
+                  <li><span data-i18n="ms.in.i2">HYROX gym</span><span></span></li>
+                  <li><span data-i18n="ms.in.i3">Indoor pool &amp; jacuzzi</span><span></span></li>
+                  <li><span data-i18n="ms.in.i4">Cold plunge &amp; showers</span><span></span></li>
+                  <li><span data-i18n-html="ms.in.i5">Steam<small>Tue, Thu, Sat</small></span><span><bdi>09:00 – 21:30</bdi></span></li>
+                  <li><span data-i18n-html="ms.in.i6">Sauna<small>Mon, Wed, Fri</small></span><span><bdi>09:00 – 21:30</bdi></span></li>
+                </ul>
+              </div>
+              <div class="mplan__extra">
+                <div><span data-i18n="ms.guest">Accompanied guest, any age</span><b>$25</b></div>
+              </div>
+              <a class="btn" href="#inquire" data-plan="indoor" data-i18n="ms.cta.req">Request information</a>
+            </div>
+          </article>
+
+          <!-- Outdoor -->
+          <article class="mplan mplan--outdoor" data-reveal style="--i:1">
+            <blockquote class="bubble" data-bubble>
+              <q data-i18n="rv.albert.short">An exceptional club with everything you need, from the different pools to the varied sports fields, all in the middle of nature.</q>
+              <cite>Albert B. · Google</cite>
+            </blockquote>
+            <div class="mplan__top">
+              <h3 class="mplan__name" data-i18n="ms.out.t">Outdoor</h3>
+              <p class="mplan__sub" data-i18n="ms.out.sub">Leisure Island, all summer</p>
+              <div class="mplan__hours">
+                <span><b data-i18n="ms.out.h1">Every day</b> · <bdi>10:00 – 20:00</bdi></span>
+                <span><b data-i18n="ms.out.h2">Season</b> · <span data-i18n="ms.out.h2v">16 May to 20 September</span></span>
+              </div>
+            </div>
+            <div class="mplan__body">
+              <dl class="mprices">
+                <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[200,300,400]">$200</dd></div>
+                <div><dt data-i18n="ms.season">Summer season</dt><dd data-price="[400,600,800]">$400</dd></div>
+              </dl>
+              <div class="mincl">
+                <h4 data-i18n="ms.free.t">Free with this membership</h4>
+                <ul role="list">
+                  <li><span data-i18n="ms.out.i1">Outdoor lap pool</span><span></span></li>
+                  <li><span data-i18n="ms.out.i2">Slides &amp; leisure pool</span><span></span></li>
+                  <li><span data-i18n="ms.out.i3">Kids' pools &amp; splash pad</span><span></span></li>
+                  <li><span data-i18n="ms.out.i4">Jacuzzi</span><span></span></li>
+                  <li><span data-i18n-html="ms.out.i5">Football &amp; basketball courts<small>Unless reserved</small></span><span></span></li>
+                </ul>
+              </div>
+              <div class="mplan__extra">
+                <div><span data-i18n="ms.vis">Day visitors</span><b data-i18n="ms.vis.v">Under 2 free · under 10 $25 · over 10 $30</b></div>
+                <div><span data-i18n="ms.locker">Private locker</span><b data-i18n="ms.locker.v">$5 / day · $100 / season</b></div>
+              </div>
+              <a class="btn" href="#inquire" data-plan="island" data-i18n="ms.cta.req">Request information</a>
+            </div>
+          </article>
+
+          <!-- Full Access -->
+          <article class="mplan mplan--full" data-reveal style="--i:2">
+            <blockquote class="bubble bubble--5" data-bubble>
+              <q data-i18n="rv.ivonne.short">The staff was so friendly, and the variety of pools, including the jacuzzi, made it even better.</q>
+              <cite>Ivonne C. · Google</cite>
+            </blockquote>
+            <div class="mplan__top">
+              <h3 class="mplan__name" data-i18n="ms.full.t">Full Access</h3>
+              <p class="mplan__sub" data-i18n="ms.full.sub">Indoor + Outdoor, the whole club</p>
+              <div class="mplan__hours">
+                <span><b data-i18n="ms.in.short">Indoor</b> · <span data-i18n="ms.in.hours">Mon to Sat, from 07:30</span></span>
+                <span><b data-i18n="ms.out.short">Outdoor</b> · <span data-i18n="ms.out.hours">Daily 10:00 – 20:00, 16 May to 20 Sept</span></span>
+              </div>
+            </div>
+            <div class="mplan__body">
+              <dl class="mprices">
+                <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[250,400,500]">$250</dd></div>
+                <div><dt data-i18n="ms.season">Summer season</dt><dd data-price="[700,1200,1400]">$700</dd></div>
+                <div><dt data-i18n="ms.year">1 year</dt><dd data-price="[1000,1500,2000]">$1,000</dd></div>
+              </dl>
+              <div class="mincl">
+                <h4 data-i18n="ms.free.t">Free with this membership</h4>
+                <ul role="list">
+                  <li><span data-i18n="ms.full.i1">Everything in Indoor</span><span></span></li>
+                  <li><span data-i18n="ms.full.i2">Everything in Outdoor</span><span></span></li>
+                </ul>
+              </div>
+              <a class="btn btn--solid" href="#inquire" data-plan="full" data-i18n="ms.cta.req">Request information</a>
+            </div>
+          </article>
         </div>
 
-        <div class="plans" data-stagger>
-          <article class="plan" data-plan-card="indoor">
-            <div class="plan__head"><span class="plan__tag" data-i18n="ms.p1.tag">Indoor · all year</span></div>
-            <h3 class="h3" data-i18n="ms.p1.t">Indoor Club</h3>
-            <p class="small" data-i18n="ms.p1.d">The gym, heated pool, wellness and every weekly class, all year round.</p>
-            <div class="plan__price" aria-live="polite"><b data-price='{"month":[120,200,240],"season":null,"year":[700,1200,1400]}'>$120</b><span data-per>/ month</span></div>
-            <p class="plan__note" data-na-note hidden data-i18n="ms.na">Not offered for this plan. Try another duration.</p>
-            <dl class="plan__rows">
-              <div><dt data-i18n="ms.r.elig">Eligibility</dt><dd data-i18n="ms.r.elig.v">Singles, couples and families</dd></div>
-              <div><dt data-i18n="ms.r.fac">Facilities</dt><dd data-i18n="ms.p1.fac">Gym, heated indoor pool, jacuzzi, steam, sauna, ping pong</dd></div>
-              <div><dt data-i18n="ms.r.cls">Classes</dt><dd data-i18n="ms.r.cls.inc">All weekly classes, kids and adults, included</dd></div>
-              <div><dt data-i18n="ms.r.hapc">Performance Center</dt><dd><span class="editable" data-i18n="tbc.short">To confirm</span></dd></div>
-              <div><dt data-i18n="ms.r.isl">Leisure Island</dt><dd data-i18n="ms.r.no">Not included</dd></div>
-              <div><dt data-i18n="ms.r.dur">Duration</dt><dd data-i18n="ms.p1.dur">1 month or 1 year</dd></div>
-              <div><dt data-i18n="ms.r.cond">Conditions</dt><dd data-i18n="ms.p1.cond">Insurance $20 per person · accompanied guest $25</dd></div>
-            </dl>
-            <a class="btn" href="#inquire" data-plan="indoor" data-i18n="ms.cta.req">Request information</a>
-          </article>
-
-          <article class="plan plan--feature" data-plan-card="full">
-            <div class="plan__head"><span class="plan__tag" data-i18n="ms.p3.tag">Indoor + Outdoor</span><span class="plan__flag" data-i18n="ms.best">Best value</span></div>
-            <h3 class="h3" data-i18n="ms.p3.t">Full Access</h3>
-            <p class="small" data-i18n="ms.p3.d">Everything, everywhere: Leisure Island all summer and the Indoor Club all year.</p>
-            <div class="plan__price" aria-live="polite"><b data-price='{"month":[250,400,500],"season":[700,1200,1400],"year":[1000,1500,2000]}'>$250</b><span data-per>/ month</span></div>
-            <p class="plan__note" data-na-note hidden data-i18n="ms.na">Not offered for this plan. Try another duration.</p>
-            <dl class="plan__rows">
-              <div><dt data-i18n="ms.r.elig">Eligibility</dt><dd data-i18n="ms.r.elig.v">Singles, couples and families</dd></div>
-              <div><dt data-i18n="ms.r.fac">Facilities</dt><dd data-i18n="ms.p3.fac">Every facility, indoors and out</dd></div>
-              <div><dt data-i18n="ms.r.cls">Classes</dt><dd data-i18n="ms.r.cls.inc">All weekly classes, kids and adults, included</dd></div>
-              <div><dt data-i18n="ms.r.hapc">Performance Center</dt><dd><span class="editable" data-i18n="tbc.short">To confirm</span></dd></div>
-              <div><dt data-i18n="ms.r.isl">Leisure Island</dt><dd data-i18n="ms.p3.isl">Included, all season</dd></div>
-              <div><dt data-i18n="ms.r.dur">Duration</dt><dd data-i18n="ms.p3.dur">1 month, summer season or 1 year</dd></div>
-              <div><dt data-i18n="ms.r.cond">Conditions</dt><dd data-i18n="ms.p3.cond">Insurance $20 per person</dd></div>
-            </dl>
-            <a class="btn btn--solid" href="#inquire" data-plan="full" data-i18n="ms.cta.req">Request information</a>
-          </article>
-
-          <article class="plan" data-plan-card="island">
-            <div class="plan__head"><span class="plan__tag" data-i18n="ms.p2.tag">Outdoor · summer</span></div>
-            <h3 class="h3" data-i18n="ms.p2.t">Leisure Island</h3>
-            <p class="small" data-i18n="ms.p2.d">The outdoor water resort: pools, slides, courts and terraces, all summer.</p>
-            <div class="plan__price" aria-live="polite"><b data-price='{"month":[200,300,400],"season":[400,600,800],"year":null}'>$200</b><span data-per>/ month</span></div>
-            <p class="plan__note" data-na-note hidden data-i18n="ms.na">Not offered for this plan. Try another duration.</p>
-            <dl class="plan__rows">
-              <div><dt data-i18n="ms.r.elig">Eligibility</dt><dd data-i18n="ms.r.elig.v">Singles, couples and families</dd></div>
-              <div><dt data-i18n="ms.r.fac">Facilities</dt><dd data-i18n="ms.p2.fac">Outdoor lap pool, slides, kids' pools, courts, terraces</dd></div>
-              <div><dt data-i18n="ms.r.cls">Classes</dt><dd><span class="editable" data-i18n="tbc.short">To confirm</span></dd></div>
-              <div><dt data-i18n="ms.r.hapc">Performance Center</dt><dd data-i18n="ms.r.no">Not included</dd></div>
-              <div><dt data-i18n="ms.r.isl">Leisure Island</dt><dd data-i18n="ms.p2.isl">Included, during the season</dd></div>
-              <div><dt data-i18n="ms.r.dur">Duration</dt><dd data-i18n="ms.p2.dur">1 month or summer season</dd></div>
-              <div><dt data-i18n="ms.r.cond">Conditions</dt><dd data-i18n="ms.p2.cond">Insurance $20 per person · locker $5/day or $100/season</dd></div>
-            </dl>
-            <a class="btn" href="#inquire" data-plan="island" data-i18n="ms.cta.req">Request information</a>
-          </article>
+        <div class="mfacts">
+          <div class="mfacts__free"><span data-i18n="ms.wifi">Free Wi-Fi</span><span data-i18n="ms.parking">Free parking</span></div>
         </div>
-        <p class="small" style="margin-block-start:1.5rem" data-reveal data-i18n="ms.rates.note">Rates in USD as published for the 2027 season, per single, couple or family. Under-2s always enter free.</p>
-        <span class="editable" data-i18n="ms.rates.tbc">Rates to be confirmed by the club before launch</span>
       </div>
     </section>
 
-    <!-- Compare -->
-    <section class="section section--surface" id="compare" aria-labelledby="compare-title">
+    <!-- Free classes -->
+    <section class="section section--surface" id="classes" aria-labelledby="cls-title">
       <div class="wrap">
-        <div class="intro">
+        <div class="head">
           <div>
-            <span class="eyebrow" data-reveal data-i18n="ms.cmp.eyebrow">Compare</span>
-            <h2 class="h2" id="compare-title" data-reveal data-i18n-html="ms.cmp.title">Side by side, <em>at a glance.</em></h2>
+            <span class="eyebrow" data-reveal data-i18n="ms.cls.eyebrow">Free classes</span>
+            <h2 class="h2" id="cls-title" data-reveal data-i18n-html="ms.cls.title">Included, <em>every week.</em></h2>
           </div>
-          <p class="lead" data-reveal data-i18n="ms.cmp.lead">Built to read on a phone: three columns, one line per facility.</p>
+          <a class="link-arrow" href="schedule.html" data-reveal data-i18n="f.sched">Weekly schedule</a>
         </div>
-        <div class="compare-wrap" data-reveal>
-          <table class="compare">
-            <caption class="sr-only" data-i18n="ms.cmp.caption">What each membership includes</caption>
-            <thead>
-              <tr><th scope="col"><span class="sr-only" data-i18n="ms.cmp.feature">Feature</span></th><th scope="col" data-i18n="ms.p1.t">Indoor Club</th><th scope="col" data-i18n="ms.p2.t">Leisure Island</th><th scope="col" data-i18n="ms.p3.t">Full Access</th></tr>
-            </thead>
-            <tbody>
-              <tr class="grp"><th colspan="4" data-i18n="ms.cmp.g1">Indoor Club</th></tr>
-              <tr><th scope="row" data-i18n="ms.f.gym">Gym &amp; cardio</th><td>✓</td><td class="no">—</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.pool">Heated indoor pool</th><td>✓</td><td class="no">—</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.well">Sauna, steam &amp; jacuzzi</th><td>✓</td><td class="no">—</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.cls">Weekly classes, kids &amp; adults</th><td>✓</td><td class="no" data-i18n="tbc.abbr">TBC</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.hapc">Hybrid Athlete Performance Center</th><td class="no" data-i18n="tbc.abbr">TBC</td><td class="no">—</td><td class="no" data-i18n="tbc.abbr">TBC</td></tr>
-              <tr class="grp"><th colspan="4" data-i18n="ms.cmp.g2">Leisure Island</th></tr>
-              <tr><th scope="row" data-i18n="ms.f.olympic">Outdoor lap pool</th><td class="no">—</td><td>✓</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.slides">Slides &amp; leisure pool</th><td class="no">—</td><td>✓</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.kids">Kids' pools &amp; splash pad</th><td class="no">—</td><td>✓</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.f.courts">Football &amp; basketball courts</th><td class="no">—</td><td>✓</td><td>✓</td></tr>
-              <tr class="grp"><th colspan="4" data-i18n="ms.cmp.g3">Durations</th></tr>
-              <tr><th scope="row" data-i18n="ms.dur.month">Monthly</th><td>✓</td><td>✓</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.dur.season">Summer season</th><td class="no">—</td><td>✓</td><td>✓</td></tr>
-              <tr><th scope="row" data-i18n="ms.dur.year">Annual</th><td>✓</td><td class="no">—</td><td>✓</td></tr>
-              <tr class="grp"><th colspan="4" data-i18n="ms.cmp.g4">Always</th></tr>
-              <tr><th scope="row" data-i18n="ms.f.wifi">Wifi &amp; free parking</th><td>✓</td><td>✓</td><td>✓</td></tr>
-            </tbody>
-          </table>
+        <div class="fclasses">
+          <div class="fclass fclass--kids" data-reveal>
+            <div class="fclass__head"><h3 data-i18n="ms.kids">Kids</h3><span data-i18n="ms.kids.age">Under 16</span></div>
+            <ul role="list">
+              <li><b data-i18n="cl.breakdance">Breakdance</b><span data-i18n="tt.k1">Sat · 09:00</span></li>
+              <li><b data-i18n="cl.latino">Latino dance</b><span data-i18n="tt.k2">Sat · 10:00</span></li>
+              <li><b data-i18n="cl.fitness">Fitness</b><span data-i18n="tt.k3">Sat · 11:00</span></li>
+              <li><b data-i18n="cl.ballet">C. Ballet</b><span data-i18n="tt.k4">Sat · 12:00</span></li>
+              <li><b data-i18n="cl.tkd">Taekwondo</b><span data-i18n-html="tt.k5">Tue &amp; Fri<small>Age 4–6 · 16:15 &nbsp;|&nbsp; Age 6–8 · 17:00 &nbsp;|&nbsp; Over 8 · 18:00</small></span></li>
+              <li><b data-i18n="cl.hiphop">Hip hop</b><span data-i18n="tt.k6">Wed · 17:00</span></li>
+              <li><b data-i18n="cl.gym">Gymnastics</b><span data-i18n="tt.k7">Thu · 18:00</span></li>
+              <li><b data-i18n="cl.kick">Kickboxing</b><span data-i18n="tt.k8">Wed · 18:00</span></li>
+              <li><b data-i18n="cl.basket">Basketball</b><span data-i18n-html="tt.k9">Thu<small>Age 6–8 · 17:00 &nbsp;|&nbsp; Over 8 · 18:00</small></span></li>
+              <li><b data-i18n="cl.foot">Football</b><span data-i18n-html="tt.k10">Fri<small>Age 6–8 · 17:00 &nbsp;|&nbsp; Over 8 · 18:00</small></span></li>
+              <li><b data-i18n="cl.run">Run Club</b><span data-i18n="tt.k11">Wed · 18:00 &nbsp;|&nbsp; Sat · 08:00</span></li>
+            </ul>
+          </div>
+          <div class="fclass fclass--adults" data-reveal style="--i:1">
+            <div class="fclass__head"><h3 data-i18n="ms.adults">Adults</h3><span data-i18n="ms.adults.age">16 and over</span></div>
+            <ul role="list">
+              <li><b data-i18n="cl.aerobics">Aerobics</b><span data-i18n="tt.a1">Mon &amp; Wed · 09:00</span></li>
+              <li><b data-i18n="cl.oriental">Oriental</b><span data-i18n="tt.a2">Mon &amp; Wed · 10:00 &nbsp;|&nbsp; Tue &amp; Thu · 19:00</span></li>
+              <li><b data-i18n="cl.pilates">Mat Pilates</b><span data-i18n="tt.a3">Mon · 18:00</span></li>
+              <li><b>HYROX</b><span data-i18n="tt.a4">Thu · 08:00 &nbsp;|&nbsp; Mon · 19:00</span></li>
+              <li><b data-i18n="cl.run">Run Club</b><span data-i18n="tt.a5">Wed &amp; Thu · 19:00 &nbsp;|&nbsp; Sat · 07:00</span></li>
+              <li><b data-i18n="cl.kick">Kickboxing</b><span data-i18n="tt.a6">Wed · 19:00</span></li>
+              <li><b data-i18n="cl.aqua">Aqua gym</b><span data-i18n="tt.a7">Wed · 19:00 &nbsp;|&nbsp; Thu · 10:00</span></li>
+              <li><b data-i18n="cl.swim">Swim Club</b><span data-i18n="tt.a8">Mon &amp; Wed · 20:00</span></li>
+              <li><b data-i18n="cl.boxing">Boxing</b><span data-i18n="tt.a9">Tue &amp; Thu · 20:00</span></li>
+              <li><b>Body Combat</b><span data-i18n="tt.a10">Fri · 20:00</span></li>
+              <li><b>Grit</b><span data-i18n="tt.a11">Tue · 08:00</span></li>
+              <li><b data-i18n="cl.cali">Calisthenics</b><span data-i18n="tt.a12">Fri · 19:30</span></li>
+              <li><b>Body Shape</b><span data-i18n="tt.a13">Fri · 09:00 &amp; 19:00</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="fclasses__who" data-reveal><span data-i18n="ms.cls.with">Included with:</span> <span class="ask" title="To be confirmed by the club">?</span></p>
+      </div>
+    </section>
+
+    <!-- Beyond Membership -->
+    <section class="section" id="beyond" aria-labelledby="beyond-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow" data-reveal data-i18n="by.eyebrow">Beyond membership</span>
+            <h2 class="h2" id="beyond-title" data-reveal data-i18n-html="by.title">More, <em>when you want it.</em></h2>
+          </div>
+        </div>
+        <div class="beyond">
+          <div class="bcards" data-stagger>
+            <article class="bcard">
+              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">01</span><h3 data-i18n="by.tkd.t">Taekwondo</h3></div>
+              <p class="bcard__note" data-i18n="by.tkd.n">Administration fee to the School of Champions</p>
+              <ul role="list">
+                <li><span data-i18n="by.members">Members</span><b>$30</b></li>
+                <li><span data-i18n="by.nonmembers">Non-members</span><b>$60</b></li>
+              </ul>
+            </article>
+            <article class="bcard">
+              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">02</span><h3 data-i18n="by.pt.t">Personal training</h3></div>
+              <ul role="list">
+                <li><span data-i18n="by.pt.1">Fitness training session</span><b>$25</b></li>
+                <li><span data-i18n="by.pt.2">Physiotherapy session</span><b>$30</b></li>
+                <li><span data-i18n="by.pt.3">Pilates Reformer, per person</span><b>$12</b></li>
+                <li><span data-i18n="by.pt.4">Solarium</span><b data-i18n="by.pt.4v">$1 / minute · $10 / 15 min</b></li>
+              </ul>
+            </article>
+            <article class="bcard">
+              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">03</span><h3 data-i18n="by.swim.t">Learn to swim</h3></div>
+              <ul role="list">
+                <li><span data-i18n="by.swim.1">1 person, per session</span><b>$30</b></li>
+                <li><span data-i18n="by.swim.2">2 people, per session</span><b>$40</b></li>
+                <li><span data-i18n="by.swim.3">3 people, per session</span><b>$50</b></li>
+              </ul>
+            </article>
+            <article class="bcard">
+              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">04</span><h3 data-i18n="by.court.t">Football or basketball court</h3></div>
+              <ul role="list">
+                <li><span data-i18n="by.court.1">90 minutes</span><b>$60</b></li>
+                <li><span data-i18n="by.court.2">120 minutes</span><b>$80</b></li>
+              </ul>
+              <p class="bcard__free" data-i18n="by.court.free">Free for members during the summer season, unless reserved</p>
+            </article>
+          </div>
+
+          <aside class="evbook" id="events" aria-labelledby="ev-title" data-reveal>
+            <div class="evbook__ring" data-ring>
+              <h3 class="evbook__core" id="ev-title" data-i18n="ev.title">Book your event</h3>
+              <span class="evbook__item" style="--x:0%;--y:-41%" data-i18n="ev.wedding">Wedding</span>
+              <span class="evbook__item" style="--x:27%;--y:-21%" data-i18n="ev.communion">First communion</span>
+              <span class="evbook__item" style="--x:27%;--y:21%" data-i18n="ev.birthday">Birthday</span>
+              <span class="evbook__item" style="--x:0%;--y:41%" data-i18n="ev.teen">Teenage pool party</span>
+              <span class="evbook__item" style="--x:-27%;--y:21%" data-i18n="ev.baptism">Baptism</span>
+              <span class="evbook__item" style="--x:-27%;--y:-21%" data-i18n="ev.bachelor">Bachelor party</span>
+            </div>
+            <p data-i18n="ev.contact">For any event, please contact</p>
+            <a class="evbook__phone" href="tel:+9613478200" dir="ltr">03 478 200</a>
+            <a class="btn btn--red" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="ev.wa">WhatsApp the events team</a>
+          </aside>
         </div>
       </div>
     </section>
 
     <!-- Corporate -->
-    <section class="section" id="corporate" aria-labelledby="corp-title">
+    <section class="section section--surface" id="corporate" aria-labelledby="corp-title">
       <div class="wrap">
-        <div class="split split--wide">
-          <div class="split__media" data-reveal>
-            <ph r="3x2" tag="Photo" t="A team at the club" b="Colleagues after a Run Club session or a group class. Genuine, not staged corporate." img="boxing-group" pos="50% 55%" alt="A group of members in boxing gloves after a class"/>
+        <div class="bento">
+          <div class="c7 r3 m2 mr2" data-reveal>
+            <ph r="free" tag="Photo" t="A team at the club" img="boxing-group" pos="50% 55%" alt="A group of members in boxing gloves after a class" sz="(min-width: 900px) 58vw, 100vw"/>
+            <span class="sticker sticker--red" data-i18n="ms.corp.sticker">Teams welcome</span>
           </div>
-          <div class="split__body">
-            <span class="eyebrow" data-reveal data-i18n="ms.corp.eyebrow">Corporate</span>
-            <h2 class="h3" id="corp-title" data-reveal data-i18n="ms.corp.title">Memberships for teams</h2>
-            <p data-reveal data-i18n="ms.corp.p">For companies that want their people moving. We put together packages for groups of any size, combining indoor, outdoor and Full Access as your team needs.</p>
-            <a class="btn btn--solid" href="#inquire" data-plan="corporate" data-reveal data-i18n="ms.corp.cta">Ask about corporate membership</a>
+          <div class="tile tile--red c5 r2 m2" data-reveal style="--i:1">
+            <span class="eyebrow" style="color:#fff" data-i18n="ms.corp.eyebrow">Corporate</span>
+            <h2 id="corp-title" data-i18n-html="ms.corp.title2">Memberships <em>for teams.</em></h2>
+            <a class="btn btn--light" href="#inquire" data-plan="corporate" data-i18n="ms.corp.cta">Ask about corporate membership</a>
+          </div>
+          <div class="tile c5 m2" data-reveal style="--i:2">
+            <p class="h4" data-i18n="ms.corp.mix">Indoor, Outdoor or Full Access, mixed as your team needs.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Conditions -->
-    <section class="section section--surface" id="conditions" aria-labelledby="cond-title">
-      <div class="wrap">
-        <div class="intro">
-          <div>
-            <span class="eyebrow" data-reveal data-i18n="ms.cond.eyebrow">Good to know</span>
-            <h2 class="h2" id="cond-title" data-reveal data-i18n-html="ms.cond.title">The small print, <em>kept small.</em></h2>
-          </div>
-        </div>
-        <ul class="prices list-cols" role="list" data-reveal>
-          <li><span data-i18n="ms.c1">Obligatory insurance, per person</span><b>$20</b></li>
-          <li><span data-i18n="ms.c2">Under-2s</span><b data-i18n="ms.free">Free</b></li>
-          <li><span data-i18n="ms.c3">Accompanied guest, Indoor Club, any age</span><b>$25</b></li>
-          <li><span data-i18n-html="ms.c4">Leisure Island day visit<small>Under 10 · 10 and over</small></span><b>$20 · $25</b></li>
-          <li><span data-i18n="ms.c5">Private locker, per day · per season</span><b>$5 · $100</b></li>
-          <li><span data-i18n="ms.c6">Online purchase</span><b data-i18n="ms.c6v">Coming later</b></li>
-        </ul>
       </div>
     </section>
 
@@ -215,22 +283,20 @@ scripts: assets/lang/memberships.js, assets/memberships.js
           <div class="split__body">
             <span class="eyebrow" data-reveal data-i18n="ms.inq.eyebrow">Request information</span>
             <h2 class="h2" id="inq-title" data-reveal data-i18n-html="ms.inq.title">Come and <em>see it first.</em></h2>
-            <p data-reveal data-i18n="ms.inq.p">Tell us which plan interests you. The memberships team will call or WhatsApp you back, and you're welcome to tour the club before you decide.</p>
             <dl class="specs" data-reveal>
-              <div><dt data-i18n="vis.rec">Reception</dt><dd><a href="tel:+9613340341" dir="ltr">03 340 341</a></dd></div>
+              <div><dt data-i18n="vis.rec">Reception</dt><dd><a href="tel:+9613340341" dir="ltr">03 340 341</a> · <a href="tel:+9614920921" dir="ltr">04 920 921</a></dd></div>
               <div><dt>WhatsApp</dt><dd><a href="https://wa.me/9613340341" target="_blank" rel="noopener" dir="ltr">03 340 341</a></dd></div>
             </dl>
           </div>
           <div class="inquiry" data-reveal>
             <h3 class="h4" data-i18n="inq.t">Send an inquiry</h3>
-            <p class="small" data-i18n="ms.inq.short">Three fields. Reply within one working day.</p>
             <form novalidate data-inquiry data-route="membership">
               <div class="field full">
                 <label for="ms-plan" data-i18n="ms.inq.plan">I'm interested in</label>
                 <select id="ms-plan" name="type">
-                  <option value="indoor" data-route="membership" data-i18n="ms.p1.t">Indoor Club</option>
-                  <option value="full" data-route="membership" data-i18n="ms.p3.t">Full Access</option>
-                  <option value="island" data-route="membership" data-i18n="ms.p2.t">Leisure Island</option>
+                  <option value="indoor" data-route="membership" data-i18n="ms.in.t">Indoor</option>
+                  <option value="island" data-route="membership" data-i18n="ms.out.t">Outdoor</option>
+                  <option value="full" data-route="membership" data-i18n="ms.full.t">Full Access</option>
                   <option value="corporate" data-route="membership" data-i18n="ms.o.corp">Corporate membership</option>
                   <option value="visit" data-route="membership" data-i18n="ms.o.visit">Scheduling a visit</option>
                   <option value="unsure" data-route="membership" data-i18n="ms.o.unsure">Not sure yet</option>

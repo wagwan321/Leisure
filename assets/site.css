@@ -32,22 +32,24 @@
 }
 
 
-/* Leisure Island — "fun, bright" sub-identity (owner's note). Flat colour, no gradients. */
+/* Leisure Island — olive green sub-identity (owner, Oct 2026: the club is renovating in olive),
+   with black and beige alongside. Flat colour, no gradients. */
 :root {
-  --island-lagoon: #0A78A3;  /* owner's note: Leisure Island "fun, bright" — the only two non-table accents */
-  --island-sun: #FFC93C;
-  --island-deep: #191919;    /* aliases onto the table */
-  --island-coral: #FFC93C;
-  --island-foam: #FFFFFF;
+  --island-lagoon: #5B6530;  /* olive: the island's main colour */
+  --island-sun: #E9DFC3;     /* beige: accents and buttons on olive */
+  --island-deep: #191919;    /* black */
+  --island-coral: #E9DFC3;
+  --island-foam: #F1ECDD;    /* light beige: island sections on paper */
+  --island-olive-dark: #3F4621;
 
   --font-sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
   --font-serif: "Instrument Serif", "Times New Roman", serif;
 
   /* One disciplined type scale (§05) */
-  --t-xs: .8125rem;   /* 13 labels */
-  --t-sm: .875rem;    /* 14 small */
-  --t-base: 1rem;     /* 16 body */
-  --t-md: 1.125rem;   /* 18 body large */
+  --t-xs: .9375rem;   /* 15 labels (owner: small text bigger) */
+  --t-sm: 1rem;       /* 16 small */
+  --t-base: 1.0625rem; /* 17 body */
+  --t-md: 1.25rem;    /* 20 body large */
   --t-lg: 1.5rem;     /* 24 lead, card titles */
   --t-xl: clamp(1.75rem, 1.45rem + 1.1vw, 2.5rem);   /* 28–40 sub-headings */
   --t-2xl: clamp(2.5rem, 1.7rem + 3.2vw, 4.5rem);    /* 40–72 section headlines */
@@ -182,13 +184,13 @@ html[dir="rtl"] .link-arrow:hover::after { transform: translateX(-3px); }
   display: inline-flex; align-items: center; gap: .45rem;
   padding: .3rem .55rem; border-radius: 2px;
   background: var(--bg); color: var(--ink);
-  font-size: 10.5px; font-weight: 600; letter-spacing: .12em;
+  font-size: 12.5px; font-weight: 600; letter-spacing: .12em;
 }
 .ph__tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--ph-ink); }
 .ph--video .ph__tag::before { background: var(--red); }
 .ph__ratio {
   position: absolute; inset-block-start: .85rem; inset-inline-end: .85rem;
-  font-size: 10.5px; letter-spacing: .08em; font-variant-numeric: tabular-nums;
+  font-size: 12.5px; letter-spacing: .08em; font-variant-numeric: tabular-nums;
 }
 .ph__brief {
   position: absolute; inset-inline: .85rem; inset-block-end: .8rem;
@@ -488,7 +490,7 @@ html[lang="ar"] .access__label { letter-spacing: 0; }
 .plan__head { display: flex; justify-content: space-between; align-items: start; gap: 1rem; }
 .plan__tag { font-size: var(--t-xs); letter-spacing: .1em; color: var(--muted-ink); }
 html[lang="ar"] .plan__tag { letter-spacing: 0; }
-.plan__flag { font-size: 10.5px; font-weight: 600; letter-spacing: .1em; background: var(--red); color: #fff; padding: .3rem .5rem; border-radius: 2px; white-space: nowrap; }
+.plan__flag { font-size: 12.5px; font-weight: 600; letter-spacing: .1em; background: var(--red); color: #fff; padding: .3rem .5rem; border-radius: 2px; white-space: nowrap; }
 .plan h3 { margin-block: 1rem .5rem; }
 .plan__price { display: flex; align-items: baseline; gap: .35rem; margin-block: 1.25rem .25rem; }
 .plan__price b { font-size: var(--t-2xl); font-weight: 500; letter-spacing: -.03em; line-height: 1; }
@@ -596,7 +598,7 @@ html[lang="ar"] .vrow h3 { letter-spacing: 0; font-size: var(--t-sm); }
 .hours { display: grid; gap: .35rem; font-size: var(--t-sm); }
 .hours div { display: flex; justify-content: space-between; gap: 1rem; }
 .hours span:last-child { font-variant-numeric: tabular-nums; }
-.editable { display: inline-flex; align-items: center; gap: .35rem; font-size: 10.5px; letter-spacing: .08em; color: var(--muted-ink); margin-block-start: .5rem; }
+.editable { display: inline-flex; align-items: center; gap: .35rem; font-size: 12.5px; letter-spacing: .08em; color: var(--muted-ink); margin-block-start: .5rem; }
 .editable::before { content: ""; width: 6px; height: 6px; border: 1px solid currentColor; border-radius: 50%; }
 .visit__map { display: grid; gap: 1.5rem; align-content: start; }
 .inquiry { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 1rem + 1.5vw, 2rem); }
@@ -873,7 +875,7 @@ main [id] { scroll-margin-top: 130px; }
 /* tags */
 .tag {
   display: inline-flex; align-items: center; gap: .4rem; width: fit-content;
-  font-size: 10.5px; font-weight: 600; letter-spacing: .1em;
+  font-size: 12.5px; font-weight: 600; letter-spacing: .1em;
   padding: .3rem .55rem; border-radius: 2px; background: var(--surface); color: var(--ink);
 }
 html[lang="ar"] .tag { letter-spacing: 0; font-size: 11.5px; }

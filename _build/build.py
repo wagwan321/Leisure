@@ -116,10 +116,26 @@ def breadcrumb_jsonld(label, path):
     return '  <script type="application/ld+json">\n  ' + json.dumps(data, ensure_ascii=False) + "\n  </script>"
 
 
+NL = chr(10)
+REDIRECT = """<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<title>The Leisure Club</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="{site}{to}" />
+<meta http-equiv="refresh" content="0; url={to}" />
+<script>location.replace("{to}" + (location.hash && "{to}".indexOf("#") < 0 ? location.hash : ""));</script>
+</head><body><p><a href="{to}">The Leisure Club</a></p></body></html>
+"""
+
+
 def build(src_file):
     meta, body = parse(src_file.read_text(encoding="utf-8"))
     name = src_file.stem
     out_name = f"{name}.html"
+    if meta.get("redirect"):
+        # a page merged into another one: keep the old address working
+        (ROOT / out_name).write_text(REDIRECT.format(site=SITE, to=meta["redirect"]), encoding="utf-8", newline=NL)
+        return out_name
     path = "" if name == "index" else out_name
 
     body = re.sub(r"<ph\s+(.*?)/>", ph, body, flags=re.S)
