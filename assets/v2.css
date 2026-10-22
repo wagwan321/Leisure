@@ -331,7 +331,20 @@ html[lang="ar"] .eyebrow { font-size: clamp(1.05rem, .95rem + .4vw, 1.3rem); let
 .mprices dt { font-size: var(--t-md); }
 
 /* homepage: the What's included button opens that card only */
-.mplans--home { align-items: start; }
+.mplans--home { align-items: stretch; }
+/* homepage: three cards side by side, same width and same height, filling the section */
+@media (min-width: 700px) {
+  .mplans--home { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.75rem, .5rem + 1vw, 1.5rem); }
+  .mplans--home .mplan { height: 100%; }
+  .mplans--home .mplan__body { flex: 1; }
+  .mplans--home .mplan__go { margin-block-start: auto; }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  .mplans--home .mplan__name { font-size: clamp(1.6rem, 1rem + 2vw, 2.4rem); }
+  .mplans--home .mprices dd { font-size: clamp(1.4rem, .9rem + 1.8vw, 2.2rem); }
+  .mplans--home .mprices dt { font-size: var(--t-sm); }
+  .mplans--home .mplan__top, .mplans--home .mplan__body { padding: 1.25rem; }
+}
 .mopen { display: inline-flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; border: 1px solid var(--ink); background: none; padding: .9rem 1.2rem; font-weight: 600; font-size: var(--t-base); border-radius: 2px; }
 .mopen::after { content: "+"; font-size: 1.4rem; line-height: 1; transition: transform .35s var(--ease); }
 .mopen[aria-expanded="true"]::after { transform: rotate(45deg); }
