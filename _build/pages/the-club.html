@@ -23,6 +23,11 @@ scripts: assets/lang/club.js
       </div>
     </section>
 
+    <div class="strip" aria-hidden="true">
+      <div class="marquee"><div class="marquee__track"><span data-i18n="mq.cl1">Since 1991</span><span data-i18n="cl.p1.t">Movement</span><span data-i18n="cl.p2.t">Wellness</span><span data-i18n="cl.p3.t">Leisure</span><span data-i18n="cl.p4.t">Community</span><span data-i18n="mq.cl1">Since 1991</span><span data-i18n="cl.p1.t">Movement</span><span data-i18n="cl.p2.t">Wellness</span><span data-i18n="cl.p3.t">Leisure</span><span data-i18n="cl.p4.t">Community</span></div></div>
+    </div>
+
+
 
     <section class="section" id="story" aria-labelledby="story-title">
       <div class="wrap">
@@ -33,10 +38,16 @@ scripts: assets/lang/club.js
           </div>
         </div>
         <p data-reveal><a class="btn btn--solid" href="our-story.html" data-i18n="cl.story.cta">Read the full story</a></p>
+        <dl class="facts facts--band">
+          <div class="fact" data-reveal><dt data-i18n="fact.1">Year founded</dt><dd class="num"><bdi>1991</bdi></dd></div>
+          <div class="fact" data-reveal style="--i:1"><dt data-i18n="fact.2">Years of movement</dt><dd class="num" data-count="35">35</dd></div>
+          <div class="fact" data-reveal style="--i:2"><dt data-i18n="fact.3">Destinations: the Club &amp; Leisure Island</dt><dd class="num" data-count="2">2</dd></div>
+          <div class="fact" data-reveal style="--i:3"><dt data-i18n="fact.4">Indoor pool, year-round</dt><dd class="num"><bdi>25 m</bdi></dd></div>
+        </dl>
       </div>
     </section>
 
-    <section class="section section--surface" id="philosophy" aria-labelledby="phil-title">
+    <section class="section section--contrast" id="philosophy" aria-labelledby="phil-title">
       <div class="wrap">
         <div class="intro">
           <div>
@@ -44,7 +55,7 @@ scripts: assets/lang/club.js
             <h2 class="h2" id="phil-title" data-reveal data-i18n-html="cl.ph.title">More than <em>a club.</em></h2>
           </div>
         </div>
-        <div class="pillars" data-stagger>
+        <div class="pillars pillars--big" data-stagger>
           <div class="pillar"><span class="pillar__word" data-i18n="cl.p1.t">Movement</span><p data-i18n="cl.p1.p">Every body, every age, every level, from a first class to a first race.</p></div>
           <div class="pillar"><span class="pillar__word" data-i18n="cl.p2.t">Wellness</span><p data-i18n="cl.p2.p">Recovery and rest matter as much as effort.</p></div>
           <div class="pillar"><span class="pillar__word" data-i18n="cl.p3.t">Leisure</span><p data-i18n="cl.p3.p">Long summer days, good food and time together.</p></div>

@@ -108,6 +108,13 @@
     var media = $(".page-hero__media .ph"); if (!media) return;
     var wrap = media.parentNode; claim(wrap);
     gsap.fromTo(media, { opacity: 0 }, { opacity: 1, duration: 1.2, ease: "power2.out", delay: 0.1 });
+    // full-screen openings: the title lifts away as you scroll (the picture itself never moves)
+    var sec = wrap.closest(".page-hero");
+    var text = sec && sec.querySelector(".head, .page-hero__grid");
+    if (text && media.classList.contains("r-21x9") && window.matchMedia("(min-width: 900px)").matches) {
+      gsap.to(text, { yPercent: -30, opacity: 0, ease: "none",
+        scrollTrigger: { trigger: sec, start: "top top", end: "bottom 15%", scrub: true } });
+    }
     $$(".page-hero__aside > *, .crumbs").forEach(function (el, i) {
       gsap.from(el, { y: 24, opacity: 0, duration: 1.1, ease: "expo.out", delay: 0.35 + i * 0.08 });
     });

@@ -527,3 +527,29 @@ TLC_add({
     "by.swim.3b": "3 personnes"
   }
 });
+
+/* Fourth owner review (Oct 2026): word strips and number bands on the inner pages. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "mq.fit1": "القوة", "mq.fit3": "حصص مجانية", "mq.fit5": "التعافي",
+    "fx.f1": "حصة أسبوعية مجانية", "fx.f2": "محطات HYROX", "fx.f3": "أيام في الأسبوع", "fx.f4": "موعد الافتتاح",
+    "mq.aq1": "اسبح", "mq.aq2": "تعلّم", "mq.aq3": "تسابق",
+    "aq.f1": "مسبح داخلي مدفّأ", "aq.f2": "طرق للسباحة", "aq.f3": "سنوات لنادي السباحة", "aq.f4": "الدروس ابتداءً من",
+    "mq.cm3": "منصّات التتويج", "mq.cm4": "معًا", "mq.cm5": "لكل وتيرة",
+    "cm.f1": "ناديان", "cm.f2": "سنوات معًا", "cm.f3": "تقييم Google", "cm.f4": "مراجعة على Google",
+    "mq.cl1": "منذ 1991",
+    "mq.vs1": "ديك المحدي", "mq.vs2": "بارك طاميش", "mq.vs3": "شانفيل",
+    "mq.sc1": "24 حصة مجانية"
+  },
+  fr: {
+    "mq.fit1": "Force", "mq.fit3": "Cours gratuits", "mq.fit5": "Récupération",
+    "fx.f1": "Cours hebdomadaires gratuits", "fx.f2": "Stations HYROX", "fx.f3": "Jours par semaine", "fx.f4": "Ouverture",
+    "mq.aq1": "Nager", "mq.aq2": "Apprendre", "mq.aq3": "Concourir",
+    "aq.f1": "Piscine intérieure chauffée", "aq.f2": "Façons de nager", "aq.f3": "Années de Swim Club", "aq.f4": "Cours à partir de",
+    "mq.cm3": "Podiums", "mq.cm4": "Ensemble", "mq.cm5": "À chaque rythme",
+    "cm.f1": "Clubs", "cm.f2": "Années ensemble", "cm.f3": "Note Google", "cm.f4": "Avis Google",
+    "mq.cl1": "Depuis 1991",
+    "mq.vs1": "Dik el-Mehdi", "mq.vs2": "Park Tamish", "mq.vs3": "Champville",
+    "mq.sc1": "24 cours gratuits"
+  }
+});

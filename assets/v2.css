@@ -582,3 +582,59 @@ html[dir="rtl"] .mother:hover::after { transform: translateX(-10px); }
 
 /* phones: wide page-top photos and films stay wide */
 @media (max-width: 699px) { .page-hero__media .ph.r-21x9 { aspect-ratio: 16 / 10 !important; } }
+
+/* ==========================================================================
+   Inner pages with the homepage's energy (owner review, Oct 2026)
+   ========================================================================== */
+
+/* full-screen opening: the page's photo or film fills the screen, title over it */
+@media (min-width: 900px) {
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) { padding: 0 !important; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) > .wrap { max-width: none; padding: 0; display: grid; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) > .wrap > * { grid-area: 1 / 1; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media { margin: 0 !important; position: relative; z-index: 0; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media .ph { aspect-ratio: auto !important; height: min(88vh, 920px); border-radius: 0; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.18) 48%, rgba(0,0,0,.38) 100%); }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .crumbs { position: relative; z-index: 3; align-self: start; justify-self: start; margin: 0; padding: 1.5rem var(--gutter); color: #fff; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .crumbs a { color: #fff; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .head,
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__grid { position: relative; z-index: 3; align-self: end; justify-self: center; width: 100%; max-width: var(--max); margin: 0; padding: 0 var(--gutter) clamp(2.5rem, 2rem + 3vw, 5rem); color: #fff; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-title { color: #fff; font-size: clamp(3.5rem, 1.5rem + 6.5vw, 9rem); }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-title em { color: var(--island-sun); }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .eyebrow { color: #fff; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .btn { --b-ink: #fff; --b-line: #fff; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .btn--solid { --b-bg: #fff; --b-ink: #191919; --b-line: #fff; }
+  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .pill { color: #fff; }
+}
+
+/* moving word strip under the opening */
+.strip { background: var(--ink); color: #F6F5F2; padding-block: 1.1rem; overflow: hidden; }
+.strip--red { background: var(--red); }
+.strip--olive { background: var(--island-lagoon); }
+.strip .marquee { border: 0; padding: 0; font-size: clamp(1.5rem, 1.05rem + 1.9vw, 2.9rem); }
+.strip .marquee__track span::after { color: var(--red); }
+.strip--red .marquee__track span::after { color: #191919; }
+.strip--olive .marquee__track span::after { color: var(--island-sun); }
+
+/* numbers band */
+.facts--band { margin-block-start: clamp(2.5rem, 2rem + 3vw, 4.5rem); }
+.section--contrast .facts--band .fact { border-color: rgba(255,255,255,.25); }
+
+/* photos react to the pointer (inside their frame) */
+.bento > div .ph > img, .bento > a .ph > img, .split__media .ph > img { transition: scale .9s var(--ease); }
+@media (hover: hover) {
+  .bento > div:hover .ph > img, .bento > a:hover .ph > img, .split__media:hover .ph > img { scale: 1.05; }
+  .bento > *:hover .sticker { transform: translateY(-4px); }
+}
+.bento .sticker { transition: transform .45s var(--ease); }
+
+/* philosophy words, big */
+.pillars--big .pillar__word { font-size: clamp(2.2rem, 1.4rem + 3vw, 4.5rem); font-weight: 700; letter-spacing: -.04em; line-height: 1; }
+.section--contrast .pillars--big .pillar { border-color: rgba(255,255,255,.25); }
+.pillars--big .pillar { transition: transform .5s var(--ease); }
+@media (hover: hover) { .pillars--big .pillar:hover { transform: translateY(-8px); } .pillars--big .pillar:hover .pillar__word { color: var(--red); } }
+
+/* buttons keep their contrast inside olive sections */
+.section--olive-dark .btn--sun, .section--olive .btn--sun { --b-bg: var(--island-sun); --b-ink: #191919; --b-line: var(--island-sun); }
+.evx .btn--light { --b-bg: #F6F5F2; --b-ink: #191919; --b-line: #F6F5F2; }
+.evx .evx__p--beige .btn--light { --b-bg: #191919; --b-ink: #F6F5F2; --b-line: #191919; }
