@@ -82,15 +82,31 @@
     update();
   }
 
-  // ---------- Aquatics: lane lines draw across when they come into view ----------
-  var lanes = document.querySelectorAll(".lane");
-  if (lanes.length) {
-    if ("IntersectionObserver" in window) {
-      var lio = new IntersectionObserver(function (es) {
-        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); lio.unobserve(e.target); } });
-      }, { threshold: 0.6 });
-      lanes.forEach(function (l) { lio.observe(l); });
-    } else { lanes.forEach(function (l) { l.classList.add("is-in"); }); }
+  // ---------- Aquatics: the opening photo is water you can touch (WebGL ripples) ----------
+  var rip = document.querySelector("[data-ripple]");
+  if (rip) {
+    var hint = rip.parentNode.querySelector(".ripple__hint"), $r = null, timer = null;
+    function drop() {
+      if (!$r || document.hidden) return;
+      var w = rip.clientWidth, h = rip.clientHeight;
+      $r.ripples("drop", Math.random() * w, Math.random() * h, 18 + Math.random() * 14, 0.05 + Math.random() * 0.05);
+    }
+    function start() {
+      if ($r || still() || !window.jQuery || !window.jQuery.fn.ripples) return;
+      try {
+        $r = window.jQuery(rip);
+        $r.ripples({ resolution: 384, dropRadius: 22, perturbance: 0.035, interactive: true });
+        timer = setInterval(drop, 2600); setTimeout(drop, 600);
+      } catch (e) { $r = null; rip.parentNode.classList.add("no-ripple"); }
+    }
+    function stop() {
+      if (!$r) return;
+      clearInterval(timer); try { $r.ripples("destroy"); } catch (e) {}
+      $r = null; rip.style.backgroundImage = rip.style.backgroundImage;
+    }
+    rip.addEventListener("pointermove", function () { if (hint) hint.classList.add("is-gone"); }, { once: true });
+    new MutationObserver(function () { still() ? stop() : start(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-motion"] });
+    if (document.readyState === "complete") start(); else window.addEventListener("load", start);
   }
 
   // ---------- Community: medal cards tilt toward the pointer ----------

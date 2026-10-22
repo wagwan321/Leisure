@@ -559,3 +559,6 @@ TLC_add({
   ar: { "fp.today": "هذا الأسبوع في النادي", "fp.day": "اليوم", "fp.next": "التالي", "fp.hx.km": "جري 1 كم بين كل محطة" },
   fr: { "fp.today": "Cette semaine au club", "fp.day": "Jour", "fp.next": "Ensuite", "fp.hx.km": "1 km de course entre chaque station" }
 });
+
+/* Aquatics water effect (Oct 2026). DRAFT for native review. */
+TLC_add({ ar: { "aq.touch": "المس الماء" }, fr: { "aq.touch": "Touchez l'eau" } });

@@ -136,6 +136,8 @@
         </div>
         <div class="page-hero__media" data-reveal>
           <div class="ph r-21x9 ph--video ph--photo"><img src="images/site/pool-lanes-logo-1400.webp" srcset="images/site/pool-lanes-logo-1400.webp 1400w, images/site/pool-lanes-logo-2400.webp 2400w" sizes="100vw" alt="The heated indoor pool" loading="lazy" decoding="async" style="object-position:50% 62%"></div>
+          <div class="ripple" data-ripple style="background-image:url(images/site/pool-lanes-logo-1400.webp);background-position:50% 62%" aria-hidden="true"></div>
+          <span class="ripple__hint" aria-hidden="true" data-i18n="aq.touch">Touch the water</span>
         </div>
       </div>
     </section>
@@ -144,7 +146,6 @@
 
 
     <!-- Three ways to swim (brief: distinguish recreational, instruction, competitive) -->
-    <div class="lane" aria-hidden="true"><div class="wrap"><i class="lane__line"></i></div></div>
     <section class="section" aria-labelledby="ways-title">
       <div class="wrap">
         <div class="intro">
@@ -169,8 +170,6 @@
         </div>
       </div>
     </section>
-
-    <div class="lane" aria-hidden="true"><div class="wrap"><span class="lane__no">1</span><i class="lane__line"></i></div></div>
     <section class="section section--surface" id="indoor" aria-labelledby="indoor-title">
       <div class="wrap">
         <div class="split">
@@ -190,8 +189,6 @@
         </div>
       </div>
     </section>
-
-    <div class="lane" aria-hidden="true"><div class="wrap"><span class="lane__no">2</span><i class="lane__line"></i></div></div>
     <section class="section" id="lessons" aria-labelledby="lessons-title">
       <div class="wrap">
         <div class="split split--rev">
@@ -213,9 +210,8 @@
         </div>
       </div>
     </section>
-
-    <div class="lane" aria-hidden="true"><div class="wrap"><span class="lane__no">3</span><i class="lane__line"></i></div></div>
-    <section class="section section--contrast" id="swim-club" aria-labelledby="club-title">
+    <section class="section section--contrast pool-light" id="swim-club" aria-labelledby="club-title">
+      <div class="caustics" aria-hidden="true"><i></i><i></i></div>
       <div class="wrap">
         <div class="split split--wide">
           <div class="split__media">
@@ -230,8 +226,6 @@
         </div>
       </div>
     </section>
-
-    <div class="lane" aria-hidden="true"><div class="wrap"><span class="lane__no">4</span><i class="lane__line"></i></div></div>
     <section class="section" id="competitive" aria-labelledby="comp-title">
       <div class="wrap">
         <div class="intro">
@@ -253,8 +247,6 @@
         <p style="margin-block-start:2rem" data-reveal><a class="link-arrow" href="community.html#achievements" data-i18n="aq.cp.all">All events &amp; competitions</a></p>
       </div>
     </section>
-
-    <div class="lane" aria-hidden="true"><div class="wrap"><span class="lane__no">5</span><i class="lane__line"></i></div></div>
     <section class="section island" id="outdoor" aria-labelledby="out-title">
       <div class="wrap">
         <div class="split">
@@ -376,6 +368,8 @@
   <script src="assets/i18n.js" defer></script>
   <script src="assets/lang/common.js" defer></script>
   <script src="assets/lang/aquatics.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js" defer></script>
   <script src="assets/lang/v2.js" defer></script>
   <script src="assets/data/club.js" defer></script>
   <script src="assets/motion.js" defer></script>
