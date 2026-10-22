@@ -82,6 +82,17 @@
     update();
   }
 
+  // ---------- Aquatics: lane lines draw across when they come into view ----------
+  var lanes = document.querySelectorAll(".lane");
+  if (lanes.length) {
+    if ("IntersectionObserver" in window) {
+      var lio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); lio.unobserve(e.target); } });
+      }, { threshold: 0.6 });
+      lanes.forEach(function (l) { lio.observe(l); });
+    } else { lanes.forEach(function (l) { l.classList.add("is-in"); }); }
+  }
+
   // ---------- Community: medal cards tilt toward the pointer ----------
   document.querySelectorAll("[data-tilt] > *").forEach(function (card) {
     card.addEventListener("pointermove", function (e) {

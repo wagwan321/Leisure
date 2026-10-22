@@ -708,19 +708,18 @@ html[dir="rtl"] .track__fill { transform-origin: right; }
   .track__list { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 1.25rem; margin: 0; }
 }
 
-/* ---------- Aquatics: water surface and lane ropes ---------- */
-[data-page="aquatics"] .page-hero__media { position: relative; }
-.wave { position: absolute; z-index: 2; inset-inline: 0; bottom: -1px; width: 200%; height: clamp(36px, 5vw, 80px); fill: var(--bg); pointer-events: none; }
-.wave__a { opacity: .55; }
-html:not([data-motion="still"]) .wave { animation: waveMove 9s linear infinite; }
-html:not([data-motion="still"]) .wave__b { animation: waveBob 4s ease-in-out infinite; }
-@keyframes waveMove { to { transform: translateX(-50%); } }
-@keyframes waveBob { 50% { transform: translateY(6px); } }
-.rope { height: 14px; overflow: hidden; background: var(--bg); }
-.rope i { display: block; height: 100%; width: 200%; border-radius: 99px;
-  background: repeating-linear-gradient(90deg, #E62028 0 26px, #F6F5F2 26px 30px, #E62028 30px 56px, #F6F5F2 56px 60px, #2A6FD6 60px 86px, #F6F5F2 86px 90px, #2A6FD6 90px 116px, #F6F5F2 116px 120px); }
-html:not([data-motion="still"]) .rope i { animation: ropeDrift 30s linear infinite; }
-@keyframes ropeDrift { to { transform: translateX(-50%); } }
+/* ---------- Aquatics: pool lane lines that draw as you scroll ---------- */
+.lane { background: var(--bg); padding-block: clamp(1.5rem, 1rem + 2vw, 3rem); }
+.lane .wrap { display: flex; align-items: center; gap: 1.25rem; }
+.lane__no { flex: none; width: 2.6rem; height: 2.6rem; display: grid; place-items: center; background: #191919; color: #F6F5F2; font-weight: 700; font-size: var(--t-md); border-radius: 4px; font-variant-numeric: tabular-nums; }
+.lane__line { position: relative; flex: 1; height: 8px; background: #191919; border-radius: 1px; transform-origin: left; }
+html[dir="rtl"] .lane__line { transform-origin: right; }
+.lane__line::after { content: ""; position: absolute; inset-inline-end: 0; top: 50%; width: 8px; height: 46px; translate: 0 -50%; background: var(--red); border-radius: 1px; }
+.js:not([data-motion="still"]) .lane__line { transform: scaleX(0); transition: transform 1.6s cubic-bezier(.65,0,.2,1); }
+.js:not([data-motion="still"]) .lane__no { opacity: 0; transform: translateY(10px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.js .lane.is-in .lane__line { transform: scaleX(1); }
+.js .lane.is-in .lane__no { opacity: 1; transform: none; }
+.lane + .section, .section + .lane { margin: 0; }
 
 /* ---------- Community: medal wall that tilts ---------- */
 .medals { perspective: 1200px; }
