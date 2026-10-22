@@ -562,3 +562,43 @@ TLC_add({
 
 /* Aquatics water effect (Oct 2026). DRAFT for native review. */
 TLC_add({ ar: { "aq.touch": "المس الماء" }, fr: { "aq.touch": "Touchez l'eau" } });
+
+/* Hospitality & Events page and Our Story merge (Oct 2026). DRAFT for native review. */
+TLC_add({
+  ar: {
+    "own.film": "فيلم المالكَين",
+    "li2.ev.eyebrow2": "٠٤ · الأعراس والمناسبات",
+    "evh.lead": "احتفل",
+    "evh.w1": "بعرسك.", "evh.w2": "بعيد ميلادك.", "evh.w3": "بعمادة.", "evh.w4": "بمناولة أولى.", "evh.w5": "بحفلة عزوبية.", "evh.w6": "بحفلة مسبح للمراهقين.",
+    "evx.g.p": "مشاوي على الفحم، برغر، لفائف وبيتزا، مع قائمة خاصة بالأطفال.",
+    "evx.b1.p": "كوكتيلات مثلّجة ونبيذ لبناني بجانب الماء.",
+    "evx.b2.p": "يتحوّل العشاء إلى رقص تحت أضواء الحديقة.",
+    "evx.b3.p": "كريب وعصائر طازجة وبابل تي.",
+    "evx.c.t": "الضيافة والتموين",
+    "evx.c.p": "من مطبخ غريل هاوس، لمناسبتك هنا أو في أي مكان آخر. يلزم الطلب المسبق.",
+    "evx.w.title": "قل نعم <em>بين أشجار الصنوبر.</em>",
+    "evp.q1": "ماذا تحتفل؟", "evp.q2": "في أي شهر تقريبًا؟", "evp.q3": "كم عدد الضيوف؟",
+    "evp.your": "مناسبتك", "evp.send": "أرسل على واتساب", "evp.guests": "ضيف",
+    "evp.msg": "مرحبًا، أودّ تنظيم {occ} في ذا ليجر كلوب في {month} تقريبًا، لنحو {guests} ضيف.",
+    "evp.m.jan": "كانون الثاني", "evp.m.feb": "شباط", "evp.m.mar": "آذار", "evp.m.apr": "نيسان", "evp.m.may": "أيار", "evp.m.jun": "حزيران",
+    "evp.m.jul": "تموز", "evp.m.aug": "آب", "evp.m.sep": "أيلول", "evp.m.oct": "تشرين الأول", "evp.m.nov": "تشرين الثاني", "evp.m.dec": "كانون الأول"
+  },
+  fr: {
+    "own.film": "Le film des propriétaires",
+    "li2.ev.eyebrow2": "04 · Mariages et événements",
+    "evh.lead": "Célébrez",
+    "evh.w1": "votre mariage.", "evh.w2": "votre anniversaire.", "evh.w3": "un baptême.", "evh.w4": "une première communion.", "evh.w5": "un enterrement de vie de garçon.", "evh.w6": "une pool party ado.",
+    "evx.g.p": "Grillades au charbon, burgers, wraps et pizzas, avec un vrai menu enfants.",
+    "evx.b1.p": "Cocktails glacés et vins libanais au bord de l'eau.",
+    "evx.b2.p": "Le dîner se transforme en soirée dansante sous les lumières du jardin.",
+    "evx.b3.p": "Crêpes, jus frais et bubble tea.",
+    "evx.c.t": "Traiteur",
+    "evx.c.p": "Depuis la cuisine du Grill House, pour votre événement ici ou ailleurs. Sur commande.",
+    "evx.w.title": "Dites oui <em>parmi les pins.</em>",
+    "evp.q1": "Que célébrez-vous ?", "evp.q2": "Vers quel mois ?", "evp.q3": "Combien d'invités ?",
+    "evp.your": "Votre événement", "evp.send": "Envoyer sur WhatsApp", "evp.guests": "invités",
+    "evp.msg": "Bonjour, je souhaite organiser un(e) {occ} au Leisure Club vers {month}, pour environ {guests} invités.",
+    "evp.m.jan": "Janv.", "evp.m.feb": "Févr.", "evp.m.mar": "Mars", "evp.m.apr": "Avr.", "evp.m.may": "Mai", "evp.m.jun": "Juin",
+    "evp.m.jul": "Juil.", "evp.m.aug": "Août", "evp.m.sep": "Sept.", "evp.m.oct": "Oct.", "evp.m.nov": "Nov.", "evp.m.dec": "Déc."
+  }
+});

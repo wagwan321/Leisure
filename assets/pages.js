@@ -109,6 +109,77 @@
     if (document.readyState === "complete") start(); else window.addEventListener("load", start);
   }
 
+  // ---------- Hospitality & Events: the occasion in the title keeps changing ----------
+  var rot = document.querySelector("[data-rotate]");
+  if (rot) {
+    var words = rot.children, wi = 0;
+    setInterval(function () {
+      if (still() || document.hidden) return;
+      words[wi].classList.remove("is-on"); words[wi].classList.add("is-off");
+      var prev = words[wi]; setTimeout(function () { prev.classList.remove("is-off"); }, 700);
+      wi = (wi + 1) % words.length; words[wi].classList.add("is-on");
+    }, 2400);
+  }
+
+  // ---------- Hospitality & Events: venue list, the picture follows the name ----------
+  document.querySelectorAll("[data-menuboard]").forEach(function (mb) {
+    var items = mb.querySelectorAll(".menuboard__item"), layers = mb.querySelectorAll(".menuboard__layer");
+    function act(i) {
+      items.forEach(function (x, k) { x.classList.toggle("is-active", k === i); });
+      layers.forEach(function (x, k) { x.classList.toggle("is-active", k === i); });
+    }
+    items.forEach(function (it, i) {
+      it.addEventListener("mouseenter", function () { act(i); });
+      it.addEventListener("focus", function () { act(i); });
+      it.addEventListener("click", function () { act(i); });
+    });
+  });
+
+  // ---------- Hospitality & Events: plan your event, writes the WhatsApp message ----------
+  var planner = document.querySelector("[data-planner]");
+  if (planner) {
+    var MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+    var MEN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var mBox = planner.querySelector("[data-months]");
+    var nowM = new Date().getMonth();
+    var st = { occ: "wedding", month: (nowM + 2) % 12, guests: "30–100" };
+    function mName(i) { return t("evp.m." + MONTHS[i], MEN[i]); }
+    function drawMonths() {
+      var h = "";
+      for (var k = 0; k < 12; k++) {
+        var i = (nowM + k) % 12;
+        h += '<button type="button" role="radio" aria-checked="' + (i === st.month) + '" data-month="' + i + '">' + mName(i) + "</button>";
+      }
+      mBox.innerHTML = h;
+    }
+    function occLabel() { var b = planner.querySelector('[data-occ="' + st.occ + '"]'); return b ? b.textContent.trim() : st.occ; }
+    function out() {
+      planner.querySelector("[data-out-occ]").textContent = occLabel();
+      planner.querySelector("[data-out-month]").textContent = mName(st.month);
+      planner.querySelector("[data-out-guests]").textContent = st.guests + " " + t("evp.guests", "guests");
+      var msg = t("evp.msg", "Hello, I would like to plan a {occ} at The Leisure Club around {month}, for about {guests} guests.")
+        .replace("{occ}", occLabel().toLowerCase()).replace("{month}", mName(st.month)).replace("{guests}", st.guests);
+      planner.querySelector("[data-out-link]").href = "https://wa.me/9613478200?text=" + encodeURIComponent(msg);
+      var card = planner.querySelector(".planner__card"); card.classList.remove("is-bump"); void card.offsetWidth; card.classList.add("is-bump");
+    }
+    planner.addEventListener("click", function (e) {
+      var b = e.target.closest("button[role=radio]"); if (!b) return;
+      var group = b.parentNode;
+      group.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-checked", String(x === b)); });
+      if (b.dataset.occ) st.occ = b.dataset.occ;
+      if (b.dataset.month) st.month = +b.dataset.month;
+      if (b.dataset.guests) st.guests = b.dataset.guests;
+      out();
+    });
+    document.querySelectorAll("[data-plan-occ]").forEach(function (a) {
+      a.addEventListener("click", function () {
+        var b = planner.querySelector('[data-occ="' + a.dataset.planOcc + '"]'); if (b) b.click();
+      });
+    });
+    document.addEventListener("tlc:lang", function () { drawMonths(); out(); });
+    drawMonths(); out();
+  }
+
   // ---------- Community: medal cards tilt toward the pointer ----------
   document.querySelectorAll("[data-tilt] > *").forEach(function (card) {
     card.addEventListener("pointermove", function (e) {
