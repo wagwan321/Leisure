@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="paper" data-motion="expressive" data-hero="framed">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Full Access membership | The Leisure Club</title>
+  <meta name="description" content="Full Access membership: everything at the Indoor Club all year and everything at Leisure Island in season. Solo, duo and family prices: monthly, summer season or yearly." />
+  <meta name="theme-color" content="#F6F5F2" />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="alternate" hreflang="en" href="https://theleisureclub-lb.com/full-access.html" />
+  <link rel="alternate" hreflang="ar" href="https://theleisureclub-lb.com/full-access.html?lang=ar" />
+  <link rel="alternate" hreflang="fr" href="https://theleisureclub-lb.com/full-access.html?lang=fr" />
+  <meta property="og:title" content="Full Access membership | The Leisure Club" />
+  <meta property="og:description" content="Full Access membership: everything at the Indoor Club all year and everything at Leisure Island in season. Solo, duo and family prices: monthly, summer season or yearly." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://theleisureclub-lb.com/full-access.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/v2.css" />
+
+  <!-- Apply saved / shared review options before first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement, q = new URLSearchParams(location.search), s = {};
+      try { s = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
+      var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      d.dataset.theme = "paper"; // the brief's colour table (§04)
+      d.dataset.hero = q.get("hero") || s.hero || "framed";
+      var m = q.get("motion") || s.motion;
+      if (m) d.setAttribute("data-motion-chosen", "");
+      d.dataset.motion = m || (reduce ? "still" : "expressive");
+      d.classList.add("js");
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://theleisureclub-lb.com/"}, {"@type": "ListItem", "position": 2, "name": "Full Access membership", "item": "https://theleisureclub-lb.com/full-access.html"}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- ===================== Header (Aman-inspired: Menu · centred logo · language + one action) ===================== -->
+  <header class="site-header is-solid" id="top">
+    <div class="progress" aria-hidden="true"></div>
+    <div class="bar wrap">
+      <div class="bar__start">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__bars" aria-hidden="true"></span><span data-i18n="menu">Menu</span>
+        </button>
+      </div>
+      <a class="brand" href="index.html" aria-label="The Leisure Club, home">
+        <img class="brand__logo-dark" src="images/logo.png" alt="The Leisure Club" width="196" height="178" />
+        <img class="brand__logo-light" src="images/logo-white.png" alt="" width="196" height="178" />
+      </a>
+      <div class="bar__end">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+        <!-- Member Login: add only once a functional member portal exists (brief §07) -->
+        <a class="btn btn--solid btn--sm" href="memberships.html" data-i18n="nav.memberships">Memberships</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen menu: seven sections, no sub-lists (owner review, Oct 2026: fewer subsections) -->
+  <div class="site-menu" id="site-menu" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="site-menu__nav">
+      <div class="site-menu__top">
+        <a class="brand" href="index.html" aria-label="The Leisure Club, home"><img src="images/logo.png" alt="The Leisure Club" width="196" height="178" /></a>
+        <button class="site-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">×</span></button>
+      </div>
+      <nav aria-label="Primary">
+        <ol class="menu-primary" role="list">
+          <li><a href="index.html" data-nav="home" data-i18n="nav.home">Home</a></li>
+          <li><a href="the-club.html" data-nav="club" data-i18n="nav.club">The Club</a></li>
+          <li><a href="fitness.html" data-nav="fitness" data-i18n="nav.fitness2">Fitness</a></li>
+          <li><a href="aquatics.html" data-nav="aquatics" data-i18n="nav.aquatics">Aquatics</a></li>
+          <li><a href="leisure-island.html" data-nav="island" data-i18n="nav.island">Leisure Island</a></li>
+          <li><a href="community.html" data-nav="community" data-i18n="nav.community">Community</a></li>
+          <li><a href="memberships.html" data-nav="memberships" aria-current="page" data-i18n="nav.memberships">Memberships</a></li>
+        </ol>
+        <ul class="menu-secondary" role="list">
+          <li><a href="visit.html" data-nav="visit" data-i18n="util.contact">Contact</a></li>
+          <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </nav>
+      <div class="lang site-menu__lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="ar" aria-pressed="false" lang="ar">العربية</button>
+        <button type="button" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+    </div>
+    <!-- desktop: a quiet side panel with the three most asked-for links -->
+    <div class="site-menu__aside">
+      <div class="site-menu__panel" data-menu-panel>
+        <div data-menu-default>
+          <p class="eyebrow" data-i18n="mn.welcome">Dik el-Mehdi · Since 1991</p>
+          <p class="site-menu__panel-title" data-i18n-html="mn.panel">Movement. Wellness. <em>Leisure. Community.</em></p>
+          <div class="site-menu__boxes">
+            <a class="btn" href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a>
+            <a class="btn" href="schedule.html" data-i18n="f.sched">Weekly schedule</a>
+            <a class="btn" href="visit.html" data-i18n="util.contact">Contact</a>
+          </div>
+        </div>
+        <div data-menu-sub hidden>
+          <p class="eyebrow" data-menu-sub-title></p>
+          <div class="site-menu__boxes" data-menu-sub-list></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+<section class="mhero mhero--red">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><a href="memberships.html" data-i18n="nav.memberships">Memberships</a><span aria-hidden="true">/</span><span data-i18n="ms.full.t">Full Access</span></nav>
+        <span class="eyebrow eyebrow--dot" data-i18n="mp.eyebrow">Membership</span>
+        <h1 class="mhero__title" data-i18n="ms.full.t">Full Access</h1>
+        <p class="mhero__sub" data-i18n="ms.full.sub">Indoor + Outdoor, the whole club</p>
+        <div class="pills mhero__pills">
+          <span class="pill pill--live live" data-live="indoor"><span data-live-text></span></span>
+          <span class="pill"><span data-i18n="ms.in.short">Indoor</span>&nbsp;·&nbsp;<span data-i18n="ms.in.hours">Mon to Sat, from 07:30</span></span>
+          <span class="pill"><span data-i18n="ms.out.short">Outdoor</span>&nbsp;·&nbsp;<span data-i18n="ms.out.hours">Daily 10:00 – 20:00, 16 May to 20 Sept</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="mp.prices">Prices</span>
+            <h2 class="h2" id="prices-title" data-reveal data-i18n-html="mp.prices.title">Pick <em>who's joining.</em></h2>
+          </div>
+          <div class="who" role="group" aria-label="Who's joining" data-i18n-attr="aria-label:ms.who" data-reveal>
+            <button type="button" data-who="0" aria-pressed="true" data-i18n="ms.solo">Solo</button>
+            <button type="button" data-who="1" aria-pressed="false" data-i18n="ms.duo">Duo</button>
+            <button type="button" data-who="2" aria-pressed="false" data-i18n="ms.family">Family</button>
+          </div>
+        </div>
+        <div class="figs mfigs mfigs--3 mtone--red" data-reveal>
+            <div class="fig"><b data-price="[250,400,500]">$250</b><small data-i18n="ms.month">1 month</small></div>
+            <div class="fig"><b data-price="[700,1200,1400]">$700</b><small data-i18n="ms.season">Summer season</small></div>
+            <div class="fig"><b data-price="[1000,1500,2000]">$1,000</b><small data-i18n="ms.year">1 year</small></div>
+        </div>
+        <div class="mfacts">
+          <div class="mfacts__free"><span data-i18n="ms.wifi">Free Wi-Fi</span><span data-i18n="ms.parking">Free parking</span></div>
+          <p class="insurance"><span data-i18n="ms.ins">OBLIGATORY INSURANCE</span> · <b>$20</b> <span data-i18n="ms.ins.per">per person</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface" id="included" aria-labelledby="incl-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="ms.free.t">Free with this membership</span>
+            <h2 class="h2" id="incl-title" data-reveal data-i18n-html="mp.incl.title">Everything <em>that comes with it.</em></h2>
+          </div>
+        </div>
+        <div class="mincl2 mincl2--2 mtone--red" data-reveal>
+          <div class="mincl2__group">
+            <h3 class="mincl2__h" data-i18n="ms.in.t">Indoor</h3>
+            <ul role="list">
+              <li><span data-i18n="ms.in.i1">Gym &amp; ping pong</span><b><bdi>07:30 – 22:00</bdi></b></li>
+              <li><span data-i18n="ms.in.i2">HYROX gym</span><b></b></li>
+              <li><span data-i18n="ms.in.i3">Indoor pool &amp; jacuzzi</span><b></b></li>
+              <li><span data-i18n="ms.in.i4">Cold plunge &amp; showers</span><b></b></li>
+              <li><span data-i18n-html="ms.in.i5">Steam<small>Tue, Thu, Sat</small></span><b><bdi>09:00 – 21:30</bdi></b></li>
+              <li><span data-i18n-html="ms.in.i6">Sauna<small>Mon, Wed, Fri</small></span><b><bdi>09:00 – 21:30</bdi></b></li>
+            </ul>
+          </div>
+          <div class="mincl2__group">
+            <h3 class="mincl2__h" data-i18n="ms.out.t">Outdoor</h3>
+            <ul role="list">
+              <li><span data-i18n="ms.out.i1">Outdoor lap pool</span><b></b></li>
+              <li><span data-i18n="ms.out.i2">Slides &amp; leisure pool</span><b></b></li>
+              <li><span data-i18n="ms.out.i3">Kids' pools &amp; splash pad</span><b></b></li>
+              <li><span data-i18n="ms.out.i4">Jacuzzi</span><b></b></li>
+              <li><span data-i18n-html="ms.out.i5">Football &amp; basketball courts<small>Unless reserved</small></span><b></b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rows mextras" data-reveal>
+            <div><span data-i18n="ms.guest">Accompanied guest, any age</span><b>$25</b></div>
+            <div><span data-i18n="ms.vis">Day visitors</span><b data-i18n="ms.vis.v">Under 2 free · under 10 $25 · over 10 $30</b></div>
+            <div><span data-i18n="ms.locker">Private locker</span><b data-i18n="ms.locker.v">$5 / day · $100 / season</b></div>
+            <div><span data-i18n="ms.cls.with2">Free weekly classes</span><b><a class="link-arrow" href="memberships.html#classes"><span data-i18n="ms.cls.with">Included with:</span> ?</a></b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--surface mreview" aria-label="Review">
+      <div class="wrap">
+        <blockquote class="bigquote" data-reveal>
+          <span class="quote__stars" aria-label="5 stars">★★★★★</span>
+          <p data-i18n="rv.ivonne">“The staff was so friendly, and the variety of pools, including the jacuzzi, made it even better.”</p>
+          <cite>Ivonne C.<small>Google</small></cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section section--contrast cta-band" aria-labelledby="mp-cta-title">
+      <div class="wrap">
+        <div>
+          <h2 class="h2" id="mp-cta-title" data-i18n-html="ms.inq.title">Come and <em>see it first.</em></h2>
+        </div>
+        <div class="cta-band__btns">
+          <a class="btn btn--red" href="memberships.html?plan=full#inquire" data-i18n="ms.cta.req">Request information</a>
+          <a class="btn" href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="others-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="mp.others">Other memberships</span>
+            <h2 class="h2" id="others-title" data-reveal data-i18n-html="mp.others.title">Or <em>the rest of the club.</em></h2>
+          </div>
+          <a class="link-arrow" href="memberships.html" data-reveal data-i18n="mem.all">See all memberships</a>
+        </div>
+        <div class="mothers">
+          <a class="mother mother--ink" href="indoor.html" data-reveal>
+            <span class="mother__name" data-i18n="ms.in.t">Indoor</span>
+            <span class="mother__from"><span data-i18n="by.from">From</span> $120</span>
+          </a>
+          <a class="mother mother--olive" href="outdoor.html" data-reveal>
+            <span class="mother__name" data-i18n="ms.out.t">Outdoor</span>
+            <span class="mother__from"><span data-i18n="by.from">From</span> $200</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="The Leisure Club" width="196" height="178" />
+          <p class="h3" data-i18n-html="foot.line">More than a club. <em>Since 1991.</em></p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h3 data-i18n="f.explore">Explore</h3>
+            <ul role="list">
+              <li><a href="the-club.html" data-i18n="nav.club">The Club</a></li>
+              <li><a href="fitness.html" data-i18n="nav.fitness2">Fitness</a></li>
+              <li><a href="aquatics.html" data-i18n="nav.aquatics">Aquatics</a></li>
+              <li><a href="leisure-island.html" data-i18n="nav.island">Leisure Island</a></li>
+              <li><a href="community.html" data-i18n="nav.community">Community</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="nav.memberships">Memberships</h3>
+            <ul role="list">
+              <li><a href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a></li>
+              <li><a href="memberships.html#beyond" data-i18n="f.beyond">Beyond membership</a></li>
+              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
+              <li><a href="memberships.html#events" data-i18n="f.book">Book your event</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="f.contact">Contact</h3>
+            <ul role="list">
+              <li><a href="tel:+9613340341" dir="ltr">03 340 341</a></li>
+              <li><a href="tel:+9614920921" dir="ltr">04 920 921</a></li>
+              <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="visit.html" data-i18n="f.find">Find us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="vis.follow">Follow</h3>
+            <ul role="list">
+              <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/theleisureclublb" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="https://www.tiktok.com/@theleisureclublb" target="_blank" rel="noopener">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 The Leisure Club · <span data-i18n="foot.est">Est. 1991</span></span>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile: persistent conversion bar (appears after the hero) -->
+  <nav class="mobile-cta" aria-label="Quick actions">
+    <a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="memberships.html" data-i18n="nav.memberships">Memberships</a>
+  </nav>
+
+  <!-- ===================== Design review panel (prototype only) ===================== -->
+  <div class="review" data-review lang="en" dir="ltr">
+    <div class="review__panel" id="review-panel" hidden>
+      <h2>Design options</h2>
+      <p>Prototype: try the motion and hero options live. Colours are the brief's table (§04).</p>
+      <fieldset>
+        <legend>Motion</legend>
+        <div class="seg">
+          <label><input type="radio" name="motion" value="still" /><span>Still</span></label>
+          <label><input type="radio" name="motion" value="quiet" /><span>Quiet</span></label>
+          <label><input type="radio" name="motion" value="expressive" /><span>Expressive</span></label>
+        </div>
+        <p class="review__hint" data-motion-hint></p>
+      </fieldset>
+      <fieldset>
+        <legend>Hero layout</legend>
+        <div class="seg">
+          <label><input type="radio" name="hero" value="bleed" /><span>Full-bleed film</span></label>
+          <label><input type="radio" name="hero" value="framed" /><span>Framed film</span></label>
+        </div>
+      </fieldset>
+      <div class="review__foot">
+        <a href="direction.html">Creative direction board →</a>
+        <button type="button" data-copy-link>Copy share link</button>
+      </div>
+    </div>
+    <button class="review__toggle" type="button" aria-expanded="false" aria-controls="review-panel">Design options</button>
+  </div>
+
+  <!-- Motion libraries (used only by the Expressive level) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/lang/common.js" defer></script>
+  <script src="assets/lang/memberships.js" defer></script>
+  <script src="assets/memberships.js" defer></script>
+  <script src="assets/lang/v2.js" defer></script>
+  <script src="assets/data/club.js" defer></script>
+  <script src="assets/motion.js" defer></script>
+  <script src="assets/site.js" defer></script>
+  <script src="assets/extras.js" defer></script>
+  <script src="assets/media.js" defer></script>
+</body>
+</html>

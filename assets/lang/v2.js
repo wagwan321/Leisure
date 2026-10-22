@@ -483,3 +483,47 @@ TLC_add({
     "mem.more": "Tous les détails des abonnements"
   }
 });
+
+/* Third owner review (Oct 2026): membership pages and Beyond Membership cards. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "ex.title2": "خمس طرق <em>للدخول.</em>",
+    "mem.all": "كل العضويات",
+    "ms.go.in": "اكتشف العضوية الداخلية",
+    "ms.go.out": "اكتشف العضوية الخارجية",
+    "ms.go.full": "اكتشف الدخول الكامل",
+    "mp.eyebrow": "العضوية",
+    "mp.prices": "الأسعار",
+    "mp.prices.title": "اختر <em>من سينضم.</em>",
+    "mp.incl.title": "كل ما <em>تشمله العضوية.</em>",
+    "mp.others": "عضويات أخرى",
+    "mp.others.title": "أو <em>بقية النادي.</em>",
+    "ms.cls.with2": "الحصص الأسبوعية المجانية",
+    "by.permin": "/دقيقة",
+    "by.pt.4b": "السولاريوم · 10$ لـ 15 دقيقة",
+    "by.swim.n": "للحصة",
+    "by.swim.1b": "شخص واحد",
+    "by.swim.2b": "شخصان",
+    "by.swim.3b": "3 أشخاص"
+  },
+  fr: {
+    "ex.title2": "Cinq façons <em>d'entrer.</em>",
+    "mem.all": "Tous les abonnements",
+    "ms.go.in": "Découvrir Intérieur",
+    "ms.go.out": "Découvrir Extérieur",
+    "ms.go.full": "Découvrir Accès complet",
+    "mp.eyebrow": "Abonnement",
+    "mp.prices": "Tarifs",
+    "mp.prices.title": "Qui <em>s'inscrit ?</em>",
+    "mp.incl.title": "Tout ce <em>qui est inclus.</em>",
+    "mp.others": "Autres abonnements",
+    "mp.others.title": "Ou <em>le reste du club.</em>",
+    "ms.cls.with2": "Cours hebdomadaires gratuits",
+    "by.permin": "/min",
+    "by.pt.4b": "Solarium · 10 $ les 15 min",
+    "by.swim.n": "Par séance",
+    "by.swim.1b": "1 personne",
+    "by.swim.2b": "2 personnes",
+    "by.swim.3b": "3 personnes"
+  }
+});

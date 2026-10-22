@@ -48,6 +48,46 @@
     });
   });
 
+  // Beyond Membership: cards stack as you scroll; each one's figures count up when it arrives,
+  // and a card darkens as the next one slides over it
+  document.querySelectorAll("[data-stack]").forEach(function (stack) {
+    var cards = Array.prototype.slice.call(stack.querySelectorAll(".stack__card"));
+    function count(card) {
+      card.querySelectorAll("[data-num]").forEach(function (el) {
+        var to = parseFloat(el.dataset.num), t0 = null;
+        if (still() || to < 5) { el.textContent = to; return; }
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var k = Math.min(1, (ts - t0) / 1100);
+          el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(step);
+        }
+        el.textContent = "0"; requestAnimationFrame(step);
+      });
+    }
+    if ("IntersectionObserver" in window) {
+      var seen = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add("is-in"); count(e.target); seen.unobserve(e.target);
+        });
+      }, { threshold: 0.35 });
+      cards.forEach(function (c) { seen.observe(c); });
+    } else { cards.forEach(function (c) { c.classList.add("is-in"); }); }
+    var ticking = false;
+    function cover() {
+      ticking = false;
+      cards.forEach(function (c, i) {
+        var next = cards[i + 1]; if (!next) return;
+        var a = c.getBoundingClientRect(), b = next.getBoundingClientRect();
+        var k = Math.max(0, Math.min(1, 1 - (b.top - a.top) / a.height));
+        c.style.setProperty("--cover", k.toFixed(3));
+      });
+    }
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(cover); } }, { passive: true });
+    cover();
+  });
+
   // Book your event panels
   document.querySelectorAll("[data-evx]").forEach(function (wrap) {
     var panels = wrap.querySelectorAll(".evx__p");
@@ -105,6 +145,9 @@
   }
 
   var select = document.getElementById("ms-plan");
+  // a membership page sends ?plan=… so the form opens with that plan chosen
+  var wanted = new URLSearchParams(location.search).get("plan");
+  if (select && wanted && select.querySelector('option[value="' + wanted + '"]')) { select.value = wanted; select.dispatchEvent(new Event("change")); }
   document.querySelectorAll("a[data-plan]").forEach(function (a) {
     a.addEventListener("click", function () {
       if (select) { select.value = a.dataset.plan; select.dispatchEvent(new Event("change")); }

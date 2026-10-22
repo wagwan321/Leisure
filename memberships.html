@@ -150,7 +150,7 @@
           <!-- Indoor -->
           <article class="mplan mplan--indoor" data-reveal>
             <div class="mplan__top">
-              <h3 class="mplan__name" data-i18n="ms.in.t">Indoor</h3>
+              <h3 class="mplan__name"><a href="indoor.html" data-i18n="ms.in.t">Indoor</a></h3>
               <p class="mplan__sub" data-i18n="ms.in.sub">The Indoor Club, all year</p>
               <div class="mplan__hours">
                 <span><b data-i18n="ms.in.h1">Mon to Fri</b> · <bdi>07:30 – 22:00</bdi></span>
@@ -176,6 +176,7 @@
               <div class="mplan__extra">
                 <div><span data-i18n="ms.guest">Accompanied guest, any age</span><b>$25</b></div>
               </div>
+              <a class="btn btn--solid mplan__go" href="indoor.html" data-i18n="ms.go.in">Discover Indoor</a>
               <a class="btn" href="#inquire" data-plan="indoor" data-i18n="ms.cta.req">Request information</a>
             </div>
           </article>
@@ -187,7 +188,7 @@
               <cite>Albert B. · Google</cite>
             </blockquote>
             <div class="mplan__top">
-              <h3 class="mplan__name" data-i18n="ms.out.t">Outdoor</h3>
+              <h3 class="mplan__name"><a href="outdoor.html" data-i18n="ms.out.t">Outdoor</a></h3>
               <p class="mplan__sub" data-i18n="ms.out.sub">Leisure Island, all summer</p>
               <div class="mplan__hours">
                 <span><b data-i18n="ms.out.h1">Every day</b> · <bdi>10:00 – 20:00</bdi></span>
@@ -213,6 +214,7 @@
                 <div><span data-i18n="ms.vis">Day visitors</span><b data-i18n="ms.vis.v">Under 2 free · under 10 $25 · over 10 $30</b></div>
                 <div><span data-i18n="ms.locker">Private locker</span><b data-i18n="ms.locker.v">$5 / day · $100 / season</b></div>
               </div>
+              <a class="btn btn--solid mplan__go" href="outdoor.html" data-i18n="ms.go.out">Discover Outdoor</a>
               <a class="btn" href="#inquire" data-plan="island" data-i18n="ms.cta.req">Request information</a>
             </div>
           </article>
@@ -224,7 +226,7 @@
               <cite>Ivonne C. · Google</cite>
             </blockquote>
             <div class="mplan__top">
-              <h3 class="mplan__name" data-i18n="ms.full.t">Full Access</h3>
+              <h3 class="mplan__name"><a href="full-access.html" data-i18n="ms.full.t">Full Access</a></h3>
               <p class="mplan__sub" data-i18n="ms.full.sub">Indoor + Outdoor, the whole club</p>
               <div class="mplan__hours">
                 <span><b data-i18n="ms.in.short">Indoor</b> · <span data-i18n="ms.in.hours">Mon to Sat, from 07:30</span></span>
@@ -244,7 +246,8 @@
                   <li><span data-i18n="ms.full.i2">Everything in Outdoor</span><span></span></li>
                 </ul>
               </div>
-              <a class="btn btn--solid" href="#inquire" data-plan="full" data-i18n="ms.cta.req">Request information</a>
+              <a class="btn btn--solid mplan__go" href="full-access.html" data-i18n="ms.go.full">Discover Full Access</a>
+              <a class="btn" href="#inquire" data-plan="full" data-i18n="ms.cta.req">Request information</a>
             </div>
           </article>
         </div>
@@ -305,7 +308,7 @@
       </div>
     </section>
 
-    <!-- Beyond Membership: rows that open one at a time -->
+    <!-- Beyond Membership: cards that stack as you scroll -->
     <section class="section" id="beyond" aria-labelledby="beyond-title">
       <div class="wrap">
         <div class="head">
@@ -314,64 +317,53 @@
             <h2 class="h2" id="beyond-title" data-reveal data-i18n-html="by.title">More, <em>when you want it.</em></h2>
           </div>
         </div>
-        <div class="svc" data-svc data-reveal>
-          <div class="svc__item is-open">
-            <button class="svc__head" type="button" aria-expanded="true">
-              <span class="svc__no">01</span><span class="svc__title" data-i18n="by.tkd.t">Taekwondo</span><span class="svc__from"><span data-i18n="by.from">From</span> $30</span><span class="svc__icon" aria-hidden="true"></span>
-            </button>
-            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
-              <div class="svc__photo"><div class="ph ph--photo"><img src="images/site/tkd-kick-900.webp" srcset="images/site/tkd-kick-900.webp 506w, images/site/tkd-kick-1600.webp 900w" sizes="(min-width: 800px) 30vw, 100vw" alt="A taekwondo coach holding a pad for a young student&#x27;s kick" loading="lazy" decoding="async" style="object-position:50% 50%"></div></div>
-              <div>
-                <p class="svc__note" data-i18n="by.tkd.n">Administration fee to the School of Champions</p>
-                <div class="rows">
-                  <div><span data-i18n="by.members">Members</span><b>$30</b></div>
-                  <div><span data-i18n="by.nonmembers">Non-members</span><b>$60</b></div>
-                </div>
+        <div class="stack" data-stack>
+          <article class="stack__card stack__card--ink" style="--i:0">
+            <div class="stack__media"><div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-taekwondo.jpg" data-src="video/site/loop-taekwondo.mp4" data-lazyvideo aria-label="Children practising taekwondo kicks with their coach" style="object-position:50% 50%"></video></div></div>
+            <div class="stack__body">
+              <h3 class="stack__title" data-i18n="by.tkd.t">Taekwondo</h3>
+              <p class="stack__note" data-i18n="by.tkd.n">Administration fee to the School of Champions</p>
+              <div class="figs">
+                <div class="fig"><b>$<span data-num="30">30</span></b><small data-i18n="by.members">Members</small></div>
+                <div class="fig"><b>$<span data-num="60">60</span></b><small data-i18n="by.nonmembers">Non-members</small></div>
               </div>
-            </div></div></div>
-          </div>
-          <div class="svc__item">
-            <button class="svc__head" type="button" aria-expanded="false">
-              <span class="svc__no">02</span><span class="svc__title" data-i18n="by.pt.t">Personal training</span><span class="svc__from"><span data-i18n="by.from">From</span> $12</span><span class="svc__icon" aria-hidden="true"></span>
-            </button>
-            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
-              <div class="svc__photo"><div class="ph ph--photo"><img src="images/site/pt-stretch-900.webp" srcset="images/site/pt-stretch-900.webp 506w, images/site/pt-stretch-1600.webp 900w" sizes="(min-width: 800px) 30vw, 100vw" alt="A trainer stretching a member&#x27;s leg" loading="lazy" decoding="async" style="object-position:50% 40%"></div></div>
-              <div class="rows">
-                <div><span data-i18n="by.pt.1">Fitness training session</span><b>$25</b></div>
-                <div><span data-i18n="by.pt.2">Physiotherapy session</span><b>$30</b></div>
-                <div><span data-i18n="by.pt.3">Pilates Reformer, per person</span><b>$12</b></div>
-                <div><span data-i18n="by.pt.4">Solarium</span><b data-i18n="by.pt.4v">$1 / minute · $10 / 15 min</b></div>
+            </div>
+          </article>
+          <article class="stack__card stack__card--olive" style="--i:1">
+            <div class="stack__media"><div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-physio.jpg" data-src="video/site/loop-physio.mp4" data-lazyvideo aria-label="A physiotherapist treating a member" style="object-position:50% 50%"></video></div></div>
+            <div class="stack__body">
+              <h3 class="stack__title" data-i18n="by.pt.t">Personal training</h3>
+              <div class="figs figs--4">
+                <div class="fig"><b>$<span data-num="25">25</span></b><small data-i18n="by.pt.1">Fitness training session</small></div>
+                <div class="fig"><b>$<span data-num="30">30</span></b><small data-i18n="by.pt.2">Physiotherapy session</small></div>
+                <div class="fig"><b>$<span data-num="12">12</span></b><small data-i18n="by.pt.3">Pilates Reformer, per person</small></div>
+                <div class="fig"><b>$<span data-num="1">1</span><i data-i18n="by.permin">/min</i></b><small data-i18n="by.pt.4b">Solarium · $10 for 15 min</small></div>
               </div>
-            </div></div></div>
-          </div>
-          <div class="svc__item">
-            <button class="svc__head" type="button" aria-expanded="false">
-              <span class="svc__no">03</span><span class="svc__title" data-i18n="by.swim.t">Learn to swim</span><span class="svc__from"><span data-i18n="by.from">From</span> $30</span><span class="svc__icon" aria-hidden="true"></span>
-            </button>
-            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
-              <div class="svc__photo"><div class="ph ph--photo"><img src="images/site/swim-kid-900.webp" srcset="images/site/swim-kid-900.webp 770w, images/site/swim-kid-1800.webp 1539w" sizes="(min-width: 800px) 30vw, 100vw" alt="A young swimmer in goggles and a cap swimming breaststroke" loading="lazy" decoding="async" style="object-position:50% 50%"></div></div>
-              <div class="rows">
-                <div><span data-i18n="by.swim.1">1 person, per session</span><b>$30</b></div>
-                <div><span data-i18n="by.swim.2">2 people, per session</span><b>$40</b></div>
-                <div><span data-i18n="by.swim.3">3 people, per session</span><b>$50</b></div>
+            </div>
+          </article>
+          <article class="stack__card stack__card--beige" style="--i:2">
+            <div class="stack__media"><div class="ph ph--photo"><img src="images/site/swim-kid-900.webp" srcset="images/site/swim-kid-900.webp 770w, images/site/swim-kid-1800.webp 1539w" sizes="(min-width: 900px) 40vw, 100vw" alt="A young swimmer in goggles and a cap swimming breaststroke" loading="lazy" decoding="async" style="object-position:50% 50%"></div></div>
+            <div class="stack__body">
+              <h3 class="stack__title" data-i18n="by.swim.t">Learn to swim</h3>
+              <p class="stack__note" data-i18n="by.swim.n">Per session</p>
+              <div class="figs figs--3">
+                <div class="fig"><b>$<span data-num="30">30</span></b><small data-i18n="by.swim.1b">1 person</small></div>
+                <div class="fig"><b>$<span data-num="40">40</span></b><small data-i18n="by.swim.2b">2 people</small></div>
+                <div class="fig"><b>$<span data-num="50">50</span></b><small data-i18n="by.swim.3b">3 people</small></div>
               </div>
-            </div></div></div>
-          </div>
-          <div class="svc__item">
-            <button class="svc__head" type="button" aria-expanded="false">
-              <span class="svc__no">04</span><span class="svc__title" data-i18n="by.court.t">Football or basketball court</span><span class="svc__from"><span data-i18n="by.from">From</span> $60</span><span class="svc__icon" aria-hidden="true"></span>
-            </button>
-            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
-              <div class="svc__photo"><div class="ph ph--photo"><img src="images/site/court-kick-900.webp" srcset="images/site/court-kick-900.webp 506w, images/site/court-kick-1600.webp 900w" sizes="(min-width: 800px) 30vw, 100vw" alt="A player controlling the ball on the football pitch at dusk" loading="lazy" decoding="async" style="object-position:50% 45%"></div></div>
-              <div>
-                <div class="rows">
-                  <div><span data-i18n="by.court.1">90 minutes</span><b>$60</b></div>
-                  <div><span data-i18n="by.court.2">120 minutes</span><b>$80</b></div>
-                </div>
-                <p class="svc__free" data-i18n="by.court.free">Free for members during the summer season, unless reserved</p>
+            </div>
+          </article>
+          <article class="stack__card stack__card--red" style="--i:3">
+            <div class="stack__media"><div class="ph ph--photo"><img src="images/site/court-day-900.webp" srcset="images/site/court-day-900.webp 720w, images/site/court-day-1800.webp 1440w" sizes="(min-width: 900px) 40vw, 100vw" alt="A game on the football pitch on a sunny day" loading="lazy" decoding="async" style="object-position:50% 50%"></div></div>
+            <div class="stack__body">
+              <h3 class="stack__title" data-i18n="by.court.t">Football or basketball court</h3>
+              <div class="figs">
+                <div class="fig"><b>$<span data-num="60">60</span></b><small data-i18n="by.court.1">90 minutes</small></div>
+                <div class="fig"><b>$<span data-num="80">80</span></b><small data-i18n="by.court.2">120 minutes</small></div>
               </div>
-            </div></div></div>
-          </div>
+              <p class="stack__free" data-i18n="by.court.free">Free for members during the summer season, unless reserved</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -390,28 +382,28 @@
           </div>
         </div>
         <div class="evx" data-evx data-reveal>
-          <div class="evx__p is-active" tabindex="0">
-            <div class="ph ph--photo"><img src="images/site/event-tables-900.webp" srcset="images/site/event-tables-900.webp 506w, images/site/event-tables-1600.webp 900w" sizes="(min-width: 800px) 55vw, 100vw" alt="Long tables set for a celebration" loading="lazy" decoding="async" style="object-position:50% 55%"></div>
+          <div class="evx__p evx__p--olive is-active" tabindex="0">
+            <span class="evx__art" aria-hidden="true">W</span>
             <span class="evx__no">01</span><span class="evx__label" data-i18n="ev.wedding">Wedding</span>
             <div class="evx__body"><h3 data-i18n="ev.wedding">Wedding</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
           </div>
           <div class="evx__p" tabindex="0">
-            <div class="ph ph--photo"><img src="images/site/birthday-cake-900.webp" srcset="images/site/birthday-cake-900.webp 506w, images/site/birthday-cake-1600.webp 900w" sizes="(min-width: 800px) 55vw, 100vw" alt="Two friends hugging next to a birthday cake by the pool" loading="lazy" decoding="async" style="object-position:50% 60%"></div>
+            <div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-birthday.jpg" data-src="video/site/loop-birthday.mp4" data-lazyvideo aria-label="Two friends hugging next to a birthday cake by the pool" style="object-position:50% 50%"></video></div>
             <span class="evx__no">02</span><span class="evx__label" data-i18n="ev.birthday">Birthday</span>
             <div class="evx__body"><h3 data-i18n="ev.birthday">Birthday</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
           </div>
           <div class="evx__p" tabindex="0">
-            <div class="ph ph--photo"><img src="images/site/party-group-900.webp" srcset="images/site/party-group-900.webp 506w, images/site/party-group-1600.webp 900w" sizes="(min-width: 800px) 55vw, 100vw" alt="A group of teenagers celebrating by the indoor pool" loading="lazy" decoding="async" style="object-position:50% 55%"></div>
+            <div class="ph ph--photo"><img src="images/site/foam-party-900.webp" srcset="images/site/foam-party-900.webp 900w, images/site/foam-party-1286.webp 1286w" sizes="(min-width: 800px) 55vw, 100vw" alt="A foam party at Leisure Island" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
             <span class="evx__no">03</span><span class="evx__label" data-i18n="ev.teen">Teenage pool party</span>
             <div class="evx__body"><h3 data-i18n="ev.teen">Teenage pool party</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
           </div>
-          <div class="evx__p evx__p--olive" tabindex="0">
+          <div class="evx__p evx__p--beige" tabindex="0">
             <span class="evx__art" aria-hidden="true">&amp;</span>
             <span class="evx__no">04</span><span class="evx__label" data-i18n="evx.bapcom">Baptism &amp; first communion</span>
             <div class="evx__body"><h3 data-i18n="evx.bapcom">Baptism &amp; first communion</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
           </div>
           <div class="evx__p" tabindex="0">
-            <div class="ph ph--photo"><img src="images/site/foam-party-900.webp" srcset="images/site/foam-party-900.webp 900w, images/site/foam-party-1286.webp 1286w" sizes="(min-width: 800px) 55vw, 100vw" alt="A foam party at Leisure Island" loading="lazy" decoding="async" style="object-position:50% 45%"></div>
+            <div class="ph ph--photo"><img src="images/site/bianco-bar-800.webp" srcset="images/site/bianco-bar-800.webp 800w, images/site/bianco-bar-1024.webp 1024w" sizes="(min-width: 800px) 55vw, 100vw" alt="Guests dancing at the Bianco Bar" loading="lazy" decoding="async" style="object-position:45% 50%"></div>
             <span class="evx__no">05</span><span class="evx__label" data-i18n="ev.bachelor">Bachelor party</span>
             <div class="evx__body"><h3 data-i18n="ev.bachelor">Bachelor party</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
           </div>
@@ -429,7 +421,7 @@
           <div class="btns" data-reveal><a class="btn btn--solid" href="#inquire" data-plan="corporate" data-i18n="ms.corp.cta">Ask about corporate membership</a></div>
         </div>
         <div class="bento">
-          <div class="c12 r3 m2 mr2" data-reveal>
+          <div class="c12 r5 m2 mr2" data-reveal>
             <div class="ph ph--photo"><img src="images/site/boxing-group-900.webp" srcset="images/site/boxing-group-900.webp 720w, images/site/boxing-group-1800.webp 1440w" sizes="(min-width: 900px) 58vw, 100vw" alt="A group of members in boxing gloves after a class" loading="lazy" decoding="async" style="object-position:50% 55%"></div>
             <span class="sticker sticker--red" data-i18n="ms.corp.sticker">Teams welcome</span>
           </div>
