@@ -709,12 +709,28 @@ html[dir="rtl"] .track__fill { transform-origin: right; }
 }
 
 /* ---------- Aquatics: water you can touch, and pool-floor light ---------- */
-[data-page="aquatics"] .page-hero__media { position: relative; }
-.ripple { position: absolute; inset: 0; z-index: 2; border-radius: var(--radius); background-size: cover; background-repeat: no-repeat; }
-.ripple__hint { position: absolute; z-index: 3; inset-inline-start: 1rem; inset-block-end: 1rem; background: rgba(25,25,25,.55); color: #fff; font-size: var(--t-sm); font-weight: 600; padding: .45rem .9rem; border-radius: 99px; backdrop-filter: blur(6px); transition: opacity .8s var(--ease); pointer-events: none; }
-.ripple__hint::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-inline-end: .5rem; border-radius: 50%; background: #9FE3FF; vertical-align: middle; }
-html:not([data-motion="still"]) .ripple__hint::before { animation: pulse 2s var(--ease) infinite; }
-.ripple__hint.is-gone, html[data-motion="still"] .ripple__hint, .no-ripple .ripple__hint { opacity: 0; }
+/* water line between sections: a drop falls, rings spread, the surface settles */
+.splash { position: relative; height: clamp(110px, 9vw, 150px); background: var(--bg); overflow: hidden; }
+.splash::before { content: ""; position: absolute; inset-inline: var(--gutter); top: 68%; height: 1.5px; background: #191919; opacity: .85; }
+.splash__drop { position: absolute; left: var(--x); top: 68%; width: 9px; height: 13px; margin: -13px 0 0 -4.5px; border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%; background: #1E6E9A; opacity: 0; }
+.splash__ring { position: absolute; left: var(--x); top: 68%; width: 440px; height: 40px; margin: -20px 0 0 -220px; border: 2px solid #1E6E9A; border-radius: 50%; opacity: 0; transform: scale(0); }
+html:not([data-motion="still"]) .splash.is-in .splash__drop { animation: dropFall 7s cubic-bezier(.55,0,1,.45) infinite; }
+html:not([data-motion="still"]) .splash.is-in .splash__ring { animation: ringOut 7s cubic-bezier(.15,.6,.3,1) infinite; }
+html:not([data-motion="still"]) .splash.is-in .splash__ring:nth-of-type(3) { animation-delay: .22s; }
+html:not([data-motion="still"]) .splash.is-in .splash__ring:nth-of-type(4) { animation-delay: .44s; }
+@keyframes dropFall {
+  0% { opacity: 0; transform: translateY(-70px); }
+  2% { opacity: 1; }
+  9% { opacity: 1; transform: translateY(0); }
+  10%, 100% { opacity: 0; transform: translateY(0); }
+}
+@keyframes ringOut {
+  0%, 9% { opacity: 0; transform: scale(0); }
+  10% { opacity: .9; transform: scale(.04); }
+  28% { opacity: .55; }
+  46% { opacity: 0; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
 
 .pool-light { position: relative; overflow: hidden; background: #0B2533; }
 .pool-light > .wrap { position: relative; z-index: 1; }
