@@ -589,36 +589,23 @@ html[dir="rtl"] .mother:hover::after { transform: translateX(-10px); }
 
 /* full-screen opening: the page's photo or film fills the screen, title over it */
 @media (min-width: 900px) {
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) { padding: 0 !important; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) > .wrap { max-width: none; padding: 0; display: grid; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) > .wrap > * { grid-area: 1 / 1; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media { margin: 0 !important; position: relative; z-index: 0; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media .ph { aspect-ratio: auto !important; height: min(88vh, 920px); border-radius: 0; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.18) 48%, rgba(0,0,0,.38) 100%); }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .crumbs { position: relative; z-index: 3; align-self: start; justify-self: start; margin: 0; padding: 1.5rem var(--gutter); color: #fff; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .crumbs a { color: #fff; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .head,
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__grid { position: relative; z-index: 3; align-self: end; justify-self: center; width: 100%; max-width: var(--max); margin: 0; padding: 0 var(--gutter) clamp(2.5rem, 2rem + 3vw, 5rem); color: #fff; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-title { color: #fff; font-size: clamp(3.5rem, 1.5rem + 6.5vw, 9rem); }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-title em { color: var(--island-sun); }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .eyebrow { color: #fff; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .btn { --b-ink: #fff; --b-line: #fff; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .btn--solid { --b-bg: #fff; --b-ink: #191919; --b-line: #fff; }
-  .page-hero:has(> .wrap > .page-hero__media .r-21x9) .pill { color: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) { padding: 0 !important; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) > .wrap { max-width: none; padding: 0; display: grid; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) > .wrap > * { grid-area: 1 / 1; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media { margin: 0 !important; position: relative; z-index: 0; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media .ph { aspect-ratio: auto !important; height: min(88vh, 920px); border-radius: 0; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__media::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.18) 48%, rgba(0,0,0,.38) 100%); }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .crumbs { position: relative; z-index: 3; align-self: start; justify-self: start; margin: 0; padding: 1.5rem var(--gutter); color: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .crumbs a { color: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .head,
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-hero__grid { position: relative; z-index: 3; align-self: end; justify-self: center; width: 100%; max-width: var(--max); margin: 0; padding: 0 var(--gutter) clamp(2.5rem, 2rem + 3vw, 5rem); color: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-title { color: #fff; font-size: clamp(3.5rem, 1.5rem + 6.5vw, 9rem); }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .page-title em { color: var(--island-sun); }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .eyebrow { color: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .btn { --b-ink: #fff; --b-line: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .btn--solid { --b-bg: #fff; --b-ink: #191919; --b-line: #fff; }
+  [data-page="the-club"] .page-hero:has(> .wrap > .page-hero__media .r-21x9) .pill { color: #fff; }
 }
-
-/* moving word strip under the opening */
-.strip { background: var(--ink); color: #F6F5F2; padding-block: 1.1rem; overflow: hidden; }
-.strip--red { background: var(--red); }
-.strip--olive { background: var(--island-lagoon); }
-.strip .marquee { border: 0; padding: 0; font-size: clamp(1.5rem, 1.05rem + 1.9vw, 2.9rem); }
-.strip .marquee__track span::after { color: var(--red); }
-.strip--red .marquee__track span::after { color: #191919; }
-.strip--olive .marquee__track span::after { color: var(--island-sun); }
-
-/* numbers band */
-.facts--band { margin-block-start: clamp(2.5rem, 2rem + 3vw, 4.5rem); }
-.section--contrast .facts--band .fact { border-color: rgba(255,255,255,.25); }
 
 /* photos react to the pointer (inside their frame) */
 .bento > div .ph > img, .bento > a .ph > img, .split__media .ph > img { transition: scale .9s var(--ease); }
@@ -628,13 +615,116 @@ html[dir="rtl"] .mother:hover::after { transform: translateX(-10px); }
 }
 .bento .sticker { transition: transform .45s var(--ease); }
 
-/* philosophy words, big */
-.pillars--big .pillar__word { font-size: clamp(2.2rem, 1.4rem + 3vw, 4.5rem); font-weight: 700; letter-spacing: -.04em; line-height: 1; }
-.section--contrast .pillars--big .pillar { border-color: rgba(255,255,255,.25); }
-.pillars--big .pillar { transition: transform .5s var(--ease); }
-@media (hover: hover) { .pillars--big .pillar:hover { transform: translateY(-8px); } .pillars--big .pillar:hover .pillar__word { color: var(--red); } }
-
 /* buttons keep their contrast inside olive sections */
 .section--olive-dark .btn--sun, .section--olive .btn--sun { --b-bg: var(--island-sun); --b-ink: #191919; --b-line: var(--island-sun); }
 .evx .btn--light { --b-bg: #F6F5F2; --b-ink: #191919; --b-line: #F6F5F2; }
 .evx .evx__p--beige .btn--light { --b-bg: #191919; --b-ink: #F6F5F2; --b-line: #191919; }
+
+/* ==========================================================================
+   Page signatures — every page its own look (owner review, Oct 2026)
+   ========================================================================== */
+
+/* ---------- The Club: two halves ---------- */
+.duo { display: flex; gap: .75rem; height: clamp(520px, 52vw, 720px); }
+.duo__half { position: relative; flex: 1 1 0; min-width: 0; border-radius: 14px; overflow: hidden; color: #fff; background: var(--ink); cursor: pointer; transition: flex-grow .8s var(--ease); outline-offset: 4px; }
+.duo__half.is-open { flex-grow: 2.2; cursor: default; }
+.duo__half .ph { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.duo__half::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(25,25,25,.85), rgba(25,25,25,.1) 65%); transition: background .6s; pointer-events: none; }
+.duo__half--olive::after { background: linear-gradient(to top, rgba(63,70,33,.92), rgba(63,70,33,.1) 65%); }
+.duo__half:not(.is-open)::after { background: rgba(25,25,25,.55); }
+.duo__half--olive:not(.is-open)::after { background: rgba(63,70,33,.7); }
+.duo__body { position: absolute; z-index: 2; inset-inline: 0; inset-block-end: 0; padding: clamp(1.5rem, 1rem + 2vw, 3rem); display: grid; gap: .9rem; }
+.duo__tag { justify-self: start; font-size: var(--t-sm); font-weight: 700; padding: .35rem .8rem; border-radius: 99px; background: #F6F5F2; color: #191919; }
+.duo__half--olive .duo__tag { background: var(--island-sun); }
+.duo__title { font-size: clamp(2.2rem, 1.4rem + 3vw, 4.8rem); font-weight: 700; letter-spacing: -.045em; line-height: .92; }
+.duo__list { display: grid; gap: .1rem; max-height: 0; overflow: hidden; opacity: 0; transition: max-height .7s var(--ease), opacity .5s var(--ease); }
+.duo__half.is-open .duo__list { max-height: 22rem; opacity: 1; transition-delay: .2s; }
+.duo__list a { display: flex; justify-content: space-between; gap: 1rem; padding-block: .55rem; border-top: 1px solid rgba(255,255,255,.28); font-size: var(--t-md); font-weight: 500; }
+.duo__list a::after { content: "\2192"; transition: transform .35s var(--ease); }
+html[dir="rtl"] .duo__list a::after { content: "\2190"; }
+.duo__list a:hover::after { transform: translateX(6px); }
+@media (max-width: 899px) {
+  .duo { flex-direction: column; height: auto; }
+  .duo__half { flex: none; height: 520px; }
+  .duo__list { max-height: none; opacity: 1; }
+  .duo__half:not(.is-open)::after { background: linear-gradient(to top, rgba(25,25,25,.85), rgba(25,25,25,.1) 65%); }
+}
+
+/* The Club gallery: tilted prints that straighten */
+.prints { gap: clamp(1rem, .6rem + 1.5vw, 2rem); padding: 1rem .5rem; }
+.prints > div { background: #fff; padding: .6rem .6rem 2.2rem; border-radius: 4px; box-shadow: 0 14px 34px rgba(0,0,0,.14); rotate: var(--rot, -2deg); transition: rotate .6s var(--ease), translate .6s var(--ease), box-shadow .6s var(--ease), opacity var(--dur) var(--ease); overflow: visible; }
+.prints > div:nth-child(2) { --rot: 1.6deg; } .prints > div:nth-child(3) { --rot: -1.2deg; } .prints > div:nth-child(4) { --rot: 2.2deg; } .prints > div:nth-child(5) { --rot: -2.6deg; }
+.prints > div .ph { inset: .6rem .6rem 2.2rem; height: auto; border-radius: 2px; }
+.prints > div::after { content: attr(data-cap); }
+@media (hover: hover) { .prints > div:hover { rotate: 0deg; translate: 0 -10px; box-shadow: 0 24px 50px rgba(0,0,0,.2); z-index: 2; } }
+html[data-motion="still"] .prints > div { transition: none; }
+
+/* ---------- Fitness: dark, angled opening ---------- */
+[data-page="fitness"] .page-hero { background: #191919; color: #F6F5F2; }
+[data-page="fitness"] .page-hero .crumbs, [data-page="fitness"] .page-hero .crumbs a, [data-page="fitness"] .page-hero .eyebrow { color: #F6F5F2; }
+[data-page="fitness"] .page-hero .page-title { color: #F6F5F2; font-size: clamp(3.4rem, 1.4rem + 6vw, 8.5rem); }
+[data-page="fitness"] .page-hero .page-title em { color: var(--red); }
+[data-page="fitness"] .page-hero .btn { --b-ink: #F6F5F2; --b-line: #F6F5F2; }
+[data-page="fitness"] .page-hero .btn--solid { --b-bg: var(--red); --b-ink: #fff; --b-line: var(--red); }
+[data-page="fitness"] .page-hero__media .ph { clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%); border-radius: 0; }
+
+/* Fitness: this week at the club */
+.today { margin-block-end: clamp(2rem, 1.5rem + 2vw, 3.5rem); background: #191919; color: #F6F5F2; border-radius: 16px; padding: clamp(1.25rem, 1rem + 1.5vw, 2.5rem); }
+.today__top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; margin-block-end: 1.25rem; }
+.today__title { display: flex; align-items: center; gap: .7rem; font-size: var(--t-lg); font-weight: 700; letter-spacing: -.01em; }
+.today__live { width: 10px; height: 10px; border-radius: 50%; background: var(--red); }
+html:not([data-motion="still"]) .today__live { animation: pulse 2s var(--ease) infinite; }
+.today__tabs { display: flex; flex-wrap: wrap; gap: .35rem; }
+.today__tabs button { position: relative; border: 1px solid rgba(255,255,255,.3); background: none; color: #F6F5F2; border-radius: 99px; padding: .55rem 1rem; font-weight: 600; font-size: var(--t-base); min-height: 44px; transition: background .3s, color .3s, border-color .3s; }
+.today__tabs button[aria-selected="true"] { background: #F6F5F2; color: #191919; border-color: #F6F5F2; }
+.today__tabs button i { position: absolute; top: 6px; inset-inline-end: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--red); }
+.today__list { display: grid; gap: .5rem; }
+@media (min-width: 900px) { .today__list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1rem; } }
+.today__row { display: grid; grid-template-columns: 4.5rem 1fr auto; align-items: center; gap: .25rem 1rem; padding: .9rem 1.1rem; border-radius: 10px; background: rgba(255,255,255,.06); border-inline-start: 4px solid var(--c, #F6F5F2); }
+.today__row.c-performance { --c: var(--red); } .today__row.c-pool { --c: #4FB3D9; } .today__row.c-courts, .today__row.c-outdoor { --c: var(--island-sun); }
+.today__row time { font-size: var(--t-lg); font-weight: 700; font-variant-numeric: tabular-nums; }
+.today__row b { font-size: var(--t-md); font-weight: 600; }
+.today__row span { font-size: var(--t-sm); opacity: .85; text-align: end; white-space: nowrap; }
+.today__row em { grid-column: 2 / -1; font-style: normal; font-size: var(--t-sm); font-weight: 700; color: var(--red); }
+.today__row.is-next { background: rgba(230,32,40,.18); }
+.js:not([data-motion="still"]) .today__list .today__row { opacity: 0; transform: translateX(-14px); }
+.js:not([data-motion="still"]) .today__list.is-in .today__row { opacity: 1; transform: none; transition: opacity .45s var(--ease), transform .45s var(--ease); transition-delay: calc(var(--n) * 45ms); }
+
+/* Fitness: the HYROX track */
+.track { margin-block-start: clamp(2.5rem, 2rem + 2vw, 4rem); }
+.track__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1.5rem; font-size: var(--t-lg); font-weight: 700; margin-block-end: 1.5rem; }
+.track__km { font-size: var(--t-base); font-weight: 500; opacity: .8; }
+.track__line { position: relative; height: 6px; border-radius: 6px; background: rgba(255,255,255,.18); }
+.track__fill { position: absolute; inset: 0; border-radius: inherit; background: var(--red); transform: scaleX(0); transform-origin: left; }
+html[dir="rtl"] .track__fill { transform-origin: right; }
+.track__list { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: .5rem; margin-block-start: -21px; }
+.track__st { display: grid; justify-items: center; gap: .6rem; text-align: center; }
+.track__n { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; background: #191919; border: 2px solid rgba(255,255,255,.35); transition: background .35s, border-color .35s, transform .45s cubic-bezier(.3,1.6,.5,1); }
+.track__name { font-size: var(--t-sm); font-weight: 600; opacity: .55; transition: opacity .35s; }
+.track__st.is-on .track__n { background: var(--red); border-color: var(--red); transform: scale(1.15); }
+.track__st.is-on .track__name { opacity: 1; }
+@media (max-width: 799px) {
+  .track__line { display: none; }
+  .track__list { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: 1.25rem; margin: 0; }
+}
+
+/* ---------- Aquatics: water surface and lane ropes ---------- */
+[data-page="aquatics"] .page-hero__media { position: relative; }
+.wave { position: absolute; z-index: 2; inset-inline: 0; bottom: -1px; width: 200%; height: clamp(36px, 5vw, 80px); fill: var(--bg); pointer-events: none; }
+.wave__a { opacity: .55; }
+html:not([data-motion="still"]) .wave { animation: waveMove 9s linear infinite; }
+html:not([data-motion="still"]) .wave__b { animation: waveBob 4s ease-in-out infinite; }
+@keyframes waveMove { to { transform: translateX(-50%); } }
+@keyframes waveBob { 50% { transform: translateY(6px); } }
+.rope { height: 14px; overflow: hidden; background: var(--bg); }
+.rope i { display: block; height: 100%; width: 200%; border-radius: 99px;
+  background: repeating-linear-gradient(90deg, #E62028 0 26px, #F6F5F2 26px 30px, #E62028 30px 56px, #F6F5F2 56px 60px, #2A6FD6 60px 86px, #F6F5F2 86px 90px, #2A6FD6 90px 116px, #F6F5F2 116px 120px); }
+html:not([data-motion="still"]) .rope i { animation: ropeDrift 30s linear infinite; }
+@keyframes ropeDrift { to { transform: translateX(-50%); } }
+
+/* ---------- Community: medal wall that tilts ---------- */
+.medals { perspective: 1200px; }
+.medals > * { perspective: 900px; overflow: visible !important; border-radius: 14px; }
+.medals > * > .ph { transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s ease-out, box-shadow .4s; border-radius: 14px; }
+.medals > *:hover > .ph { box-shadow: 0 26px 50px rgba(0,0,0,.22); }
+.medals .sticker { z-index: 3; }

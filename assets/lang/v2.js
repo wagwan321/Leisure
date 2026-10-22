@@ -553,3 +553,9 @@ TLC_add({
     "mq.sc1": "24 cours gratuits"
   }
 });
+
+/* Page signatures (Oct 2026). DRAFT for native review. */
+TLC_add({
+  ar: { "fp.today": "هذا الأسبوع في النادي", "fp.day": "اليوم", "fp.next": "التالي", "fp.hx.km": "جري 1 كم بين كل محطة" },
+  fr: { "fp.today": "Cette semaine au club", "fp.day": "Jour", "fp.next": "Ensuite", "fp.hx.km": "1 km de course entre chaque station" }
+});

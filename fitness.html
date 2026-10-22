@@ -40,7 +40,7 @@
   {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://theleisureclub-lb.com/"}, {"@type": "ListItem", "position": 2, "name": "Fitness", "item": "https://theleisureclub-lb.com/fitness.html"}]}
   </script>
 </head>
-<body>
+<body data-page="fitness">
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <!-- ===================== Header (Aman-inspired: Menu · centred logo · language + one action) ===================== -->
@@ -137,9 +137,6 @@
       </div>
     </section>
 
-    <div class="strip" aria-hidden="true">
-      <div class="marquee"><div class="marquee__track"><span data-i18n="mq.fit1">Strength</span><span>HYROX</span><span data-i18n="mq.fit3">Free classes</span><span data-i18n="by.pt.t">Personal training</span><span data-i18n="mq.fit5">Recovery</span><span data-i18n="mq.fit1">Strength</span><span>HYROX</span><span data-i18n="mq.fit3">Free classes</span><span data-i18n="by.pt.t">Personal training</span><span data-i18n="mq.fit5">Recovery</span></div></div>
-    </div>
 
 
     <!-- The Gym -->
@@ -165,20 +162,11 @@
           </div>
         </div>
       </div>
-      <div class="wrap">
-        <dl class="facts facts--band">
-          <div class="fact" data-reveal><dt data-i18n="fx.f1">Free weekly classes</dt><dd class="num" data-count="24">24</dd></div>
-          <div class="fact" data-reveal style="--i:1"><dt data-i18n="fx.f2">HYROX stations</dt><dd class="num" data-count="8">8</dd></div>
-          <div class="fact" data-reveal style="--i:2"><dt data-i18n="fx.f3">Days a week</dt><dd class="num" data-count="6">6</dd></div>
-          <div class="fact" data-reveal style="--i:3"><dt data-i18n="fx.f4">Doors open</dt><dd class="num"><bdi>07:30</bdi></dd></div>
-        </dl>
-      </div>
     </section>
 
     <!-- HYROX -->
     <section class="section section--contrast" id="hyrox" aria-labelledby="hyrox-title">
       <div class="wrap">
-        <p class="statement" style="margin-block:0 clamp(2.5rem,2rem + 3vw,4.5rem);color:#F6F5F2" data-reveal data-scrub-words data-i18n="hc.phil.statement">Strength without endurance is half an athlete. Endurance without strength is the other half. Here, you train both.</p>
         <div class="show show--rev">
           <div class="show__text">
             <span class="eyebrow eyebrow--dot" data-reveal data-i18n="hc.eyebrow">The newest chapter</span>
@@ -197,12 +185,19 @@
           </div>
           </div>
         </div>
-        <div style="margin-block-start:clamp(2rem,1.5rem + 2vw,3.5rem)" data-reveal>
-          <p class="show__note" style="margin-block-end:1rem" data-i18n="fp.hx.stations">The eight stations</p>
-          <div class="pills">
-            <span class="pill" data-i18n="hc.e1">SkiErg</span><span class="pill" data-i18n="hc.e2">Sled push</span><span class="pill" data-i18n="hc.e3">Sled pull</span><span class="pill" data-i18n="hc.e4">Burpee broad jumps</span>
-            <span class="pill" data-i18n="hc.e5">Rowing</span><span class="pill" data-i18n="hc.e6">Farmers carry</span><span class="pill" data-i18n="hc.e7">Sandbag lunges</span><span class="pill" data-i18n="hc.e8">Wall balls</span>
-          </div>
+        <div class="track" data-track>
+          <p class="track__head"><span data-i18n="fp.hx.stations">The eight stations</span><span class="track__km" data-i18n="fp.hx.km">1 km run between each</span></p>
+          <div class="track__line"><i class="track__fill"></i></div>
+          <ol class="track__list" role="list">
+            <li class="track__st"><span class="track__n">1</span><span class="track__name" data-i18n="hc.e1">SkiErg</span></li>
+            <li class="track__st"><span class="track__n">2</span><span class="track__name" data-i18n="hc.e2">Sled push</span></li>
+            <li class="track__st"><span class="track__n">3</span><span class="track__name" data-i18n="hc.e3">Sled pull</span></li>
+            <li class="track__st"><span class="track__n">4</span><span class="track__name" data-i18n="hc.e4">Burpee broad jumps</span></li>
+            <li class="track__st"><span class="track__n">5</span><span class="track__name" data-i18n="hc.e5">Rowing</span></li>
+            <li class="track__st"><span class="track__n">6</span><span class="track__name" data-i18n="hc.e6">Farmers carry</span></li>
+            <li class="track__st"><span class="track__n">7</span><span class="track__name" data-i18n="hc.e7">Sandbag lunges</span></li>
+            <li class="track__st"><span class="track__n">8</span><span class="track__name" data-i18n="hc.e8">Wall balls</span></li>
+          </ol>
         </div>
       </div>
     </section>
@@ -219,6 +214,13 @@
             <a class="btn btn--solid" href="memberships.html#classes" data-i18n="fp.cls.all">All classes and times</a>
             <a class="btn" href="schedule.html" data-i18n="fp.cta.sched">See the weekly schedule</a>
           </div>
+        </div>
+        <div class="today" data-today data-reveal>
+          <div class="today__top">
+            <p class="today__title"><span class="today__live" aria-hidden="true"></span><span data-i18n="fp.today">This week at the club</span></p>
+            <div class="today__tabs" role="tablist" aria-label="Day" data-i18n-attr="aria-label:fp.day"></div>
+          </div>
+          <ol class="today__list" role="list" aria-live="polite"></ol>
         </div>
         <div class="bento">
           <div class="c4 r3" data-reveal>
@@ -411,11 +413,14 @@
   <script src="assets/lang/common.js" defer></script>
   <script src="assets/lang/fitness.js" defer></script>
   <script src="assets/lang/hybrid.js" defer></script>
+  <script src="assets/lang/schedule.js" defer></script>
+  <script src="assets/data/schedule.js" defer></script>
   <script src="assets/lang/v2.js" defer></script>
   <script src="assets/data/club.js" defer></script>
   <script src="assets/motion.js" defer></script>
   <script src="assets/site.js" defer></script>
   <script src="assets/extras.js" defer></script>
   <script src="assets/media.js" defer></script>
+  <script src="assets/pages.js" defer></script>
 </body>
 </html>

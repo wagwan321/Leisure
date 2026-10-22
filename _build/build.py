@@ -140,7 +140,7 @@ def build(src_file):
 
     body = re.sub(r"<ph\s+(.*?)/>", ph, body, flags=re.S)
 
-    head = HEAD
+    head = HEAD.replace("<body>", f'<body data-page="{name}">', 1)
     head = head.replace("{{TITLE}}", html.escape(meta.get("title", "The Leisure Club"), quote=True))
     head = head.replace("{{DESCRIPTION}}", html.escape(meta.get("description", ""), quote=True))
     head = head.replace("{{PATH}}", path)

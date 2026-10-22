@@ -111,7 +111,7 @@
     // full-screen openings: the title lifts away as you scroll (the picture itself never moves)
     var sec = wrap.closest(".page-hero");
     var text = sec && sec.querySelector(".head, .page-hero__grid");
-    if (text && media.classList.contains("r-21x9") && window.matchMedia("(min-width: 900px)").matches) {
+    if (text && document.body.dataset.page === "the-club" && media.classList.contains("r-21x9") && window.matchMedia("(min-width: 900px)").matches) {
       gsap.to(text, { yPercent: -30, opacity: 0, ease: "none",
         scrollTrigger: { trigger: sec, start: "top top", end: "bottom 15%", scrub: true } });
     }

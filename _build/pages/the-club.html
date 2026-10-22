@@ -23,9 +23,6 @@ scripts: assets/lang/club.js
       </div>
     </section>
 
-    <div class="strip" aria-hidden="true">
-      <div class="marquee"><div class="marquee__track"><span data-i18n="mq.cl1">Since 1991</span><span data-i18n="cl.p1.t">Movement</span><span data-i18n="cl.p2.t">Wellness</span><span data-i18n="cl.p3.t">Leisure</span><span data-i18n="cl.p4.t">Community</span><span data-i18n="mq.cl1">Since 1991</span><span data-i18n="cl.p1.t">Movement</span><span data-i18n="cl.p2.t">Wellness</span><span data-i18n="cl.p3.t">Leisure</span><span data-i18n="cl.p4.t">Community</span></div></div>
-    </div>
 
 
 
@@ -38,16 +35,10 @@ scripts: assets/lang/club.js
           </div>
         </div>
         <p data-reveal><a class="btn btn--solid" href="our-story.html" data-i18n="cl.story.cta">Read the full story</a></p>
-        <dl class="facts facts--band">
-          <div class="fact" data-reveal><dt data-i18n="fact.1">Year founded</dt><dd class="num"><bdi>1991</bdi></dd></div>
-          <div class="fact" data-reveal style="--i:1"><dt data-i18n="fact.2">Years of movement</dt><dd class="num" data-count="35">35</dd></div>
-          <div class="fact" data-reveal style="--i:2"><dt data-i18n="fact.3">Destinations: the Club &amp; Leisure Island</dt><dd class="num" data-count="2">2</dd></div>
-          <div class="fact" data-reveal style="--i:3"><dt data-i18n="fact.4">Indoor pool, year-round</dt><dd class="num"><bdi>25 m</bdi></dd></div>
-        </dl>
       </div>
     </section>
 
-    <section class="section section--contrast" id="philosophy" aria-labelledby="phil-title">
+    <section class="section section--surface" id="philosophy" aria-labelledby="phil-title">
       <div class="wrap">
         <div class="intro">
           <div>
@@ -55,7 +46,7 @@ scripts: assets/lang/club.js
             <h2 class="h2" id="phil-title" data-reveal data-i18n-html="cl.ph.title">More than <em>a club.</em></h2>
           </div>
         </div>
-        <div class="pillars pillars--big" data-stagger>
+        <div class="pillars" data-stagger>
           <div class="pillar"><span class="pillar__word" data-i18n="cl.p1.t">Movement</span><p data-i18n="cl.p1.p">Every body, every age, every level, from a first class to a first race.</p></div>
           <div class="pillar"><span class="pillar__word" data-i18n="cl.p2.t">Wellness</span><p data-i18n="cl.p2.p">Recovery and rest matter as much as effort.</p></div>
           <div class="pillar"><span class="pillar__word" data-i18n="cl.p3.t">Leisure</span><p data-i18n="cl.p3.p">Long summer days, good food and time together.</p></div>
@@ -72,28 +63,34 @@ scripts: assets/lang/club.js
             <h2 class="h2" id="fac-title" data-reveal data-i18n-html="cl.fac.title">One club, <em>two destinations.</em></h2>
           </div>
         </div>
-        <div class="access-split" data-stagger>
-          <div class="access-box">
-            <span class="tag" data-i18n="cl.fac.in.tag">Indoor · all year</span>
-            <h3 class="h3" data-i18n="cl.fac.in.t">The Indoor Club</h3>
-            <ul class="prices" role="list">
-              <li><span data-i18n="cl.fac.in.1">Gym, strength &amp; cardio</span><a class="link-arrow" href="fitness.html#gym" aria-label="The Gym"></a></li>
-              <li><span data-i18n="cl.fac.in.2">Hybrid Athlete Performance Center</span><a class="link-arrow" href="fitness.html#hyrox" aria-label="Performance Center"></a></li>
-              <li><span data-i18n="cl.fac.in.3">Heated 25 m indoor pool</span><a class="link-arrow" href="aquatics.html#indoor" aria-label="Indoor pool"></a></li>
-              <li><span data-i18n="cl.fac.in.4">Sauna, steam &amp; jacuzzi</span><a class="link-arrow" href="fitness.html#wellness" aria-label="Wellness"></a></li>
-              <li><span data-i18n="cl.fac.in.5">Studios for group classes</span><a class="link-arrow" href="schedule.html" aria-label="Schedule"></a></li>
-            </ul>
+        <div class="duo" data-duo data-reveal>
+          <div class="duo__half is-open" tabindex="0">
+            <ph r="free" t="The Indoor Club" img="duo-indoor" pos="50% 55%" alt="The indoor pool with the club's logo on the wall" sz="(min-width: 900px) 65vw, 100vw"/>
+            <div class="duo__body">
+              <span class="duo__tag" data-i18n="cl.fac.in.tag">Indoor · all year</span>
+              <h3 class="duo__title" data-i18n="cl.fac.in.t">The Indoor Club</h3>
+              <ul class="duo__list" role="list">
+                <li><a href="fitness.html#gym" data-i18n="cl.fac.in.1">Gym, strength &amp; cardio</a></li>
+                <li><a href="fitness.html#hyrox" data-i18n="cl.fac.in.2">Hybrid Athlete Performance Center</a></li>
+                <li><a href="aquatics.html#indoor" data-i18n="cl.fac.in.3">Heated 25 m indoor pool</a></li>
+                <li><a href="fitness.html#wellness" data-i18n="cl.fac.in.4">Sauna, steam &amp; jacuzzi</a></li>
+                <li><a href="schedule.html" data-i18n="cl.fac.in.5">Studios for group classes</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="access-box" style="background:var(--island-lagoon);color:#fff;border-color:var(--island-lagoon);--ink:#fff;--muted-ink:rgba(255,255,255,.82);--line:rgba(255,255,255,.22);--line-strong:rgba(255,255,255,.5)">
-            <span class="tag" style="background:var(--island-sun);color:var(--island-deep)" data-i18n="cl.fac.out.tag">Outdoor · summer</span>
-            <h3 class="h3" data-i18n="nav.island">Leisure Island</h3>
-            <ul class="prices" role="list">
-              <li><span data-i18n="cl.fac.out.1">Outdoor lap pool</span><a class="link-arrow" href="leisure-island.html#water" aria-label="Pools"></a></li>
-              <li><span data-i18n="cl.fac.out.2">Slides, leisure &amp; kids' pools</span><a class="link-arrow" href="leisure-island.html#water" aria-label="Slides"></a></li>
-              <li><span data-i18n="cl.fac.out.3">Football &amp; basketball</span><a class="link-arrow" href="leisure-island.html#sports" aria-label="Sports"></a></li>
-              <li><span data-i18n="cl.fac.out.4">Grill House &amp; bars</span><a class="link-arrow" href="leisure-island.html#food" aria-label="Hospitality"></a></li>
-              <li><span data-i18n="cl.fac.out.5">Wedding garden &amp; terraces</span><a class="link-arrow" href="leisure-island.html#events" aria-label="Weddings"></a></li>
-            </ul>
+          <div class="duo__half duo__half--olive" tabindex="0">
+            <ph r="free" t="Leisure Island" img="duo-island" pos="50% 55%" alt="Football on the Leisure Island pitch at sunset" sz="(min-width: 900px) 65vw, 100vw"/>
+            <div class="duo__body">
+              <span class="duo__tag" data-i18n="cl.fac.out.tag">Outdoor · summer</span>
+              <h3 class="duo__title" data-i18n="nav.island">Leisure Island</h3>
+              <ul class="duo__list" role="list">
+                <li><a href="leisure-island.html#water" data-i18n="cl.fac.out.1">Outdoor lap pool</a></li>
+                <li><a href="leisure-island.html#water" data-i18n="cl.fac.out.2">Slides, leisure &amp; kids' pools</a></li>
+                <li><a href="leisure-island.html#sports" data-i18n="cl.fac.out.3">Football &amp; basketball</a></li>
+                <li><a href="leisure-island.html#food" data-i18n="cl.fac.out.4">Grill House &amp; bars</a></li>
+                <li><a href="leisure-island.html#events" data-i18n="cl.fac.out.5">Wedding garden &amp; terraces</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -107,7 +104,7 @@ scripts: assets/lang/club.js
             <h2 class="h2" id="gal-title" data-reveal data-i18n-html="cl.gal.title">A curated <em>look around.</em></h2>
           </div>
         </div>
-        <div class="bento">
+        <div class="bento prints">
           <div class="c4 r3 mr2" data-reveal><ph r="free" t="Architecture" img="island-chalet" pos="50% 55%" alt="A wooden chalet among the pines at Leisure Island" sz="(min-width: 900px) 33vw, 50vw"/></div>
           <div class="c8 r3" data-reveal style="--i:1"><ph r="free" t="Water" img="island-aerial" pos="50% 50%" alt="Leisure Island from the air: pools, slides and the pitch" sz="(min-width: 900px) 66vw, 50vw"/></div>
           <div class="c6 r2 m2" data-reveal><ph r="free" t="Community" img="meet-hug" pos="50% 50%" alt="Two swimmers hugging after a race at a club swim meet" sz="(min-width: 900px) 50vw, 100vw"/></div>
