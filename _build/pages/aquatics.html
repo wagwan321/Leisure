@@ -37,10 +37,19 @@ scripts: assets/lang/aquatics.js
             <h2 class="h2" id="ways-title" data-reveal data-i18n-html="aq.ways.title">Swim, learn <em>or compete.</em></h2>
           </div>
         </div>
-        <div class="bento" style="grid-auto-rows:auto">
-          <div class="tile c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w1.tag">Recreational</span><h3 data-i18n="aq.w1.t">Swim for yourself</h3><a class="btn btn--light" href="#indoor" data-i18n="aq.w1.cta">Indoor pool</a></div>
-          <div class="tile tile--red c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w2.tag">Instruction</span><h3 data-i18n="aq.w2.t">Learn, at any age</h3><a class="btn btn--light" href="#lessons" data-i18n="aq.w2.cta">Lessons</a></div>
-          <div class="tile tile--olive c4 m2" data-reveal style="min-height:220px"><span class="eyebrow" style="color:#fff" data-i18n="aq.w3.tag">Competitive</span><h3 data-i18n="aq.w3.t">Train and race</h3><a class="btn btn--light" href="#swim-club" data-i18n="aq.w3.cta">Swim Club</a></div>
+        <div class="bento">
+          <a class="c4 r3 m2" href="#indoor" data-reveal>
+            <ph r="free" t="Recreational swimming" img="swim-lanes-rec" pos="50% 55%" alt="Swimmers in the lanes of the pool" sz="(min-width: 900px) 33vw, 100vw"/>
+            <span class="sticker" data-i18n="aq.w1.t">Swim for yourself</span>
+          </a>
+          <a class="c4 r3 m2" href="#lessons" data-reveal style="--i:1">
+            <ph r="free" t="Swimming lessons" img="swim-learn" pos="50% 50%" alt="A young swimmer in goggles swimming down a lane" sz="(min-width: 900px) 33vw, 100vw"/>
+            <span class="sticker sticker--olive" data-i18n="aq.w2.t">Learn, at any age</span>
+          </a>
+          <a class="c4 r3 m2" href="#swim-club" data-reveal style="--i:2">
+            <ph r="free" t="Competitive swimming" img="swim-race-start" pos="50% 50%" alt="Swimmers diving in at the start of a race" sz="(min-width: 900px) 33vw, 100vw"/>
+            <span class="sticker sticker--red" data-i18n="aq.w3.t">Train and race</span>
+          </a>
         </div>
       </div>
     </section>

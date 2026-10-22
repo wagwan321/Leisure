@@ -26,29 +26,27 @@ scripts: assets/lang/fitness.js, assets/lang/hybrid.js
 
     <!-- The Gym -->
     <section class="section" id="gym" aria-labelledby="gym-title">
-      <div class="wrap">
+      <div class="wrap show">
+        <div class="show__text">
+          <span class="eyebrow eyebrow--dot" data-reveal data-i18n="fp.gym.eyebrow">01 · The Gym</span>
+          <h2 class="h2" id="gym-title" data-reveal data-i18n-html="fp.gym.title2">Strength &amp; cardio, <em>done properly.</em></h2>
+          <div class="rows" data-reveal>
+            <div><span data-i18n="ms.in.h1">Mon to Fri</span><b><bdi>07:30 – 22:00</bdi></b></div>
+            <div><span data-i18n="ms.in.h2">Saturday</span><b><bdi>07:30 – 21:00</bdi></b></div>
+            <div><span data-i18n="ms.in.i1">Gym &amp; ping pong</span><b data-i18n="fp.free">Free</b></div>
+          </div>
+          <p class="show__note" data-reveal data-i18n="fp.gym.free">Free with Indoor &amp; Full Access</p>
+        </div>
         <div class="bento">
-          <div class="tile c4 r2 m2" data-reveal>
-            <span class="eyebrow" style="color:#fff" data-i18n="fp.gym.eyebrow">01 · The Gym</span>
-            <h2 id="gym-title" data-i18n-html="fp.gym.title2">Strength &amp; cardio, <em>done properly.</em></h2>
-            <div class="times" style="--line:rgba(255,255,255,.25)">
-              <div><span data-i18n="ms.in.h1">Mon to Fri</span><b><bdi>07:30 – 22:00</bdi></b></div>
-              <div><span data-i18n="ms.in.h2">Saturday</span><b><bdi>07:30 – 21:00</bdi></b></div>
-            </div>
-          </div>
-          <div class="c4 r3 m2 mr2" data-reveal style="--i:1">
+          <div class="c6 r3 m2 mr2" data-reveal>
             <ph r="free" tag="Video" t="Strength area" video="loop-gym" pos="50% 30%" alt="A member training on a cable machine"/>
-            <span class="sticker" data-i18n="fp.gym.free">Free with Indoor &amp; Full Access</span>
           </div>
-          <div class="c4 r2" data-reveal style="--i:2">
-            <ph r="free" t="Cardio" img="cardio-row" pos="50% 60%" alt="A row of treadmills in the gym" sz="(min-width: 900px) 33vw, 50vw"/>
+          <div class="c6 r2" data-reveal style="--i:1">
+            <ph r="free" t="Cardio" img="cardio-row" pos="50% 60%" alt="A row of treadmills in the gym" sz="(min-width: 900px) 30vw, 50vw"/>
             <span class="sticker" data-i18n="fp.cardio">Cardio</span>
           </div>
-          <div class="c4 r1" data-reveal>
-            <ph r="free" t="Machines" img="gym-machine" pos="50% 30%" alt="A member training on a machine in the gym" sz="(min-width: 900px) 33vw, 50vw"/>
-          </div>
-          <div class="tile tile--red c4 m2" data-reveal style="--i:1">
-            <p class="h4" data-i18n="fp.pingpong">Ping pong included, 07:30 to 22:00</p>
+          <div class="c6 r1" data-reveal style="--i:2">
+            <ph r="free" t="Machines" img="gym-machine" pos="50% 30%" alt="A member training on a machine in the gym" sz="(min-width: 900px) 30vw, 50vw"/>
           </div>
         </div>
       </div>
@@ -57,41 +55,38 @@ scripts: assets/lang/fitness.js, assets/lang/hybrid.js
     <!-- HYROX -->
     <section class="section section--contrast" id="hyrox" aria-labelledby="hyrox-title">
       <div class="wrap">
-        <div class="head">
-          <div>
+        <div class="show show--rev">
+          <div class="show__text">
             <span class="eyebrow eyebrow--dot" data-reveal data-i18n="hc.eyebrow">The newest chapter</span>
             <h2 class="h2" id="hyrox-title" data-reveal data-i18n-html="hc.title">Hybrid Athlete <em>Performance Center.</em></h2>
-          </div>
-          <span class="hapc__badge" style="margin:0" data-reveal data-i18n="hapc.badge">Lebanon's first HYROX gym</span>
-        </div>
-        <div class="bento">
-          <div class="c8 r3 m2 mr2" data-reveal>
-            <ph r="free" t="The Center in motion" cls="ph--dark" img="hybrid-session" pos="50% 55%" alt="Members training on the Hybrid Athlete Performance Center floor" sz="(min-width: 900px) 66vw, 100vw"/>
-            <span class="sticker sticker--red">HYROX</span>
-          </div>
-          <div class="tile tile--red c4 r2 m2" data-reveal style="--i:1">
-            <h3 data-i18n="fp.hx.classes">Coached classes</h3>
-            <div class="times" style="--line:rgba(255,255,255,.3)">
+            <span class="hapc__badge" style="margin:0;justify-self:start" data-reveal data-i18n="hapc.badge">Lebanon's first HYROX gym</span>
+            <div class="rows" data-reveal>
               <div><span>HYROX</span><b data-i18n="tt.a4s">Thu 08:00 · Mon 19:00</b></div>
               <div><span>Grit</span><b data-i18n="tt.a11s">Tue 08:00</b></div>
               <div><span data-i18n="cl.cali">Calisthenics</span><b data-i18n="tt.a12s">Fri 19:30</b></div>
             </div>
           </div>
-          <div class="c4 r1" data-reveal style="--i:2">
-            <ph r="free" t="Farmers carry lane" cls="ph--dark" img="gym-carry-lane" pos="50% 48%" alt="A member carrying kettlebells down the training lane" sz="(min-width: 900px) 33vw, 50vw"/>
-          </div>
-          <div class="c4 r2" data-reveal>
-            <ph r="free" t="Lifting" cls="ph--dark" img="hyrox-lift" pos="50% 55%" alt="An athlete lifting on the performance floor" sz="(min-width: 900px) 33vw, 50vw"/>
-          </div>
-          <div class="c4 r2" data-reveal style="--i:1">
-            <ph r="free" t="Cable machine" cls="ph--dark" img="hyrox-cable" pos="50% 40%" alt="An athlete mid-session on the cable machine" sz="(min-width: 900px) 33vw, 50vw"/>
-          </div>
-          <div class="tile tile--paper c4 r2 m2" data-reveal style="--i:2">
-            <h3 data-i18n="fp.hx.stations">The eight stations</h3>
-            <div class="pills">
-              <span class="pill" data-i18n="hc.e1">SkiErg</span><span class="pill" data-i18n="hc.e2">Sled push</span><span class="pill" data-i18n="hc.e3">Sled pull</span><span class="pill" data-i18n="hc.e4">Burpee broad jumps</span>
-              <span class="pill" data-i18n="hc.e5">Rowing</span><span class="pill" data-i18n="hc.e6">Farmers carry</span><span class="pill" data-i18n="hc.e7">Sandbag lunges</span><span class="pill" data-i18n="hc.e8">Wall balls</span>
+          <div class="bento">
+            <div class="c8 r3 m2 mr2" data-reveal>
+              <ph r="free" t="The Center in motion" cls="ph--dark" img="hybrid-session" pos="50% 55%" alt="Members training on the Hybrid Athlete Performance Center floor" sz="(min-width: 900px) 45vw, 100vw"/>
+              <span class="sticker sticker--red">HYROX</span>
             </div>
+            <div class="c4 r1" data-reveal style="--i:1">
+              <ph r="free" t="Farmers carry lane" cls="ph--dark" img="gym-carry-lane" pos="50% 48%" alt="A member carrying kettlebells down the training lane" sz="(min-width: 900px) 20vw, 50vw"/>
+            </div>
+            <div class="c4 r2" data-reveal style="--i:2">
+              <ph r="free" t="Lifting" cls="ph--dark" img="hyrox-lift" pos="50% 55%" alt="An athlete lifting on the performance floor" sz="(min-width: 900px) 20vw, 50vw"/>
+            </div>
+            <div class="c12 r1 m2" data-reveal>
+              <ph r="free" t="Cable machine" cls="ph--dark" img="hyrox-cable" pos="50% 35%" alt="An athlete mid-session on the cable machine" sz="(min-width: 900px) 60vw, 100vw"/>
+            </div>
+          </div>
+        </div>
+        <div style="margin-block-start:clamp(2rem,1.5rem + 2vw,3.5rem)" data-reveal>
+          <p class="show__note" style="margin-block-end:1rem" data-i18n="fp.hx.stations">The eight stations</p>
+          <div class="pills">
+            <span class="pill" data-i18n="hc.e1">SkiErg</span><span class="pill" data-i18n="hc.e2">Sled push</span><span class="pill" data-i18n="hc.e3">Sled pull</span><span class="pill" data-i18n="hc.e4">Burpee broad jumps</span>
+            <span class="pill" data-i18n="hc.e5">Rowing</span><span class="pill" data-i18n="hc.e6">Farmers carry</span><span class="pill" data-i18n="hc.e7">Sandbag lunges</span><span class="pill" data-i18n="hc.e8">Wall balls</span>
           </div>
         </div>
       </div>
@@ -102,34 +97,33 @@ scripts: assets/lang/fitness.js, assets/lang/hybrid.js
       <div class="wrap">
         <div class="head">
           <div>
-            <span class="eyebrow" data-reveal data-i18n="fp.cls.eyebrow2">02 · Free classes</span>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="fp.cls.eyebrow2">02 · Free classes</span>
             <h2 class="h2" id="cls-title" data-reveal data-i18n-html="fp.cls.title">A full week, <em>for every age.</em></h2>
           </div>
-          <a class="link-arrow" href="schedule.html" data-reveal data-i18n="fp.cta.sched">See the weekly schedule</a>
+          <div class="btns" style="display:flex;gap:.75rem;flex-wrap:wrap" data-reveal>
+            <a class="btn btn--solid" href="memberships.html#classes" data-i18n="fp.cls.all">All classes and times</a>
+            <a class="btn" href="schedule.html" data-i18n="fp.cta.sched">See the weekly schedule</a>
+          </div>
         </div>
         <div class="bento">
-          <div class="c3 r2" data-reveal>
-            <ph r="free" t="Trampoline class" img="class-trampoline" pos="50% 45%" alt="Members in a trampoline fitness class" sz="(min-width: 900px) 25vw, 50vw"/>
+          <div class="c4 r2 m2" data-reveal>
+            <ph r="free" t="Trampoline class" img="class-trampoline" pos="50% 45%" alt="Members in a trampoline fitness class" sz="(min-width: 900px) 33vw, 100vw"/>
             <span class="sticker" data-i18n="fp.cls.adults">Adults</span>
           </div>
-          <div class="c3 r2" data-reveal style="--i:1">
-            <ph r="free" t="Breakdance" img="breakdance-kids" pos="50% 55%" alt="A child doing a breakdance move in the studio" sz="(min-width: 900px) 25vw, 50vw"/>
+          <div class="c4 r2" data-reveal style="--i:1">
+            <ph r="free" t="Breakdance" img="breakdance-kids" pos="50% 55%" alt="A child doing a breakdance move in the studio" sz="(min-width: 900px) 33vw, 50vw"/>
             <span class="sticker sticker--red" data-i18n="cl.breakdance">Breakdance</span>
           </div>
-          <div class="tile tile--red c6 r2 m2" data-reveal style="--i:2">
-            <p class="big">24<small data-i18n="fp.cls.count">free weekly classes: 11 for kids under 16, 13 for adults</small></p>
-            <a class="btn btn--light" href="memberships.html#classes" data-i18n="fp.cls.all">All classes and times</a>
-          </div>
-          <div class="c4 r2" data-reveal>
+          <div class="c4 r2" data-reveal style="--i:2">
             <ph r="free" t="Gymnastics" img="class-acro" pos="50% 50%" alt="A gymnastics class in the studio" sz="(min-width: 900px) 33vw, 50vw"/>
             <span class="sticker" data-i18n="cl.gym">Gymnastics</span>
           </div>
-          <div class="c4 r2" data-reveal style="--i:1">
-            <ph r="free" t="Dance" img="zumba-kids" pos="50% 50%" alt="Children in a dance class" sz="(min-width: 900px) 33vw, 50vw"/>
+          <div class="c6 r2" data-reveal>
+            <ph r="free" t="Dance" img="zumba-kids" pos="50% 50%" alt="Children in a dance class" sz="(min-width: 900px) 50vw, 50vw"/>
             <span class="sticker" data-i18n="cl.latino">Latino dance</span>
           </div>
-          <div class="c4 r2 m2" data-reveal style="--i:2">
-            <ph r="free" t="Kids' gymnastics" img="gymnastics-kids" pos="50% 50%" alt="Girls stretching in a kids' class" sz="(min-width: 900px) 33vw, 100vw"/>
+          <div class="c6 r2" data-reveal style="--i:1">
+            <ph r="free" t="Kids' gymnastics" img="gymnastics-kids" pos="50% 50%" alt="Girls stretching in a kids' class" sz="(min-width: 900px) 50vw, 50vw"/>
             <span class="sticker sticker--red" data-i18n="ms.kids.age">Under 16</span>
           </div>
         </div>
@@ -138,26 +132,24 @@ scripts: assets/lang/fitness.js, assets/lang/hybrid.js
 
     <!-- Personal training -->
     <section class="section section--surface" id="training" aria-labelledby="pt-title">
-      <div class="wrap">
+      <div class="wrap show">
+        <div class="show__text">
+          <span class="eyebrow eyebrow--dot" data-reveal data-i18n="fp.pt.eyebrow2">03 · Personal training</span>
+          <h2 class="h2" id="pt-title" data-reveal data-i18n-html="fp.pt.title2">Coaching <em>built around you.</em></h2>
+          <div class="rows" data-reveal>
+            <div><span data-i18n="by.pt.1">Fitness training session</span><b>$25</b></div>
+            <div><span data-i18n="by.pt.2">Physiotherapy session</span><b>$30</b></div>
+            <div><span data-i18n="by.pt.3">Pilates Reformer, per person</span><b>$12</b></div>
+          </div>
+          <div class="btns" data-reveal><a class="btn btn--solid" href="visit.html?type=training#inquire" data-i18n="fp.pt.cta2">Book a session</a></div>
+        </div>
         <div class="bento">
-          <div class="c5 r3 m2 mr2" data-reveal>
-            <ph r="free" t="One-to-one" img="coach-lunge" pos="40% 60%" alt="A coach guiding a member through a lunge" sz="(min-width: 900px) 42vw, 100vw"/>
+          <div class="c7 r3 m2 mr2" data-reveal>
+            <ph r="free" t="One-to-one" img="coach-lunge" pos="40% 60%" alt="A coach guiding a member through a lunge" sz="(min-width: 900px) 35vw, 100vw"/>
           </div>
-          <div class="tile tile--paper c7 r2 m2" data-reveal style="--i:1">
-            <span class="eyebrow" data-i18n="fp.pt.eyebrow2">03 · Personal training</span>
-            <h2 id="pt-title" data-i18n-html="fp.pt.title2">Coaching <em>built around you.</em></h2>
-            <div class="times">
-              <div><span data-i18n="by.pt.1">Fitness training session</span><b>$25</b></div>
-              <div><span data-i18n="by.pt.2">Physiotherapy session</span><b>$30</b></div>
-              <div><span data-i18n="by.pt.3">Pilates Reformer, per person</span><b>$12</b></div>
-            </div>
-          </div>
-          <div class="c4 r1" data-reveal>
-            <ph r="free" t="Physiotherapy" img="physio" pos="50% 55%" alt="A physiotherapist treating a member" sz="(min-width: 900px) 33vw, 50vw"/>
+          <div class="c5 r3 m2" data-reveal style="--i:1">
+            <ph r="free" t="Physiotherapy" img="physio" pos="50% 55%" alt="A physiotherapist treating a member" sz="(min-width: 900px) 25vw, 100vw"/>
             <span class="sticker" data-i18n="fp.physio">Physiotherapy</span>
-          </div>
-          <div class="tile c3 m2" data-reveal style="--i:1">
-            <a class="btn btn--light" href="visit.html?type=training#inquire" data-i18n="fp.pt.cta2">Book a session</a>
           </div>
         </div>
       </div>
@@ -165,30 +157,28 @@ scripts: assets/lang/fitness.js, assets/lang/hybrid.js
 
     <!-- Wellness & recovery -->
     <section class="section" id="wellness" aria-labelledby="well-title">
-      <div class="wrap">
-        <div class="bento">
-          <div class="tile c4 r2 m2" data-reveal>
-            <span class="eyebrow" style="color:#fff" data-i18n="fp.well.eyebrow2">04 · Wellness &amp; recovery</span>
-            <h2 id="well-title" data-i18n-html="fp.well.title2">Recovery is <em>part of the training.</em></h2>
-            <div class="times" style="--line:rgba(255,255,255,.25)">
-              <div><span data-i18n="fp.steam.d">Steam · Tue, Thu, Sat</span><b><bdi>09:00 – 21:30</bdi></b></div>
-              <div><span data-i18n="fp.sauna.d">Sauna · Mon, Wed, Fri</span><b><bdi>09:00 – 21:30</bdi></b></div>
-            </div>
+      <div class="wrap show show--rev">
+        <div class="show__text">
+          <span class="eyebrow eyebrow--dot" data-reveal data-i18n="fp.well.eyebrow2">04 · Wellness &amp; recovery</span>
+          <h2 class="h2" id="well-title" data-reveal data-i18n-html="fp.well.title2">Recovery is <em>part of the training.</em></h2>
+          <div class="rows" data-reveal>
+            <div><span data-i18n="fp.steam.d">Steam · Tue, Thu, Sat</span><b><bdi>09:00 – 21:30</bdi></b></div>
+            <div><span data-i18n="fp.sauna.d">Sauna · Mon, Wed, Fri</span><b><bdi>09:00 – 21:30</bdi></b></div>
+            <div><span data-i18n="fp.plunge">Cold plunge, jacuzzi &amp; showers included</span><b data-i18n="fp.free">Free</b></div>
           </div>
-          <div class="c4 r2" data-reveal style="--i:1">
-            <ph r="free" t="Sauna" img="sauna" pos="50% 60%" alt="The wooden sauna" sz="(min-width: 900px) 33vw, 50vw"/>
+        </div>
+        <div class="bento">
+          <div class="c6 r2" data-reveal>
+            <ph r="free" t="Sauna" img="sauna" pos="50% 60%" alt="The wooden sauna" sz="(min-width: 900px) 30vw, 50vw"/>
             <span class="sticker" data-i18n="fp.sauna">Sauna</span>
           </div>
-          <div class="c4 r2" data-reveal style="--i:2">
-            <ph r="free" t="Steam room" img="steam-room" pos="50% 60%" alt="The steam room" sz="(min-width: 900px) 33vw, 50vw"/>
+          <div class="c6 r2" data-reveal style="--i:1">
+            <ph r="free" t="Steam room" img="steam-room" pos="50% 60%" alt="The steam room" sz="(min-width: 900px) 30vw, 50vw"/>
             <span class="sticker" data-i18n="fp.steam">Steam</span>
           </div>
-          <div class="c8 r1 m2" data-reveal>
-            <ph r="free" t="Indoor pool and jacuzzi" img="indoor-pool-old" pos="50% 50%" alt="The indoor pool hall" sz="(min-width: 900px) 66vw, 100vw"/>
+          <div class="c12 r1 m2" data-reveal>
+            <ph r="free" t="Indoor pool and jacuzzi" img="indoor-pool-old" pos="50% 50%" alt="The indoor pool hall" sz="(min-width: 900px) 60vw, 100vw"/>
             <span class="sticker" data-i18n="ms.in.i3">Indoor pool &amp; jacuzzi</span>
-          </div>
-          <div class="tile tile--red c4 m2" data-reveal style="--i:1">
-            <p class="h4" data-i18n="fp.plunge">Cold plunge, jacuzzi &amp; showers included</p>
           </div>
         </div>
       </div>

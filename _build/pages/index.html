@@ -181,7 +181,7 @@ scripts: assets/lang/home.js, assets/memberships.js
 
     <!-- ===================== Memberships ===================== -->
     <section class="section" id="memberships" aria-labelledby="mem-title">
-      <div class="wrap">
+      <div class="wrap wrap--wide">
         <div class="head">
           <div>
             <span class="eyebrow" data-reveal data-i18n="mem.eyebrow">Memberships</span>
@@ -193,7 +193,7 @@ scripts: assets/lang/home.js, assets/memberships.js
             <button type="button" data-who="2" aria-pressed="false" data-i18n="ms.family">Family</button>
           </div>
         </div>
-        <div class="mplans" style="margin-block-start:0">
+        <div class="mplans mplans--home" style="margin-block-start:0">
           <article class="mplan mplan--indoor" data-reveal>
             <div class="mplan__top">
               <h3 class="mplan__name" data-i18n="ms.in.t">Indoor</h3>
@@ -204,7 +204,21 @@ scripts: assets/lang/home.js, assets/memberships.js
                 <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[120,200,240]">$120</dd></div>
                 <div><dt data-i18n="ms.year">1 year</dt><dd data-price="[700,1200,1400]">$700</dd></div>
               </dl>
-              <a class="btn" href="memberships.html#plans" data-i18n="mem.incl">What's included</a>
+              <button class="mopen" type="button" aria-expanded="false" aria-controls="incl-indoor" data-i18n="mem.incl">What's included</button>
+              <div class="mdrop" id="incl-indoor"><div>
+                <div class="mincl">
+                <ul role="list">
+                  <li style="--n:0"><span data-i18n="ms.in.i1">Gym &amp; ping pong</span><span><bdi>07:30 – 22:00</bdi></span></li>
+                  <li style="--n:1"><span data-i18n="ms.in.i2">HYROX gym</span><span></span></li>
+                  <li style="--n:2"><span data-i18n="ms.in.i3">Indoor pool &amp; jacuzzi</span><span></span></li>
+                  <li style="--n:3"><span data-i18n="ms.in.i4">Cold plunge &amp; showers</span><span></span></li>
+                  <li style="--n:4"><span data-i18n-html="ms.in.i5">Steam<small>Tue, Thu, Sat</small></span><span><bdi>09:00 – 21:30</bdi></span></li>
+                  <li style="--n:5"><span data-i18n-html="ms.in.i6">Sauna<small>Mon, Wed, Fri</small></span><span><bdi>09:00 – 21:30</bdi></span></li>
+                </ul>
+                <div class="mplan__extra"><div><span data-i18n="ms.guest">Accompanied guest, any age</span><b>$25</b></div></div>
+                </div>
+                <a class="link-arrow" style="margin-block-start:1rem" href="memberships.html#plans" data-i18n="mem.more">All membership details</a>
+              </div></div>
             </div>
           </article>
           <article class="mplan mplan--outdoor" data-reveal style="--i:1">
@@ -217,7 +231,20 @@ scripts: assets/lang/home.js, assets/memberships.js
                 <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[200,300,400]">$200</dd></div>
                 <div><dt data-i18n="ms.season">Summer season</dt><dd data-price="[400,600,800]">$400</dd></div>
               </dl>
-              <a class="btn" href="memberships.html#plans" data-i18n="mem.incl">What's included</a>
+              <button class="mopen" type="button" aria-expanded="false" aria-controls="incl-outdoor" data-i18n="mem.incl">What's included</button>
+              <div class="mdrop" id="incl-outdoor"><div>
+                <div class="mincl">
+                <ul role="list">
+                  <li style="--n:0"><span data-i18n="ms.out.i1">Outdoor lap pool</span><span></span></li>
+                  <li style="--n:1"><span data-i18n="ms.out.i2">Slides &amp; leisure pool</span><span></span></li>
+                  <li style="--n:2"><span data-i18n="ms.out.i3">Kids' pools &amp; splash pad</span><span></span></li>
+                  <li style="--n:3"><span data-i18n="ms.out.i4">Jacuzzi</span><span></span></li>
+                  <li style="--n:4"><span data-i18n-html="ms.out.i5">Football &amp; basketball courts<small>Unless reserved</small></span><span></span></li>
+                </ul>
+                <div class="mplan__extra"><div><span data-i18n="ms.out.h1">Every day</span><b><bdi>10:00 – 20:00</bdi></b></div><div><span data-i18n="ms.vis">Day visitors</span><b data-i18n="ms.vis.v">Under 2 free · under 10 $25 · over 10 $30</b></div></div>
+                </div>
+                <a class="link-arrow" style="margin-block-start:1rem" href="memberships.html#plans" data-i18n="mem.more">All membership details</a>
+              </div></div>
             </div>
           </article>
           <article class="mplan mplan--full" data-reveal style="--i:2">
@@ -231,7 +258,16 @@ scripts: assets/lang/home.js, assets/memberships.js
                 <div><dt data-i18n="ms.season">Summer season</dt><dd data-price="[700,1200,1400]">$700</dd></div>
                 <div><dt data-i18n="ms.year">1 year</dt><dd data-price="[1000,1500,2000]">$1,000</dd></div>
               </dl>
-              <a class="btn btn--solid" href="memberships.html#plans" data-i18n="mem.incl">What's included</a>
+              <button class="mopen" type="button" aria-expanded="false" aria-controls="incl-full" data-i18n="mem.incl">What's included</button>
+              <div class="mdrop" id="incl-full"><div>
+                <div class="mincl">
+                <ul role="list">
+                  <li style="--n:0"><span data-i18n="ms.full.i1">Everything in Indoor</span><span></span></li>
+                  <li style="--n:1"><span data-i18n="ms.full.i2">Everything in Outdoor</span><span></span></li>
+                </ul>
+                </div>
+                <a class="link-arrow" style="margin-block-start:1rem" href="memberships.html#plans" data-i18n="mem.more">All membership details</a>
+              </div></div>
             </div>
           </article>
         </div>
@@ -284,13 +320,14 @@ scripts: assets/lang/home.js, assets/memberships.js
             <h2 class="h2" id="rv-title" data-reveal data-i18n-html="rv.title">In their <em>own words.</em></h2>
           </div>
           <a class="rating" href="https://www.google.com/maps/place/The+Leisure+Club+(+Outdoor+Island+)/@33.9374008,35.6204719,17z" target="_blank" rel="noopener" data-reveal>
-            <span class="rating__num">4.1</span>
-            <span><span class="rating__stars" aria-hidden="true">★★★★☆</span><span class="rating__meta" style="display:block" data-i18n="rv.meta">263 reviews on Google</span></span>
+            <span class="rating__num" data-countto="4.1">4.1</span>
+            <span><span class="rating__stars" aria-hidden="true"><span style="--s:0">★</span><span style="--s:1">★</span><span style="--s:2">★</span><span style="--s:3">★</span><span class="half" style="--s:4">★</span></span><span class="rating__meta" style="display:block" data-i18n="rv.meta">263 reviews on Google</span></span>
           </a>
         </div>
-        <div class="quotes" data-stagger>
+        <div class="qwall" data-qwall>
+          <div class="qrow">
           <blockquote class="quote">
-            <span class="quote__stars" aria-label="5 stars">★★★★★</span>
+            <span class="quote__stars" aria-label="5 stars"><span style="--s:0">★</span><span style="--s:1">★</span><span style="--s:2">★</span><span style="--s:3">★</span><span style="--s:4">★</span></span>
             <p data-i18n="rv.ivonne">“The staff was so friendly, and the variety of pools, including the jacuzzi, made it even better.”</p>
             <cite>Ivonne C.<small>Google</small></cite>
           </blockquote>
@@ -299,15 +336,16 @@ scripts: assets/lang/home.js, assets/memberships.js
             <cite>Albert B.<small data-i18n="rv.translated">Google · translated from Arabic</small></cite>
           </blockquote>
           <blockquote class="quote">
-            <span class="quote__stars" aria-label="5 stars">★★★★★</span>
+            <span class="quote__stars" aria-label="5 stars"><span style="--s:0">★</span><span style="--s:1">★</span><span style="--s:2">★</span><span style="--s:3">★</span><span style="--s:4">★</span></span>
             <p data-i18n="rv.pia">“The highlight of our stay was undoubtedly the staff. They were super friendly and went out of their way to ensure we had everything we needed.”</p>
             <cite>Pia L.<small>Google</small></cite>
           </blockquote>
           <blockquote class="quote">
-            <span class="quote__stars" aria-label="4 stars">★★★★☆</span>
+            <span class="quote__stars" aria-label="4 stars"><span style="--s:0">★</span><span style="--s:1">★</span><span style="--s:2">★</span><span style="--s:3">★</span><span style="--s:4">☆</span></span>
             <p data-i18n="rv.donna">“What really stood out was the amazing service! The lady who spoke to me on the phone was unbelievably kind and helpful.”</p>
             <cite>Donna C.<small>Google</small></cite>
           </blockquote>
+          </div>
         </div>
       </div>
     </section>
@@ -349,9 +387,6 @@ scripts: assets/lang/home.js, assets/memberships.js
           <a class="it" href="leisure-island.html#water" data-reveal style="--i:4">
             <ph r="free" t="pool parties" img="island-crowd" pos="50% 50%" alt="A busy summer day in the leisure pool"/>
             <span class="it__label" data-i18n="isl.t5b">Pool parties</span>
-          </a>
-          <a class="it it--book" href="leisure-island.html#events" data-reveal style="--i:5">
-            <span class="it__book"><b data-i18n="ev.title">Book your event</b><span data-i18n="isl.t6b">Weddings, birthdays, baptisms &amp; pool parties</span><span class="it__phone" dir="ltr">03 478 200</span></span>
           </a>
         </div>
 

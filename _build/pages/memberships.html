@@ -19,7 +19,7 @@ scripts: assets/lang/memberships.js, assets/memberships.js
 
     <!-- Plans: Indoor · Outdoor · Full Access -->
     <section class="section" id="plans" aria-labelledby="plans-title" style="padding-block-start:0">
-      <div class="wrap">
+      <div class="wrap wrap--wide">
         <h2 class="sr-only" id="plans-title" data-i18n="ms.plans.t">Membership prices</h2>
         <div class="mplans__bar">
           <div>
@@ -192,85 +192,133 @@ scripts: assets/lang/memberships.js, assets/memberships.js
       </div>
     </section>
 
-    <!-- Beyond Membership -->
+    <!-- Beyond Membership: rows that open one at a time -->
     <section class="section" id="beyond" aria-labelledby="beyond-title">
       <div class="wrap">
         <div class="head">
           <div>
-            <span class="eyebrow" data-reveal data-i18n="by.eyebrow">Beyond membership</span>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="by.eyebrow">Beyond membership</span>
             <h2 class="h2" id="beyond-title" data-reveal data-i18n-html="by.title">More, <em>when you want it.</em></h2>
           </div>
         </div>
-        <div class="beyond">
-          <div class="bcards" data-stagger>
-            <article class="bcard">
-              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">01</span><h3 data-i18n="by.tkd.t">Taekwondo</h3></div>
-              <p class="bcard__note" data-i18n="by.tkd.n">Administration fee to the School of Champions</p>
-              <ul role="list">
-                <li><span data-i18n="by.members">Members</span><b>$30</b></li>
-                <li><span data-i18n="by.nonmembers">Non-members</span><b>$60</b></li>
-              </ul>
-            </article>
-            <article class="bcard">
-              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">02</span><h3 data-i18n="by.pt.t">Personal training</h3></div>
-              <ul role="list">
-                <li><span data-i18n="by.pt.1">Fitness training session</span><b>$25</b></li>
-                <li><span data-i18n="by.pt.2">Physiotherapy session</span><b>$30</b></li>
-                <li><span data-i18n="by.pt.3">Pilates Reformer, per person</span><b>$12</b></li>
-                <li><span data-i18n="by.pt.4">Solarium</span><b data-i18n="by.pt.4v">$1 / minute · $10 / 15 min</b></li>
-              </ul>
-            </article>
-            <article class="bcard">
-              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">03</span><h3 data-i18n="by.swim.t">Learn to swim</h3></div>
-              <ul role="list">
-                <li><span data-i18n="by.swim.1">1 person, per session</span><b>$30</b></li>
-                <li><span data-i18n="by.swim.2">2 people, per session</span><b>$40</b></li>
-                <li><span data-i18n="by.swim.3">3 people, per session</span><b>$50</b></li>
-              </ul>
-            </article>
-            <article class="bcard">
-              <div class="bcard__top"><span class="bcard__icon" aria-hidden="true">04</span><h3 data-i18n="by.court.t">Football or basketball court</h3></div>
-              <ul role="list">
-                <li><span data-i18n="by.court.1">90 minutes</span><b>$60</b></li>
-                <li><span data-i18n="by.court.2">120 minutes</span><b>$80</b></li>
-              </ul>
-              <p class="bcard__free" data-i18n="by.court.free">Free for members during the summer season, unless reserved</p>
-            </article>
+        <div class="svc" data-svc data-reveal>
+          <div class="svc__item is-open">
+            <button class="svc__head" type="button" aria-expanded="true">
+              <span class="svc__no">01</span><span class="svc__title" data-i18n="by.tkd.t">Taekwondo</span><span class="svc__from"><span data-i18n="by.from">From</span> $30</span><span class="svc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
+              <div class="svc__photo"><ph r="free" t="Taekwondo" img="tkd-kick" pos="50% 50%" alt="A taekwondo coach holding a pad for a young student's kick" sz="(min-width: 800px) 30vw, 100vw"/></div>
+              <div>
+                <p class="svc__note" data-i18n="by.tkd.n">Administration fee to the School of Champions</p>
+                <div class="rows">
+                  <div><span data-i18n="by.members">Members</span><b>$30</b></div>
+                  <div><span data-i18n="by.nonmembers">Non-members</span><b>$60</b></div>
+                </div>
+              </div>
+            </div></div></div>
           </div>
+          <div class="svc__item">
+            <button class="svc__head" type="button" aria-expanded="false">
+              <span class="svc__no">02</span><span class="svc__title" data-i18n="by.pt.t">Personal training</span><span class="svc__from"><span data-i18n="by.from">From</span> $12</span><span class="svc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
+              <div class="svc__photo"><ph r="free" t="Personal training" img="pt-stretch" pos="50% 40%" alt="A trainer stretching a member's leg" sz="(min-width: 800px) 30vw, 100vw"/></div>
+              <div class="rows">
+                <div><span data-i18n="by.pt.1">Fitness training session</span><b>$25</b></div>
+                <div><span data-i18n="by.pt.2">Physiotherapy session</span><b>$30</b></div>
+                <div><span data-i18n="by.pt.3">Pilates Reformer, per person</span><b>$12</b></div>
+                <div><span data-i18n="by.pt.4">Solarium</span><b data-i18n="by.pt.4v">$1 / minute · $10 / 15 min</b></div>
+              </div>
+            </div></div></div>
+          </div>
+          <div class="svc__item">
+            <button class="svc__head" type="button" aria-expanded="false">
+              <span class="svc__no">03</span><span class="svc__title" data-i18n="by.swim.t">Learn to swim</span><span class="svc__from"><span data-i18n="by.from">From</span> $30</span><span class="svc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
+              <div class="svc__photo"><ph r="free" t="Learn to swim" img="swim-kid" pos="50% 50%" alt="A young swimmer in goggles and a cap swimming breaststroke" sz="(min-width: 800px) 30vw, 100vw"/></div>
+              <div class="rows">
+                <div><span data-i18n="by.swim.1">1 person, per session</span><b>$30</b></div>
+                <div><span data-i18n="by.swim.2">2 people, per session</span><b>$40</b></div>
+                <div><span data-i18n="by.swim.3">3 people, per session</span><b>$50</b></div>
+              </div>
+            </div></div></div>
+          </div>
+          <div class="svc__item">
+            <button class="svc__head" type="button" aria-expanded="false">
+              <span class="svc__no">04</span><span class="svc__title" data-i18n="by.court.t">Football or basketball court</span><span class="svc__from"><span data-i18n="by.from">From</span> $60</span><span class="svc__icon" aria-hidden="true"></span>
+            </button>
+            <div class="svc__body"><div class="svc__inner"><div class="svc__grid">
+              <div class="svc__photo"><ph r="free" t="Football court" img="court-kick" pos="50% 45%" alt="A player controlling the ball on the football pitch at dusk" sz="(min-width: 800px) 30vw, 100vw"/></div>
+              <div>
+                <div class="rows">
+                  <div><span data-i18n="by.court.1">90 minutes</span><b>$60</b></div>
+                  <div><span data-i18n="by.court.2">120 minutes</span><b>$80</b></div>
+                </div>
+                <p class="svc__free" data-i18n="by.court.free">Free for members during the summer season, unless reserved</p>
+              </div>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <aside class="evbook" id="events" aria-labelledby="ev-title" data-reveal>
-            <div class="evbook__ring" data-ring>
-              <h3 class="evbook__core" id="ev-title" data-i18n="ev.title">Book your event</h3>
-              <span class="evbook__item" style="--x:0%;--y:-41%" data-i18n="ev.wedding">Wedding</span>
-              <span class="evbook__item" style="--x:27%;--y:-21%" data-i18n="ev.communion">First communion</span>
-              <span class="evbook__item" style="--x:27%;--y:21%" data-i18n="ev.birthday">Birthday</span>
-              <span class="evbook__item" style="--x:0%;--y:41%" data-i18n="ev.teen">Teenage pool party</span>
-              <span class="evbook__item" style="--x:-27%;--y:21%" data-i18n="ev.baptism">Baptism</span>
-              <span class="evbook__item" style="--x:-27%;--y:-21%" data-i18n="ev.bachelor">Bachelor party</span>
-            </div>
-            <p data-i18n="ev.contact">For any event, please contact</p>
-            <a class="evbook__phone" href="tel:+9613478200" dir="ltr">03 478 200</a>
+    <!-- Book your event: photo panels that open on hover or tap -->
+    <section class="section section--contrast" id="events" aria-labelledby="ev-title">
+      <div class="wrap">
+        <div class="evx__top">
+          <div>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="ev.title">Book your event</span>
+            <h2 class="h2" id="ev-title" data-reveal data-i18n-html="evx.title">Your day, <em>at the club.</em></h2>
+          </div>
+          <div class="evx__call" data-reveal>
+            <a class="evx__phone" href="tel:+9613478200" dir="ltr">03 478 200</a>
             <a class="btn btn--red" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="ev.wa">WhatsApp the events team</a>
-          </aside>
+          </div>
+        </div>
+        <div class="evx" data-evx data-reveal>
+          <div class="evx__p is-active" tabindex="0">
+            <ph r="free" t="Wedding" img="event-tables" pos="50% 55%" alt="Long tables set for a celebration" sz="(min-width: 800px) 55vw, 100vw"/>
+            <span class="evx__no">01</span><span class="evx__label" data-i18n="ev.wedding">Wedding</span>
+            <div class="evx__body"><h3 data-i18n="ev.wedding">Wedding</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
+          </div>
+          <div class="evx__p" tabindex="0">
+            <ph r="free" t="Birthday" img="birthday-cake" pos="50% 60%" alt="Two friends hugging next to a birthday cake by the pool" sz="(min-width: 800px) 55vw, 100vw"/>
+            <span class="evx__no">02</span><span class="evx__label" data-i18n="ev.birthday">Birthday</span>
+            <div class="evx__body"><h3 data-i18n="ev.birthday">Birthday</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
+          </div>
+          <div class="evx__p" tabindex="0">
+            <ph r="free" t="Teenage pool party" img="party-group" pos="50% 55%" alt="A group of teenagers celebrating by the indoor pool" sz="(min-width: 800px) 55vw, 100vw"/>
+            <span class="evx__no">03</span><span class="evx__label" data-i18n="ev.teen">Teenage pool party</span>
+            <div class="evx__body"><h3 data-i18n="ev.teen">Teenage pool party</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
+          </div>
+          <div class="evx__p evx__p--olive" tabindex="0">
+            <span class="evx__art" aria-hidden="true">&amp;</span>
+            <span class="evx__no">04</span><span class="evx__label" data-i18n="evx.bapcom">Baptism &amp; first communion</span>
+            <div class="evx__body"><h3 data-i18n="evx.bapcom">Baptism &amp; first communion</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
+          </div>
+          <div class="evx__p" tabindex="0">
+            <ph r="free" t="Bachelor party" img="foam-party" pos="50% 45%" alt="A foam party at Leisure Island" sz="(min-width: 800px) 55vw, 100vw"/>
+            <span class="evx__no">05</span><span class="evx__label" data-i18n="ev.bachelor">Bachelor party</span>
+            <div class="evx__body"><h3 data-i18n="ev.bachelor">Bachelor party</h3><a class="btn btn--light" href="https://wa.me/9613478200" target="_blank" rel="noopener" data-i18n="evx.ask">Ask for a date</a></div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Corporate -->
     <section class="section section--surface" id="corporate" aria-labelledby="corp-title">
-      <div class="wrap">
+      <div class="wrap show">
+        <div class="show__text">
+          <span class="eyebrow eyebrow--dot" data-reveal data-i18n="ms.corp.eyebrow">Corporate</span>
+          <h2 class="h2" id="corp-title" data-reveal data-i18n-html="ms.corp.title2">Memberships <em>for teams.</em></h2>
+          <p class="show__note" data-reveal data-i18n="ms.corp.mix">Indoor, Outdoor or Full Access, mixed as your team needs.</p>
+          <div class="btns" data-reveal><a class="btn btn--solid" href="#inquire" data-plan="corporate" data-i18n="ms.corp.cta">Ask about corporate membership</a></div>
+        </div>
         <div class="bento">
-          <div class="c7 r3 m2 mr2" data-reveal>
+          <div class="c12 r3 m2 mr2" data-reveal>
             <ph r="free" tag="Photo" t="A team at the club" img="boxing-group" pos="50% 55%" alt="A group of members in boxing gloves after a class" sz="(min-width: 900px) 58vw, 100vw"/>
             <span class="sticker sticker--red" data-i18n="ms.corp.sticker">Teams welcome</span>
-          </div>
-          <div class="tile tile--red c5 r2 m2" data-reveal style="--i:1">
-            <span class="eyebrow" style="color:#fff" data-i18n="ms.corp.eyebrow">Corporate</span>
-            <h2 id="corp-title" data-i18n-html="ms.corp.title2">Memberships <em>for teams.</em></h2>
-            <a class="btn btn--light" href="#inquire" data-plan="corporate" data-i18n="ms.corp.cta">Ask about corporate membership</a>
-          </div>
-          <div class="tile c5 m2" data-reveal style="--i:2">
-            <p class="h4" data-i18n="ms.corp.mix">Indoor, Outdoor or Full Access, mixed as your team needs.</p>
           </div>
         </div>
       </div>

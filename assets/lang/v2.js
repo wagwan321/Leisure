@@ -463,3 +463,23 @@ TLC_add({
     "vs.h.season": "Leisure Island · saison"
   }
 });
+
+/* Second owner review (Oct 2026): AR / FR for the new interactive sections. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "fp.free": "مجاني",
+    "by.from": "ابتداءً من",
+    "evx.title": "يومك، <em>في النادي.</em>",
+    "evx.ask": "اسأل عن موعد",
+    "evx.bapcom": "عمادة ومناولة أولى",
+    "mem.more": "كل تفاصيل العضويات"
+  },
+  fr: {
+    "fp.free": "Gratuit",
+    "by.from": "À partir de",
+    "evx.title": "Votre journée, <em>au club.</em>",
+    "evx.ask": "Demander une date",
+    "evx.bapcom": "Baptême et première communion",
+    "mem.more": "Tous les détails des abonnements"
+  }
+});
