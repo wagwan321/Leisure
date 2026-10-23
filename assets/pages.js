@@ -82,6 +82,21 @@
     update();
   }
 
+  // ---------- Our Story: the brush stroke paints itself down as you read the timeline ----------
+  var brush = document.querySelector(".legacy__brush");
+  if (brush) {
+    var right = brush.closest(".legacy__right"), bt = false;
+    function paint() {
+      bt = false;
+      var r = right.getBoundingClientRect(), vh = window.innerHeight;
+      var p = (vh * 0.75 - r.top) / Math.max(1, r.height - vh * 0.35);
+      brush.style.setProperty("--paint", Math.max(0, Math.min(1.12, p)).toFixed(3));
+    }
+    window.addEventListener("scroll", function () { if (!bt) { bt = true; requestAnimationFrame(paint); } }, { passive: true });
+    window.addEventListener("resize", paint);
+    paint();
+  }
+
   // ---------- Aquatics: each section's big number rises as it arrives ----------
   var numbered = document.querySelectorAll("section[data-num]");
   if (numbered.length) {
