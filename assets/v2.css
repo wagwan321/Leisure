@@ -804,24 +804,16 @@ html[data-motion="still"] .planner__card.is-bump { animation: none; }
 .evband { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 2rem; }
 .evband__list { margin-block-start: 1rem; font-size: var(--t-lg); font-weight: 500; opacity: .9; }
 
-/* ---------- Our Story: all-text timeline, the old crumpled paper on the right ---------- */
-@media (min-width: 900px) {
-  .legacy--paper { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
-  .legacy--paper .legacy__list { order: 1; }
-  .legacy--paper .legacy__year {
-    order: 2; display: grid; align-content: end; gap: .5rem;
-    height: calc(100vh - var(--header-h, 84px) - 120px); min-height: 520px;
-    padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); border-radius: 4px;
-    background: #E8D9BC image-set(url("../images/site/story-paper-700.webp") 1x, url("../images/site/story-paper-1050.webp") 2x) center / cover no-repeat;
-    box-shadow: 0 30px 60px rgba(60,40,20,.22), 0 2px 6px rgba(60,40,20,.15);
-    rotate: -1.2deg;
-  }
-  .legacy--paper .legacy__year b { color: #3B2A17; mix-blend-mode: multiply; text-shadow: 0 1px 0 rgba(255,250,235,.4); }
-  .legacy--paper .legacy__year span { color: #3B2A17; font-weight: 600; }
+/* ---------- Our Story: behind the timeline text, a vertical brush stroke of old club photos ---------- */
+.legacy__right { position: relative; }
+.legacy__right > .legacy__list { position: relative; z-index: 1; }
+.legacy__brush {
+  position: sticky; z-index: 0; top: calc(var(--header-h, 84px) + 30px);
+  height: calc(100vh - var(--header-h, 84px) - 60px); margin-block-end: calc(-100vh + var(--header-h, 84px) + 60px);
+  background: image-set(url("../images/site/story-brush-600.webp") 1x, url("../images/site/story-brush-900.webp") 2x) right center / contain no-repeat;
+  opacity: .5; pointer-events: none;
 }
-.legacy--paper .era { padding-block-end: clamp(2.5rem, 2rem + 3vw, 4rem); }
-.legacy--paper .era h3 { font-size: var(--t-xl); }
-.legacy--paper .era p { font-size: var(--t-md); }
+@media (max-width: 899px) { .legacy__brush { opacity: .28; background-position: center; } }
 
 /* ---------- Hospitality & Events: occasion panels, slanted the other way from Community ---------- */
 .occs { display: grid; gap: .75rem; }
