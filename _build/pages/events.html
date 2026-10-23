@@ -75,6 +75,45 @@ scripts: assets/lang/events.js
       </div>
     </section>
 
+    <!-- Occasions: diagonal panels, slanted the other way from Community -->
+    <section class="section section--contrast" id="occasions" aria-labelledby="occ-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow eyebrow--dot" data-reveal data-i18n="ev.title">Book your event</span>
+            <h2 class="h2" id="occ-title" data-reveal data-i18n-html="evx.title">Your day, <em>at the club.</em></h2>
+          </div>
+        </div>
+        <div class="occs" data-reveal>
+          <a class="occ occ--beige" href="#plan" data-plan-occ="wedding">
+            <span class="occ__art" aria-hidden="true">W</span>
+            <span class="occ__no" aria-hidden="true">01</span>
+            <span class="occ__body"><span class="occ__name" data-i18n="ev.wedding">Wedding</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
+          </a>
+          <a class="occ" href="#plan" data-plan-occ="birthday">
+            <ph r="free" tag="Video" t="Birthday" video="loop-tables" pos="50% 50%" alt="Tables set by the pool and guests arriving for a party"/>
+            <span class="occ__no" aria-hidden="true">02</span>
+            <span class="occ__body"><span class="occ__name" data-i18n="ev.birthday">Birthday</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
+          </a>
+          <a class="occ" href="#plan" data-plan-occ="teen">
+            <ph r="free" t="Teenage pool party" img="foam-party" pos="50% 45%" alt="A foam party at Leisure Island" sz="(min-width: 800px) 30vw, 100vw"/>
+            <span class="occ__no" aria-hidden="true">03</span>
+            <span class="occ__body"><span class="occ__name" data-i18n="ev.teen">Teenage pool party</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
+          </a>
+          <a class="occ occ--olive" href="#plan" data-plan-occ="baptism">
+            <span class="occ__art" aria-hidden="true">&amp;</span>
+            <span class="occ__no" aria-hidden="true">04</span>
+            <span class="occ__body"><span class="occ__name" data-i18n="evx.bapcom">Baptism &amp; first communion</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
+          </a>
+          <a class="occ" href="#plan" data-plan-occ="bachelor">
+            <ph r="free" t="Bachelor party" img="bar-counter" pos="50% 50%" alt="The bar counter at the club" sz="(min-width: 800px) 30vw, 100vw"/>
+            <span class="occ__no" aria-hidden="true">05</span>
+            <span class="occ__body"><span class="occ__name" data-i18n="ev.bachelor">Bachelor party</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Plan your event: builds the WhatsApp message -->
     <section class="section" id="plan" aria-labelledby="plan-title">
       <div class="wrap">

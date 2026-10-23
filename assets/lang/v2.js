@@ -605,3 +605,6 @@ TLC_add({
 
 /* Oct 2026: memberships event banner. DRAFT for native review. */
 TLC_add({ ar: { "evp.plan": "خطّط لمناسبتك" }, fr: { "evp.plan": "Planifier votre événement" } });
+
+/* Oct 2026. DRAFT for native review. */
+TLC_add({ ar: { "li2.toevents": "الأعراس والمناسبات" }, fr: { "li2.toevents": "Mariages et événements" } });

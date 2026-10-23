@@ -803,3 +803,47 @@ html[data-motion="still"] .planner__card.is-bump { animation: none; }
 .planner__media { position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; margin-block-end: .5rem; }
 .evband { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 2rem; }
 .evband__list { margin-block-start: 1rem; font-size: var(--t-lg); font-weight: 500; opacity: .9; }
+
+/* ---------- Our Story: all-text timeline, the old crumpled paper on the right ---------- */
+@media (min-width: 900px) {
+  .legacy--paper { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .legacy--paper .legacy__list { order: 1; }
+  .legacy--paper .legacy__year {
+    order: 2; display: grid; align-content: end; gap: .5rem;
+    height: calc(100vh - var(--header-h, 84px) - 120px); min-height: 520px;
+    padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); border-radius: 4px;
+    background: #E8D9BC image-set(url("../images/site/story-paper-700.webp") 1x, url("../images/site/story-paper-1050.webp") 2x) center / cover no-repeat;
+    box-shadow: 0 30px 60px rgba(60,40,20,.22), 0 2px 6px rgba(60,40,20,.15);
+    rotate: -1.2deg;
+  }
+  .legacy--paper .legacy__year b { color: #3B2A17; mix-blend-mode: multiply; text-shadow: 0 1px 0 rgba(255,250,235,.4); }
+  .legacy--paper .legacy__year span { color: #3B2A17; font-weight: 600; }
+}
+.legacy--paper .era { padding-block-end: clamp(2.5rem, 2rem + 3vw, 4rem); }
+.legacy--paper .era h3 { font-size: var(--t-xl); }
+.legacy--paper .era p { font-size: var(--t-md); }
+
+/* ---------- Hospitality & Events: occasion panels, slanted the other way from Community ---------- */
+.occs { display: grid; gap: .75rem; }
+@media (min-width: 800px) {
+  .occs { display: flex; gap: 0; height: clamp(460px, 44vw, 620px); padding-inline: 3%; }
+  .occ { flex: 1 1 0; min-width: 0; margin-inline: -1.6%; clip-path: polygon(0 0, 86% 0, 100% 100%, 14% 100%); transition: flex-grow .7s var(--ease), filter .4s var(--ease); }
+  html[dir="rtl"] .occ { clip-path: polygon(14% 0, 100% 0, 86% 100%, 0 100%); }
+  .occs:hover .occ:not(:hover) { filter: grayscale(.6) brightness(.72); }
+  .occ:hover { flex-grow: 1.7; }
+}
+.occ { position: relative; display: block; overflow: hidden; min-height: 320px; color: #fff; background: #262626; }
+.occ .ph { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.occ::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.05) 60%); pointer-events: none; }
+.occ--beige { background: var(--island-sun); color: #191919; }
+.occ--olive { background: var(--island-lagoon); }
+.occ--beige::after, .occ--olive::after { background: none; }
+.occ__art { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-serif); font-style: italic; font-size: clamp(7rem, 4rem + 8vw, 13rem); line-height: 1; opacity: .25; }
+.occ__no { position: absolute; z-index: 2; inset-block-start: 1.25rem; inset-inline-start: 18%; font-size: clamp(2.5rem, 1.6rem + 3vw, 4.5rem); font-weight: 700; line-height: .8; letter-spacing: -.05em; color: transparent; -webkit-text-stroke: 2px #fff; }
+.occ--beige .occ__no { -webkit-text-stroke-color: #191919; }
+.occ__body { position: absolute; z-index: 2; inset-inline: 0; inset-block-end: 0; padding: 1.5rem 12% 1.75rem 22%; display: grid; gap: .5rem; }
+html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
+.occ__name { font-size: clamp(1.4rem, 1rem + 1.2vw, 2.2rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.05; }
+.occ__go { justify-self: start; font-size: var(--t-sm); font-weight: 700; padding: .35rem .8rem; border-radius: 99px; background: var(--red); color: #fff; opacity: 0; transform: translateY(8px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
+.occ:hover .occ__go, .occ:focus-visible .occ__go { opacity: 1; transform: none; }
+@media (max-width: 799px) { .occ__body { padding: 1.25rem; } .occ__no { inset-inline-start: 1.25rem; } .occ__go { opacity: 1; transform: none; } }
