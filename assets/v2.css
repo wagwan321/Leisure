@@ -808,15 +808,15 @@ html[data-motion="still"] .planner__card.is-bump { animation: none; }
 .legacy__right { position: relative; }
 .legacy__track { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 @media (min-width: 900px) {
-  .legacy__track { inset-inline: 38% calc(var(--gutter) * -1); }
-  .legacy__right > .legacy__list { max-width: 56%; }
-  .legacy__right .era p { text-shadow: 0 0 12px var(--bg), 0 0 4px var(--bg); }
+  .legacy__track { inset-inline: 30% calc(var(--gutter) * -1); }
+  .legacy__right > .legacy__list { max-width: 50%; }
+  .legacy__right .era > * { position: relative; justify-self: start; background: rgba(246,245,242,.9); box-shadow: 0 0 0 .35rem rgba(246,245,242,.9); border-radius: 2px; }
 }
 .legacy__right > .legacy__list { position: relative; z-index: 1; }
 .legacy__brush {
   position: sticky; z-index: 0; top: calc(var(--header-h, 84px) + 12px);
   height: min(calc(100vh - var(--header-h, 84px) - 24px), 100%);
-  background: image-set(url("../images/site/story-brush-600.webp") 1x, url("../images/site/story-brush-900.webp") 2x) right center / auto 118% no-repeat;
+  background: image-set(url("../images/site/story-brush-600.webp") 1x, url("../images/site/story-brush-900.webp") 2x) right center / min(46vw, 84vh) 100% no-repeat;
   opacity: .92; pointer-events: none;
   --paint: 0;
   -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(var(--paint) * 100%), transparent calc(var(--paint) * 100% + 9%));
