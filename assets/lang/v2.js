@@ -602,3 +602,6 @@ TLC_add({
     "evp.m.jul": "Juil.", "evp.m.aug": "Août", "evp.m.sep": "Sept.", "evp.m.oct": "Oct.", "evp.m.nov": "Nov.", "evp.m.dec": "Déc."
   }
 });
+
+/* Oct 2026: memberships event banner. DRAFT for native review. */
+TLC_add({ ar: { "evp.plan": "خطّط لمناسبتك" }, fr: { "evp.plan": "Planifier votre événement" } });

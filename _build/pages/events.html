@@ -20,6 +20,9 @@ scripts: assets/lang/events.js
             <span data-i18n="evh.w6">a teenage pool party.</span>
           </span>
         </h1>
+        <div class="evhero__media" aria-hidden="true">
+          <ph r="free" tag="Video" t="Birthday by the pool" video="loop-birthday" pos="50% 50%" alt="Two friends hugging next to a birthday cake by the pool"/>
+        </div>
         <div class="evhero__call">
           <a class="btn btn--red" href="#plan" data-i18n="ev.title">Book your event</a>
           <a class="evhero__phone" href="tel:+9613478200" dir="ltr">03 478 200</a>
@@ -47,7 +50,7 @@ scripts: assets/lang/events.js
           <div class="menuboard__media" aria-hidden="true">
             <div class="menuboard__layer is-active"><ph r="free" t="The Grill House" img="burger-plate" pos="50% 45%" alt="A burger and fries from the Grill House" sz="(min-width: 900px) 45vw, 100vw"/></div>
             <div class="menuboard__layer menuboard__layer--type menuboard__layer--beige"><span>Pool Bar</span></div>
-            <div class="menuboard__layer menuboard__layer--type menuboard__layer--olive"><span>Bianco Bar</span></div>
+            <div class="menuboard__layer"><ph r="free" t="Bianco Bar" img="bianco-bar" pos="45% 50%" alt="Guests dancing at the Bianco Bar" sz="(min-width: 900px) 45vw, 100vw"/></div>
             <div class="menuboard__layer"><ph r="free" t="Leisure Treats" img="bubble-tea" pos="50% 40%" alt="A bubble tea in a Leisure Club shirt" sz="(min-width: 900px) 45vw, 100vw"/></div>
             <div class="menuboard__layer"><ph r="free" tag="Video" t="Catering" video="loop-catering" pos="50% 50%" alt="Platters of food laid out for a party"/></div>
           </div>
@@ -58,7 +61,7 @@ scripts: assets/lang/events.js
     <!-- Weddings -->
     <section class="section section--contrast evwed" id="weddings" aria-labelledby="wed-title">
       <div class="wrap evwed__grid">
-        <div class="evwed__mono" aria-hidden="true">&amp;</div>
+        <div class="evwed__media" data-reveal><ph r="free" t="Leisure Island from the air" img="island-aerial" pos="50% 50%" alt="Leisure Island from the air: pools, gardens and terraces among the pines" sz="(min-width: 900px) 42vw, 100vw"/></div>
         <div class="show__text">
           <span class="eyebrow eyebrow--dot" data-reveal data-i18n="ev.w.eyebrow">Weddings</span>
           <h2 class="h2" id="wed-title" data-reveal data-i18n-html="evx.w.title">Say yes <em>among the pines.</em></h2>
@@ -109,6 +112,7 @@ scripts: assets/lang/events.js
             </div>
           </div>
           <div class="planner__card">
+            <div class="planner__media" aria-hidden="true"><ph r="free" tag="Video" t="A party by the pool" video="loop-party" pos="50% 50%" alt="Guests around a birthday cake by the pool"/></div>
             <span class="planner__tag" data-i18n="evp.your">Your event</span>
             <p class="planner__occ" data-out-occ>Wedding</p>
             <p class="planner__meta"><span data-out-month></span><span data-out-guests></span></p>

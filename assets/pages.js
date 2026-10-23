@@ -82,15 +82,15 @@
     update();
   }
 
-  // ---------- Aquatics: a drop falls into a calm water line when each divider comes into view ----------
-  var splashes = document.querySelectorAll(".splash");
-  if (splashes.length) {
+  // ---------- Aquatics: each section's big number rises as it arrives ----------
+  var numbered = document.querySelectorAll("section[data-num]");
+  if (numbered.length) {
     if ("IntersectionObserver" in window) {
-      var sio = new IntersectionObserver(function (es) {
-        es.forEach(function (e) { e.target.classList.toggle("is-in", e.isIntersecting); });
-      }, { threshold: 0.8 });
-      splashes.forEach(function (s) { sio.observe(s); });
-    } else { splashes.forEach(function (s) { s.classList.add("is-in"); }); }
+      var nio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); nio.unobserve(e.target); } });
+      }, { threshold: 0.2 });
+      numbered.forEach(function (n) { nio.observe(n); });
+    } else { numbered.forEach(function (n) { n.classList.add("is-in"); }); }
   }
 
   // ---------- Hospitality & Events: the occasion in the title keeps changing ----------

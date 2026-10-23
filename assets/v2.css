@@ -709,38 +709,14 @@ html[dir="rtl"] .track__fill { transform-origin: right; }
 }
 
 /* ---------- Aquatics: water you can touch, and pool-floor light ---------- */
-/* water line between sections: a drop falls, rings spread, the surface settles */
-.splash { position: relative; height: clamp(110px, 9vw, 150px); background: var(--bg); overflow: hidden; }
-.splash::before { content: ""; position: absolute; inset-inline: var(--gutter); top: 68%; height: 1.5px; background: #191919; opacity: .85; }
-.splash__drop { position: absolute; left: var(--x); top: 68%; width: 9px; height: 13px; margin: -13px 0 0 -4.5px; border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%; background: #1E6E9A; opacity: 0; }
-.splash__ring { position: absolute; left: var(--x); top: 68%; width: 440px; height: 40px; margin: -20px 0 0 -220px; border: 2px solid #1E6E9A; border-radius: 50%; opacity: 0; transform: scale(0); }
-html:not([data-motion="still"]) .splash.is-in .splash__drop { animation: dropFall 7s cubic-bezier(.55,0,1,.45) infinite; }
-html:not([data-motion="still"]) .splash.is-in .splash__ring { animation: ringOut 7s cubic-bezier(.15,.6,.3,1) infinite; }
-html:not([data-motion="still"]) .splash.is-in .splash__ring:nth-of-type(3) { animation-delay: .22s; }
-html:not([data-motion="still"]) .splash.is-in .splash__ring:nth-of-type(4) { animation-delay: .44s; }
-@keyframes dropFall {
-  0% { opacity: 0; transform: translateY(-70px); }
-  2% { opacity: 1; }
-  9% { opacity: 1; transform: translateY(0); }
-  10%, 100% { opacity: 0; transform: translateY(0); }
-}
-@keyframes ringOut {
-  0%, 9% { opacity: 0; transform: scale(0); }
-  10% { opacity: .9; transform: scale(.04); }
-  28% { opacity: .55; }
-  46% { opacity: 0; transform: scale(1); }
-  100% { opacity: 0; transform: scale(1); }
-}
-
-.pool-light { position: relative; overflow: hidden; background: #0B2533; }
-.pool-light > .wrap { position: relative; z-index: 1; }
-.caustics { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-.caustics i { position: absolute; inset: 0; background: url("../images/site/caustics.png") 0 0 / 560px repeat; mix-blend-mode: screen; opacity: .32; }
-.caustics i + i { background-size: 820px; opacity: .22; }
-html:not([data-motion="still"]) .caustics i { animation: causticA 26s linear infinite; }
-html:not([data-motion="still"]) .caustics i + i { animation: causticB 38s linear infinite; }
-@keyframes causticA { to { background-position: 560px 280px; } }
-@keyframes causticB { to { background-position: -820px 410px; } }
+/* Aquatics: clean transitions, a large section number rises as each section arrives */
+section[data-num] { position: relative; overflow: hidden; }
+section[data-num] > .wrap { position: relative; z-index: 1; }
+.bignum { position: absolute; z-index: 0; inset-block-start: clamp(1rem, .5rem + 2vw, 3rem); inset-inline-end: var(--gutter); font-size: clamp(7rem, 4rem + 12vw, 17rem); font-weight: 700; letter-spacing: -.06em; line-height: .8; color: transparent; -webkit-text-stroke: 2px #191919; opacity: .3; pointer-events: none; font-variant-numeric: tabular-nums; }
+.section--contrast .bignum, .island .bignum { opacity: .4; -webkit-text-stroke-color: #F6F5F2; }
+.js:not([data-motion="still"]) .bignum { transform: translateY(40%); opacity: 0; transition: transform 1.2s cubic-bezier(.2,.7,.1,1), opacity 1.2s ease; }
+.js:not([data-motion="still"]) section.is-in > .bignum { transform: none; opacity: .3; }
+.js:not([data-motion="still"]) .section--contrast.is-in > .bignum, .js:not([data-motion="still"]) .island.is-in > .bignum { opacity: .4; }
 
 /* ---------- Community: medal wall that tilts ---------- */
 .medals { perspective: 1200px; }
@@ -812,3 +788,18 @@ html[data-motion="still"] .planner__card.is-bump { animation: none; }
 .planner__meta span { background: rgba(255,255,255,.18); border-radius: 99px; padding: .35rem .8rem; font-weight: 600; font-size: var(--t-sm); }
 .planner__go { --b-bg: #fff; --b-ink: #191919; --b-line: #fff; justify-content: center; margin-block-start: .75rem; }
 .planner__phone { text-align: center; font-size: var(--t-lg); font-weight: 600; }
+
+/* events: pictures in every section */
+@media (min-width: 900px) {
+  .evhero .wrap { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); column-gap: clamp(2rem, 1rem + 3vw, 4rem); align-items: end; }
+  .evhero .wrap > :not(.evhero__media) { grid-column: 1; }
+  .evhero__media { grid-column: 2; grid-row: 1 / span 4; align-self: stretch; min-height: 520px; }
+}
+.evhero__media { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 5; }
+@media (min-width: 900px) { .evhero__media { aspect-ratio: auto; } }
+@media (max-width: 899px) { .evhero__media { margin-block-end: 2rem; max-height: 70vh; } }
+.evhero__media .ph, .evwed__media .ph, .planner__media .ph { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; }
+.evwed__media { position: relative; aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; }
+.planner__media { position: relative; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; margin-block-end: .5rem; }
+.evband { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 2rem; }
+.evband__list { margin-block-start: 1rem; font-size: var(--t-lg); font-weight: 500; opacity: .9; }
