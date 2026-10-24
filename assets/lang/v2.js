@@ -608,3 +608,9 @@ TLC_add({ ar: { "evp.plan": "خطّط لمناسبتك" }, fr: { "evp.plan": "Pl
 
 /* Oct 2026. DRAFT for native review. */
 TLC_add({ ar: { "li2.toevents": "الأعراس والمناسبات" }, fr: { "li2.toevents": "Mariages et événements" } });
+
+/* Oct 2026: classes are for Indoor and Full Access members. DRAFT for native review. */
+TLC_add({
+  ar: { "ms.cls.only": "لأعضاء الداخلي والدخول الكامل فقط", "ms.cls.incl": "مشمولة في هذه العضوية", "ms.cls.yes": "مشمولة · انظر أدناه", "ms.cls.no": "للداخلي والدخول الكامل فقط" },
+  fr: { "ms.cls.only": "Réservés aux membres Intérieur et Accès complet", "ms.cls.incl": "Inclus dans cet abonnement", "ms.cls.yes": "Inclus · voir ci-dessous", "ms.cls.no": "Intérieur et Accès complet uniquement" }
+});
