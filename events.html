@@ -28,8 +28,8 @@
       try { s = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
       var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
       d.dataset.theme = "paper"; // the brief's colour table (§04)
-      d.dataset.hero = q.get("hero") || s.hero || "framed";
-      var m = q.get("motion") || s.motion;
+      d.dataset.hero = q.get("hero") || "framed";
+      var m = q.get("motion");
       if (m) d.setAttribute("data-motion-chosen", "");
       d.dataset.motion = m || (reduce ? "still" : "expressive");
       d.classList.add("js");
@@ -341,35 +341,6 @@
     <a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a>
     <a href="memberships.html" data-i18n="nav.memberships">Memberships</a>
   </nav>
-
-  <!-- ===================== Design review panel (prototype only) ===================== -->
-  <div class="review" data-review lang="en" dir="ltr">
-    <div class="review__panel" id="review-panel" hidden>
-      <h2>Design options</h2>
-      <p>Prototype: try the motion and hero options live. Colours are the brief's table (§04).</p>
-      <fieldset>
-        <legend>Motion</legend>
-        <div class="seg">
-          <label><input type="radio" name="motion" value="still" /><span>Still</span></label>
-          <label><input type="radio" name="motion" value="quiet" /><span>Quiet</span></label>
-          <label><input type="radio" name="motion" value="expressive" /><span>Expressive</span></label>
-        </div>
-        <p class="review__hint" data-motion-hint></p>
-      </fieldset>
-      <fieldset>
-        <legend>Hero layout</legend>
-        <div class="seg">
-          <label><input type="radio" name="hero" value="bleed" /><span>Full-bleed film</span></label>
-          <label><input type="radio" name="hero" value="framed" /><span>Framed film</span></label>
-        </div>
-      </fieldset>
-      <div class="review__foot">
-        <a href="direction.html">Creative direction board →</a>
-        <button type="button" data-copy-link>Copy share link</button>
-      </div>
-    </div>
-    <button class="review__toggle" type="button" aria-expanded="false" aria-controls="review-panel">Design options</button>
-  </div>
 
   <!-- Motion libraries (used only by the Expressive level) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>

@@ -808,15 +808,16 @@ html[data-motion="still"] .planner__card.is-bump { animation: none; }
 .legacy__right { position: relative; }
 .legacy__track { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
 @media (min-width: 900px) {
-  .legacy:has(.legacy__track) { grid-template-columns: 4fr 8fr; }
-  .legacy__track { inset-inline: 40% calc(var(--gutter) * -.5); }
-  .legacy__right > .legacy__list { max-width: 40%; }
+  .legacy:has(.legacy__track) { grid-template-columns: 3fr 9fr; gap: clamp(2rem, 1rem + 2vw, 3.5rem); }
+  .legacy:has(.legacy__track) .legacy__year b { font-size: clamp(4.5rem, 2rem + 6vw, 9rem); }
+  .legacy__track { inset-inline: 36% calc(var(--gutter) * -1); }
+  .legacy__right > .legacy__list { max-width: 34%; }
 }
 .legacy__right > .legacy__list { position: relative; z-index: 1; }
 .legacy__brush {
-  position: sticky; z-index: 0; top: calc(var(--header-h, 84px) + 12px);
-  height: min(calc(100vh - var(--header-h, 84px) - 24px), 100%);
-  background: image-set(url("../images/site/story-lebanon-837.webp") 1x, url("../images/site/story-lebanon-1256.webp") 2x) right center / contain no-repeat;
+  position: sticky; z-index: 0; top: calc(var(--header-h, 84px) + 4px);
+  height: min(calc(100vh - var(--header-h, 84px) - 8px), 100%);
+  background: image-set(url("../images/site/story-lebanon-1035.webp") 1x, url("../images/site/story-lebanon-1553.webp") 2x) right center / contain no-repeat;
   opacity: .92; pointer-events: none;
   --paint: 0;
   -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(var(--paint) * 100%), transparent calc(var(--paint) * 100% + 9%));

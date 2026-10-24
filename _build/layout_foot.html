@@ -65,35 +65,6 @@
     <a href="memberships.html" data-i18n="nav.memberships">Memberships</a>
   </nav>
 
-  <!-- ===================== Design review panel (prototype only) ===================== -->
-  <div class="review" data-review lang="en" dir="ltr">
-    <div class="review__panel" id="review-panel" hidden>
-      <h2>Design options</h2>
-      <p>Prototype: try the motion and hero options live. Colours are the brief's table (§04).</p>
-      <fieldset>
-        <legend>Motion</legend>
-        <div class="seg">
-          <label><input type="radio" name="motion" value="still" /><span>Still</span></label>
-          <label><input type="radio" name="motion" value="quiet" /><span>Quiet</span></label>
-          <label><input type="radio" name="motion" value="expressive" /><span>Expressive</span></label>
-        </div>
-        <p class="review__hint" data-motion-hint></p>
-      </fieldset>
-      <fieldset>
-        <legend>Hero layout</legend>
-        <div class="seg">
-          <label><input type="radio" name="hero" value="bleed" /><span>Full-bleed film</span></label>
-          <label><input type="radio" name="hero" value="framed" /><span>Framed film</span></label>
-        </div>
-      </fieldset>
-      <div class="review__foot">
-        <a href="direction.html">Creative direction board →</a>
-        <button type="button" data-copy-link>Copy share link</button>
-      </div>
-    </div>
-    <button class="review__toggle" type="button" aria-expanded="false" aria-controls="review-panel">Design options</button>
-  </div>
-
   <!-- Motion libraries (used only by the Expressive level) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
