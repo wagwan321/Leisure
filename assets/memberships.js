@@ -144,6 +144,29 @@
     watch.forEach(function (el) { el.classList.add("is-in", "is-seen"); });
   }
 
+  // Free classes summary: counts and class names come from the one schedule file (assets/data/schedule.js)
+  function drawClasses() {
+    var box = document.querySelector("[data-clsum]");
+    if (!box || !window.TLC_SCHEDULE) return;
+    var lang = (window.TLC_i18n && window.TLC_i18n.current) || "en";
+    var t = function (k, f) { var v = window.TLC_i18n && window.TLC_i18n.t(k); return v != null ? v : f; };
+    var groups = { adults: [], kids: [] };
+    window.TLC_SCHEDULE.classes.forEach(function (c) {
+      var name = c.name[lang] || c.name.en;
+      if (groups[c.group] && groups[c.group].indexOf(name) < 0) groups[c.group].push(name);
+    });
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); };
+    ["adults", "kids"].forEach(function (g) {
+      var el = box.querySelector('[data-clsum-list="' + g + '"]');
+      if (el) el.innerHTML = groups[g].map(function (n, i) { return '<span style="--n:' + i + '">' + esc(n) + "</span>"; }).join("");
+    });
+    box.querySelector("[data-clsum-total]").textContent = groups.adults.length + groups.kids.length;
+    box.querySelector("[data-clsum-adults]").textContent = groups.adults.length + " " + t("cs.adults", "for adults");
+    box.querySelector("[data-clsum-kids]").textContent = groups.kids.length + " " + t("cs.kids", "for kids under 16");
+  }
+  drawClasses();
+  document.addEventListener("tlc:lang", drawClasses);
+
   var select = document.getElementById("ms-plan");
   // a membership page sends ?plan=… so the form opens with that plan chosen
   var wanted = new URLSearchParams(location.search).get("plan");

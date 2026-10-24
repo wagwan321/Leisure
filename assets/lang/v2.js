@@ -614,3 +614,9 @@ TLC_add({
   ar: { "ms.cls.only": "لأعضاء الداخلي والدخول الكامل فقط", "ms.cls.incl": "مشمولة في هذه العضوية", "ms.cls.yes": "مشمولة · انظر أدناه", "ms.cls.no": "للداخلي والدخول الكامل فقط" },
   fr: { "ms.cls.only": "Réservés aux membres Intérieur et Accès complet", "ms.cls.incl": "Inclus dans cet abonnement", "ms.cls.yes": "Inclus · voir ci-dessous", "ms.cls.no": "Intérieur et Accès complet uniquement" }
 });
+
+/* Oct 2026: free classes summary. DRAFT for native review. */
+TLC_add({
+  ar: { "cs.free": "حصة أسبوعية مجانية", "cs.adults": "للكبار", "cs.kids": "للأطفال دون 16 سنة", "cs.see": "اطّلع على جدول هذا الأسبوع" },
+  fr: { "cs.free": "cours hebdomadaires gratuits", "cs.adults": "pour adultes", "cs.kids": "pour enfants de moins de 16 ans", "cs.see": "Voir le planning de la semaine" }
+});

@@ -3,7 +3,7 @@ title: Indoor membership | The Leisure Club
 description: Indoor membership at The Leisure Club: gym, HYROX gym, indoor pool, jacuzzi, cold plunge, steam and sauna. Solo, duo and family prices, monthly or yearly.
 nav: memberships
 crumb: Indoor membership
-scripts: assets/lang/memberships.js, assets/memberships.js
+scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships.js
 -->
     <section class="mhero mhero--ink">
       <div class="wrap">
@@ -78,43 +78,17 @@ scripts: assets/lang/memberships.js, assets/memberships.js
             <h2 class="h2" id="pcls-title" data-reveal data-i18n-html="ms.cls.title">Included, <em>every week.</em></h2>
             <div class="pills" style="margin-block-start:1rem" data-reveal><span class="pill pill--fill" data-i18n="ms.cls.incl">Included with this membership</span></div>
           </div>
-          <a class="link-arrow" href="schedule.html" data-reveal data-i18n="f.sched">Weekly schedule</a>
         </div>
-        <div class="fclasses">
-          <div class="fclass fclass--kids" data-reveal>
-            <div class="fclass__head"><h3 data-i18n="ms.kids">Kids</h3><span data-i18n="ms.kids.age">Under 16</span></div>
-            <ul role="list">
-              <li><b data-i18n="cl.breakdance">Breakdance</b><span data-i18n="tt.k1">Sat · 09:00</span></li>
-              <li><b data-i18n="cl.latino">Latino dance</b><span data-i18n="tt.k2">Sat · 10:00</span></li>
-              <li><b data-i18n="cl.fitness">Fitness</b><span data-i18n="tt.k3">Sat · 11:00</span></li>
-              <li><b data-i18n="cl.ballet">C. Ballet</b><span data-i18n="tt.k4">Sat · 12:00</span></li>
-              <li><b data-i18n="cl.tkd">Taekwondo</b><span data-i18n-html="tt.k5">Tue &amp; Fri<small>Age 4–6 · 16:15 &nbsp;|&nbsp; Age 6–8 · 17:00 &nbsp;|&nbsp; Over 8 · 18:00</small></span></li>
-              <li><b data-i18n="cl.hiphop">Hip hop</b><span data-i18n="tt.k6">Wed · 17:00</span></li>
-              <li><b data-i18n="cl.gym">Gymnastics</b><span data-i18n="tt.k7">Thu · 18:00</span></li>
-              <li><b data-i18n="cl.kick">Kickboxing</b><span data-i18n="tt.k8">Wed · 18:00</span></li>
-              <li><b data-i18n="cl.basket">Basketball</b><span data-i18n-html="tt.k9">Thu<small>Age 6–8 · 17:00 &nbsp;|&nbsp; Over 8 · 18:00</small></span></li>
-              <li><b data-i18n="cl.foot">Football</b><span data-i18n-html="tt.k10">Fri<small>Age 6–8 · 17:00 &nbsp;|&nbsp; Over 8 · 18:00</small></span></li>
-              <li><b data-i18n="cl.run">Run Club</b><span data-i18n="tt.k11">Wed · 18:00 &nbsp;|&nbsp; Sat · 08:00</span></li>
-            </ul>
+        <div class="clsum" data-clsum data-reveal>
+          <div class="clsum__top">
+            <p class="clsum__count"><b data-clsum-total>25</b> <span data-i18n="cs.free">free weekly classes</span></p>
+            <p class="clsum__split"><span data-clsum-adults></span><span data-clsum-kids></span></p>
           </div>
-          <div class="fclass fclass--adults" data-reveal style="--i:1">
-            <div class="fclass__head"><h3 data-i18n="ms.adults">Adults</h3><span data-i18n="ms.adults.age">16 and over</span></div>
-            <ul role="list">
-              <li><b data-i18n="cl.aerobics">Aerobics</b><span data-i18n="tt.a1">Mon &amp; Wed · 09:00</span></li>
-              <li><b data-i18n="cl.oriental">Oriental</b><span data-i18n="tt.a2">Mon &amp; Wed · 10:00 &nbsp;|&nbsp; Tue &amp; Thu · 19:00</span></li>
-              <li><b data-i18n="cl.pilates">Mat Pilates</b><span data-i18n="tt.a3">Mon · 18:00</span></li>
-              <li><b>HYROX</b><span data-i18n="tt.a4">Thu · 08:00 &nbsp;|&nbsp; Mon · 19:00</span></li>
-              <li><b data-i18n="cl.run">Run Club</b><span data-i18n="tt.a5">Wed &amp; Thu · 19:00 &nbsp;|&nbsp; Sat · 07:00</span></li>
-              <li><b data-i18n="cl.kick">Kickboxing</b><span data-i18n="tt.a6">Wed · 19:00</span></li>
-              <li><b data-i18n="cl.aqua">Aqua gym</b><span data-i18n="tt.a7">Wed · 19:00 &nbsp;|&nbsp; Thu · 10:00</span></li>
-              <li><b data-i18n="cl.swim">Swim Club</b><span data-i18n="tt.a8">Mon &amp; Wed · 20:00</span></li>
-              <li><b data-i18n="cl.boxing">Boxing</b><span data-i18n="tt.a9">Tue &amp; Thu · 20:00</span></li>
-              <li><b>Body Combat</b><span data-i18n="tt.a10">Fri · 20:00</span></li>
-              <li><b>Grit</b><span data-i18n="tt.a11">Tue · 08:00</span></li>
-              <li><b data-i18n="cl.cali">Calisthenics</b><span data-i18n="tt.a12">Fri · 19:30</span></li>
-              <li><b>Body Shape</b><span data-i18n="tt.a13">Fri · 09:00 &amp; 19:00</span></li>
-            </ul>
+          <div class="clsum__groups">
+            <div class="clsum__group"><h3 data-i18n="ms.adults">Adults</h3><div class="clsum__tags" data-clsum-list="adults"></div></div>
+            <div class="clsum__group clsum__group--kids"><h3><span data-i18n="ms.kids">Kids</span> <small data-i18n="ms.kids.age">Under 16</small></h3><div class="clsum__tags" data-clsum-list="kids"></div></div>
           </div>
+          <a class="btn btn--solid clsum__go" href="schedule.html" data-i18n="cs.see">See this week's schedule</a>
         </div>
       </div>
     </section>

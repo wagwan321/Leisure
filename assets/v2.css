@@ -854,3 +854,21 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 .mplan__body > .mplan__go { margin-block-start: auto; }
 .mplan__body > .mplan__go + .btn { margin-block-start: 0; }
 .mplan__body > .btn { width: 100%; justify-content: center; }
+
+/* free classes summary (memberships, indoor, full access): names from the schedule file */
+.clsum { display: grid; gap: clamp(1.25rem, 1rem + 1.5vw, 2.25rem); background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: clamp(1.5rem, 1rem + 2vw, 3rem); }
+.clsum__top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 2rem; }
+.clsum__count { font-size: var(--t-xl); font-weight: 600; letter-spacing: -.02em; }
+.clsum__count b { font-size: clamp(3rem, 2rem + 4vw, 5.5rem); font-weight: 700; letter-spacing: -.05em; line-height: .9; color: var(--red); margin-inline-end: .35rem; }
+.clsum__split { display: flex; gap: .5rem; flex-wrap: wrap; }
+.clsum__split span { font-size: var(--t-sm); font-weight: 600; padding: .4rem .85rem; border-radius: 99px; background: var(--surface); }
+.clsum__groups { display: grid; gap: 1.5rem; }
+@media (min-width: 900px) { .clsum__groups { grid-template-columns: 1fr 1fr; gap: 2.5rem; } }
+.clsum__group h3 { font-size: var(--t-lg); font-weight: 700; margin-block-end: .8rem; }
+.clsum__group h3 small { font-size: var(--t-sm); font-weight: 600; color: var(--red); margin-inline-start: .35rem; }
+.clsum__tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+.clsum__tags span { font-size: var(--t-base); font-weight: 500; padding: .5rem 1rem; border-radius: 99px; border: 1px solid var(--line-strong); }
+.clsum__group--kids .clsum__tags span { border-color: rgba(230,32,40,.45); }
+.js:not([data-motion="still"]) .clsum.is-in .clsum__tags span { animation: tagIn .5s var(--ease) both; animation-delay: calc(var(--n) * 40ms); }
+@keyframes tagIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.clsum__go { justify-self: start; }
