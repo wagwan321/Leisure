@@ -849,3 +849,8 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 .occ__go { justify-self: start; font-size: var(--t-sm); font-weight: 700; padding: .35rem .8rem; border-radius: 99px; background: var(--red); color: #fff; opacity: 0; transform: translateY(8px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
 .occ:hover .occ__go, .occ:focus-visible .occ__go { opacity: 1; transform: none; }
 @media (max-width: 799px) { .occ__body { padding: 1.25rem; } .occ__no { inset-inline-start: 1.25rem; } .occ__go { opacity: 1; transform: none; } }
+
+/* membership cards: the buttons always line up along the bottom */
+.mplan__body > .mplan__go { margin-block-start: auto; }
+.mplan__body > .mplan__go + .btn { margin-block-start: 0; }
+.mplan__body > .btn { width: 100%; justify-content: center; }
