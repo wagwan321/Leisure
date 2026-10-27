@@ -754,8 +754,6 @@ html[dir="rtl"] .menuboard__item.is-active h3 { transform: translateX(-10px); }
 .menuboard__layer { position: absolute; inset: 0; opacity: 0; transition: opacity .6s var(--ease); }
 .menuboard__layer.is-active { opacity: 1; }
 .menuboard__layer .ph { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: 0; }
-.menuboard__layer--type { display: grid; place-items: center; text-align: center; padding: 2rem; }
-.menuboard__layer--type span { font-family: var(--font-serif); font-style: italic; font-size: clamp(3rem, 2rem + 4vw, 6rem); line-height: 1; }
 .menuboard__layer--beige { background: var(--island-sun); color: #191919; }
 .menuboard__layer--olive { background: var(--island-lagoon); color: #F6F5F2; }
 @media (max-width: 899px) { .menuboard__media { order: -1; aspect-ratio: 4 / 3; } }
