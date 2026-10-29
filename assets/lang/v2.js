@@ -620,3 +620,41 @@ TLC_add({
   ar: { "cs.free": "حصة أسبوعية مجانية", "cs.adults": "للكبار", "cs.kids": "للأطفال دون 16 سنة", "cs.see": "اطّلع على جدول هذا الأسبوع" },
   fr: { "cs.free": "cours hebdomadaires gratuits", "cs.adults": "pour adultes", "cs.kids": "pour enfants de moins de 16 ans", "cs.see": "Voir le planning de la semaine" }
 });
+
+/* Oct 2026: Escape bungalows, The Pilates Club, kids' Learn to Swim. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "li2.m8": "البنغالوهات",
+    "li2.esc.sticker": "بنغالوهات Escape", "li2.esc.eyebrow": "04 · الإقامة",
+    "li2.esc.title": "Escape <em>by The Leisure Island.</em>",
+    "li2.esc.p": "عطلة صيفية للعائلات، قريبة من بيروت. بنغالوهان بين أشجار الصنوبر، Orchid وJasmine، وLeisure Island على بُعد خطوات لقضاء النهار.",
+    "li2.esc.u1": "Orchid", "li2.esc.u2": "Jasmine",
+    "li2.esc.cta": "احجز إقامتك", "li2.esc.ask": "اسأل النادي",
+    "aq.ls.eyebrow2": "02 · تعليم السباحة · الأطفال",
+    "aq.ls.title2": "نعلّم الأطفال السباحة",
+    "aq.ls.p2": "يتعلّم الأطفال مع مدرّب في المياه الدافئة والهادئة للمسبح الداخلي المدفّأ، من أول طفو حتى الأشواط الكاملة، من المبتدئ إلى المتقدّم. الدروس خاصة، لسبّاح أو اثنين أو ثلاثة. ويمكن للكبار التعلّم أيضًا.",
+    "fp.pil.eyebrow": "03 · The Pilates Club",
+    "fp.pil.title": "تحرّك، تواصل، <em>واشعر بأفضل حال.</em>",
+    "fp.pil.p": "The Pilates Club استوديو دافئ داخل The Leisure Club، مع حصص Reformer وبيلاتس على البساط.",
+    "fp.pil.call": "اتصل للحجز", "fp.pil.mat": "بيلاتس على البساط · حصة أسبوعية مجانية",
+    "fp.pil.book": "الحجوزات", "fp.pil.when": "مواعيد الحصص",
+    "fp.pt.eyebrow3": "04 · التدريب الشخصي", "fp.well.eyebrow3": "05 · العافية والاستشفاء"
+  },
+  fr: {
+    "li2.m8": "Bungalows",
+    "li2.esc.sticker": "Bungalows Escape", "li2.esc.eyebrow": "04 · Séjour",
+    "li2.esc.title": "Escape <em>by The Leisure Island.</em>",
+    "li2.esc.p": "Une escapade d'été en famille, tout près de Beyrouth. Deux bungalows sous les pins, Orchid et Jasmine, avec Leisure Island à deux pas pour les journées.",
+    "li2.esc.u1": "Orchid", "li2.esc.u2": "Jasmine",
+    "li2.esc.cta": "Réserver votre séjour", "li2.esc.ask": "Contacter le club",
+    "aq.ls.eyebrow2": "02 · Apprendre à nager · Enfants",
+    "aq.ls.title2": "Apprendre aux enfants à nager",
+    "aq.ls.p2": "Les enfants apprennent avec un coach dans l'eau chaude et calme de la piscine intérieure chauffée, du premier flottement aux longueurs complètes, du débutant au confirmé. Cours particuliers, pour un, deux ou trois nageurs. Les adultes peuvent aussi apprendre.",
+    "fp.pil.eyebrow": "03 · The Pilates Club",
+    "fp.pil.title": "Bouger, se retrouver, <em>se sentir au mieux.</em>",
+    "fp.pil.p": "The Pilates Club est un studio chaleureux au sein de The Leisure Club, avec des séances Reformer et du Pilates au sol.",
+    "fp.pil.call": "Appeler pour réserver", "fp.pil.mat": "Pilates au sol · un cours hebdomadaire gratuit",
+    "fp.pil.book": "Réservations", "fp.pil.when": "Horaires des cours",
+    "fp.pt.eyebrow3": "04 · Coaching personnel", "fp.well.eyebrow3": "05 · Bien-être & récupération"
+  }
+});
