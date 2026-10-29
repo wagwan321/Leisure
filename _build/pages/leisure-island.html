@@ -126,10 +126,40 @@ scripts: assets/lang/island.js
             <span class="eyebrow" style="color:#fff" data-i18n="li2.esc.eyebrow">04 · Stay</span>
             <h2 id="escape-title" data-i18n-html="li2.esc.title">Escape <em>by The Leisure Island.</em></h2>
             <p data-i18n="li2.esc.p">A summer getaway for families, close to Beirut. Two bungalows among the pines, Orchid and Jasmine, with Leisure Island right there for the days.</p>
-            <div class="pills"><span class="pill" data-i18n="li2.esc.u1">Orchid</span><span class="pill" data-i18n="li2.esc.u2">Jasmine</span></div>
+            <div class="pills"><a class="pill" href="#orchid" data-i18n="li2.esc.u1">Orchid</a><a class="pill" href="#jasmine" data-i18n="li2.esc.u2">Jasmine</a></div>
             <div class="btns" style="display:flex;flex-wrap:wrap;gap:.75rem">
               <a class="btn btn--sun" href="https://www.instagram.com/escape.bytheleisureisland/" target="_blank" rel="noopener" data-i18n="li2.esc.cta">Book your stay</a>
               <a class="btn btn--light" href="visit.html#inquire" data-i18n="li2.esc.ask">Ask the club</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery template: one line per photo or film. "w" spans two columns, "t" two rows.
+             Swap a placeholder for img="name" (images/site/name-*.webp) or video="name" (video/site/name.mp4). -->
+        <div class="stay">
+          <div class="stay__unit" id="orchid" data-reveal>
+            <h3 class="stay__name" data-i18n="li2.esc.u1">Orchid</h3>
+            <div class="gal">
+              <div class="w t"><ph r="free" tag="Photo" t="Orchid · living space" b="Wide, from the door, daylight."/></div>
+              <div><ph r="free" tag="Photo" t="Orchid · bedroom" b="From the foot of the bed."/></div>
+              <div><ph r="free" tag="Video" t="Orchid · walk-through" b="One shot, 5 to 10 s, slow."/></div>
+            </div>
+          </div>
+          <div class="stay__unit" id="jasmine" data-reveal style="--i:1">
+            <h3 class="stay__name" data-i18n="li2.esc.u2">Jasmine</h3>
+            <div class="gal">
+              <div class="w t"><ph r="free" tag="Photo" t="Jasmine · living space" b="Wide, from the door, daylight."/></div>
+              <div><ph r="free" tag="Photo" t="Jasmine · bedroom" b="From the foot of the bed."/></div>
+              <div><ph r="free" tag="Video" t="Jasmine · walk-through" b="One shot, 5 to 10 s, slow."/></div>
+            </div>
+          </div>
+          <div class="stay__unit stay__unit--all" data-reveal>
+            <h3 class="stay__name" data-i18n="li2.esc.around">Around the bungalows</h3>
+            <div class="gal gal--4">
+              <div class="t"><ph r="free" tag="Photo" t="The terrace" b="Seating, with the trees behind."/></div>
+              <div class="w"><ph r="free" tag="Photo" t="The view" b="From the terrace, landscape."/></div>
+              <div class="t"><ph r="free" tag="Video" t="Evening" b="Lights on, one shot, 5 to 10 s."/></div>
+              <div class="w"><ph r="free" tag="Photo" t="Leisure Island next door" b="A bungalow with the pools in view."/></div>
             </div>
           </div>
         </div>
