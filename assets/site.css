@@ -712,6 +712,9 @@ html:not([data-motion="still"]) .it:hover .ph > img { scale: 1.03; }
 .split-word > span { display: inline-block; }
 .js[data-motion="expressive"] .hero.is-ready .split-word > span { animation: rise 1.2s var(--ease) both; animation-delay: calc(var(--w) * 110ms + 200ms); }
 .js[data-motion="quiet"] .hero.is-ready .hero__content { animation: fade 1.2s var(--ease) both .15s; }
+/* framed hero: the headline is positioned against .hero, so the content fade must not use transform */
+.js[data-motion="quiet"][data-hero="framed"] .hero.is-ready .hero__content { animation-name: fadeonly; }
+@keyframes fadeonly { from { opacity: 0; } }
 @keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
 @keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
