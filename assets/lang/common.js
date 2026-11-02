@@ -22,7 +22,7 @@
     "nav.island": "ليجر آيلاند",
     "nav.community": "المجتمع",
     "nav.memberships": "العضويات",
-    "menu": "القائمة",
+    "menu": "القائمة", "tab.sched": "الجدول",
     "cta.whatsapp": "راسلنا على واتساب",
 
     "hero.eyebrow": "ديك المحدي، لبنان · منذ ١٩٩١",
@@ -187,7 +187,7 @@
     "nav.island": "Leisure Island",
     "nav.community": "Communauté",
     "nav.memberships": "Abonnements",
-    "menu": "Menu",
+    "menu": "Menu", "tab.sched": "Planning",
     "cta.whatsapp": "Écrivez-nous sur WhatsApp",
 
     "hero.eyebrow": "Dik el-Mehdi, Liban · Depuis 1991",

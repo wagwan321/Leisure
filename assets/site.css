@@ -631,18 +631,34 @@ html[lang="ar"] .footer__cols h3 { letter-spacing: 0; }
 .footer__cols a:hover { color: var(--red-text); }
 .footer__bottom { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; padding-block-start: 1.5rem; font-size: var(--t-xs); color: var(--muted-ink); }
 
-/* ---------- Mobile conversion bar ---------- */
-.mobile-cta {
-  position: fixed; inset-inline: 0; bottom: 0; z-index: 80;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-  background: var(--line); border-top: 1px solid var(--line);
-  transform: translateY(100%); transition: transform .5s var(--ease);
-  padding-bottom: env(safe-area-inset-bottom);
+/* ---------- Phone tab bar (like an app; always there under 900px) ---------- */
+:root { --tabbar: 0px; }
+.tabbar { display: none; }
+@media (max-width: 899px) {
+  :root { --tabbar: calc(62px + env(safe-area-inset-bottom)); }
+  .site-footer { padding-block-end: calc(2rem + var(--tabbar)); }
+  .tabbar {
+    position: fixed; inset: auto 0 0; z-index: 80; display: grid; grid-template-columns: repeat(5, 1fr);
+    height: var(--tabbar); padding: 0 4px env(safe-area-inset-bottom);
+    background: rgba(246,245,242,.96); border-top: 1px solid var(--line);
+    -webkit-backdrop-filter: saturate(1.4) blur(10px); backdrop-filter: saturate(1.4) blur(10px);
+  }
+  .tab {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 0;
+    color: #6B6B6B; font: inherit; font-size: 10.5px; font-weight: 600; background: none; border: 0; padding: 0;
+    -webkit-tap-highlight-color: transparent; cursor: pointer;
+  }
+  .tab > span:last-child { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tab svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .3s var(--ease); }
+  .tab:active svg { transform: scale(.88); }
+  .tab.is-current { color: var(--ink); }
+  .tab__plate { display: grid; place-items: center; width: 38px; height: 38px; margin-block: -16px 0; border-radius: 50%; background: var(--red); color: #fff; box-shadow: 0 0 0 4px rgba(246,245,242,.96); }
+  .tab__plate svg { width: 19px; height: 19px; }
+  .tab--main { color: var(--ink); }
 }
-.mobile-cta.is-visible { transform: none; }
-.mobile-cta a { display: flex; align-items: center; justify-content: center; min-height: 56px; background: var(--bg); font-size: var(--t-sm); font-weight: 500; }
-.mobile-cta a:last-child { background: var(--ink); color: var(--bg); }
-@media (min-width: 900px) { .mobile-cta { display: none; } }
+@media (max-width: 374px) { .tab { font-size: 9.5px; letter-spacing: -.01em; } }
+
+
 
 /* ==========================================================================
    Review panel — design options for the client (remove before launch)
@@ -651,7 +667,7 @@ html[lang="ar"] .footer__cols h3 { letter-spacing: 0; }
   position: fixed; inset-inline-end: 1rem; bottom: 1rem; z-index: 150;
   font-family: "Inter", system-ui, sans-serif; font-size: 13px; color: #191919;
 }
-@media (max-width: 899px) { .review { bottom: calc(68px + env(safe-area-inset-bottom)); } }
+@media (max-width: 899px) { .review { bottom: calc(var(--tabbar) + 8px); } }
 .review__toggle {
   display: inline-flex; align-items: center; gap: .5rem;
   background: #191919; color: #F6F5F2; border: 1px solid #858585; border-radius: 99px;
@@ -761,16 +777,20 @@ html[data-motion="expressive"] .progress { display: block; }
 }
 html[lang="ar"] .statement { letter-spacing: 0; line-height: 1.4; }
 
-/* Explore — mobile: native swipe carousel (all motion levels) */
+/* Explore — phone: all five on one screen, one wide tile and a 2 x 2 grid */
 @media (max-width: 759px) {
-  .gateways {
-    display: flex; gap: .9rem; overflow-x: auto; scroll-snap-type: x mandatory;
-    margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter);
-    scrollbar-width: none; overscroll-behavior-x: contain;
-  }
-  .gateways::-webkit-scrollbar { display: none; }
-  .gw { flex: 0 0 82%; scroll-snap-align: start; }
-  .gw .ph { aspect-ratio: 4 / 5; }
+  .gateways { grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .gw { position: relative; overflow: hidden; border-radius: var(--radius); color: #fff; }
+  .gw:first-child { grid-column: 1 / -1; }
+  .gw__media { border-radius: 0; }
+  .gw .ph { aspect-ratio: auto; height: 44vw; }
+  .gw:first-child .ph { height: 40vw; }
+  .explore { padding-block-start: 2.5rem; }
+  .explore .section-head { margin-block-end: 1.25rem; }
+  .gw__meta { position: absolute; inset: auto 0 0; z-index: 1; margin: 0; gap: .1rem; padding: 2.5rem .8rem .7rem; background: linear-gradient(to top, rgba(0,0,0,.62), rgba(0,0,0,0)); }
+  .gw__no { color: rgba(255,255,255,.85); }
+  .gateways .gw__title { font-size: 1.05rem; font-weight: 600; letter-spacing: -.01em; line-height: 1.15; }
+  .gw__go { display: none; }
 }
 
 /* Explore — desktop expressive: pinned horizontal gallery */

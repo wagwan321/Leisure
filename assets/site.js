@@ -98,6 +98,11 @@
     });
   });
   toggle.addEventListener("click", function () { setMenu(!doc.classList.contains("menu-open")); });
+  /* phone tab bar: the Menu tab opens the same menu; the current page's tab is marked */
+  var tabMenu = document.querySelector("[data-tab-menu]");
+  if (tabMenu) tabMenu.addEventListener("click", function () { setMenu(true); });
+  var curTab = document.querySelector('.tabbar [data-tab="' + document.body.dataset.page + '"]');
+  if (curTab) { curTab.classList.add("is-current"); curTab.setAttribute("aria-current", "page"); }
   menu.querySelector("[data-menu-close]").addEventListener("click", function () { setMenu(false); toggle.focus(); });
   menu.addEventListener("click", function (e) {
     if (e.target.closest("a")) closeMenu();
