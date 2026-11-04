@@ -658,3 +658,19 @@ TLC_add({
     "fp.pt.eyebrow3": "04 · Coaching personnel", "fp.well.eyebrow3": "05 · Bien-être & récupération"
   }
 });
+
+/* Nov 2026: Center classes, HYROX personal training, what a trainer can help with. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "hapc.n": "حصص في المركز كل أسبوع", "hapc.pt": "تدريب شخصي لـ HYROX",
+    "fp.pt.g0": "بماذا يمكن أن يساعدك مدرّبك",
+    "fp.pt.g1": "إنقاص الوزن", "fp.pt.g2": "قوة الجسم بالكامل", "fp.pt.g3": "الوقاية من الإصابات",
+    "fp.pt.g4": "إعادة التأهيل بعد الإصابة", "fp.pt.g5": "القوة والتكييف البدني"
+  },
+  fr: {
+    "hapc.n": "cours au Centre chaque semaine", "hapc.pt": "Coaching personnel HYROX",
+    "fp.pt.g0": "Ce que votre coach peut vous apporter",
+    "fp.pt.g1": "Perte de poids", "fp.pt.g2": "Force du corps entier", "fp.pt.g3": "Prévention des blessures",
+    "fp.pt.g4": "Rééducation après blessure", "fp.pt.g5": "Force et conditionnement"
+  }
+});

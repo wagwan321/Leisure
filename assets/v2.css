@@ -892,3 +892,15 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 .gal .ph { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; border-radius: inherit; }
 .gal .w { grid-column: span 2; }
 .gal .t { grid-row: span 2; }
+
+/* Hybrid Athlete Performance Center: the three classes, then HYROX personal training */
+.hapc__count { display: flex; align-items: center; gap: 1rem; margin-block-end: 1.25rem; font-size: var(--t-md); font-weight: 600; line-height: 1.25; }
+.hapc__count > b { font-size: clamp(3.5rem, 2.5rem + 4vw, 5.5rem); font-weight: 700; letter-spacing: -.05em; line-height: .85; color: var(--red); }
+.hapc__count small { display: block; font-size: var(--t-sm); font-weight: 500; opacity: .75; margin-block-start: .2rem; }
+.rows > .hapc__pt > span { font-weight: 600; }
+.rows > .hapc__pt a { color: inherit; }
+
+/* Personal training: what a trainer can help with */
+.ptgoals { display: grid; gap: .8rem; }
+.ptgoals__head { font-size: var(--t-sm); font-weight: 600; }
+.ptgoals .pill { font-size: var(--t-base); padding: .55rem 1rem; }
