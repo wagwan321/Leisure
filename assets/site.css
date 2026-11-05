@@ -35,12 +35,12 @@
 /* Leisure Island — olive green sub-identity (owner, Oct 2026: the club is renovating in olive),
    with black and beige alongside. Flat colour, no gradients. */
 :root {
-  --island-lagoon: #5B6530;  /* olive: the island's main colour */
+  --island-lagoon: #5F6648;  /* calm olive: the island's main colour (owner, Nov 2026: softer) */
   --island-sun: #E9DFC3;     /* beige: accents and buttons on olive */
   --island-deep: #191919;    /* black */
   --island-coral: #E9DFC3;
   --island-foam: #F1ECDD;    /* light beige: island sections on paper */
-  --island-olive-dark: #3F4621;
+  --island-olive-dark: #42473A;
 
   --font-sans: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
   --font-serif: "Instrument Serif", "Times New Roman", serif;
