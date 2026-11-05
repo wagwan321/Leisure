@@ -688,3 +688,24 @@ TLC_add({
     "by.pt.4c": "Solarium · ou 15 min pour 10 $", "hero.cta3": "Réserver une visite"
   }
 });
+
+/* Nov 2026: inquiry forms send through WhatsApp. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "inq.send2": "أرسل عبر واتساب", "inq.o5": "حجز زيارة",
+    "inq.wa.msg": "مرحبًا The Leisure Club، أنا {name}. أودّ الاستفسار عن: {topic}. رقمي: {phone}.",
+    "inq.wa.ok": "يُفتح واتساب ورسالتك جاهزة. اضغط إرسال فقط."
+  },
+  fr: {
+    "inq.send2": "Envoyer sur WhatsApp", "inq.o5": "Réserver une visite",
+    "inq.wa.msg": "Bonjour The Leisure Club, je suis {name}. Je souhaite me renseigner sur : {topic}. Mon numéro : {phone}.",
+    "inq.wa.ok": "WhatsApp s'ouvre avec votre message. Il ne reste qu'à appuyer sur Envoyer."
+  }
+});
+
+/* Nov 2026: every inquiry goes to the club's WhatsApp, so the routing note says just that. DRAFT for native review. */
+TLC_add({
+  en: { "route.membership": "Sent to the club on WhatsApp.", "route.training": "Sent to the club on WhatsApp.", "route.events": "Sent to the club on WhatsApp.", "route.general": "Sent to the club on WhatsApp." },
+  ar: { "route.membership": "يُرسل إلى النادي عبر واتساب.", "route.training": "يُرسل إلى النادي عبر واتساب.", "route.events": "يُرسل إلى النادي عبر واتساب.", "route.general": "يُرسل إلى النادي عبر واتساب." },
+  fr: { "route.membership": "Envoyé au club sur WhatsApp.", "route.training": "Envoyé au club sur WhatsApp.", "route.events": "Envoyé au club sur WhatsApp.", "route.general": "Envoyé au club sur WhatsApp." }
+});

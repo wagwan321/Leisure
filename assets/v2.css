@@ -918,3 +918,14 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 .is-live .gal > div:has(> .ph:not(.ph--photo)) { display: none; }
 .is-live .stay__unit:not(:has(.ph--photo)) { display: none; }
 .is-live .stay:not(:has(.ph--photo)) { display: none; }
+
+/* Final pass (Nov 2026): small details on phones and desktop */
+.hours span:last-child { white-space: nowrap; text-align: end; }
+@media (max-width: 599px) {
+  /* the opening's info line reads as one sentence; the film button keeps only its icon */
+  .hero__bar .live { display: block; line-height: 1.45; }
+  .hero__bar .live::before { display: inline-block; vertical-align: middle; margin-inline-end: .45rem; }
+  .hero__bar .film-toggle > span:not(.film-toggle__icon) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  /* photo labels: a size smaller in the small tiles */
+  .sticker { font-size: .78rem; padding: .35rem .7rem; max-width: calc(100% - 1.5rem); }
+}

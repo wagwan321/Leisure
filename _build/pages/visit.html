@@ -80,6 +80,7 @@ scripts: assets/lang/visit.js
                 <div class="field full">
                   <label for="inq-type" data-i18n="inq.type">I'm asking about</label>
                   <select id="inq-type" name="type">
+                    <option value="visit" data-route="general" data-i18n="inq.o5">Booking a visit</option>
                     <option value="membership" data-i18n="inq.o1">Memberships</option>
                     <option value="training" data-i18n="inq.o2">Training &amp; classes</option>
                     <option value="events" data-i18n="inq.o3">Events &amp; celebrations</option>
@@ -96,7 +97,7 @@ scripts: assets/lang/visit.js
                   <input id="inq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required dir="ltr" />
                 </div>
                 <div class="field full">
-                  <button class="btn btn--solid" type="submit" data-i18n="inq.send">Send inquiry</button>
+                  <button class="btn btn--solid" type="submit" data-i18n="inq.send2">Send on WhatsApp</button>
                 </div>
                 <p class="form-status full" data-form-status hidden></p>
               </form>

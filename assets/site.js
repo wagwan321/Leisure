@@ -173,7 +173,15 @@
         missing[0].focus();
         return;
       }
-      status.textContent = t("inq.proto", "Prototype: nothing was sent.");
+      var get = function (n) { var f = form.querySelector('[name="' + n + '"]'); return f ? f.value.trim() : ""; };
+      var sel = form.querySelector('select[name="type"]');
+      var topic = sel ? sel.options[sel.selectedIndex].text.trim() : "";
+      var msg = t("inq.wa.msg", "Hello The Leisure Club, I'm {name}. I'd like to ask about: {topic}. My number: {phone}.")
+        .replace("{name}", get("name")).replace("{topic}", topic).replace("{phone}", get("phone"));
+      var url = "https://wa.me/9613340341?text=" + encodeURIComponent(msg);
+      status.textContent = t("inq.wa.ok", "WhatsApp is opening with your message. Just press send.");
+      var win = window.open(url, "_blank", "noopener");
+      if (!win) location.href = url;
     });
   });
 
