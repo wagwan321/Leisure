@@ -10,7 +10,7 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
         <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><span data-i18n="nav.memberships">Memberships</span></nav>
         <div class="head">
           <div>
-            <span class="eyebrow eyebrow--dot" data-i18n="ms.eyebrow2">Affiliation 2027</span>
+            <span class="eyebrow eyebrow--dot" data-i18n="ms.eyebrow2">2027 Memberships</span>
             <h1 class="page-title" data-i18n-html="ms.title">Belonging, <em>by design.</em></h1>
           </div>
         </div>
@@ -30,7 +30,7 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
               <button type="button" data-who="2" aria-pressed="false" data-i18n="ms.family">Family</button>
             </div>
           </div>
-          <p class="insurance"><span data-i18n="ms.ins">OBLIGATORY INSURANCE</span> · <b>$20</b> <span data-i18n="ms.ins.per">per person</span></p>
+          <p class="insurance"><span data-i18n="ms.ins2">Required insurance</span> · <b>$20</b> <span data-i18n="ms.ins.per">per person</span></p>
         </div>
 
         <div class="mplans">
@@ -42,6 +42,7 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
               <div class="mplan__hours">
                 <span><b data-i18n="ms.in.h1">Mon to Fri</b> · <bdi>07:30 – 22:00</bdi></span>
                 <span><b data-i18n="ms.in.h2">Saturday</b> · <bdi>07:30 – 21:00</bdi></span>
+                <span><b data-i18n="ms.in.h3">Sunday</b> · <span data-i18n="ms.closed2">closed</span></span>
               </div>
             </div>
             <div class="mplan__body">
@@ -70,10 +71,6 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
 
           <!-- Outdoor -->
           <article class="mplan mplan--outdoor" data-reveal style="--i:1">
-            <blockquote class="bubble" data-bubble>
-              <q data-i18n="rv.albert.short">An exceptional club with everything you need, from the different pools to the varied sports fields, all in the middle of nature.</q>
-              <cite>Albert B. · Google</cite>
-            </blockquote>
             <div class="mplan__top">
               <h3 class="mplan__name"><a href="outdoor.html" data-i18n="ms.out.t">Outdoor</a></h3>
               <p class="mplan__sub" data-i18n="ms.out.sub">Leisure Island, all summer</p>
@@ -108,15 +105,11 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
 
           <!-- Full Access -->
           <article class="mplan mplan--full" data-reveal style="--i:2">
-            <blockquote class="bubble bubble--5" data-bubble>
-              <q data-i18n="rv.ivonne.short">The staff was so friendly, and the variety of pools, including the jacuzzi, made it even better.</q>
-              <cite>Ivonne C. · Google</cite>
-            </blockquote>
             <div class="mplan__top">
               <h3 class="mplan__name"><a href="full-access.html" data-i18n="ms.full.t">Full Access</a></h3>
               <p class="mplan__sub" data-i18n="ms.full.sub">Indoor + Outdoor, the whole club</p>
               <div class="mplan__hours">
-                <span><b data-i18n="ms.in.short">Indoor</b> · <span data-i18n="ms.in.hours">Mon to Sat, from 07:30</span></span>
+                <span><b data-i18n="ms.in.short">Indoor</b> · <span data-i18n="ms.in.hours">Mon to Sat, from 07:30 · closed Sunday</span></span>
                 <span><b data-i18n="ms.out.short">Outdoor</b> · <span data-i18n="ms.out.hours">Daily 10:00 – 20:00, 16 May to 20 Sept</span></span>
               </div>
             </div>
@@ -142,6 +135,19 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
         <div class="mfacts">
           <div class="mfacts__free"><span data-i18n="ms.wifi">Free Wi-Fi</span><span data-i18n="ms.parking">Free parking</span></div>
         </div>
+
+        <div class="quotes mquotes">
+          <blockquote class="quote" data-reveal>
+            <span class="quote__stars" aria-label="5 stars">★★★★★</span>
+            <q data-i18n="rv.albert.short">An exceptional club with everything you need, from the different pools to the varied sports fields, all in the middle of nature.</q>
+            <cite>Albert B. · Google</cite>
+          </blockquote>
+          <blockquote class="quote" data-reveal>
+            <span class="quote__stars" aria-label="5 stars">★★★★★</span>
+            <q data-i18n="rv.ivonne.short">The staff was so friendly, and the variety of pools, including the jacuzzi, made it even better.</q>
+            <cite>Ivonne C. · Google</cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 
@@ -157,7 +163,7 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
         </div>
         <div class="clsum" data-clsum data-reveal>
           <div class="clsum__top">
-            <p class="clsum__count"><b data-clsum-total>25</b> <span data-i18n="cs.free">free weekly classes</span></p>
+            <p class="clsum__count"><b data-clsum-total>25</b> <span data-i18n="cs.free2">activities, free every week</span></p>
             <p class="clsum__split"><span data-clsum-adults></span><span data-clsum-kids></span></p>
           </div>
           <div class="clsum__groups">
@@ -197,7 +203,7 @@ scripts: assets/lang/memberships.js, assets/data/schedule.js, assets/memberships
               <div class="figs figs--3">
                 <div class="fig"><b>$<span data-num="25">25</span></b><small data-i18n="by.pt.1">Fitness training session</small></div>
                 <div class="fig"><b>$<span data-num="12">12</span></b><small data-i18n="by.pt.3">Pilates Reformer, per person</small></div>
-                <div class="fig"><b>$<span data-num="1">1</span><i data-i18n="by.permin">/min</i></b><small data-i18n="by.pt.4b">Solarium · $10 for 15 min</small></div>
+                <div class="fig"><b>$<span data-num="1">1</span><i data-i18n="by.permin">/min</i></b><small data-i18n="by.pt.4c">Solarium · or 15 min for $10</small></div>
               </div>
             </div>
           </article>

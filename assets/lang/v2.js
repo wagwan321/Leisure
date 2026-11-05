@@ -141,7 +141,7 @@ TLC_add({
     "li2.food.title": "كُل، اشرب، <em>واسهر.</em>",
     "li2.ev.title": "قُل نعم <em>بين الصنوبر.</em>",
     "li2.end.title": "الصيف، <em>طوال الموسم.</em>",
-    "ms.eyebrow2": "الانتساب 2027",
+    "ms.eyebrow2": "العضويات 2027",
     "ms.plans.t": "أسعار العضويات",
     "ms.in.sub": "النادي الداخلي، طوال العام",
     "ms.free.t": "مجانًا مع هذه العضوية",
@@ -160,7 +160,7 @@ TLC_add({
     "ms.locker.v": "5$ / اليوم · 100$ / الموسم",
     "rv.ivonne.short": "كان الفريق ودودًا جدًا، وتنوّع المسابح، ومنها الجاكوزي، جعل التجربة أجمل.",
     "ms.in.short": "داخلي",
-    "ms.in.hours": "من الاثنين إلى السبت، ابتداءً من 07:30",
+    "ms.in.hours": "من الاثنين إلى السبت، ابتداءً من 07:30 · مغلق يوم الأحد",
     "ms.out.short": "خارجي",
     "ms.out.hours": "يوميًا 10:00 – 20:00، من 16 أيار إلى 20 أيلول",
     "ms.full.i1": "كل ما يشمله داخلي",
@@ -372,7 +372,7 @@ TLC_add({
     "li2.food.title": "Manger, boire, <em>rester tard.</em>",
     "li2.ev.title": "Dites oui <em>sous les pins.</em>",
     "li2.end.title": "L'été, <em>toute la saison.</em>",
-    "ms.eyebrow2": "Affiliation 2027",
+    "ms.eyebrow2": "Abonnements 2027",
     "ms.plans.t": "Tarifs des abonnements",
     "ms.in.sub": "Le Club intérieur, toute l'année",
     "ms.free.t": "Gratuit avec cet abonnement",
@@ -391,7 +391,7 @@ TLC_add({
     "ms.locker.v": "5 $ / jour · 100 $ / saison",
     "rv.ivonne.short": "Le personnel était très sympathique, et la variété des piscines, jacuzzi compris, a rendu l'expérience encore meilleure.",
     "ms.in.short": "Intérieur",
-    "ms.in.hours": "Du lundi au samedi, dès 07:30",
+    "ms.in.hours": "Du lundi au samedi, dès 07:30 · fermé le dimanche",
     "ms.out.short": "Extérieur",
     "ms.out.hours": "Tous les jours 10:00 – 20:00, du 16 mai au 20 sept.",
     "ms.full.i1": "Tout l'abonnement Intérieur",
@@ -539,7 +539,7 @@ TLC_add({
     "cm.f1": "ناديان", "cm.f2": "سنوات معًا", "cm.f3": "تقييم Google", "cm.f4": "مراجعة على Google",
     "mq.cl1": "منذ 1991",
     "mq.vs1": "ديك المحدي", "mq.vs2": "بارك طاميش", "mq.vs3": "شانفيل",
-    "mq.sc1": "24 حصة مجانية"
+    "mq.sc1": "24 نشاطًا مجانيًا"
   },
   fr: {
     "mq.fit1": "Force", "mq.fit3": "Cours gratuits", "mq.fit5": "Récupération",
@@ -550,7 +550,7 @@ TLC_add({
     "cm.f1": "Clubs", "cm.f2": "Années ensemble", "cm.f3": "Note Google", "cm.f4": "Avis Google",
     "mq.cl1": "Depuis 1991",
     "mq.vs1": "Dik el-Mehdi", "mq.vs2": "Park Tamish", "mq.vs3": "Champville",
-    "mq.sc1": "24 cours gratuits"
+    "mq.sc1": "24 activités gratuites"
   }
 });
 
@@ -662,15 +662,29 @@ TLC_add({
 /* Nov 2026: Center classes, HYROX personal training, what a trainer can help with. DRAFT for native review. */
 TLC_add({
   ar: {
-    "hapc.n": "حصص في المركز كل أسبوع", "hapc.pt": "تدريب شخصي لـ HYROX",
+    "hapc.hx": "حصص مجانية كل أسبوع", "hapc.pt": "تدريب شخصي لـ HYROX",
     "fp.pt.g0": "بماذا يمكن أن يساعدك مدرّبك",
     "fp.pt.g1": "إنقاص الوزن", "fp.pt.g2": "قوة الجسم بالكامل", "fp.pt.g3": "الوقاية من الإصابات",
     "fp.pt.g4": "إعادة التأهيل بعد الإصابة", "fp.pt.g5": "القوة والتكييف البدني"
   },
   fr: {
-    "hapc.n": "cours au Centre chaque semaine", "hapc.pt": "Coaching personnel HYROX",
+    "hapc.hx": "Cours gratuits chaque semaine", "hapc.pt": "Coaching personnel HYROX",
     "fp.pt.g0": "Ce que votre coach peut vous apporter",
     "fp.pt.g1": "Perte de poids", "fp.pt.g2": "Force du corps entier", "fp.pt.g3": "Prévention des blessures",
     "fp.pt.g4": "Rééducation après blessure", "fp.pt.g5": "Force et conditionnement"
+  }
+});
+
+/* Nov 2026 review: Sunday, insurance, activities count, solarium, Book a visit. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "ms.in.h3": "الأحد", "ms.closed": "مغلق", "ms.closed2": "مغلق", "vis.h4": "النادي الداخلي · الأحد",
+    "ms.ins2": "تأمين إلزامي", "cs.free2": "نشاطًا، مجانًا كل أسبوع",
+    "by.pt.4c": "السولاريوم · أو 15 دقيقة بـ10$", "hero.cta3": "احجز زيارة"
+  },
+  fr: {
+    "ms.in.h3": "Dimanche", "ms.closed": "Fermé", "ms.closed2": "fermé", "vis.h4": "Club intérieur · dimanche",
+    "ms.ins2": "Assurance obligatoire", "cs.free2": "activités, gratuites chaque semaine",
+    "by.pt.4c": "Solarium · ou 15 min pour 10 $", "hero.cta3": "Réserver une visite"
   }
 });

@@ -98,6 +98,8 @@
     });
   });
   toggle.addEventListener("click", function () { setMenu(!doc.classList.contains("menu-open")); });
+  /* the live site hides empty photo slots (bungalow gallery); the preview link and localhost still show them */
+  if (/^(leisure-nu\.vercel\.app|(www\.)?theleisureclub-lb\.com)$/.test(location.hostname)) doc.classList.add("is-live");
   /* phone tab bar: the Menu tab opens the same menu; the current page's tab is marked */
   var tabMenu = document.querySelector("[data-tab-menu]");
   if (tabMenu) tabMenu.addEventListener("click", function () { setMenu(true); });

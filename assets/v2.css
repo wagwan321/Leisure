@@ -90,7 +90,7 @@ html:not([data-motion="still"]) .owners__play { animation: pulse 2.4s var(--ease
 .mplans__bar .lbl { font-size: var(--t-sm); font-weight: 600; margin-inline-end: .75rem; }
 
 .mplans { display: grid; gap: 1.25rem; }
-@media (min-width: 1000px) { .mplans { grid-template-columns: repeat(3, 1fr); align-items: stretch; margin-block-start: 8.5rem; } }
+@media (min-width: 1000px) { .mplans { grid-template-columns: repeat(3, 1fr); align-items: stretch; margin-block-start: 2rem; } }
 .mplan {
   position: relative; display: flex; flex-direction: column; background: var(--card);
   border: 1px solid var(--line); border-radius: 8px; overflow: visible;
@@ -126,8 +126,8 @@ html[lang="ar"] .mincl h4 { letter-spacing: 0; }
 .mfacts { margin-block-start: 1.5rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
 .mfacts__free { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: var(--t-sm); }
 .mfacts__free span::before { content: "✓ "; font-weight: 700; }
-.insurance { color: var(--red); font-weight: 700; font-size: var(--t-base); letter-spacing: .02em; }
-.insurance b { font-size: var(--t-lg); }
+.insurance { color: var(--muted-ink); font-weight: 500; font-size: var(--t-sm); }
+.insurance b { color: var(--ink); font-weight: 600; }
 
 /* review bubble on a membership card */
 .bubble {
@@ -893,10 +893,11 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 .gal .w { grid-column: span 2; }
 .gal .t { grid-row: span 2; }
 
-/* Hybrid Athlete Performance Center: the three classes, then HYROX personal training */
-.hapc__count { display: flex; align-items: center; gap: 1rem; margin-block-end: 1.25rem; font-size: var(--t-md); font-weight: 600; line-height: 1.25; }
-.hapc__count > b { font-size: clamp(3.5rem, 2.5rem + 4vw, 5.5rem); font-weight: 700; letter-spacing: -.05em; line-height: .85; color: var(--red); }
-.hapc__count small { display: block; font-size: var(--t-sm); font-weight: 500; opacity: .75; margin-block-start: .2rem; }
+/* Hybrid Athlete Performance Center: HYROX classes, then HYROX personal training */
+.hapc__hx { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.1rem; margin-block-end: 1.25rem; font-size: var(--t-md); font-weight: 600; line-height: 1.25; }
+.hapc__hx > b { font-size: clamp(2.75rem, 2rem + 3vw, 4.5rem); font-weight: 700; letter-spacing: -.04em; line-height: .9; color: var(--red); }
+.hapc__hx small { display: block; font-size: var(--t-sm); font-weight: 500; opacity: .75; margin-block-start: .2rem; }
+.rows .cap { text-transform: capitalize; }
 .rows > .hapc__pt > span { font-weight: 600; }
 .rows > .hapc__pt a { color: inherit; }
 
@@ -904,3 +905,16 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 .ptgoals { display: grid; gap: .8rem; }
 .ptgoals__head { font-size: var(--t-sm); font-weight: 600; }
 .ptgoals .pill { font-size: var(--t-base); padding: .55rem 1rem; }
+
+/* Memberships: what members say, below the plans */
+.mquotes { margin-block-start: clamp(2rem, 1.5rem + 2vw, 3rem); }
+@media (min-width: 1200px) { .mquotes { grid-template-columns: repeat(2, 1fr); } }
+
+/* desktop header: WhatsApp beside Memberships (phones have it in the tab bar) */
+.bar__end .bar__wa { display: none; }
+@media (min-width: 900px) { .bar__end .bar__wa { display: inline-flex; } }
+
+/* live site: empty photo slots stay hidden until the photos arrive */
+.is-live .gal > div:has(> .ph:not(.ph--photo)) { display: none; }
+.is-live .stay__unit:not(:has(.ph--photo)) { display: none; }
+.is-live .stay:not(:has(.ph--photo)) { display: none; }
