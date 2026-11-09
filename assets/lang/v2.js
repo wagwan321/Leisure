@@ -777,3 +777,5 @@ TLC_add({
     "lc.cls.title": "Des cours gratuits, <em>chaque semaine.</em>", "lc.explore": "Découvrir The Leisure Club"
   }
 });
+
+TLC_add({ ar: { "lc.t.str": "القوة", "lc.t.cardio": "الكارديو" }, fr: { "lc.t.str": "Force", "lc.t.cardio": "Cardio" } });

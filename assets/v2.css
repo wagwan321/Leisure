@@ -1065,3 +1065,17 @@ body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3
 .clsum--club .clsum__who { background: #3B4450; color: #F6F5F2; }
 .clsum--club .clsum__group--kids .clsum__tags span { border-color: rgba(59,68,80,.45); }
 .clsum--club .clsum__group h3 small { color: #3B4450; }
+
+/* homepage: The Leisure Club as photos, like Summer lives here; free classes as one beige tile */
+.lctile { display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; text-decoration: none; }
+.lctile .eyebrow { color: #191919; }
+.lctile .eyebrow::before { background: #3B4450; }
+.lctile__n { display: grid; gap: .35rem; font-size: var(--t-lg); font-weight: 600; line-height: 1.2; color: #191919; }
+.lctile__n b { font-size: clamp(4rem, 2.5rem + 5vw, 7.5rem); font-weight: 700; letter-spacing: -.05em; line-height: .85; color: #3B4450; }
+.lctile__who { justify-self: start; align-self: flex-start; font-size: var(--t-sm); font-weight: 700; padding: .4rem .85rem; border-radius: 99px; background: #3B4450; color: #F6F5F2; }
+.lctile--list { background: #4A5562; color: #F6F5F2; }
+.lctile__list { display: flex; flex-wrap: wrap; gap: .3rem .9rem; font-size: var(--t-md); font-weight: 600; }
+.lctile--list .link-arrow { color: var(--island-sun); }
+.club .eyebrow::before { background: var(--island-sun) !important; }
+.lctile .eyebrow::before, body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3B4450 !important; }
+.lctile--list .link-arrow { align-self: flex-start; }

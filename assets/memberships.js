@@ -169,6 +169,7 @@
       set("[data-clsum-adults]", groups.adults.length + " " + t("cs.adults", "for adults"));
       set("[data-clsum-kids]", groups.kids.length + " " + t("cs.kids", "for kids under 16"));
     });
+    document.querySelectorAll("[data-clsum-n]").forEach(function (el) { el.textContent = groups.adults.length + groups.kids.length; });
   }
   drawClasses();
   document.addEventListener("tlc:lang", drawClasses);
