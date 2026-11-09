@@ -957,16 +957,17 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 @media (max-width: 799px) { .occ--more { min-height: 220px; } }
 
 /* ---------- The Leisure Club · Indoors: black and white, the twin of Leisure Island ---------- */
+/* pool blue (owner, Nov 2026): cool against the island olive, and it echoes the indoor pool */
 .club {
-  background: #0D0D0D; color: #F6F5F2;
+  background: #1F3A4D; color: #F6F5F2;
   --ink: #F6F5F2; --muted-ink: #B5B5B5; --line: rgba(255,255,255,.16); --line-strong: rgba(255,255,255,.4);
-  --bg: #0D0D0D; --card: #161616; --surface: #161616;
+  --bg: #1F3A4D; --card: #284A5F; --surface: #284A5F;
 }
 .club .eyebrow { color: #F6F5F2; }
 .club .eyebrow::before { background: var(--red); opacity: 1; }
 .club .marquee__track span::after { color: var(--red); }
 .page-hero.club .pill { border-color: rgba(255,255,255,.45); }
-.page-hero.club .pill--live { background: #F6F5F2; color: #0D0D0D; border-color: #F6F5F2; }
+.page-hero.club .pill--live { background: #F6F5F2; color: #1F3A4D; border-color: #F6F5F2; }
 .club--line { border-block-start: 1px solid var(--line); }
 .club .btn--light { --b-bg: transparent; --b-ink: #F6F5F2; --b-line: rgba(255,255,255,.5); }
 
@@ -980,7 +981,7 @@ html:not([data-motion="still"]) .neon { animation: neonOn 1.6s steps(1, end) .4s
 }
 
 /* facility tiles: film where we have it, a dark card with the name where the photo is still to come */
-.ft { display: block; background: #161616; isolation: isolate; color: #F6F5F2; }
+.ft { display: block; background: #284A5F; isolation: isolate; color: #F6F5F2; }
 .ft::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%); }
 .ft--blank { border: 1px solid rgba(255,255,255,.12); }
 .ft--blank::after { background: none; }
@@ -1019,7 +1020,7 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .rows > .pt-wl > span { font-weight: 600; }
 .rows > .pt-wl a { color: inherit; }
 /* The Leisure Club: the free classes, big, on black */
-.clsum--club { background: #161616; border-color: rgba(255,255,255,.14); color: #F6F5F2; }
+.clsum--club { background: #284A5F; border-color: rgba(255,255,255,.14); color: #F6F5F2; }
 .clsum--club .clsum__split span { background: rgba(255,255,255,.1); }
 .clsum--club .clsum__tags span { border-color: rgba(255,255,255,.3); }
 .clsum--club .clsum__group--kids .clsum__tags span { border-color: rgba(230,32,40,.6); }
