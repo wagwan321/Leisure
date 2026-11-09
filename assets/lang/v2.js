@@ -757,3 +757,23 @@ TLC_add({
     "lc.cta": "Abonnement Intérieur", "lc.toisland": "Leisure Island · Extérieur", "li2.toclub": "The Leisure Club · Intérieur"
   }
 });
+
+/* Nov 2026 (10th): self-improvement line, HYROX free access, free clubs, from 3 years old, weight loss program. DRAFT for native review. */
+TLC_add({
+  ar: {
+    "hero.sub2": "<span>مكان لتطوير الذات</span> <span>لكل العائلة.</span>",
+    "hapc.free": "دخول مجاني إلى مركز أداء الرياضي لكل الأعمار ولكل مستويات اللياقة.",
+    "cm.free": "مجاني لأعضاء الداخلي والدخول الكامل",
+    "aq.w2.t3": "تعلّم في أي عمر، ابتداءً من 3 سنوات", "aq.ls.from3": "ابتداءً من 3 سنوات",
+    "fp.pt.wl": "برنامج إنقاص الوزن", "fp.pt.wl.ask": "اسأل مدرّبك",
+    "lc.cls.title": "حصص مجانية، <em>كل أسبوع.</em>", "lc.explore": "اكتشف The Leisure Club"
+  },
+  fr: {
+    "hero.sub2": "<span>Un lieu pour progresser</span> <span>pour toute la famille.</span>",
+    "hapc.free": "Accès gratuit à l'Athlete Performance Center pour tous les âges et tous les niveaux.",
+    "cm.free": "Gratuit pour les membres Intérieur et Accès complet",
+    "aq.w2.t3": "Apprendre à tout âge, dès 3 ans", "aq.ls.from3": "Dès 3 ans",
+    "fp.pt.wl": "Programme de perte de poids", "fp.pt.wl.ask": "Demandez à votre coach",
+    "lc.cls.title": "Des cours gratuits, <em>chaque semaine.</em>", "lc.explore": "Découvrir The Leisure Club"
+  }
+});

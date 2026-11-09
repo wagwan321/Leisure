@@ -1,8 +1,9 @@
 <!--
 title: The Leisure Club | Indoors: gym, HYROX, heated pool, sauna and steam
-description: The Leisure Club, the indoor side of the club in Dik el-Mehdi: gym and table tennis, Lebanon's first HYROX gym, a heated 25-metre pool and jacuzzi, sauna, steam room, cold plunge, boxing room, studios and solarium. Open Monday to Saturday from 07:30.
+description: The Leisure Club, the indoor side of the club in Dik el-Mehdi: gym and table tennis, Lebanon's first HYROX gym, a heated 25-meter pool and jacuzzi, sauna, steam room, boxing room, studios and solarium. Open Monday to Saturday from 07:30.
 nav: club
 crumb: The Leisure Club
+scripts: assets/data/schedule.js, assets/memberships.js
 -->
     <section class="page-hero club" aria-labelledby="lc-title">
       <div class="wrap">
@@ -50,31 +51,50 @@ crumb: The Leisure Club
           <a class="ft ft--blank c4 r2" href="fitness.html#hyrox" data-reveal>
             <span class="ft__body"><span class="ft__no">03</span><span class="ft__name">HYROX</span><span class="ft__info" data-i18n="hapc.badge">Lebanon's first HYROX gym</span></span>
           </a>
-          <div class="ft c4 r2" data-reveal style="--i:1">
-            <ph r="free" tag="Video" t="The sauna" video="loop-sauna" pos="50% 50%" alt="Inside the wooden sauna"/>
+          <div class="ft ft--blank c4 r2" data-reveal style="--i:1">
             <span class="ft__body"><span class="ft__no">04</span><span class="ft__name" data-i18n="lc.f4">Sauna</span><span class="ft__info"><span data-i18n="lc.d.mwf">Mon, Wed, Fri</span> · <bdi>09:00 – 21:30</bdi></span></span>
           </div>
           <div class="ft ft--blank c4 r2 m2" data-reveal style="--i:2">
             <span class="ft__body"><span class="ft__no">05</span><span class="ft__name" data-i18n="lc.f5">Steam room</span><span class="ft__info"><span data-i18n="lc.d.tts">Tue, Thu, Sat</span> · <bdi>09:00 – 21:30</bdi></span></span>
           </div>
-          <div class="ft ft--blank c3 r2" data-reveal>
+          <div class="ft ft--blank c4 r2" data-reveal>
             <span class="ft__body"><span class="ft__no">06</span><span class="ft__name" data-i18n="lc.f6">Boxing room</span><span class="ft__info" data-i18n="lc.f6i">Boxing &amp; kickboxing classes</span></span>
           </div>
-          <div class="ft ft--blank c3 r2" data-reveal style="--i:1">
+          <div class="ft ft--blank c4 r2" data-reveal style="--i:1">
             <span class="ft__body"><span class="ft__no">07</span><span class="ft__name" data-i18n="lc.f7">Table tennis</span><span class="ft__info"><bdi>07:30 – 22:00</bdi></span></span>
           </div>
-          <div class="ft ft--blank c3 r2" data-reveal style="--i:2">
+          <div class="ft ft--blank c4 r2 m2" data-reveal style="--i:2">
             <span class="ft__body"><span class="ft__no">08</span><span class="ft__name" data-i18n="lc.f8">Jacuzzi</span><span class="ft__info" data-i18n="lc.f8i">Next to the indoor pool</span></span>
           </div>
-          <div class="ft ft--blank c3 r2" data-reveal style="--i:3">
-            <span class="ft__body"><span class="ft__no">09</span><span class="ft__name" data-i18n="ms.in.i4">Cold plunge &amp; showers</span></span>
-          </div>
           <a class="ft ft--blank c6 r2 m2" href="schedule.html" data-reveal>
-            <span class="ft__body"><span class="ft__no">10</span><span class="ft__name" data-i18n="lc.f10">Studios</span><span class="ft__info" data-i18n="lc.f10i">Free weekly classes for Indoor &amp; Full Access members</span></span>
+            <span class="ft__body"><span class="ft__no">09</span><span class="ft__name" data-i18n="lc.f10">Studios</span><span class="ft__info" data-i18n="lc.f10i">Free weekly classes for Indoor &amp; Full Access members</span></span>
           </a>
-          <div class="ft c6 r2 m2" data-reveal style="--i:1">
-            <ph r="free" tag="Video" t="The solarium" video="loop-solarium" pos="50% 50%" alt="Inside the solarium"/>
-            <span class="ft__body"><span class="ft__no">11</span><span class="ft__name" data-i18n="lc.f11">Solarium</span><span class="ft__info"><b>$1</b>&nbsp;<span data-i18n="by.permin">/min</span></span></span>
+          <div class="ft ft--blank c6 r2 m2" data-reveal style="--i:1">
+            <span class="ft__body"><span class="ft__no">10</span><span class="ft__name" data-i18n="lc.f11">Solarium</span><span class="ft__info"><b>$1</b>&nbsp;<span data-i18n="by.permin">/min</span></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Free classes: the big reason to join indoors -->
+    <section class="section club club--line" id="free-classes" aria-labelledby="lc-cls-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow" data-reveal data-i18n="ms.cls.eyebrow">Free classes</span>
+            <h2 class="h2 lc-big" id="lc-cls-title" data-reveal data-i18n-html="lc.cls.title">Free classes, <em>every week.</em></h2>
+          </div>
+          <a class="btn btn--light" href="schedule.html" data-reveal data-i18n="cs.see">See this week's schedule</a>
+        </div>
+        <div class="clsum clsum--club" data-clsum data-reveal>
+          <div class="clsum__top">
+            <p class="clsum__count"><b data-clsum-total>24</b> <span data-i18n="cs.free2">activities, free every week</span></p>
+            <p class="clsum__split"><span data-clsum-adults></span><span data-clsum-kids></span></p>
+          </div>
+          <p class="clsum__who" data-i18n="ms.cls.only">Indoor &amp; Full Access members only</p>
+          <div class="clsum__groups">
+            <div class="clsum__group"><h3 data-i18n="ms.adults">Adults</h3><div class="clsum__tags" data-clsum-list="adults"></div></div>
+            <div class="clsum__group clsum__group--kids"><h3><span data-i18n="ms.kids">Kids</span> <small data-i18n="ms.kids.age">Under 16</small></h3><div class="clsum__tags" data-clsum-list="kids"></div></div>
           </div>
         </div>
       </div>

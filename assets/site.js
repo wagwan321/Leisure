@@ -133,6 +133,51 @@
     });
   }
 
+  /* ---------- Phone: the page's sections in a sliding bar at the top (like a menu's categories) ---------- */
+  var secbar = document.querySelector("[data-secbar]");
+  if (secbar) {
+    var track = secbar.querySelector(".secbar__track");
+    var secs = Array.prototype.filter.call(document.querySelectorAll("section"), function (sec) {
+      return !sec.closest(".site-menu") && !sec.classList.contains("hero") && !sec.classList.contains("page-hero") && !sec.classList.contains("cta-band") && sec.querySelector(".eyebrow");
+    });
+    var label = function (sec) { return sec.dataset.sec || sec.querySelector(".eyebrow").textContent.replace(/^\s*\d+\s*·\s*/, "").trim(); };
+    var build = function () {
+      track.innerHTML = "";
+      secs.forEach(function (sec, i) {
+        if (!sec.id) sec.id = "s-" + (i + 1);
+        var a = document.createElement("a");
+        a.href = "#" + sec.id; a.textContent = label(sec); a.dataset.for = sec.id;
+        track.appendChild(a);
+      });
+    };
+    if (secs.length > 1) {
+      build();
+      secbar.hidden = false;
+      document.addEventListener("tlc:lang", build);
+      var place = function () {
+        var head = document.querySelector(".site-header");
+        var shown = head && !head.classList.contains("is-hidden");
+        secbar.style.top = shown ? head.offsetHeight + "px" : "0px";
+        secbar.classList.toggle("is-on", window.scrollY > secs[0].offsetTop - 160);
+        var cur = null;
+        secs.forEach(function (sec) { if (sec.getBoundingClientRect().top < 170) cur = sec.id; });
+        track.querySelectorAll("a").forEach(function (a) {
+          var on = a.dataset.for === cur;
+          if (on && !a.classList.contains("is-active")) track.scrollTo({ left: a.offsetLeft - 16, behavior: "smooth" });
+          a.classList.toggle("is-active", on);
+        });
+      };
+      window.addEventListener("scroll", place, { passive: true });
+      place();
+      track.addEventListener("click", function (e) {
+        var a = e.target.closest("a"); if (!a) return;
+        var sec = document.getElementById(a.dataset.for); if (!sec) return;
+        e.preventDefault(); e.stopPropagation();
+        window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 64, behavior: doc.dataset.motion === "still" ? "auto" : "smooth" });
+      });
+    }
+  }
+
   /* ---------- The Leisure Club: a soft light follows the pointer across the facility tiles ---------- */
   var spot = document.querySelector("[data-spot]");
   if (spot && window.matchMedia("(hover: hover)").matches) {

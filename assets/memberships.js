@@ -13,11 +13,15 @@
   function render(flash) {
     document.querySelectorAll("[data-price]").forEach(function (el) {
       var row = JSON.parse(el.dataset.price);
-      el.textContent = "$" + row[who].toLocaleString("en-US");
+      var btn = document.querySelector('[data-who="' + who + '"]');
+      var per = btn ? btn.textContent.trim().toLowerCase() : "";
+      el.innerHTML = "$" + row[who].toLocaleString("en-US") + (per ? '<small class="mper">/ ' + per + "</small>" : "");
       if (flash) { el.removeAttribute("data-flash"); void el.offsetWidth; el.setAttribute("data-flash", ""); }
     });
   }
   var whoButtons = document.querySelectorAll("[data-who]");
+  render(false);
+  document.addEventListener("tlc:lang", function () { render(false); });
   whoButtons.forEach(function (b) {
     b.addEventListener("click", function () {
       who = parseInt(b.dataset.who, 10);
@@ -146,8 +150,7 @@
 
   // Free classes summary: counts and class names come from the one schedule file (assets/data/schedule.js)
   function drawClasses() {
-    var box = document.querySelector("[data-clsum]");
-    if (!box || !window.TLC_SCHEDULE) return;
+    if (!window.TLC_SCHEDULE) return;
     var lang = (window.TLC_i18n && window.TLC_i18n.current) || "en";
     var t = function (k, f) { var v = window.TLC_i18n && window.TLC_i18n.t(k); return v != null ? v : f; };
     var groups = { adults: [], kids: [] };
@@ -156,13 +159,16 @@
       if (groups[c.group] && groups[c.group].indexOf(name) < 0) groups[c.group].push(name);
     });
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (ch) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]; }); };
-    ["adults", "kids"].forEach(function (g) {
-      var el = box.querySelector('[data-clsum-list="' + g + '"]');
-      if (el) el.innerHTML = groups[g].map(function (n, i) { return '<span style="--n:' + i + '">' + esc(n) + "</span>"; }).join("");
+    document.querySelectorAll("[data-clsum]").forEach(function (box) {
+      ["adults", "kids"].forEach(function (g) {
+        var el = box.querySelector('[data-clsum-list="' + g + '"]');
+        if (el) el.innerHTML = groups[g].map(function (n, i) { return '<span style="--n:' + i + '">' + esc(n) + "</span>"; }).join("");
+      });
+      var set = function (sel, v) { var el = box.querySelector(sel); if (el) el.textContent = v; };
+      set("[data-clsum-total]", groups.adults.length + groups.kids.length);
+      set("[data-clsum-adults]", groups.adults.length + " " + t("cs.adults", "for adults"));
+      set("[data-clsum-kids]", groups.kids.length + " " + t("cs.kids", "for kids under 16"));
     });
-    box.querySelector("[data-clsum-total]").textContent = groups.adults.length + groups.kids.length;
-    box.querySelector("[data-clsum-adults]").textContent = groups.adults.length + " " + t("cs.adults", "for adults");
-    box.querySelector("[data-clsum-kids]").textContent = groups.kids.length + " " + t("cs.kids", "for kids under 16");
   }
   drawClasses();
   document.addEventListener("tlc:lang", drawClasses);
