@@ -957,22 +957,22 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
 @media (max-width: 799px) { .occ--more { min-height: 220px; } }
 
 /* ---------- The Leisure Club · Indoors: black and white, the twin of Leisure Island ---------- */
-/* burgundy (owner, Nov 2026): the natural opposite of the island olive, with beige and light red accents */
+/* slate (owner, Nov 2026): calm blue-grey against the island olive, with beige accents */
 .club {
-  background: #5A2228; color: #F6F5F2;
+  background: #3B4450; color: #F6F5F2;
   --ink: #F6F5F2; --muted-ink: #B5B5B5; --line: rgba(255,255,255,.16); --line-strong: rgba(255,255,255,.4);
-  --bg: #5A2228; --card: #6B2A31; --surface: #6B2A31;
+  --bg: #3B4450; --card: #4A5562; --surface: #4A5562;
 }
 .club .eyebrow { color: #F6F5F2; }
 .club .eyebrow::before { background: var(--island-sun); opacity: 1; }
 .club .marquee__track span::after { color: var(--island-sun); }
 .page-hero.club .pill { border-color: rgba(255,255,255,.45); }
-.page-hero.club .pill--live { background: #F6F5F2; color: #5A2228; border-color: #F6F5F2; }
+.page-hero.club .pill--live { background: #F6F5F2; color: #3B4450; border-color: #F6F5F2; }
 .club--line { border-block-start: 1px solid var(--line); }
 .club .btn--light { --b-bg: transparent; --b-ink: #F6F5F2; --b-line: rgba(255,255,255,.5); }
 
 /* facility tiles: film where we have it, a dark card with the name where the photo is still to come */
-.ft { display: block; background: #5A2228; isolation: isolate; color: #F6F5F2; }
+.ft { display: block; background: #3B4450; isolation: isolate; color: #F6F5F2; }
 .ft::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%); }
 .ft--blank { border: 0; }
 .ft--blank::after { background: none; }
@@ -1011,7 +1011,7 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .rows > .pt-wl > span { font-weight: 600; }
 .rows > .pt-wl a { color: inherit; }
 /* The Leisure Club: the free classes, big, on black */
-.clsum--club { background: #6B2A31; border-color: rgba(255,255,255,.14); color: #F6F5F2; }
+.clsum--club { background: #4A5562; border-color: rgba(255,255,255,.14); color: #F6F5F2; }
 .clsum--club .clsum__split span { background: rgba(255,255,255,.1); }
 .clsum--club .clsum__tags span { border-color: rgba(255,255,255,.3); }
 .clsum--club .clsum__group--kids .clsum__tags span { border-color: rgba(230,32,40,.6); }
@@ -1042,7 +1042,7 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .lcfac li::before { content: ""; display: inline-block; width: .4em; height: .4em; border-radius: 50%; background: var(--red); margin-inline-end: .55em; vertical-align: .18em; }
 .split__body > .pills { margin-block: .25rem .5rem; }
 
-/* The Leisure Club, like Leisure Island: burgundy and beige take turns; beige carries the accents on blue */
+/* The Leisure Club, like Leisure Island: slate and beige take turns; beige carries the accents on blue */
 .club .h2 em, .club .page-title em { color: var(--island-sun); }
 .club .pill--fill { background: var(--island-sun); color: #191919; border-color: var(--island-sun); }
 .page-hero.club .pill--live { background: var(--island-sun); color: #191919; border-color: var(--island-sun); }
@@ -1054,14 +1054,14 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .clsum--club .clsum__group h3 small { color: var(--red); }
 .clsum--club { --ink: #191919; --muted-ink: #191919; --line: rgba(25,25,25,.15); --line-strong: rgba(25,25,25,.35); }
 .clsum--club .clsum__count span, .clsum--club .clsum__split span, .clsum--club h3, .clsum--club .clsum__tags span { color: #191919; }
-/* light red instead of the strong red, everywhere in The Leisure Club */
-.club .eyebrow::before, .club .marquee__track span::after, .lcfac li::before { background: #F2B8BD; color: #F2B8BD; }
+/* beige accents instead of the strong red, everywhere in The Leisure Club */
+.club .eyebrow::before, .club .marquee__track span::after, .lcfac li::before { background: #E9DFC3; color: #E9DFC3; }
 .club .marquee__track span::after { background: none; }
-.ft__no { color: #F2B8BD; }
-.ft--blank .ft__no { -webkit-text-stroke-color: rgba(242,184,189,.55); }
-@media (max-width: 899px) { .ft--blank .ft__no { color: #F2B8BD; } }
-body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #5A2228; }
-.clsum--club .clsum__count b { color: #5A2228; }
-.clsum--club .clsum__who { background: #5A2228; color: #F6F5F2; }
-.clsum--club .clsum__group--kids .clsum__tags span { border-color: rgba(90,34,40,.5); }
-.clsum--club .clsum__group h3 small { color: #5A2228; }
+.ft__no { color: #E9DFC3; }
+.ft--blank .ft__no { -webkit-text-stroke-color: rgba(233,223,195,.5); }
+@media (max-width: 899px) { .ft--blank .ft__no { color: #E9DFC3; } }
+body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3B4450; }
+.clsum--club .clsum__count b { color: #3B4450; }
+.clsum--club .clsum__who { background: #3B4450; color: #F6F5F2; }
+.clsum--club .clsum__group--kids .clsum__tags span { border-color: rgba(59,68,80,.45); }
+.clsum--club .clsum__group h3 small { color: #3B4450; }
