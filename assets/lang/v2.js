@@ -733,7 +733,7 @@ TLC_add({
 TLC_add({
   en: { "lc.per": "/ month" },
   ar: {
-    "nav.club3": "The Leisure Club", "lc.eyebrow": "The Leisure Club · داخلي", "lc.title": "طوال السنة، <em class=\"neon\">في الداخل.</em>",
+    "nav.club3": "The Leisure Club", "lc.eyebrow": "The Leisure Club · داخلي", "lc.title": "طوال السنة، <em>في الداخل.</em>",
     "lc.m1": "صالة رياضية", "lc.m2": "مسبح مدفّأ", "lc.m3": "ساونا", "lc.m4": "غرفة بخار", "lc.m5": "ملاكمة", "lc.m6": "تنس الطاولة", "lc.m7": "سولاريوم",
     "lc.fac.eyebrow": "المرافق", "lc.fac.title": "كل شيء، <em>تحت سقف واحد.</em>",
     "lc.f1": "الصالة الرياضية", "lc.f2": "مسبح مدفّأ 25 م", "lc.f4": "الساونا", "lc.f5": "غرفة البخار", "lc.f6": "غرفة الملاكمة", "lc.f6i": "حصص ملاكمة وكيك بوكسينغ",
@@ -745,7 +745,7 @@ TLC_add({
     "lc.cta": "العضوية الداخلية", "lc.toisland": "Leisure Island · خارجي", "li2.toclub": "The Leisure Club · داخلي"
   },
   fr: {
-    "nav.club3": "The Leisure Club", "lc.eyebrow": "The Leisure Club · Intérieur", "lc.title": "Toute l'année, <em class=\"neon\">à l'intérieur.</em>",
+    "nav.club3": "The Leisure Club", "lc.eyebrow": "The Leisure Club · Intérieur", "lc.title": "Toute l'année, <em>à l'intérieur.</em>",
     "lc.m1": "Salle de sport", "lc.m2": "Piscine chauffée", "lc.m3": "Sauna", "lc.m4": "Hammam", "lc.m5": "Boxe", "lc.m6": "Tennis de table", "lc.m7": "Solarium",
     "lc.fac.eyebrow": "Les installations", "lc.fac.title": "Tout, <em>sous un même toit.</em>",
     "lc.f1": "Salle de sport", "lc.f2": "Piscine chauffée de 25 m", "lc.f4": "Sauna", "lc.f5": "Hammam", "lc.f6": "Salle de boxe", "lc.f6i": "Cours de boxe et de kickboxing",

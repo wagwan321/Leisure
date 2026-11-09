@@ -964,26 +964,17 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
   --bg: #1F3A4D; --card: #284A5F; --surface: #284A5F;
 }
 .club .eyebrow { color: #F6F5F2; }
-.club .eyebrow::before { background: var(--red); opacity: 1; }
-.club .marquee__track span::after { color: var(--red); }
+.club .eyebrow::before { background: var(--island-sun); opacity: 1; }
+.club .marquee__track span::after { color: var(--island-sun); }
 .page-hero.club .pill { border-color: rgba(255,255,255,.45); }
 .page-hero.club .pill--live { background: #F6F5F2; color: #1F3A4D; border-color: #F6F5F2; }
 .club--line { border-block-start: 1px solid var(--line); }
 .club .btn--light { --b-bg: transparent; --b-ink: #F6F5F2; --b-line: rgba(255,255,255,.5); }
 
-/* the title's last word switches on like a sign, once */
-.neon { color: #fff; text-shadow: 0 0 .06em #fff, 0 0 .35em rgba(230,32,40,.85), 0 0 .9em rgba(230,32,40,.45); }
-html:not([data-motion="still"]) .neon { animation: neonOn 1.6s steps(1, end) .4s both; }
-@keyframes neonOn {
-  0% { opacity: .15; text-shadow: none; } 12% { opacity: 1; } 18% { opacity: .2; text-shadow: none; }
-  26% { opacity: 1; } 30% { opacity: .35; text-shadow: none; } 42% { opacity: 1; }
-  100% { opacity: 1; }
-}
-
 /* facility tiles: film where we have it, a dark card with the name where the photo is still to come */
-.ft { display: block; background: #284A5F; isolation: isolate; color: #F6F5F2; }
+.ft { display: block; background: #1F3A4D; isolation: isolate; color: #F6F5F2; }
 .ft::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%); }
-.ft--blank { border: 1px solid rgba(255,255,255,.12); }
+.ft--blank { border: 0; }
 .ft--blank::after { background: none; }
 .ft__body { position: absolute; z-index: 2; inset: auto 0 0 0; display: grid; gap: .3rem; padding: clamp(1rem, .8rem + .8vw, 1.5rem); }
 .ft__no { font-size: var(--t-xs); font-weight: 600; letter-spacing: .14em; color: var(--red); }
@@ -1030,7 +1021,6 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .lcfac { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-block-start: 2rem; font-size: var(--t-lg); font-weight: 600; letter-spacing: -.01em; }
 .lcfac li + li::before { content: "·"; margin-inline-end: 1.25rem; color: var(--red); }
 #club .clsum { margin-block-start: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
-[data-reveal]:not(.is-in) .neon { animation: none; }
 
 /* ---------- Phone: no Menu button in the header (the tab bar has Menu); a sliding bar of the page's sections ---------- */
 .secbar { display: none; }
@@ -1051,3 +1041,16 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .lcfac li + li::before { content: ""; margin-inline-end: .55em; color: inherit; }
 .lcfac li::before { content: ""; display: inline-block; width: .4em; height: .4em; border-radius: 50%; background: var(--red); margin-inline-end: .55em; vertical-align: .18em; }
 .split__body > .pills { margin-block: .25rem .5rem; }
+
+/* The Leisure Club, like Leisure Island: pool blue and beige take turns; beige carries the accents on blue */
+.club .h2 em, .club .page-title em { color: var(--island-sun); }
+.club .pill--fill { background: var(--island-sun); color: #191919; border-color: var(--island-sun); }
+.page-hero.club .pill--live { background: var(--island-sun); color: #191919; border-color: var(--island-sun); }
+.lcfac li::before { background: var(--island-sun); }
+.clsum--club { background: var(--island-sun); color: #191919; border-color: var(--island-sun); }
+.clsum--club .clsum__split span { background: rgba(25,25,25,.08); }
+.clsum--club .clsum__tags span { border-color: rgba(25,25,25,.35); }
+.clsum--club .clsum__group--kids .clsum__tags span { border-color: rgba(230,32,40,.55); }
+.clsum--club .clsum__group h3 small { color: var(--red); }
+.clsum--club { --ink: #191919; --muted-ink: #191919; --line: rgba(25,25,25,.15); --line-strong: rgba(25,25,25,.35); }
+.clsum--club .clsum__count span, .clsum--club .clsum__split span, .clsum--club h3, .clsum--club .clsum__tags span { color: #191919; }
