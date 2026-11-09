@@ -148,51 +148,44 @@
           <p class="insurance"><span data-i18n="ms.ins2">Required insurance</span> · <b>$20</b> <span data-i18n="ms.ins.per">per person</span></p>
         </div>
 
-        <div class="mplans mplans--home">
-          <article class="mplan mplan--indoor" data-reveal>
-            <div class="mplan__top">
-              <h3 class="mplan__name"><a href="indoor.html" data-i18n="ms.in.t">Indoor</a></h3>
-              <p class="mplan__sub" data-i18n="ms.in.sub2">Gym, HYROX, indoor pool &amp; wellness</p>
-            </div>
-            <div class="mplan__body">
-              <dl class="mprices">
-                <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[120,200,240]">$120</dd></div>
-                <div><dt data-i18n="ms.year">1 year</dt><dd data-price="[700,1200,1400]">$700</dd></div>
-              </dl>
-              <a class="btn mplan__go" href="indoor.html" data-i18n="ms.go.in">Discover Indoor</a>
-              <a class="btn mplan__req" href="#inquire" data-plan="indoor" data-i18n="ms.cta.req">Request information</a>
-            </div>
-          </article>
-          <article class="mplan mplan--outdoor" data-reveal style="--i:1">
-            <div class="mplan__top">
-              <h3 class="mplan__name"><a href="outdoor.html" data-i18n="ms.out.t">Outdoor</a></h3>
-              <p class="mplan__sub" data-i18n="ms.out.sub2">Leisure Island, 16 May to 20 September</p>
-            </div>
-            <div class="mplan__body">
-              <dl class="mprices">
-                <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[200,300,400]">$200</dd></div>
-                <div><dt data-i18n="ms.season">Summer season</dt><dd data-price="[400,600,800]">$400</dd></div>
-              </dl>
-              <a class="btn mplan__go" href="outdoor.html" data-i18n="ms.go.out">Discover Outdoor</a>
-              <a class="btn mplan__req" href="#inquire" data-plan="island" data-i18n="ms.cta.req">Request information</a>
-            </div>
-          </article>
-          <article class="mplan mplan--full" data-reveal style="--i:2">
-            <div class="mplan__top">
-              <h3 class="mplan__name"><a href="full-access.html" data-i18n="ms.full.t">Full Access</a></h3>
-              <p class="mplan__sub" data-i18n="ms.full.sub">Indoor + Outdoor, the whole club</p>
-            </div>
-            <div class="mplan__body">
-              <dl class="mprices">
-                <div><dt data-i18n="ms.month">1 month</dt><dd data-price="[250,400,500]">$250</dd></div>
-                <div><dt data-i18n="ms.season">Summer season</dt><dd data-price="[700,1200,1400]">$700</dd></div>
-                <div><dt data-i18n="ms.year">1 year</dt><dd data-price="[1000,1500,2000]">$1,000</dd></div>
-              </dl>
-              <a class="btn btn--solid mplan__go" href="full-access.html" data-i18n="ms.go.full">Discover Full Access</a>
-              <a class="btn mplan__req" href="#inquire" data-plan="full" data-i18n="ms.cta.req">Request information</a>
-            </div>
-          </article>
+        <div class="mcmp" role="table" aria-label="Compare the memberships" data-i18n-attr="aria-label:ms.cmp.caption">
+          <div class="mcmp__head" role="row">
+            <span role="columnheader" class="mcmp__corner"></span>
+            <a role="columnheader" class="mcmp__plan mcmp__plan--indoor" href="indoor.html"><b data-i18n="ms.in.t">Indoor</b><small data-i18n="ms.in.sub">The Indoor Club, all year</small></a>
+            <a role="columnheader" class="mcmp__plan mcmp__plan--outdoor" href="outdoor.html"><b data-i18n="ms.out.t">Outdoor</b><small data-i18n="ms.out.sub">Leisure Island, all summer</small></a>
+            <a role="columnheader" class="mcmp__plan mcmp__plan--full" href="full-access.html"><b data-i18n="ms.full.t">Full Access</b><small data-i18n="ms.full.sub">Indoor + Outdoor, the whole club</small></a>
+          </div>
+          <div class="mcmp__group" role="row"><span role="rowheader" data-i18n="ms.cmp.prices">Prices</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.month">1 month</span></span><span role="cell"><b data-price="[120,200,240]">$120</b></span><span role="cell"><b data-price="[200,300,400]">$200</b></span><span role="cell"><b data-price="[250,400,500]">$250</b></span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.season">Summer season</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell"><b data-price="[400,600,800]">$400</b></span><span role="cell"><b data-price="[700,1200,1400]">$700</b></span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.year">1 year</span></span><span role="cell"><b data-price="[700,1200,1400]">$700</b></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell"><b data-price="[1000,1500,2000]">$1,000</b></span></div>
+          <div class="mcmp__group" role="row"><span role="rowheader" data-i18n="ms.cmp.hours">Opening hours</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.cmp.open">Open</span></span><span role="cell"><small><span data-i18n="ms.in.h1">Mon to Fri</span> <bdi>07:30 – 22:00</bdi></small><small><span data-i18n="ms.in.h2">Saturday</span> <bdi>07:30 – 21:00</bdi></small><small><span data-i18n="ms.in.h3">Sunday</span> <span data-i18n="ms.closed2">closed</span></small></span><span role="cell"><small><span data-i18n="ms.out.h1">Every day</span> <bdi>10:00 – 20:00</bdi></small><small data-i18n="ms.out.h2v">16 May to 20 September</small></span><span role="cell"><small data-i18n="ms.cmp.both">Indoor and Outdoor hours</small></span></div>
+          <div class="mcmp__group" role="row"><span role="rowheader" data-i18n="ms.cmp.g1">Indoor Club</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.in.i1">Gym &amp; ping pong</span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.in.i2">HYROX gym</span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.in.i3">Indoor pool &amp; jacuzzi</span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.in.i4">Cold plunge &amp; showers</span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n-html="ms.in.i5">Steam<small>Tue, Thu, Sat</small></span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n-html="ms.in.i6">Sauna<small>Mon, Wed, Fri</small></span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.cls.with2">Free weekly classes</span></span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.guest">Accompanied guest, any age</span></span><span role="cell">$25</span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell">$25</span></div>
+          <div class="mcmp__group" role="row"><span role="rowheader" data-i18n="ms.cmp.g2">Leisure Island</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.out.i1">Outdoor lap pool</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.out.i2">Slides &amp; leisure pool</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.out.i3">Kids' pools &amp; splash pad</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.out.i4">Jacuzzi</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n-html="ms.out.i5">Football &amp; basketball courts<small>Unless reserved</small></span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span><span role="cell" class="y" data-i18n-attr="aria-label:ms.cmp.yes" aria-label="Included">✓</span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.vis">Day visitors</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell"><small data-i18n="ms.vis.v">Under 2 free · under 10 $25 · over 10 $30</small></span><span role="cell"><small data-i18n="ms.vis.v">Under 2 free · under 10 $25 · over 10 $30</small></span></div>
+          <div class="mcmp__row" role="row"><span role="rowheader"><span data-i18n="ms.locker">Private locker</span></span><span role="cell" class="n" data-i18n-attr="aria-label:ms.cmp.no" aria-label="Not included">–</span><span role="cell"><small data-i18n="ms.locker.v">$5 / day · $100 / season</small></span><span role="cell"><small data-i18n="ms.locker.v">$5 / day · $100 / season</small></span></div>
+          <div class="mcmp__foot" role="row">
+            <span role="cell" class="mcmp__corner"></span>
+            <span role="cell"><a class="btn btn--sm" href="indoor.html" data-i18n="ms.go.in">Discover Indoor</a></span>
+            <span role="cell"><a class="btn btn--sm" href="outdoor.html" data-i18n="ms.go.out">Discover Outdoor</a></span>
+            <span role="cell"><a class="btn btn--sm btn--solid" href="full-access.html" data-i18n="ms.go.full">Discover Full Access</a></span>
+          </div>
         </div>
+        <p class="mcmp__ask"><a class="btn btn--solid" href="#inquire" data-i18n="ms.cta.req">Request information</a></p>
 
         <div class="mfacts">
           <div class="mfacts__free"><span data-i18n="ms.wifi">Free Wi-Fi</span><span data-i18n="ms.parking">Free parking</span></div>

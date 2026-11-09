@@ -929,3 +929,53 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
   /* photo labels: a size smaller in the small tiles */
   .sticker { font-size: .78rem; padding: .35rem .7rem; max-width: calc(100% - 1.5rem); }
 }
+
+/* Memberships page: the three memberships side by side, one line per item */
+.mcmp { display: grid; background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+.mcmp > div { display: grid; grid-template-columns: minmax(11rem, 1.25fr) repeat(3, minmax(0, 1fr)); }
+.mcmp > div > * { min-width: 0; }
+.mcmp__head { position: sticky; top: 0; z-index: 5; }
+.mcmp__corner { background: var(--card); border-radius: 10px 0 0 0; }
+.mcmp__plan { display: grid; align-content: start; gap: .25rem; padding: 1.1rem 1.25rem; color: #fff; background: var(--ink); }
+.mcmp__plan--outdoor { background: var(--island-lagoon); }
+.mcmp__plan--full { background: var(--red); border-radius: 0 10px 0 0; }
+.mcmp__plan b { font-size: var(--t-xl); font-weight: 600; letter-spacing: -.02em; line-height: 1.05; }
+.mcmp__plan b::after { content: " →"; font-weight: 400; }
+html[dir="rtl"] .mcmp__plan b::after { content: " ←"; }
+.mcmp__plan small { font-size: var(--t-sm); opacity: .9; }
+.mcmp__group > span { grid-column: 1 / -1; padding: 1.5rem 1.25rem .55rem; font-size: var(--t-xs); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted-ink); }
+html[lang="ar"] .mcmp__group > span { letter-spacing: 0; }
+.mcmp__row > * { display: grid; align-content: center; gap: .1rem; padding: .75rem 1.25rem; border-top: 1px solid var(--line); font-size: var(--t-base); }
+.mcmp__row > :not(:first-child) { justify-items: center; text-align: center; }
+.mcmp__row small { display: block; font-size: var(--t-sm); color: var(--muted-ink); }
+.mcmp__row > :not(:first-child) small { color: inherit; }
+.mcmp__row b { font-size: var(--t-xl); font-weight: 600; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.mcmp__row b[data-flash] { animation: flash .5s var(--ease); }
+.mcmp .y { color: var(--red); font-weight: 700; font-size: var(--t-lg); }
+.mcmp .n { color: var(--line-strong); }
+.mcmp__row:hover > * { background: var(--surface); }
+.mcmp__foot > * { padding: 1.1rem 1.25rem; border-top: 1px solid var(--line); display: grid; }
+.mcmp__foot .btn { justify-content: center; text-align: center; }
+.mcmp__ask { margin-block-start: 1.25rem; display: flex; justify-content: flex-end; }
+@media (max-width: 759px) {
+  .mcmp > div { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mcmp__corner { display: none; }
+  .mcmp__plan { padding: .8rem .6rem; text-align: center; }
+  .mcmp__plan--indoor { border-radius: 10px 0 0 0; }
+  .mcmp__plan b { font-size: var(--t-base); }
+  .mcmp__plan b::after, html[dir="rtl"] .mcmp__plan b::after { content: none; }
+  .mcmp__plan small { display: none; }
+  .mcmp__group > span { padding: 1.2rem .9rem .4rem; }
+  .mcmp__row > :first-child { grid-column: 1 / -1; padding: .7rem .9rem 0; font-weight: 600; }
+  .mcmp__row > :not(:first-child) { border-top: 0; padding: .35rem .4rem .75rem; font-size: var(--t-sm); }
+  .mcmp__row b { font-size: var(--t-lg); }
+  .mcmp__foot > * { padding: .8rem .4rem; }
+  .mcmp__foot .btn { font-size: .75rem; padding-inline: .5rem; }
+  .mcmp__ask { justify-content: stretch; } .mcmp__ask .btn { width: 100%; justify-content: center; }
+}
+
+/* homepage cards: the coloured tops share one height, so the white parts line up */
+@media (min-width: 700px) {
+  .mplans--home { grid-template-rows: auto auto; row-gap: 0; }
+  .mplans--home .mplan { display: grid; grid-row: span 2; grid-template-rows: subgrid; gap: 0; }
+}

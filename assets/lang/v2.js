@@ -709,3 +709,12 @@ TLC_add({
   ar: { "route.membership": "يُرسل إلى النادي عبر واتساب.", "route.training": "يُرسل إلى النادي عبر واتساب.", "route.events": "يُرسل إلى النادي عبر واتساب.", "route.general": "يُرسل إلى النادي عبر واتساب." },
   fr: { "route.membership": "Envoyé au club sur WhatsApp.", "route.training": "Envoyé au club sur WhatsApp.", "route.events": "Envoyé au club sur WhatsApp.", "route.general": "Envoyé au club sur WhatsApp." }
 });
+
+/* Nov 2026: memberships comparison. DRAFT for native review. */
+TLC_add({
+  ar: { "ms.cmp.prices": "الأسعار", "ms.cmp.hours": "ساعات العمل", "ms.cmp.open": "مفتوح", "ms.cmp.both": "ساعات الداخلي والخارجي",
+        "ms.cmp.yes": "مشمول", "ms.cmp.no": "غير مشمول", "ms.cmp.caption": "مقارنة العضويات" },
+  fr: { "ms.cmp.prices": "Tarifs", "ms.cmp.hours": "Horaires", "ms.cmp.open": "Ouvert", "ms.cmp.both": "Horaires intérieur et extérieur",
+        "ms.cmp.yes": "Inclus", "ms.cmp.no": "Non inclus", "ms.cmp.caption": "Comparer les abonnements" },
+  en: { "ms.cmp.yes": "Included", "ms.cmp.no": "Not included", "ms.cmp.caption": "Compare the memberships" }
+});
