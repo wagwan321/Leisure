@@ -946,3 +946,63 @@ html[dir="rtl"] .occ__body { padding: 1.5rem 22% 1.75rem 12%; }
   .mplans--home .mplan { display: grid; grid-row: span 2; grid-template-rows: subgrid; gap: 0; }
 }
 @media (max-width: 999px) { .mplans--page .mplan__extra:empty { display: none; } }
+
+/* Events: the sixth panel, for every other kind of event */
+.occs__lead { margin-block-start: 1rem; font-size: var(--t-md); max-width: 46ch; opacity: .85; }
+.occ--more { background: var(--red); }
+.occ--more::after { background: none; }
+.occ--more .occ__art { font-family: var(--font-sans, inherit); font-style: normal; font-weight: 300; opacity: .3; }
+.occ--more .occ__go { background: #fff; color: var(--red); }
+.occ__sub { font-size: var(--t-sm); font-weight: 500; opacity: .9; }
+@media (max-width: 799px) { .occ--more { min-height: 220px; } }
+
+/* ---------- The Leisure Club · Indoors: black and white, the twin of Leisure Island ---------- */
+.club {
+  background: #0D0D0D; color: #F6F5F2;
+  --ink: #F6F5F2; --muted-ink: #B5B5B5; --line: rgba(255,255,255,.16); --line-strong: rgba(255,255,255,.4);
+  --bg: #0D0D0D; --card: #161616; --surface: #161616;
+}
+.club .eyebrow { color: #F6F5F2; }
+.club .eyebrow::before { background: var(--red); opacity: 1; }
+.club .marquee__track span::after { color: var(--red); }
+.page-hero.club .pill { border-color: rgba(255,255,255,.45); }
+.page-hero.club .pill--live { background: #F6F5F2; color: #0D0D0D; border-color: #F6F5F2; }
+.club--line { border-block-start: 1px solid var(--line); }
+.club .btn--light { --b-bg: transparent; --b-ink: #F6F5F2; --b-line: rgba(255,255,255,.5); }
+
+/* the title's last word switches on like a sign, once */
+.neon { color: #fff; text-shadow: 0 0 .06em #fff, 0 0 .35em rgba(230,32,40,.85), 0 0 .9em rgba(230,32,40,.45); }
+html:not([data-motion="still"]) .neon { animation: neonOn 1.6s steps(1, end) .4s both; }
+@keyframes neonOn {
+  0% { opacity: .15; text-shadow: none; } 12% { opacity: 1; } 18% { opacity: .2; text-shadow: none; }
+  26% { opacity: 1; } 30% { opacity: .35; text-shadow: none; } 42% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* facility tiles: film where we have it, a dark card with the name where the photo is still to come */
+.ft { display: block; background: #161616; isolation: isolate; color: #F6F5F2; }
+.ft::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,0) 55%); }
+.ft--blank { border: 1px solid rgba(255,255,255,.12); }
+.ft--blank::after { background: none; }
+.ft__body { position: absolute; z-index: 2; inset: auto 0 0 0; display: grid; gap: .3rem; padding: clamp(1rem, .8rem + .8vw, 1.5rem); }
+.ft__no { font-size: var(--t-xs); font-weight: 600; letter-spacing: .14em; color: var(--red); }
+.ft__name { font-size: clamp(1.3rem, 1rem + 1.1vw, 2rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.05; }
+.ft__info { font-size: var(--t-sm); color: #CFCFCF; }
+.ft__info b { color: #fff; }
+.ft--blank .ft__no { position: absolute; inset-block-start: clamp(1rem, .8rem + .8vw, 1.5rem); font-size: clamp(2.5rem, 1.8rem + 2.5vw, 4.5rem); font-weight: 700; letter-spacing: -.05em; line-height: .8; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.35); }
+.ft--blank .ft__body { inset: 0; align-content: end; }
+a.ft .ft__name::after { content: " →"; font-weight: 400; opacity: 0; transition: opacity .3s var(--ease); }
+html[dir="rtl"] a.ft .ft__name::after { content: " ←"; }
+a.ft:hover .ft__name::after, a.ft:focus-visible .ft__name::after { opacity: 1; }
+/* a soft light follows the pointer across the tiles (desktop) */
+.ftiles .ft::before { content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: 0; transition: opacity .3s;
+  background: radial-gradient(360px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.12), transparent 65%); }
+.ftiles.is-spot .ft::before { opacity: 1; }
+html[data-motion="still"] .ftiles .ft::before { display: none; }
+@media (max-width: 899px) { .ftiles .ft { min-height: 42vw; } }
+.ft--blank .ft__no { inset-inline-start: clamp(1rem, .8rem + .8vw, 1.5rem); }
+@media (max-width: 899px) {
+  .ft--blank .ft__no { position: static; font-size: var(--t-xs); font-weight: 600; letter-spacing: .14em; line-height: 1.2; color: var(--red); -webkit-text-stroke: 0; }
+  .ft--blank { display: flex; }
+  .ft--blank .ft__body { position: relative; inset: auto; width: 100%; }
+}

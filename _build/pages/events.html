@@ -18,6 +18,7 @@ scripts: assets/lang/events.js
             <span data-i18n="evh.w4">a first communion.</span>
             <span data-i18n="evh.w5">a bachelor party.</span>
             <span data-i18n="evh.w6">a teenage pool party.</span>
+            <span data-i18n="evh.w7">any occasion.</span>
           </span>
         </h1>
         <div class="evhero__media" aria-hidden="true">
@@ -82,6 +83,7 @@ scripts: assets/lang/events.js
           <div>
             <span class="eyebrow eyebrow--dot" data-reveal data-i18n="ev.title">Book your event</span>
             <h2 class="h2" id="occ-title" data-reveal data-i18n-html="evx.title">Your day, <em>at the club.</em></h2>
+            <p class="occs__lead" data-reveal data-i18n="evx.more.lead">These are a few of the events we host. Whatever you are planning, we can host it.</p>
           </div>
         </div>
         <div class="occs" data-reveal>
@@ -110,6 +112,11 @@ scripts: assets/lang/events.js
             <span class="occ__no" aria-hidden="true">05</span>
             <span class="occ__body"><span class="occ__name" data-i18n="ev.bachelor">Bachelor party</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
           </a>
+          <a class="occ occ--more" href="#plan" data-plan-occ="other">
+            <span class="occ__art" aria-hidden="true">+</span>
+            <span class="occ__no" aria-hidden="true">06</span>
+            <span class="occ__body"><span class="occ__name" data-i18n="evx.more">And more</span><span class="occ__sub" data-i18n="evx.more.sub">Any event you have in mind</span><span class="occ__go" data-i18n="evx.ask">Ask for a date</span></span>
+          </a>
         </div>
       </div>
     </section>
@@ -134,6 +141,7 @@ scripts: assets/lang/events.js
                 <button type="button" role="radio" aria-checked="false" data-occ="communion" data-i18n="ev.communion">First communion</button>
                 <button type="button" role="radio" aria-checked="false" data-occ="bachelor" data-i18n="ev.bachelor">Bachelor party</button>
                 <button type="button" role="radio" aria-checked="false" data-occ="teen" data-i18n="ev.teen">Teenage pool party</button>
+                <button type="button" role="radio" aria-checked="false" data-occ="other" data-i18n="evx.other">Another event</button>
               </div>
             </div>
             <div class="planner__step">

@@ -718,3 +718,42 @@ TLC_add({
         "ms.cmp.yes": "Inclus", "ms.cmp.no": "Non inclus", "ms.cmp.caption": "Comparer les abonnements" },
   en: { "ms.cmp.yes": "Included", "ms.cmp.no": "Not included", "ms.cmp.caption": "Compare the memberships" }
 });
+
+/* Nov 2026: events, and more. DRAFT for native review. */
+TLC_add({
+  ar: { "evh.w7": "أيّ مناسبة.", "evx.more": "والمزيد", "evx.more.sub": "أيّ مناسبة تخطّط لها", "evx.other": "مناسبة أخرى",
+        "evx.more.lead": "هذه بعض المناسبات التي نستضيفها. مهما كان ما تخطّط له، يمكننا استضافته.",
+        "evp.msg2": "مرحبًا، أودّ تنظيم مناسبة في The Leisure Club في {month}، لحوالي {guests} ضيف." },
+  fr: { "evh.w7": "toute occasion.", "evx.more": "Et plus encore", "evx.more.sub": "Tout événement que vous imaginez", "evx.other": "Autre événement",
+        "evx.more.lead": "Voici quelques-uns des événements que nous accueillons. Quel que soit votre projet, nous pouvons l'accueillir.",
+        "evp.msg2": "Bonjour, je souhaite organiser un événement à The Leisure Club vers {month}, pour environ {guests} invités." }
+});
+
+/* Nov 2026: The Leisure Club · Indoors page. DRAFT for native review. */
+TLC_add({
+  en: { "lc.per": "/ month" },
+  ar: {
+    "nav.club3": "The Leisure Club", "lc.eyebrow": "The Leisure Club · داخلي", "lc.title": "طوال السنة، <em class=\"neon\">في الداخل.</em>",
+    "lc.m1": "صالة رياضية", "lc.m2": "مسبح مدفّأ", "lc.m3": "ساونا", "lc.m4": "غرفة بخار", "lc.m5": "ملاكمة", "lc.m6": "تنس الطاولة", "lc.m7": "سولاريوم",
+    "lc.fac.eyebrow": "المرافق", "lc.fac.title": "كل شيء، <em>تحت سقف واحد.</em>",
+    "lc.f1": "الصالة الرياضية", "lc.f2": "مسبح مدفّأ 25 م", "lc.f4": "الساونا", "lc.f5": "غرفة البخار", "lc.f6": "غرفة الملاكمة", "lc.f6i": "حصص ملاكمة وكيك بوكسينغ",
+    "lc.f7": "تنس الطاولة", "lc.f8": "الجاكوزي", "lc.f8i": "بجانب المسبح الداخلي", "lc.f10": "الاستوديوهات", "lc.f10i": "حصص أسبوعية مجانية لأعضاء الداخلي والدخول الكامل", "lc.f11": "السولاريوم",
+    "lc.d.mwf": "الاثنين، الأربعاء، الجمعة", "lc.d.tts": "الثلاثاء، الخميس، السبت",
+    "lc.h.eyebrow": "ساعات العمل", "lc.h.title": "ستة أيام <em>في الأسبوع.</em>", "lc.h.pool": "المسبح الداخلي، للأعضاء",
+    "lc.h.sauna": "الساونا · الاثنين، الأربعاء، الجمعة", "lc.h.steam": "غرفة البخار · الثلاثاء، الخميس، السبت",
+    "lc.end.title": "تمرّن، اسبح، <em>استرخِ.</em>", "lc.from": "العضوية الداخلية ابتداءً من", "lc.per": "/ شهريًا",
+    "lc.cta": "العضوية الداخلية", "lc.toisland": "Leisure Island · خارجي", "li2.toclub": "The Leisure Club · داخلي"
+  },
+  fr: {
+    "nav.club3": "The Leisure Club", "lc.eyebrow": "The Leisure Club · Intérieur", "lc.title": "Toute l'année, <em class=\"neon\">à l'intérieur.</em>",
+    "lc.m1": "Salle de sport", "lc.m2": "Piscine chauffée", "lc.m3": "Sauna", "lc.m4": "Hammam", "lc.m5": "Boxe", "lc.m6": "Tennis de table", "lc.m7": "Solarium",
+    "lc.fac.eyebrow": "Les installations", "lc.fac.title": "Tout, <em>sous un même toit.</em>",
+    "lc.f1": "Salle de sport", "lc.f2": "Piscine chauffée de 25 m", "lc.f4": "Sauna", "lc.f5": "Hammam", "lc.f6": "Salle de boxe", "lc.f6i": "Cours de boxe et de kickboxing",
+    "lc.f7": "Tennis de table", "lc.f8": "Jacuzzi", "lc.f8i": "À côté de la piscine intérieure", "lc.f10": "Studios", "lc.f10i": "Cours hebdomadaires gratuits pour les membres Intérieur et Accès complet", "lc.f11": "Solarium",
+    "lc.d.mwf": "Lun., mer., ven.", "lc.d.tts": "Mar., jeu., sam.",
+    "lc.h.eyebrow": "Horaires", "lc.h.title": "Six jours <em>sur sept.</em>", "lc.h.pool": "Piscine intérieure, membres",
+    "lc.h.sauna": "Sauna · lun., mer., ven.", "lc.h.steam": "Hammam · mar., jeu., sam.",
+    "lc.end.title": "S'entraîner, nager, <em>se détendre.</em>", "lc.from": "Abonnement Intérieur dès", "lc.per": "/ mois",
+    "lc.cta": "Abonnement Intérieur", "lc.toisland": "Leisure Island · Extérieur", "li2.toclub": "The Leisure Club · Intérieur"
+  }
+});

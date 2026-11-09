@@ -133,6 +133,21 @@
     });
   }
 
+  /* ---------- The Leisure Club: a soft light follows the pointer across the facility tiles ---------- */
+  var spot = document.querySelector("[data-spot]");
+  if (spot && window.matchMedia("(hover: hover)").matches) {
+    var tiles = spot.querySelectorAll(".ft");
+    spot.addEventListener("pointermove", function (e) {
+      spot.classList.add("is-spot");
+      tiles.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+        el.style.setProperty("--my", (e.clientY - r.top) + "px");
+      });
+    });
+    spot.addEventListener("pointerleave", function () { spot.classList.remove("is-spot"); });
+  }
+
   /* ---------- Film control (accessibility: pause the homepage film) ---------- */
   var filmBtn = document.querySelector("[data-film-toggle]");
   if (filmBtn) {

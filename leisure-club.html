@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="paper" data-motion="expressive" data-hero="framed">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>The Leisure Club | Indoors: gym, HYROX, heated pool, sauna and steam</title>
+  <meta name="description" content="The Leisure Club, the indoor side of the club in Dik el-Mehdi: gym and table tennis, Lebanon&#x27;s first HYROX gym, a heated 25-metre pool and jacuzzi, sauna, steam room, cold plunge, boxing room, studios and solarium. Open Monday to Saturday from 07:30." />
+  <meta name="theme-color" content="#F6F5F2" />
+  <link rel="icon" href="images/logo.png" />
+  <link rel="alternate" hreflang="en" href="https://theleisureclub-lb.com/leisure-club.html" />
+  <link rel="alternate" hreflang="ar" href="https://theleisureclub-lb.com/leisure-club.html?lang=ar" />
+  <link rel="alternate" hreflang="fr" href="https://theleisureclub-lb.com/leisure-club.html?lang=fr" />
+  <meta property="og:title" content="The Leisure Club | Indoors: gym, HYROX, heated pool, sauna and steam" />
+  <meta property="og:description" content="The Leisure Club, the indoor side of the club in Dik el-Mehdi: gym and table tennis, Lebanon&#x27;s first HYROX gym, a heated 25-metre pool and jacuzzi, sauna, steam room, cold plunge, boxing room, studios and solarium. Open Monday to Saturday from 07:30." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://theleisureclub-lb.com/leisure-club.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Amiri&display=swap" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/v2.css" />
+
+  <!-- Apply saved / shared review options before first paint -->
+  <script>
+    (function () {
+      var d = document.documentElement, q = new URLSearchParams(location.search), s = {};
+      try { s = JSON.parse(localStorage.getItem("tlc-review") || "{}"); } catch (e) {}
+      var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+      d.dataset.theme = "paper"; // the brief's colour table (§04)
+      d.dataset.hero = q.get("hero") || "framed";
+      var m = q.get("motion");
+      if (m) d.setAttribute("data-motion-chosen", "");
+      d.dataset.motion = m || (reduce ? "still" : "expressive");
+      d.classList.add("js");
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://theleisureclub-lb.com/"}, {"@type": "ListItem", "position": 2, "name": "The Leisure Club", "item": "https://theleisureclub-lb.com/leisure-club.html"}]}
+  </script>
+</head>
+<body data-page="leisure-club">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- ===================== Header (Aman-inspired: Menu · centred logo · language + one action) ===================== -->
+  <header class="site-header is-solid" id="top">
+    <div class="progress" aria-hidden="true"></div>
+    <div class="bar wrap">
+      <div class="bar__start">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle__bars" aria-hidden="true"></span><span data-i18n="menu">Menu</span>
+        </button>
+      </div>
+      <a class="brand" href="index.html" aria-label="The Leisure Club, home">
+        <img class="brand__logo-dark" src="images/logo.png" alt="The Leisure Club" width="196" height="178" />
+        <img class="brand__logo-light" src="images/logo-white.png" alt="" width="196" height="178" />
+      </a>
+      <div class="bar__end">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+        <!-- Member Login: add only once a functional member portal exists (brief §07) -->
+        <a class="btn btn--sm bar__wa" href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn--solid btn--sm" href="memberships.html" data-i18n="nav.memberships">Memberships</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen menu: seven sections, no sub-lists (owner review, Oct 2026: fewer subsections) -->
+  <div class="site-menu" id="site-menu" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="site-menu__nav">
+      <div class="site-menu__top">
+        <a class="brand" href="index.html" aria-label="The Leisure Club, home"><img src="images/logo.png" alt="The Leisure Club" width="196" height="178" /></a>
+        <button class="site-menu__close" type="button" aria-label="Close menu" data-menu-close><span aria-hidden="true">×</span></button>
+      </div>
+      <nav aria-label="Primary">
+        <ol class="menu-primary" role="list">
+          <li><a href="index.html" data-nav="home" data-i18n="nav.home">Home</a></li>
+          <li><a href="our-story.html" data-nav="story" data-i18n="f.story">Our Story</a></li>
+          <li><a href="fitness.html" data-nav="fitness" data-i18n="nav.fitness2">Fitness</a></li>
+          <li><a href="aquatics.html" data-nav="aquatics" data-i18n="nav.aquatics">Aquatics</a></li>
+          <li><a href="leisure-club.html" data-nav="club" aria-current="page" data-i18n="nav.club3">The Leisure Club</a></li>
+          <li><a href="leisure-island.html" data-nav="island" data-i18n="nav.island">Leisure Island</a></li>
+          <li><a href="community.html" data-nav="community" data-i18n="nav.community">Community</a></li>
+          <li><a href="events.html" data-nav="events" data-i18n="f.hosp">Hospitality &amp; Events</a></li>
+          <li><a href="memberships.html" data-nav="memberships" data-i18n="nav.memberships">Memberships</a></li>
+        </ol>
+        <ul class="menu-secondary" role="list">
+          <li><a href="visit.html" data-nav="visit" data-i18n="util.contact">Contact</a></li>
+          <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </nav>
+      <div class="lang site-menu__lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="ar" aria-pressed="false" lang="ar">العربية</button>
+        <button type="button" data-lang="fr" aria-pressed="false">Français</button>
+      </div>
+    </div>
+    <!-- desktop: a quiet side panel with the three most asked-for links -->
+    <div class="site-menu__aside">
+      <div class="site-menu__panel" data-menu-panel>
+        <div data-menu-default>
+          <p class="eyebrow" data-i18n="mn.welcome">Dik el-Mehdi · Since 1991</p>
+          <p class="site-menu__panel-title" data-i18n-html="mn.panel">Movement. Wellness. <em>Leisure. Community.</em></p>
+          <div class="site-menu__boxes">
+            <a class="btn" href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a>
+            <a class="btn" href="schedule.html" data-i18n="f.sched">Weekly schedule</a>
+            <a class="btn" href="visit.html" data-i18n="util.contact">Contact</a>
+          </div>
+        </div>
+        <div data-menu-sub hidden>
+          <p class="eyebrow" data-menu-sub-title></p>
+          <div class="site-menu__boxes" data-menu-sub-list></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+<section class="page-hero club" aria-labelledby="lc-title">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span aria-hidden="true">/</span><span data-i18n="nav.club3">The Leisure Club</span></nav>
+        <div class="head">
+          <div>
+            <span class="eyebrow" data-i18n="lc.eyebrow">The Leisure Club · Indoors</span>
+            <h1 class="page-title" id="lc-title" data-i18n-html="lc.title">All year, <em class="neon">indoors.</em></h1>
+          </div>
+          <div class="pills">
+            <span class="pill pill--live live" data-live="indoor"><span data-live-text></span></span>
+            <span class="pill"><span data-i18n="ms.in.h1">Mon to Fri</span>&nbsp;<bdi>07:30 – 22:00</bdi></span>
+            <span class="pill"><span data-i18n="ms.in.h2">Saturday</span>&nbsp;<bdi>07:30 – 21:00</bdi></span>
+            <span class="pill"><span data-i18n="ms.in.h3">Sunday</span>&nbsp;<span data-i18n="ms.closed2">closed</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="club" aria-hidden="true" style="padding-block:1.25rem">
+      <div class="marquee"><div class="marquee__track">
+        <span data-i18n="lc.m1">Gym</span><span>HYROX</span><span data-i18n="lc.m2">Heated pool</span><span data-i18n="lc.m3">Sauna</span><span data-i18n="lc.m4">Steam room</span><span data-i18n="lc.m5">Boxing</span><span data-i18n="lc.m6">Table tennis</span><span data-i18n="lc.m7">Solarium</span>
+        <span data-i18n="lc.m1">Gym</span><span>HYROX</span><span data-i18n="lc.m2">Heated pool</span><span data-i18n="lc.m3">Sauna</span><span data-i18n="lc.m4">Steam room</span><span data-i18n="lc.m5">Boxing</span><span data-i18n="lc.m6">Table tennis</span><span data-i18n="lc.m7">Solarium</span>
+      </div></div>
+    </div>
+
+    <!-- The facilities: a tile each. Tiles without a photo yet show their name and details; add img="…" or video="…" when the photos arrive. -->
+    <section class="section club" id="facilities" aria-labelledby="lc-fac-title">
+      <div class="wrap">
+        <div class="head">
+          <div>
+            <span class="eyebrow" data-reveal data-i18n="lc.fac.eyebrow">The facilities</span>
+            <h2 class="h2" id="lc-fac-title" data-reveal data-i18n-html="lc.fac.title">Everything, <em>under one roof.</em></h2>
+          </div>
+        </div>
+        <div class="bento ftiles" data-spot>
+          <a class="ft c7 r3 m2" href="fitness.html#gym" data-reveal>
+            <div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-gym-floor.jpg" data-src="video/site/loop-gym-floor.mp4" data-lazyvideo aria-label="Members training on the gym floor" style="object-position:50% 50%"></video></div>
+            <span class="ft__body"><span class="ft__no">01</span><span class="ft__name" data-i18n="lc.f1">Gym</span><span class="ft__info"><bdi>07:30 – 22:00</bdi></span></span>
+          </a>
+          <a class="ft c5 r3 m2" href="aquatics.html#indoor" data-reveal style="--i:1">
+            <div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-indoor-pool.jpg" data-src="video/site/loop-indoor-pool.mp4" data-lazyvideo aria-label="The heated indoor pool and its steps" style="object-position:50% 50%"></video></div>
+            <span class="ft__body"><span class="ft__no">02</span><span class="ft__name" data-i18n="lc.f2">Heated 25 m pool</span><span class="ft__info"><bdi>08:30 – 21:30</bdi></span></span>
+          </a>
+          <a class="ft ft--blank c4 r2" href="fitness.html#hyrox" data-reveal>
+            <span class="ft__body"><span class="ft__no">03</span><span class="ft__name">HYROX</span><span class="ft__info" data-i18n="hapc.badge">Lebanon's first HYROX gym</span></span>
+          </a>
+          <div class="ft c4 r2" data-reveal style="--i:1">
+            <div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-sauna.jpg" data-src="video/site/loop-sauna.mp4" data-lazyvideo aria-label="Inside the wooden sauna" style="object-position:50% 50%"></video></div>
+            <span class="ft__body"><span class="ft__no">04</span><span class="ft__name" data-i18n="lc.f4">Sauna</span><span class="ft__info"><span data-i18n="lc.d.mwf">Mon, Wed, Fri</span> · <bdi>09:00 – 21:30</bdi></span></span>
+          </div>
+          <div class="ft ft--blank c4 r2 m2" data-reveal style="--i:2">
+            <span class="ft__body"><span class="ft__no">05</span><span class="ft__name" data-i18n="lc.f5">Steam room</span><span class="ft__info"><span data-i18n="lc.d.tts">Tue, Thu, Sat</span> · <bdi>09:00 – 21:30</bdi></span></span>
+          </div>
+          <div class="ft ft--blank c3 r2" data-reveal>
+            <span class="ft__body"><span class="ft__no">06</span><span class="ft__name" data-i18n="lc.f6">Boxing room</span><span class="ft__info" data-i18n="lc.f6i">Boxing &amp; kickboxing classes</span></span>
+          </div>
+          <div class="ft ft--blank c3 r2" data-reveal style="--i:1">
+            <span class="ft__body"><span class="ft__no">07</span><span class="ft__name" data-i18n="lc.f7">Table tennis</span><span class="ft__info"><bdi>07:30 – 22:00</bdi></span></span>
+          </div>
+          <div class="ft ft--blank c3 r2" data-reveal style="--i:2">
+            <span class="ft__body"><span class="ft__no">08</span><span class="ft__name" data-i18n="lc.f8">Jacuzzi</span><span class="ft__info" data-i18n="lc.f8i">Next to the indoor pool</span></span>
+          </div>
+          <div class="ft ft--blank c3 r2" data-reveal style="--i:3">
+            <span class="ft__body"><span class="ft__no">09</span><span class="ft__name" data-i18n="ms.in.i4">Cold plunge &amp; showers</span></span>
+          </div>
+          <a class="ft ft--blank c6 r2 m2" href="schedule.html" data-reveal>
+            <span class="ft__body"><span class="ft__no">10</span><span class="ft__name" data-i18n="lc.f10">Studios</span><span class="ft__info" data-i18n="lc.f10i">Free weekly classes for Indoor &amp; Full Access members</span></span>
+          </a>
+          <div class="ft c6 r2 m2" data-reveal style="--i:1">
+            <div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-solarium.jpg" data-src="video/site/loop-solarium.mp4" data-lazyvideo aria-label="Inside the solarium" style="object-position:50% 50%"></video></div>
+            <span class="ft__body"><span class="ft__no">11</span><span class="ft__name" data-i18n="lc.f11">Solarium</span><span class="ft__info"><b>$1</b>&nbsp;<span data-i18n="by.permin">/min</span></span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours -->
+    <section class="section club club--line" id="hours" aria-labelledby="lc-hours-title">
+      <div class="wrap show">
+        <div class="show__text">
+          <span class="eyebrow" data-reveal data-i18n="lc.h.eyebrow">Opening hours</span>
+          <h2 class="h2" id="lc-hours-title" data-reveal data-i18n-html="lc.h.title">Six days <em>a week.</em></h2>
+        </div>
+        <div class="rows" data-reveal>
+          <div><span data-i18n="ms.in.h1">Mon to Fri</span><b><bdi>07:30 – 22:00</bdi></b></div>
+          <div><span data-i18n="ms.in.h2">Saturday</span><b><bdi>07:30 – 21:00</bdi></b></div>
+          <div><span data-i18n="ms.in.h3">Sunday</span><b data-i18n="ms.closed">Closed</b></div>
+          <div><span data-i18n="lc.h.pool">Indoor pool, members</span><b><bdi>08:30 – 21:30</bdi></b></div>
+          <div><span data-i18n="lc.h.sauna">Sauna · Mon, Wed, Fri</span><b><bdi>09:00 – 21:30</bdi></b></div>
+          <div><span data-i18n="lc.h.steam">Steam room · Tue, Thu, Sat</span><b><bdi>09:00 – 21:30</bdi></b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership -->
+    <section class="section club cta-band" aria-labelledby="lc-cta-title">
+      <div class="wrap">
+        <div>
+          <h2 class="h2" id="lc-cta-title" data-i18n-html="lc.end.title">Train, swim, <em>unwind.</em></h2>
+          <p class="h4" style="margin-block-start:1rem"><span data-i18n="lc.from">Indoor membership from</span> <b>$120</b> <span data-i18n="lc.per">/ month</span></p>
+        </div>
+        <div class="cta-band__btns">
+          <a class="btn btn--red" href="indoor.html" data-i18n="lc.cta">Indoor membership</a>
+          <a class="btn btn--light" href="leisure-island.html" data-i18n="lc.toisland">Leisure Island · Outdoors</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="images/logo.png" alt="The Leisure Club" width="196" height="178" />
+          <p class="h3" data-i18n-html="foot.line">More than a club. <em>Since 1991.</em></p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h3 data-i18n="f.explore">Explore</h3>
+            <ul role="list">
+              <li><a href="our-story.html" data-i18n="f.story">Our Story</a></li>
+              <li><a href="fitness.html" data-i18n="nav.fitness2">Fitness</a></li>
+              <li><a href="aquatics.html" data-i18n="nav.aquatics">Aquatics</a></li>
+              <li><a href="leisure-club.html" data-i18n="nav.club3">The Leisure Club</a></li>
+              <li><a href="leisure-island.html" data-i18n="nav.island">Leisure Island</a></li>
+              <li><a href="community.html" data-i18n="nav.community">Community</a></li>
+              <li><a href="events.html" data-i18n="f.hosp">Hospitality &amp; Events</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="nav.memberships">Memberships</h3>
+            <ul role="list">
+              <li><a href="memberships.html" data-i18n="mn.prices">Memberships &amp; prices</a></li>
+              <li><a href="memberships.html#beyond" data-i18n="f.beyond">Beyond membership</a></li>
+              <li><a href="schedule.html" data-i18n="f.sched">Weekly schedule</a></li>
+              <li><a href="events.html#plan" data-i18n="f.book">Book your event</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="f.contact">Contact</h3>
+            <ul role="list">
+              <li><a href="tel:+9613340341" dir="ltr">03 340 341</a></li>
+              <li><a href="tel:+9614920921" dir="ltr">04 920 921</a></li>
+              <li><a href="https://wa.me/9613340341" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="visit.html" data-i18n="f.find">Find us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 data-i18n="vis.follow">Follow</h3>
+            <ul role="list">
+              <li><a href="https://www.instagram.com/theleisureclublb/" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://www.facebook.com/theleisureclublb" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a href="https://www.tiktok.com/@theleisureclublb" target="_blank" rel="noopener">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 The Leisure Club · <span data-i18n="foot.est">Est. 1991</span></span>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Phone: tab bar, like an app (Home, Schedule, Memberships, WhatsApp, Menu) -->
+  <nav class="tabbar" aria-label="Quick links">
+    <a class="tab" href="index.html" data-tab="index"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .7-1.5l7-6a2 2 0 0 1 2.6 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-i18n="nav.home">Home</span></a>
+    <a class="tab" href="schedule.html" data-tab="schedule"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><span data-i18n="tab.sched">Schedule</span></a>
+    <a class="tab tab--main" href="memberships.html" data-tab="memberships"><span class="tab__plate"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6.2 15a3 3 0 0 1 5.6 0M15 10h3M15 14h3"/></svg></span><span data-i18n="nav.memberships">Memberships</span></a>
+    <a class="tab" href="https://wa.me/9613340341" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>WhatsApp</span></a>
+    <button class="tab" type="button" data-tab-menu aria-controls="site-menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-i18n="menu">Menu</span></button>
+  </nav>
+
+  <!-- Motion libraries (used only by the Expressive level) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/lang/common.js" defer></script>
+
+  <script src="assets/lang/v2.js" defer></script>
+  <script src="assets/data/club.js" defer></script>
+  <script src="assets/motion.js" defer></script>
+  <script src="assets/site.js" defer></script>
+  <script src="assets/extras.js" defer></script>
+  <script src="assets/media.js" defer></script>
+  <script src="assets/pages.js" defer></script>
+</body>
+</html>

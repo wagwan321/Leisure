@@ -156,7 +156,9 @@
       planner.querySelector("[data-out-occ]").textContent = occLabel();
       planner.querySelector("[data-out-month]").textContent = mName(st.month);
       planner.querySelector("[data-out-guests]").textContent = st.guests + " " + t("evp.guests", "guests");
-      var msg = t("evp.msg", "Hello, I would like to plan a {occ} at The Leisure Club around {month}, for about {guests} guests.")
+      var msg = (st.occ === "other"
+        ? t("evp.msg2", "Hello, I would like to plan an event at The Leisure Club around {month}, for about {guests} guests.")
+        : t("evp.msg", "Hello, I would like to plan a {occ} at The Leisure Club around {month}, for about {guests} guests."))
         .replace("{occ}", occLabel().toLowerCase()).replace("{month}", mName(st.month)).replace("{guests}", st.guests);
       planner.querySelector("[data-out-link]").href = "https://wa.me/9613478200?text=" + encodeURIComponent(msg);
       var card = planner.querySelector(".planner__card"); card.classList.remove("is-bump"); void card.offsetWidth; card.classList.add("is-bump");
