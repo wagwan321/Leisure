@@ -1049,3 +1049,4 @@ html[data-motion="still"] .ftiles .ft::before { display: none; }
 .clsum .clsum__who { color: #fff; }
 .lcfac li + li::before { content: ""; margin-inline-end: .55em; color: inherit; }
 .lcfac li::before { content: ""; display: inline-block; width: .4em; height: .4em; border-radius: 50%; background: var(--red); margin-inline-end: .55em; vertical-align: .18em; }
+.split__body > .pills { margin-block: .25rem .5rem; }
