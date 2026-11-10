@@ -31,7 +31,7 @@ scripts: assets/data/schedule.js, assets/memberships.js
     </div>
 
     <!-- The facilities: a tile each. Tiles without a photo yet show their name and details; add img="…" or video="…" when the photos arrive. -->
-    <section class="section section--beige" id="facilities" aria-labelledby="lc-fac-title">
+    <section class="section" id="facilities" aria-labelledby="lc-fac-title">
       <div class="wrap">
         <div class="head">
           <div>
@@ -78,30 +78,23 @@ scripts: assets/data/schedule.js, assets/memberships.js
 
     <!-- Free classes: the big reason to join indoors -->
     <section class="section club" id="free-classes" aria-labelledby="lc-cls-title">
-      <div class="wrap">
-        <div class="head">
-          <div>
-            <span class="eyebrow" data-reveal data-i18n="ms.cls.eyebrow">Free classes</span>
-            <h2 class="h2 lc-big" id="lc-cls-title" data-reveal data-i18n-html="lc.cls.title">Free classes, <em>every week.</em></h2>
-          </div>
-          <a class="btn btn--light" href="schedule.html" data-reveal data-i18n="cs.see">See this week's schedule</a>
+      <div class="wrap show lcfree" data-clsum>
+        <div class="show__text">
+          <span class="eyebrow" data-reveal data-i18n="ms.cls.eyebrow">Free classes</span>
+          <h2 class="h2" id="lc-cls-title" data-reveal data-i18n-html="lc.cls.title">Free classes, <em>every week.</em></h2>
+          <p class="lcfree__n" data-reveal><b data-clsum-total>24</b><span data-i18n="cs.free2">activities, free every week</span></p>
+          <div class="pills" data-reveal><span class="pill pill--fill" data-i18n="ms.cls.only">Indoor &amp; Full Access members only</span></div>
+          <div class="btns" data-reveal><a class="btn btn--sun" href="schedule.html" data-i18n="cs.see">See this week's schedule</a></div>
         </div>
-        <div class="clsum clsum--club" data-clsum data-reveal>
-          <div class="clsum__top">
-            <p class="clsum__count"><b data-clsum-total>24</b> <span data-i18n="cs.free2">activities, free every week</span></p>
-            <p class="clsum__split"><span data-clsum-adults></span><span data-clsum-kids></span></p>
-          </div>
-          <p class="clsum__who" data-i18n="ms.cls.only">Indoor &amp; Full Access members only</p>
-          <div class="clsum__groups">
-            <div class="clsum__group"><h3 data-i18n="ms.adults">Adults</h3><div class="clsum__tags" data-clsum-list="adults"></div></div>
-            <div class="clsum__group clsum__group--kids"><h3><span data-i18n="ms.kids">Kids</span> <small data-i18n="ms.kids.age">Under 16</small></h3><div class="clsum__tags" data-clsum-list="kids"></div></div>
-          </div>
+        <div class="clsum__groups lcfree__groups" data-reveal>
+          <div class="clsum__group"><h3 data-i18n="ms.adults">Adults</h3><div class="clsum__tags" data-clsum-list="adults"></div></div>
+          <div class="clsum__group clsum__group--kids"><h3><span data-i18n="ms.kids">Kids</span> <small data-i18n="ms.kids.age">Under 16</small></h3><div class="clsum__tags" data-clsum-list="kids"></div></div>
         </div>
       </div>
     </section>
 
     <!-- Hours -->
-    <section class="section section--beige" id="hours" aria-labelledby="lc-hours-title">
+    <section class="section" id="hours" aria-labelledby="lc-hours-title">
       <div class="wrap show">
         <div class="show__text">
           <span class="eyebrow" data-reveal data-i18n="lc.h.eyebrow">Opening hours</span>

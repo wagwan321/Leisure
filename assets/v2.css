@@ -1079,3 +1079,22 @@ body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3
 .club .eyebrow::before { background: var(--island-sun) !important; }
 .lctile .eyebrow::before, body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3B4450 !important; }
 .lctile--list .link-arrow { align-self: flex-start; }
+
+/* Leisure Island and The Leisure Club: text sits in the open beside the photos, like Fitness and Aquatics */
+.show__text .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+.island .show__text .pill--fill { background: var(--island-sun); color: #191919; border-color: var(--island-sun); }
+#escape .show { margin-block-end: clamp(2.5rem, 2rem + 2vw, 4rem); }
+@media (min-width: 960px) { #escape .show { align-items: start; } }
+/* free classes on slate: the count big, the classes listed beside it, no card */
+.lcfree { align-items: start; }
+.lcfree__n { display: flex; align-items: baseline; gap: .6rem; font-size: var(--t-lg); font-weight: 600; line-height: 1.2; }
+.lcfree__n b { font-size: clamp(4rem, 2.5rem + 5vw, 7rem); font-weight: 700; letter-spacing: -.05em; line-height: .85; color: var(--island-sun); }
+.lcfree__groups { gap: 2rem; }
+@media (min-width: 900px) { .lcfree__groups { grid-template-columns: 1fr; } }
+.lcfree .clsum__group h3 small { color: var(--island-sun); }
+.lcfree .clsum__tags span { border-color: rgba(255,255,255,.35); }
+.lcfree .clsum__group--kids .clsum__tags span { border-color: rgba(233,223,195,.6); }
+/* the homepage free-classes tile: the softer cream, not the strong beige */
+.lctile.tile--beige { background: var(--island-foam); }
+.is-live #escape:not(:has(.stay .ph--photo)) .show { margin-block-end: 0; }
+.section.island + .island.cta-band { border-block-start: 1px solid rgba(255,255,255,.22); }
