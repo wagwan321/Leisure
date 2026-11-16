@@ -785,3 +785,27 @@ TLC_add({
   ar: { "lc.hero.from": "العضوية الداخلية ابتداءً من", "lc.inc.ss": "الساونا والبخار", "lc.inc.cls": "حصة مجانية", "lc.f10j": "حيث تُقام الحصص المجانية" },
   fr: { "lc.hero.from": "Intérieur dès", "lc.inc.ss": "Sauna et hammam", "lc.inc.cls": "cours gratuits", "lc.f10j": "Là où ont lieu les cours gratuits" }
 });
+
+/* Nov 2026: kids' birthday packages (club flyers). DRAFT for native review. */
+TLC_add({
+  ar: {
+    "bd.eyebrow": "أعياد ميلاد الأطفال", "bd.title": "ثلاث طرق <em>للاحتفال.</em>",
+    "bd.kid": "/ للطفل دون 10 سنوات", "bd.adult": "/ للبالغ",
+    "bd.p1.t": "بجانب المسبح، مع بوفيه", "bd.p1.a": "بوفيه للأطفال والكبار، مع مياه ومشروبات غازية وعصائر للأطفال",
+    "bd.p2.t": "بجانب المسبح، مع طبق مشكّل", "bd.p2.a": "طبق مشكّل للأطفال، وقائمة إضافية عند الطلب",
+    "bd.p3.t": "حفلة خاصة في الحديقة", "bd.p3.min": "40 شخصًا كحدّ أدنى", "bd.p3.a": "بوفيه للأطفال والكبار، مع مياه ومشروبات غازية وعصائر", "bd.p3.np": "من دون دخول المسبح",
+    "bd.pool.k": "دخول المسبح مجاني للأطفال", "bd.pool.a": "دخول المسبح غير مشمول للكبار",
+    "bd.note": "في كل الباقات: المشروبات الأخرى تُدفع منفصلة، والتنشيط أو الزينة الإضافية متوفّران عند الطلب، والقالب عليكم.",
+    "bd.cta": "خطّط لعيد ميلاد"
+  },
+  fr: {
+    "bd.eyebrow": "Anniversaires d'enfants", "bd.title": "Trois façons <em>de fêter.</em>",
+    "bd.kid": "/ enfant de moins de 10 ans", "bd.adult": "/ adulte",
+    "bd.p1.t": "Au bord de la piscine, avec buffet", "bd.p1.a": "Buffet pour enfants et adultes, avec eau, sodas et jus pour les enfants",
+    "bd.p2.t": "Au bord de la piscine, avec plateau combo", "bd.p2.a": "Plateau combo pour les enfants, menu supplémentaire sur demande",
+    "bd.p3.t": "En privé, au Garden Venue", "bd.p3.min": "Minimum 40 personnes au total", "bd.p3.a": "Buffet pour enfants et adultes, avec eau, sodas et jus", "bd.p3.np": "Sans accès à la piscine",
+    "bd.pool.k": "Accès gratuit à la piscine pour les enfants", "bd.pool.a": "Accès à la piscine non inclus pour les adultes",
+    "bd.note": "Pour chaque formule : les autres boissons sont payantes, animation ou décoration en supplément sur demande, et vous apportez le gâteau.",
+    "bd.cta": "Organiser un anniversaire"
+  }
+});

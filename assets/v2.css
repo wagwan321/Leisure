@@ -1120,8 +1120,8 @@ body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3
 .lclist dd { font-size: var(--t-base); text-align: end; margin-inline-start: auto; }
 .lclist dd a { text-decoration: underline; text-underline-offset: .2em; }
 /* tile links: the name is the link text, the arrow is decoration */
-.ft .ft__name::after { content: " →" / ""; }
-html[dir="rtl"] .ft .ft__name::after { content: " ←" / ""; }
+a.ft .ft__name::after { content: " →" / ""; }
+html[dir="rtl"] a.ft .ft__name::after { content: " ←" / ""; }
 /* ending: the price at the scale of the 24 */
 .lcend__price { margin-block-start: 1.25rem; font-size: var(--t-lg); font-weight: 500; }
 .lcend__price b { font-size: clamp(3rem, 2rem + 4vw, 5.5rem); font-weight: 700; letter-spacing: -.04em; line-height: .9; color: var(--island-sun); margin-inline: .15em; }
@@ -1169,3 +1169,16 @@ body[data-page="leisure-club"] #hours { padding-block-end: clamp(2.5rem, 2rem + 
 .hz { border-block-start: 6px solid var(--hz); }
 .hz--club { background: #DFE3E8; }
 .hz--island { background: #E4E6D7; }
+
+/* Events: kids' birthday packages, three side by side, text in the open */
+.bdpk { display: grid; gap: clamp(1.5rem, 1rem + 2vw, 2.5rem); }
+@media (min-width: 900px) { .bdpk { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.bdpk__one { display: grid; gap: .8rem; align-content: start; padding-block-start: 1.25rem; border-block-start: 3px solid var(--ink); }
+.bdpk__no { font-size: clamp(2.5rem, 1.8rem + 2.5vw, 4rem); font-weight: 700; letter-spacing: -.05em; line-height: .85; color: var(--red); }
+.bdpk__one h3 { font-size: var(--t-xl); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; }
+.bdpk__price { font-size: var(--t-base); line-height: 1.5; }
+.bdpk__price b { font-size: var(--t-xl); font-weight: 700; letter-spacing: -.02em; }
+.bdpk__one ul { display: grid; gap: .45rem; font-size: var(--t-base); }
+.bdpk__one li { padding-inline-start: 1.1rem; position: relative; }
+.bdpk__one li::before { content: ""; position: absolute; inset-inline-start: 0; top: .6em; width: .4em; height: .4em; border-radius: 50%; background: var(--red); }
+.bdpk__note { margin-block: clamp(1.5rem, 1rem + 1.5vw, 2.5rem) 1.25rem; font-size: var(--t-base); max-width: 60ch; }
