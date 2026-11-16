@@ -1157,3 +1157,15 @@ body[data-page="leisure-club"] #hours { padding-block-end: clamp(2.5rem, 2rem + 
 .hz--club .lctile__who { background: var(--island-sun); color: #191919; }
 .hz--club .lctile--list { background: transparent; color: var(--ink); padding-inline: 0; border-block-start: 1px solid var(--line-strong); border-radius: 0; }
 .hz--club .lctile--list .link-arrow { color: var(--hz); }
+/* homepage club and island: a little more of their colour (Nov 2026): a pale tint of each, a stronger rule, the heading word and labels in full colour */
+.hz--club { background: #E9EBEE; }
+.hz--island { background: #ECEDE3; }
+.hz > .wrap { border-block-start-width: 6px; }
+.hz .h2 em { font-weight: 400; }
+.hz .eyebrow { color: var(--hz); }
+.hz .pill:not(.pill--fill):not(.pill--live) { border-color: var(--hz); color: var(--hz); }
+.hz--club .lctile--list { border-block-start-color: #3B4450; }
+.hz > .wrap { border-block-start: 0; padding-block-start: 0; }
+.hz { border-block-start: 6px solid var(--hz); }
+.hz--club { background: #DFE3E8; }
+.hz--island { background: #E4E6D7; }
