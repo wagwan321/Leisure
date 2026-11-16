@@ -1098,3 +1098,62 @@ body[data-page="leisure-club"] .section--beige .eyebrow::before { background: #3
 .lctile.tile--beige { background: var(--island-foam); }
 .is-live #escape:not(:has(.stay .ph--photo)) .show { margin-block-end: 0; }
 .section.island + .island.cta-band { border-block-start: 1px solid rgba(255,255,255,.22); }
+
+/* ---------- The Leisure Club, after the critique (Nov 2026) ---------- */
+/* hero: status, one hours line, the offer and its action */
+.lchero__side { display: grid; gap: 1rem; justify-items: start; }
+.lchero__offer { font-size: var(--t-md); font-weight: 500; }
+.lchero__offer b { font-size: var(--t-xl); font-weight: 700; letter-spacing: -.02em; color: var(--island-sun); }
+.club .pill--live:not(.is-open) { background: transparent; color: #F6F5F2; border-color: rgba(255,255,255,.45); }
+@media (max-width: 759px) { .lcticker { display: none; } }
+/* facilities: HYROX leads the list, in the open on cream */
+.lcmore { display: grid; gap: clamp(2rem, 1.5rem + 2vw, 3rem); margin-block-start: clamp(2rem, 1.5rem + 2vw, 3rem); }
+@media (min-width: 900px) { .lcmore { grid-template-columns: 5fr 7fr; align-items: start; gap: 4rem; } }
+.lchx { display: grid; gap: .6rem; justify-items: start; color: var(--ink); text-decoration: none; padding-block-start: 1.25rem; border-block-start: 3px solid #3B4450; }
+.lchx__name { font-size: clamp(3rem, 2rem + 4vw, 5.5rem); font-weight: 700; letter-spacing: -.04em; line-height: .9; color: #3B4450; }
+.lchx__claim { font-size: var(--t-lg); font-weight: 600; }
+.lchx__p { font-size: var(--t-base); max-width: 38ch; }
+.lclist { display: grid; }
+.lclist > div { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .2rem 1.5rem; padding-block: .85rem; border-block-end: 1px solid var(--line-strong); }
+.lclist > div:first-child { border-block-start: 1px solid var(--line-strong); }
+.lclist dt { font-size: var(--t-md); font-weight: 600; }
+.lclist dd { font-size: var(--t-base); text-align: end; margin-inline-start: auto; }
+.lclist dd a { text-decoration: underline; text-underline-offset: .2em; }
+/* tile links: the name is the link text, the arrow is decoration */
+.ft .ft__name::after { content: " →" / ""; }
+html[dir="rtl"] .ft .ft__name::after { content: " ←" / ""; }
+/* ending: the price at the scale of the 24 */
+.lcend__price { margin-block-start: 1.25rem; font-size: var(--t-lg); font-weight: 500; }
+.lcend__price b { font-size: clamp(3rem, 2rem + 4vw, 5.5rem); font-weight: 700; letter-spacing: -.04em; line-height: .9; color: var(--island-sun); margin-inline: .15em; }
+.lcend__incl { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-block-start: 1rem; font-size: var(--t-base); font-weight: 500; }
+.lcend__incl li::before { content: ""; display: inline-block; width: .4em; height: .4em; border-radius: 50%; background: var(--island-sun); margin-inline-end: .5em; vertical-align: .15em; }
+.lcend .cta-band__btns { align-items: center; gap: 1.25rem; }
+.lcend .link-arrow { color: #F6F5F2; }
+/* focus on slate: beige, not red */
+.club :focus-visible { outline-color: var(--island-sun); }
+/* consistency: section dots slate on this page's cream sections, beige on slate */
+body[data-page="leisure-club"] .section:not(.club) .eyebrow::before { background: #3B4450 !important; }
+/* kids' classes stand apart */
+.lcfree .clsum__group--kids .clsum__tags span { background: rgba(233,223,195,.14); border-color: var(--island-sun); }
+.lcfree .link-arrow { color: var(--island-sun); }
+/* less dead space before the ending */
+body[data-page="leisure-club"] #hours { padding-block-end: clamp(2.5rem, 2rem + 2vw, 4rem); }
+
+/* ---------- Homepage: The Leisure Club and Leisure Island on cream, their colour as an accent only (Nov 2026) ---------- */
+.hz { --hz: #3B4450; --hz-ink: #F6F5F2; }
+.hz--island { --hz: var(--island-lagoon); --hz-ink: #fff; }
+.hz > .wrap { border-block-start: 3px solid var(--hz); padding-block-start: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem); }
+.hz .eyebrow::before { background: var(--hz) !important; }
+.hz .h2 em { color: var(--hz); }
+.hz .pill--fill, .hz .pill--live.is-open { background: var(--hz); color: var(--hz-ink); border-color: var(--hz); }
+.hz .pill--live:not(.is-open) { background: transparent; color: var(--ink); border-color: currentColor; }
+.hz .it__label { background: var(--hz); color: var(--hz-ink); }
+/* the free-classes tile carries the club's slate; the facility list sits in the open */
+.hz--club .lctile:not(.lctile--list) { background: #3B4450; color: #F6F5F2; }
+.hz--club .lctile:not(.lctile--list) .eyebrow { color: #F6F5F2; }
+.hz--club .lctile:not(.lctile--list) .eyebrow::before { background: var(--island-sun) !important; }
+.hz--club .lctile__n { color: #F6F5F2; }
+.hz--club .lctile__n b { color: var(--island-sun); }
+.hz--club .lctile__who { background: var(--island-sun); color: #191919; }
+.hz--club .lctile--list { background: transparent; color: var(--ink); padding-inline: 0; border-block-start: 1px solid var(--line-strong); border-radius: 0; }
+.hz--club .lctile--list .link-arrow { color: var(--hz); }

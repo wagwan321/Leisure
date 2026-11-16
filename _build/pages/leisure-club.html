@@ -13,24 +13,28 @@ scripts: assets/data/schedule.js, assets/memberships.js
             <span class="eyebrow" data-i18n="lc.eyebrow">The Leisure Club · Indoors</span>
             <h1 class="page-title" id="lc-title" data-i18n-html="lc.title">All year, <em>indoors.</em></h1>
           </div>
-          <div class="pills">
-            <span class="pill pill--live live" data-live="indoor"><span data-live-text></span></span>
-            <span class="pill"><span data-i18n="ms.in.h1">Mon to Fri</span>&nbsp;<bdi>07:30 – 22:00</bdi></span>
-            <span class="pill"><span data-i18n="ms.in.h2">Saturday</span>&nbsp;<bdi>07:30 – 21:00</bdi></span>
-            <span class="pill"><span data-i18n="ms.in.h3">Sunday</span>&nbsp;<span data-i18n="ms.closed2">closed</span></span>
+          <div class="lchero__side">
+            <div class="pills">
+              <span class="pill pill--live live" data-live="indoor"><span data-live-text></span></span>
+              <span class="pill" data-i18n="ms.in.hours">Mon to Sat, from 07:30 · closed Sunday</span>
+            </div>
+            <p class="lchero__offer"><span data-i18n="lc.hero.from">Indoor from</span> <b>$120</b> <span data-i18n="lc.per">/ month</span></p>
+            <a class="btn btn--sun" href="indoor.html" data-i18n="lc.cta">Indoor membership</a>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="club" aria-hidden="true" style="padding-block:1.25rem">
+    <div class="club lcticker" aria-hidden="true" style="padding-block:1.25rem">
       <div class="marquee"><div class="marquee__track">
         <span data-i18n="lc.m1">Gym</span><span>HYROX</span><span data-i18n="lc.m2">Heated pool</span><span data-i18n="lc.m3">Sauna</span><span data-i18n="lc.m4">Steam room</span><span data-i18n="lc.m5">Boxing</span><span data-i18n="lc.m6">Table tennis</span><span data-i18n="lc.m7">Solarium</span>
         <span data-i18n="lc.m1">Gym</span><span>HYROX</span><span data-i18n="lc.m2">Heated pool</span><span data-i18n="lc.m3">Sauna</span><span data-i18n="lc.m4">Steam room</span><span data-i18n="lc.m5">Boxing</span><span data-i18n="lc.m6">Table tennis</span><span data-i18n="lc.m7">Solarium</span>
       </div></div>
     </div>
 
-    <!-- The facilities: a tile each. Tiles without a photo yet show their name and details; add img="…" or video="…" when the photos arrive. -->
+    <!-- The facilities. The two films lead; HYROX gets its own spot; the others are a list until their photos arrive.
+         When a facility's photo comes in, move it from the list into the bento as a tile
+         built like the gym tile (a div.ft with the photo shortcode and its .ft__body). -->
     <section class="section" id="facilities" aria-labelledby="lc-fac-title">
       <div class="wrap">
         <div class="head">
@@ -41,37 +45,30 @@ scripts: assets/data/schedule.js, assets/memberships.js
         </div>
         <div class="bento ftiles" data-spot>
           <a class="ft c7 r3 m2" href="fitness.html#gym" data-reveal>
-            <ph r="free" tag="Video" t="The gym" video="loop-gym-floor" pos="50% 50%" alt="Members training on the gym floor"/>
-            <span class="ft__body"><span class="ft__no">01</span><span class="ft__name" data-i18n="lc.f1">Gym</span><span class="ft__info"><bdi>07:30 – 22:00</bdi></span></span>
+            <ph r="free" tag="Video" t="The gym" video="loop-gym-floor" pos="50% 50%" alt="Members training on the gym floor" x='aria-hidden="true"'/>
+            <span class="ft__body"><span class="ft__name" data-i18n="lc.f1">Gym</span><span class="ft__info"><bdi>07:30 – 22:00</bdi></span></span>
           </a>
           <a class="ft c5 r3 m2" href="aquatics.html#indoor" data-reveal style="--i:1">
-            <ph r="free" tag="Video" t="The indoor pool" video="loop-indoor-pool" pos="50% 50%" alt="The heated indoor pool and its steps"/>
-            <span class="ft__body"><span class="ft__no">02</span><span class="ft__name" data-i18n="lc.f2">Heated 25 m pool</span><span class="ft__info"><bdi>08:30 – 21:30</bdi></span></span>
+            <ph r="free" tag="Video" t="The indoor pool" video="loop-indoor-pool" pos="50% 50%" alt="The heated indoor pool and its steps" x='aria-hidden="true"'/>
+            <span class="ft__body"><span class="ft__name" data-i18n="lc.f2">Heated 25 m pool</span><span class="ft__info"><bdi>08:30 – 21:30</bdi></span></span>
           </a>
-          <a class="ft ft--blank c4 r2" href="fitness.html#hyrox" data-reveal>
-            <span class="ft__body"><span class="ft__no">03</span><span class="ft__name">HYROX</span><span class="ft__info" data-i18n="hapc.badge">Lebanon's first HYROX gym</span></span>
+        </div>
+        <div class="lcmore">
+          <a class="lchx" href="fitness.html#hyrox" data-reveal>
+            <span class="lchx__name">HYROX</span>
+            <span class="lchx__claim" data-i18n="hapc.badge">Lebanon's first HYROX gym</span>
+            <span class="lchx__p" data-i18n="hapc.free">Free access to Athlete Performance Center for every age, every fitness level.</span>
+            <span class="link-arrow" data-i18n="hapc.cta1">Discover the Center</span>
           </a>
-          <div class="ft ft--blank c4 r2" data-reveal style="--i:1">
-            <span class="ft__body"><span class="ft__no">04</span><span class="ft__name" data-i18n="lc.f4">Sauna</span><span class="ft__info"><span data-i18n="lc.d.mwf">Mon, Wed, Fri</span> · <bdi>09:00 – 21:30</bdi></span></span>
-          </div>
-          <div class="ft ft--blank c4 r2 m2" data-reveal style="--i:2">
-            <span class="ft__body"><span class="ft__no">05</span><span class="ft__name" data-i18n="lc.f5">Steam room</span><span class="ft__info"><span data-i18n="lc.d.tts">Tue, Thu, Sat</span> · <bdi>09:00 – 21:30</bdi></span></span>
-          </div>
-          <div class="ft ft--blank c4 r2" data-reveal>
-            <span class="ft__body"><span class="ft__no">06</span><span class="ft__name" data-i18n="lc.f6">Boxing room</span><span class="ft__info" data-i18n="lc.f6i">Boxing &amp; kickboxing classes</span></span>
-          </div>
-          <div class="ft ft--blank c4 r2" data-reveal style="--i:1">
-            <span class="ft__body"><span class="ft__no">07</span><span class="ft__name" data-i18n="lc.f7">Table tennis</span><span class="ft__info"><bdi>07:30 – 22:00</bdi></span></span>
-          </div>
-          <div class="ft ft--blank c4 r2 m2" data-reveal style="--i:2">
-            <span class="ft__body"><span class="ft__no">08</span><span class="ft__name" data-i18n="lc.f8">Jacuzzi</span><span class="ft__info" data-i18n="lc.f8i">Next to the indoor pool</span></span>
-          </div>
-          <a class="ft ft--blank c6 r2 m2" href="schedule.html" data-reveal>
-            <span class="ft__body"><span class="ft__no">09</span><span class="ft__name" data-i18n="lc.f10">Studios</span><span class="ft__info" data-i18n="lc.f10i">Free weekly classes for Indoor &amp; Full Access members</span></span>
-          </a>
-          <div class="ft ft--blank c6 r2 m2" data-reveal style="--i:1">
-            <span class="ft__body"><span class="ft__no">10</span><span class="ft__name" data-i18n="lc.f11">Solarium</span><span class="ft__info"><b>$1</b>&nbsp;<span data-i18n="by.permin">/min</span></span></span>
-          </div>
+          <dl class="lclist" data-reveal style="--i:1">
+            <div><dt data-i18n="lc.f4">Sauna</dt><dd><span data-i18n="lc.d.mwf">Mon, Wed, Fri</span> · <bdi>09:00 – 21:30</bdi></dd></div>
+            <div><dt data-i18n="lc.f5">Steam room</dt><dd><span data-i18n="lc.d.tts">Tue, Thu, Sat</span> · <bdi>09:00 – 21:30</bdi></dd></div>
+            <div><dt data-i18n="lc.f8">Jacuzzi</dt><dd data-i18n="lc.f8i">Next to the indoor pool</dd></div>
+            <div><dt data-i18n="lc.f6">Boxing room</dt><dd data-i18n="lc.f6i">Boxing &amp; kickboxing classes</dd></div>
+            <div><dt data-i18n="lc.f7">Table tennis</dt><dd><bdi>07:30 – 22:00</bdi></dd></div>
+            <div><dt data-i18n="lc.f10">Studios</dt><dd><a href="#free-classes" data-i18n="lc.f10j">Home of the free classes</a></dd></div>
+            <div><dt data-i18n="lc.f11">Solarium</dt><dd><b>$1</b>&nbsp;<span data-i18n="by.permin">/min</span></dd></div>
+          </dl>
         </div>
       </div>
     </section>
@@ -84,7 +81,7 @@ scripts: assets/data/schedule.js, assets/memberships.js
           <h2 class="h2" id="lc-cls-title" data-reveal data-i18n-html="lc.cls.title">Free classes, <em>every week.</em></h2>
           <p class="lcfree__n" data-reveal><b data-clsum-total>24</b><span data-i18n="cs.free2">activities, free every week</span></p>
           <div class="pills" data-reveal><span class="pill pill--fill" data-i18n="ms.cls.only">Indoor &amp; Full Access members only</span></div>
-          <div class="btns" data-reveal><a class="btn btn--sun" href="schedule.html" data-i18n="cs.see">See this week's schedule</a></div>
+          <p data-reveal><a class="link-arrow" href="schedule.html" data-i18n="cs.see">See this week's schedule</a></p>
         </div>
         <div class="clsum__groups lcfree__groups" data-reveal>
           <div class="clsum__group"><h3 data-i18n="ms.adults">Adults</h3><div class="clsum__tags" data-clsum-list="adults"></div></div>
@@ -112,15 +109,18 @@ scripts: assets/data/schedule.js, assets/memberships.js
     </section>
 
     <!-- Membership -->
-    <section class="section club cta-band" aria-labelledby="lc-cta-title">
+    <section class="section club cta-band lcend" aria-labelledby="lc-cta-title">
       <div class="wrap">
         <div>
           <h2 class="h2" id="lc-cta-title" data-i18n-html="lc.end.title">Train, swim, <em>unwind.</em></h2>
-          <p class="h4" style="margin-block-start:1rem"><span data-i18n="lc.from">Indoor membership from</span> <b>$120</b> <span data-i18n="lc.per">/ month</span></p>
+          <p class="lcend__price"><span data-i18n="lc.hero.from">Indoor from</span> <b>$120</b> <span data-i18n="lc.per">/ month</span></p>
+          <ul class="lcend__incl" role="list">
+            <li data-i18n="lc.f1">Gym</li><li>HYROX</li><li data-i18n="lc.f2">Heated 25 m pool</li><li data-i18n="lc.inc.ss">Sauna &amp; steam</li><li><span data-clsum-n>24</span> <span data-i18n="lc.inc.cls">free classes</span></li>
+          </ul>
         </div>
         <div class="cta-band__btns">
           <a class="btn btn--sun" href="indoor.html" data-i18n="lc.cta">Indoor membership</a>
-          <a class="btn btn--light" href="leisure-island.html" data-i18n="lc.toisland">Leisure Island · Outdoors</a>
+          <a class="link-arrow" href="leisure-island.html" data-i18n="lc.toisland">Leisure Island · Outdoors</a>
         </div>
       </div>
     </section>

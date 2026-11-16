@@ -779,3 +779,9 @@ TLC_add({
 });
 
 TLC_add({ ar: { "lc.t.str": "القوة", "lc.t.cardio": "الكارديو" }, fr: { "lc.t.str": "Force", "lc.t.cardio": "Cardio" } });
+
+/* Nov 2026: Leisure Club after the critique. DRAFT for native review. */
+TLC_add({
+  ar: { "lc.hero.from": "العضوية الداخلية ابتداءً من", "lc.inc.ss": "الساونا والبخار", "lc.inc.cls": "حصة مجانية", "lc.f10j": "حيث تُقام الحصص المجانية" },
+  fr: { "lc.hero.from": "Intérieur dès", "lc.inc.ss": "Sauna et hammam", "lc.inc.cls": "cours gratuits", "lc.f10j": "Là où ont lieu les cours gratuits" }
+});

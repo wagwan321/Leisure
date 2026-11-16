@@ -177,7 +177,7 @@
 
   // Community — club rows slide in like a list being written
   function community() {
-    var rows = $$(".club"); if (!rows.length) return;
+    var rows = $$(".clubs .club"); if (!rows.length) return;
     rows.forEach(claim);
     gsap.from(rows, { x: doc.dir === "rtl" ? 50 : -50, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.1,
       scrollTrigger: { trigger: ".clubs", start: "top 85%", once: true } });

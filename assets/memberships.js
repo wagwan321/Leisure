@@ -162,7 +162,7 @@
     document.querySelectorAll("[data-clsum]").forEach(function (box) {
       ["adults", "kids"].forEach(function (g) {
         var el = box.querySelector('[data-clsum-list="' + g + '"]');
-        if (el) el.innerHTML = groups[g].map(function (n, i) { return '<span style="--n:' + i + '">' + esc(n) + "</span>"; }).join("");
+        if (el) { el.setAttribute("role", "list"); el.innerHTML = groups[g].map(function (n, i) { return '<span role="listitem" style="--n:' + i + '">' + esc(n) + "</span>"; }).join(""); }
       });
       var set = function (sel, v) { var el = box.querySelector(sel); if (el) el.textContent = v; };
       set("[data-clsum-total]", groups.adults.length + groups.kids.length);
