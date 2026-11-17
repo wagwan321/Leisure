@@ -124,7 +124,7 @@
   // ---------- Hospitality & Events: a menu opens full-screen over the page ----------
   var dlg = document.querySelector("[data-menudlg]");
   if (dlg && dlg.showModal) {
-    var dimg = dlg.querySelector("[data-menudlg-img]");
+    var dimg = document.createElement("img"); dlg.appendChild(dimg);
     var shut = function () { dlg.close(); };
     document.querySelectorAll("[data-menu]").forEach(function (a) {
       a.addEventListener("click", function (e) {
