@@ -1188,3 +1188,12 @@ body[data-page="leisure-club"] #hours { padding-block-end: clamp(2.5rem, 2rem + 
   .lchx { grid-template-columns: auto 1fr; column-gap: clamp(2rem, 1rem + 3vw, 4rem); align-items: center; }
   .lchx__name { grid-row: span 3; }
 }
+
+/* Events: "See the menu" under each place, and the menu full-screen */
+.menuboard__menu { grid-column: 2; justify-self: start; max-height: 0; opacity: 0; overflow: hidden; visibility: hidden; transition: max-height .5s var(--ease), opacity .4s var(--ease); font-size: var(--t-base); font-weight: 600; }
+.menuboard__item.is-active .menuboard__menu { max-height: 3rem; opacity: 1; visibility: visible; margin-block-start: .4rem; }
+.menudlg { padding: 0; border: 0; background: transparent; max-width: min(94vw, 900px); max-height: 94vh; overflow: visible; }
+.menudlg::backdrop { background: rgba(10,10,10,.82); }
+.menudlg img { display: block; max-width: 100%; max-height: 94vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+.menudlg__close { position: absolute; inset-block-start: -.75rem; inset-inline-end: -.75rem; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 0; background: #F6F5F2; color: #191919; font-size: 1.6rem; line-height: 1; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+@media (max-width: 599px) { .menudlg__close { inset-block-start: .5rem; inset-inline-end: .5rem; } .menudlg { max-height: 100vh; } .menudlg img { max-height: 100vh; border-radius: 0; } }

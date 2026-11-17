@@ -809,3 +809,5 @@ TLC_add({
     "bd.cta": "Organiser un anniversaire"
   }
 });
+
+TLC_add({ ar: { "evx.menu": "اطّلع على القائمة", "evx.close": "إغلاق" }, fr: { "evx.menu": "Voir le menu", "evx.close": "Fermer" }, en: { "evx.close": "Close" } });

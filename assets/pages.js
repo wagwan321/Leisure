@@ -121,6 +121,24 @@
   }
 
   // ---------- Hospitality & Events: venue list, the picture follows the name ----------
+  // ---------- Hospitality & Events: a menu opens full-screen over the page ----------
+  var dlg = document.querySelector("[data-menudlg]");
+  if (dlg && dlg.showModal) {
+    var dimg = dlg.querySelector("[data-menudlg-img]");
+    var shut = function () { dlg.close(); };
+    document.querySelectorAll("[data-menu]").forEach(function (a) {
+      a.addEventListener("click", function (e) {
+        e.preventDefault(); e.stopPropagation();
+        dimg.src = a.getAttribute("href"); dimg.alt = a.dataset.menuAlt || "";
+        dlg.showModal();
+        if (window.TLC_motion) window.TLC_motion.pause(true);
+      });
+    });
+    dlg.addEventListener("close", function () { if (window.TLC_motion) window.TLC_motion.pause(false); });
+    dlg.querySelector("[data-menudlg-close]").addEventListener("click", shut);
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) shut(); });
+  }
+
   document.querySelectorAll("[data-menuboard]").forEach(function (mb) {
     var items = mb.querySelectorAll(".menuboard__item"), layers = mb.querySelectorAll(".menuboard__layer");
     function act(i) {

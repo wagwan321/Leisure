@@ -161,11 +161,11 @@
         </div>
         <div class="menuboard" data-menuboard>
           <ol class="menuboard__list" role="list">
-            <li class="menuboard__item is-active" tabindex="0"><span class="menuboard__no">01</span><h3 data-i18n="ev.g.title">The Grill House</h3><p data-i18n="evx.g.p">BBQ off the coals, burgers, wraps and pizzas, with a proper kids' menu.</p></li>
-            <li class="menuboard__item" tabindex="0"><span class="menuboard__no">02</span><h3 data-i18n="ev.b1.t">The Pool Bar</h3><p data-i18n="evx.b1.p">Frozen cocktails and Lebanese wines by the water.</p></li>
+            <li class="menuboard__item is-active" tabindex="0"><span class="menuboard__no">01</span><h3 data-i18n="ev.g.title">The Grill House</h3><p data-i18n="evx.g.p">BBQ off the coals, burgers, wraps and pizzas, with a proper kids' menu.</p><a class="menuboard__menu link-arrow" href="menus/grill-house-menu.jpeg" target="_blank" rel="noopener" data-menu data-menu-alt="The Grill House menu" data-i18n="evx.menu">See the menu</a></li>
+            <li class="menuboard__item" tabindex="0"><span class="menuboard__no">02</span><h3 data-i18n="ev.b1.t">The Pool Bar</h3><p data-i18n="evx.b1.p">Frozen cocktails and Lebanese wines by the water.</p><a class="menuboard__menu link-arrow" href="menus/pool-bar-menu.jpeg" target="_blank" rel="noopener" data-menu data-menu-alt="The Pool Bar menu" data-i18n="evx.menu">See the menu</a></li>
             <li class="menuboard__item" tabindex="0"><span class="menuboard__no">03</span><h3 data-i18n="ev.b2.t">Bianco Bar</h3><p data-i18n="evx.b2.p">Dinner turns into dancing under the garden lights.</p></li>
-            <li class="menuboard__item" tabindex="0"><span class="menuboard__no">04</span><h3 data-i18n="ev.b3.t">Leisure Treats</h3><p data-i18n="evx.b3.p">Crepes, fresh juices and bubble tea.</p></li>
-            <li class="menuboard__item" tabindex="0"><span class="menuboard__no">05</span><h3 data-i18n="evx.c.t">Catering</h3><p data-i18n="evx.c.p">From the Grill House kitchen, for your event here or elsewhere. Pre-order required.</p></li>
+            <li class="menuboard__item" tabindex="0"><span class="menuboard__no">04</span><h3 data-i18n="ev.b3.t">Leisure Treats</h3><p data-i18n="evx.b3.p">Crepes, fresh juices and bubble tea.</p><a class="menuboard__menu link-arrow" href="menus/leisure-treats-menu.jpeg" target="_blank" rel="noopener" data-menu data-menu-alt="The Leisure Treats menu" data-i18n="evx.menu">See the menu</a></li>
+            <li class="menuboard__item" tabindex="0"><span class="menuboard__no">05</span><h3 data-i18n="evx.c.t">Catering</h3><p data-i18n="evx.c.p">From the Grill House kitchen, for your event here or elsewhere. Pre-order required.</p><a class="menuboard__menu link-arrow" href="menus/grill-house-catering-menu.jpeg" target="_blank" rel="noopener" data-menu data-menu-alt="The Grill House catering menu" data-i18n="evx.menu">See the menu</a></li>
           </ol>
           <div class="menuboard__media" aria-hidden="true">
             <div class="menuboard__layer is-active"><div class="ph ph--video ph--photo"><video muted loop playsinline preload="none" poster="video/site/loop-grill.jpg" data-src="video/site/loop-grill.mp4" data-lazyvideo aria-label="Pizza from the oven, sandwiches and salads being made at the Grill House" style="object-position:50% 50%"></video></div></div>
@@ -177,6 +177,12 @@
         </div>
       </div>
     </section>
+
+    <!-- Menus open full-screen -->
+    <dialog class="menudlg" data-menudlg aria-label="Menu">
+      <button class="menudlg__close" type="button" data-menudlg-close aria-label="Close" data-i18n-attr="aria-label:evx.close">×</button>
+      <img alt="" data-menudlg-img>
+    </dialog>
 
     <!-- Weddings -->
     <section class="section section--contrast evwed" id="weddings" aria-labelledby="wed-title">
