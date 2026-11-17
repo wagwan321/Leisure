@@ -124,11 +124,12 @@
   // ---------- Hospitality & Events: a menu opens full-screen over the page ----------
   var dlg = document.querySelector("[data-menudlg]");
   if (dlg && dlg.showModal) {
-    var dimg = document.createElement("img"); dlg.appendChild(dimg);
+    var dimg = null;
     var shut = function () { dlg.close(); };
     document.querySelectorAll("[data-menu]").forEach(function (a) {
       a.addEventListener("click", function (e) {
         e.preventDefault(); e.stopPropagation();
+        if (!dimg) { dimg = document.createElement("img"); dlg.appendChild(dimg); }
         dimg.src = a.getAttribute("href"); dimg.alt = a.dataset.menuAlt || "";
         dlg.showModal();
         if (window.TLC_motion) window.TLC_motion.pause(true);
