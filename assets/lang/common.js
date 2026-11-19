@@ -172,7 +172,7 @@
     "foot.line": "أكثر من مجرد نادٍ. <em>منذ ١٩٩١.</em>",
     "f.story": "قصتنا", "f.phil": "فلسفتنا", "f.fac": "المرافق", "f.gal": "معرض الصور",
     "f.move": "تحرّك", "f.sched": "الجدول الأسبوعي", "f.enjoy": "استمتع", "f.events": "الأعراس والمناسبات",
-    "f.contact": "تواصل", "foot.est": "تأسس عام ١٩٩١"
+    "f.contact": "تواصل", "foot.est": "تأسس عام ١٩٩١", "foot.by": "تصميم Envision"
   };
 
   var fr = {
@@ -337,7 +337,7 @@
     "foot.line": "Plus qu'un club. <em>Depuis 1991.</em>",
     "f.story": "Notre histoire", "f.phil": "Notre philosophie", "f.fac": "Installations", "f.gal": "Galerie",
     "f.move": "Bouger", "f.sched": "Planning hebdomadaire", "f.enjoy": "Profiter", "f.events": "Mariages & événements",
-    "f.contact": "Contact", "foot.est": "Fondé en 1991"
+    "f.contact": "Contact", "foot.est": "Fondé en 1991", "foot.by": "Réalisé par Envision"
   };
 
   TLC_add({ en: en, ar: ar, fr: fr });

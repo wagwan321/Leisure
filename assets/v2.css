@@ -1197,3 +1197,6 @@ body[data-page="leisure-club"] #hours { padding-block-end: clamp(2.5rem, 2rem + 
 .menudlg img { display: block; max-width: 100%; max-height: 94vh; width: auto; height: auto; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
 .menudlg__close { position: absolute; inset-block-start: -.75rem; inset-inline-end: -.75rem; width: 2.75rem; height: 2.75rem; border-radius: 50%; border: 0; background: #F6F5F2; color: #191919; font-size: 1.6rem; line-height: 1; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
 @media (max-width: 599px) { .menudlg__close { inset-block-start: .5rem; inset-inline-end: .5rem; } .menudlg { max-height: 100vh; } .menudlg img { max-height: 100vh; border-radius: 0; } }
+
+/* Footer credit stays in one piece */
+.footer__by { white-space: nowrap; }
