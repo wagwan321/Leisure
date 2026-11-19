@@ -554,7 +554,7 @@ html:not([data-motion="still"]) .mhero__sub, html:not([data-motion="still"]) .mh
 .mfigs .fig { border-top: 6px solid var(--tone); padding-block-start: 1.25rem; }
 .mfigs .fig b { font-size: clamp(3.2rem, 1.6rem + 6vw, 8rem); color: var(--tone); }
 .mfigs .fig small { font-size: var(--t-lg); font-weight: 600; }
-@media (max-width: 699px) { .mfigs--3 { grid-template-columns: 1fr; } .mfigs--2 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 699px) { .mfigs--3, .mfigs--2 { grid-template-columns: 1fr; } }
 
 .mincl2 { display: grid; gap: 2rem 3rem; }
 @media (min-width: 900px) { .mincl2--2 { grid-template-columns: 1fr 1fr; } }
